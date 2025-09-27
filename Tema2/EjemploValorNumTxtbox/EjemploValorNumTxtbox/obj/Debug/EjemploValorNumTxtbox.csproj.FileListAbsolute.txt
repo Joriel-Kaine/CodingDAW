@@ -1,0 +1,11 @@
+C:\zProgramacion\Programacion DAW\Tema2\EjemploValorNumTxtbox\EjemploValorNumTxtbox\obj\Debug\EjemploValorNumTxtbox.csproj.AssemblyReference.cache
+C:\zProgramacion\Programacion DAW\Tema2\EjemploValorNumTxtbox\EjemploValorNumTxtbox\obj\Debug\EjemploValorNumTxtbox.Form1.resources
+C:\zProgramacion\Programacion DAW\Tema2\EjemploValorNumTxtbox\EjemploValorNumTxtbox\obj\Debug\EjemploValorNumTxtbox.Properties.Resources.resources
+C:\zProgramacion\Programacion DAW\Tema2\EjemploValorNumTxtbox\EjemploValorNumTxtbox\obj\Debug\EjemploValorNumTxtbox.csproj.GenerateResource.cache
+C:\zProgramacion\Programacion DAW\Tema2\EjemploValorNumTxtbox\EjemploValorNumTxtbox\obj\Debug\EjemploValorNumTxtbox.csproj.CoreCompileInputs.cache
+C:\zProgramacion\Programacion DAW\Tema2\EjemploValorNumTxtbox\EjemploValorNumTxtbox\bin\Debug\EjemploValorNumTxtbox.exe.config
+C:\zProgramacion\Programacion DAW\Tema2\EjemploValorNumTxtbox\EjemploValorNumTxtbox\bin\Debug\EjemploValorNumTxtbox.exe
+C:\zProgramacion\Programacion DAW\Tema2\EjemploValorNumTxtbox\EjemploValorNumTxtbox\bin\Debug\EjemploValorNumTxtbox.pdb
+C:\zProgramacion\Programacion DAW\Tema2\EjemploValorNumTxtbox\EjemploValorNumTxtbox\obj\Debug\EjemploValorNumTxtbox.exe
+C:\zProgramacion\Programacion DAW\Tema2\EjemploValorNumTxtbox\EjemploValorNumTxtbox\obj\Debug\EjemploValorNumTxtbox.pdb
+C:\zProgramacion\Programacion DAW\Tema2\EjemploValorNumTxtbox\EjemploValorNumTxtbox\obj\Debug\EjemploValorNumTxtbox.exe.config
