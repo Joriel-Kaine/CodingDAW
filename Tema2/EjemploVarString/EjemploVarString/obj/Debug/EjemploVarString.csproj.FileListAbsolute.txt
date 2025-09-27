@@ -1,0 +1,10 @@
+C:\zProgramacion\Programacion DAW\Tema2\EjemploVarString\EjemploVarString\bin\Debug\EjemploVarString.exe.config
+C:\zProgramacion\Programacion DAW\Tema2\EjemploVarString\EjemploVarString\bin\Debug\EjemploVarString.exe
+C:\zProgramacion\Programacion DAW\Tema2\EjemploVarString\EjemploVarString\bin\Debug\EjemploVarString.pdb
+C:\zProgramacion\Programacion DAW\Tema2\EjemploVarString\EjemploVarString\obj\Debug\EjemploVarString.csproj.AssemblyReference.cache
+C:\zProgramacion\Programacion DAW\Tema2\EjemploVarString\EjemploVarString\obj\Debug\EjemploVarString.Form1.resources
+C:\zProgramacion\Programacion DAW\Tema2\EjemploVarString\EjemploVarString\obj\Debug\EjemploVarString.Properties.Resources.resources
+C:\zProgramacion\Programacion DAW\Tema2\EjemploVarString\EjemploVarString\obj\Debug\EjemploVarString.csproj.GenerateResource.cache
+C:\zProgramacion\Programacion DAW\Tema2\EjemploVarString\EjemploVarString\obj\Debug\EjemploVarString.csproj.CoreCompileInputs.cache
+C:\zProgramacion\Programacion DAW\Tema2\EjemploVarString\EjemploVarString\obj\Debug\EjemploVarString.exe
+C:\zProgramacion\Programacion DAW\Tema2\EjemploVarString\EjemploVarString\obj\Debug\EjemploVarString.pdb
