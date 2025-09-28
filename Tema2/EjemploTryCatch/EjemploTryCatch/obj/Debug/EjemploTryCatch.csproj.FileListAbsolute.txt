@@ -1,0 +1,11 @@
+C:\zProgramacion\Programacion DAW\Tema2\EjemploTryCatch\EjemploTryCatch\bin\Debug\EjemploTryCatch.exe.config
+C:\zProgramacion\Programacion DAW\Tema2\EjemploTryCatch\EjemploTryCatch\bin\Debug\EjemploTryCatch.exe
+C:\zProgramacion\Programacion DAW\Tema2\EjemploTryCatch\EjemploTryCatch\bin\Debug\EjemploTryCatch.pdb
+C:\zProgramacion\Programacion DAW\Tema2\EjemploTryCatch\EjemploTryCatch\obj\Debug\EjemploTryCatch.csproj.AssemblyReference.cache
+C:\zProgramacion\Programacion DAW\Tema2\EjemploTryCatch\EjemploTryCatch\obj\Debug\EjemploTryCatch.Form1.resources
+C:\zProgramacion\Programacion DAW\Tema2\EjemploTryCatch\EjemploTryCatch\obj\Debug\EjemploTryCatch.Properties.Resources.resources
+C:\zProgramacion\Programacion DAW\Tema2\EjemploTryCatch\EjemploTryCatch\obj\Debug\EjemploTryCatch.csproj.GenerateResource.cache
+C:\zProgramacion\Programacion DAW\Tema2\EjemploTryCatch\EjemploTryCatch\obj\Debug\EjemploTryCatch.csproj.CoreCompileInputs.cache
+C:\zProgramacion\Programacion DAW\Tema2\EjemploTryCatch\EjemploTryCatch\obj\Debug\EjemploTryCatch.exe
+C:\zProgramacion\Programacion DAW\Tema2\EjemploTryCatch\EjemploTryCatch\obj\Debug\EjemploTryCatch.pdb
+C:\zProgramacion\Programacion DAW\Tema2\EjemploTryCatch\EjemploTryCatch\obj\Debug\EjemploTryCatch.exe.config
