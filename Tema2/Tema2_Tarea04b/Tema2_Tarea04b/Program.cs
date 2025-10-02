@@ -27,7 +27,7 @@ namespace Tema2_Tarea04b
             decimal neto = precio * (1 - descuento);
 
             // Mostramos por consola los resultados.
-            Console.WriteLine($"\nPrecio:         {precio:C2}");
+            Console.WriteLine($"\nPrecio:       {precio:C2}");
             Console.WriteLine($"Descuento:      {descuento:P1}");
             Console.WriteLine($"Neto:           {neto:C2}");
 
