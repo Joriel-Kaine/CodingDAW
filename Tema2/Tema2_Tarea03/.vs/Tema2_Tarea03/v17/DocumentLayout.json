@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\zProgramacion\\Programacion DAW\\Tema2\\Tema2_Tarea03\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3FDF9ABC-0889-4030-BDBF-A32B47C8AEE9}|Tema2_Tarea03\\Tema2_Tarea03.csproj|C:\\zProgramacion\\Programacion DAW\\Tema2\\Tema2_Tarea03\\tema2_tarea03\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3FDF9ABC-0889-4030-BDBF-A32B47C8AEE9}|Tema2_Tarea03\\Tema2_Tarea03.csproj|c:\\zprogramacion\\programacion daw\\tema2\\tema2_tarea03\\tema2_tarea03\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FDF9ABC-0889-4030-BDBF-A32B47C8AEE9}|Tema2_Tarea03\\Tema2_Tarea03.csproj|solutionrelative:tema2_tarea03\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FDF9ABC-0889-4030-BDBF-A32B47C8AEE9}|Tema2_Tarea03\\Tema2_Tarea03.csproj|c:\\zprogramacion\\programacion daw\\tema2\\tema2_tarea03\\tema2_tarea03\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3FDF9ABC-0889-4030-BDBF-A32B47C8AEE9}|Tema2_Tarea03\\Tema2_Tarea03.csproj|C:\\zProgramacion\\Programacion DAW\\Tema2\\Tema2_Tarea03\\tema2_tarea03\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3FDF9ABC-0889-4030-BDBF-A32B47C8AEE9}|Tema2_Tarea03\\Tema2_Tarea03.csproj|solutionrelative:tema2_tarea03\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -54,8 +54,7 @@
               "ToolTip": "C:\\zProgramacion\\Programacion DAW\\Tema2\\Tema2_Tarea03\\Tema2_Tarea03\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Tema2_Tarea03\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T15:26:38.883Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-09-30T15:26:38.883Z"
             }
           ]
         }
