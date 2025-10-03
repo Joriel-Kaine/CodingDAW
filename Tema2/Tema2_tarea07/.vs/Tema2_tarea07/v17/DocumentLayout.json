@@ -1,0 +1,65 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\zProgramacion\\Programacion DAW\\Tema2\\Tema2_tarea07\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8C72C0-FB8B-40B1-808C-EC217A87D772}|Tema2_tarea07\\Tema2_tarea07.csproj|c:\\zprogramacion\\programacion daw\\tema2\\tema2_tarea07\\tema2_tarea07\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C8C72C0-FB8B-40B1-808C-EC217A87D772}|Tema2_tarea07\\Tema2_tarea07.csproj|solutionrelative:tema2_tarea07\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8C72C0-FB8B-40B1-808C-EC217A87D772}|Tema2_tarea07\\Tema2_tarea07.csproj|c:\\zprogramacion\\programacion daw\\tema2\\tema2_tarea07\\tema2_tarea07\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8C72C0-FB8B-40B1-808C-EC217A87D772}|Tema2_tarea07\\Tema2_tarea07.csproj|solutionrelative:tema2_tarea07\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6d4078d1-5951-4ed1-ac0e-0a8099c1cce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\zProgramacion\\Programacion DAW\\Tema2\\Tema2_tarea07\\Tema2_tarea07\\Form1.cs",
+              "RelativeDocumentMoniker": "Tema2_tarea07\\Form1.cs",
+              "ToolTip": "C:\\zProgramacion\\Programacion DAW\\Tema2\\Tema2_tarea07\\Tema2_tarea07\\Form1.cs",
+              "RelativeToolTip": "Tema2_tarea07\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T13:37:14.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\zProgramacion\\Programacion DAW\\Tema2\\Tema2_tarea07\\Tema2_tarea07\\Form1.cs",
+              "RelativeDocumentMoniker": "Tema2_tarea07\\Form1.cs",
+              "ToolTip": "C:\\zProgramacion\\Programacion DAW\\Tema2\\Tema2_tarea07\\Tema2_tarea07\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Tema2_tarea07\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T13:26:40.081Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
