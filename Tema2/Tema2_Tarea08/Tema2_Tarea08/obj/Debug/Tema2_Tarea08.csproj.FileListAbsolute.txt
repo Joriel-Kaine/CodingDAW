@@ -1,0 +1,11 @@
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea08\Tema2_Tarea08\bin\Debug\Tema2_Tarea08.exe.config
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea08\Tema2_Tarea08\bin\Debug\Tema2_Tarea08.exe
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea08\Tema2_Tarea08\bin\Debug\Tema2_Tarea08.pdb
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea08\Tema2_Tarea08\obj\Debug\Tema2_Tarea08.csproj.AssemblyReference.cache
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea08\Tema2_Tarea08\obj\Debug\Tema2_Tarea08.Form1.resources
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea08\Tema2_Tarea08\obj\Debug\Tema2_Tarea08.Properties.Resources.resources
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea08\Tema2_Tarea08\obj\Debug\Tema2_Tarea08.csproj.GenerateResource.cache
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea08\Tema2_Tarea08\obj\Debug\Tema2_Tarea08.csproj.CoreCompileInputs.cache
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea08\Tema2_Tarea08\obj\Debug\Tema2_Tarea08.exe
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea08\Tema2_Tarea08\obj\Debug\Tema2_Tarea08.pdb
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea08\Tema2_Tarea08\obj\Debug\Tema2_Tarea08.exe.config
