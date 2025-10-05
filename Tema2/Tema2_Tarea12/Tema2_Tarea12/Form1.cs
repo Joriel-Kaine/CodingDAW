@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,11 +18,15 @@ namespace Tema2_Tarea12
             InitializeComponent();
         }
 
+        const decimal convert = 166.386M;
+
         private void btnPeseta_Click(object sender, EventArgs e)
         {
             try
             {
-                double euro = double.Parse(txtEuro.Text);
+                decimal euro = decimal.Parse(txtEuro.Text);
+
+                txtPeseta.Text = (euro * convert).ToString("N3");
             }
             catch (FormatException)
             {
@@ -33,7 +38,9 @@ namespace Tema2_Tarea12
         {
             try
             {
-                double peseta = double.Parse(txtPeseta.Text);
+                decimal peseta = decimal.Parse(txtPeseta.Text);
+
+                txtEuro.Text = (peseta / convert).ToString("N3");
             }
             catch (FormatException)
             {
