@@ -32,6 +32,7 @@
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.lblCms = new System.Windows.Forms.Label();
             this.btnResultado = new System.Windows.Forms.Button();
+            this.lblResultado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblAltura
@@ -75,12 +76,24 @@
             this.btnResultado.TabIndex = 3;
             this.btnResultado.Text = "Resultado";
             this.btnResultado.UseVisualStyleBackColor = false;
+            this.btnResultado.Click += new System.EventHandler(this.btnResultado_Click);
+            // 
+            // lblResultado
+            // 
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado.Location = new System.Drawing.Point(139, 258);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(267, 29);
+            this.lblResultado.TabIndex = 4;
+            this.lblResultado.Text = "Mide X metros y X cms.";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 344);
+            this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.btnResultado);
             this.Controls.Add(this.lblCms);
             this.Controls.Add(this.txtAltura);
@@ -98,6 +111,7 @@
         private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.Label lblCms;
         private System.Windows.Forms.Button btnResultado;
+        private System.Windows.Forms.Label lblResultado;
     }
 }
 

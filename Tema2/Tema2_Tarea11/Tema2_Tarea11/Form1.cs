@@ -16,5 +16,22 @@ namespace Tema2_Tarea11
         {
             InitializeComponent();
         }
+
+        private void btnResultado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int numero = int.Parse(txtAltura.Text);
+
+                int metros = numero / 100;
+                int centimetros = numero - (metros * 100);
+
+                lblResultado.Text = ($"Mide {metros} metros y {centimetros} cms.");
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Introduce un valor numérico válido.", "Error de formato");
+            }
+        }
     }
 }
