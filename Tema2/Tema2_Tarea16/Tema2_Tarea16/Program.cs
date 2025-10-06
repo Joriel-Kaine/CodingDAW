@@ -12,24 +12,31 @@ namespace Tema2_Tarea16
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Tarea 16: Manuel MR");
+            try
+            {
+                Console.WriteLine("Tarea 16: Manuel MR");
 
-            Console.Write("\nEscribe el número de horas normales al mes: ");
-            int horasNormal = int.Parse(Console.ReadLine());
+                Console.Write("\nEscribe el número de horas normales al mes: ");
+                int horasNormal = int.Parse(Console.ReadLine());
 
-            Console.Write("Escribe el número de horas extra al mes: ");
-            int horasExtra = int.Parse(Console.ReadLine());
+                Console.Write("Escribe el número de horas extra al mes: ");
+                int horasExtra = int.Parse(Console.ReadLine());
 
-            Console.Write("Escribe el precio por hora: ");
-            decimal precioHora = decimal.Parse(Console.ReadLine());
+                Console.Write("Escribe el precio por hora: ");
+                decimal precioHora = decimal.Parse(Console.ReadLine());
 
-            Console.WriteLine($"\nHoras normales: {horasNormal}, horas extra: {horasExtra} y un precio/hora de {precioHora} euros.");
+                Console.WriteLine($"\nHoras normales: {horasNormal}, horas extra: {horasExtra} y un precio/hora de {precioHora} euros.");
 
-            decimal nominaSinRetencion = (horasNormal * precioHora) + (horasExtra * (precioHora * 2));
-            decimal nominaMensual = nominaSinRetencion - (nominaSinRetencion * (retencion / 100));
+                decimal nominaSinRetencion = (horasNormal * precioHora) + (horasExtra * (precioHora * 2));
+                decimal nominaMensual = nominaSinRetencion - (nominaSinRetencion * (retencion / 100));
 
-            Console.WriteLine($"\nNómina mensual sin retención: {nominaSinRetencion} euros.");
-            Console.WriteLine($"Nómina mensual: {nominaMensual} euros.");
+                Console.WriteLine($"\nNómina mensual sin retención: {nominaSinRetencion} euros.");
+                Console.WriteLine($"Nómina mensual: {nominaMensual} euros.");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Introduce un valor numérico válido.");
+            }
         }
     }
 }
