@@ -1,0 +1,8 @@
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea15\Tema2_Tarea15\bin\Debug\Tema2_Tarea15.exe.config
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea15\Tema2_Tarea15\bin\Debug\Tema2_Tarea15.exe
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea15\Tema2_Tarea15\bin\Debug\Tema2_Tarea15.pdb
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea15\Tema2_Tarea15\obj\Debug\Tema2_Tarea15.csproj.AssemblyReference.cache
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea15\Tema2_Tarea15\obj\Debug\Tema2_Tarea15.csproj.CoreCompileInputs.cache
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea15\Tema2_Tarea15\obj\Debug\Tema2_Tarea15.exe
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea15\Tema2_Tarea15\obj\Debug\Tema2_Tarea15.pdb
+C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea15\Tema2_Tarea15\obj\Debug\Tema2_Tarea15.exe.config
