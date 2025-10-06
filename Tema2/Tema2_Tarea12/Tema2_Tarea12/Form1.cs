@@ -18,7 +18,7 @@ namespace Tema2_Tarea12
             InitializeComponent();
         }
 
-        const decimal convert = 166.386M;
+        const decimal Convert = 166.386M;
 
         private void btnPeseta_Click(object sender, EventArgs e)
         {
