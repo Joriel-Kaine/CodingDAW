@@ -19,7 +19,7 @@ namespace Tema2_Tarea13
 
         enum Estacion
         {
-            Primavera,
+            Primavera = 1,
             Verano,
             Otoño,
             Invierno
@@ -28,25 +28,25 @@ namespace Tema2_Tarea13
         private void btnPrimavera_Click(object sender, EventArgs e)
         {
             Estacion est = Estacion.Primavera;
-            MessageBox.Show("Estación: " + est.ToString() + " (" + (int)++est + ")");
+            MessageBox.Show("Estación: " + est.ToString() + " (" + (int)est + ")");
         }
 
         private void btnVerano_Click(object sender, EventArgs e)
         {
             Estacion est = Estacion.Verano;
-            MessageBox.Show("Estación: " + est.ToString() + " (" + (int)++est + ")");
+            MessageBox.Show("Estación: " + est.ToString() + " (" + (int)est + ")");
         }
 
         private void btnOtono_Click(object sender, EventArgs e)
         {
             Estacion est = Estacion.Otoño;
-            MessageBox.Show("Estación: " + est.ToString() + " (" + (int)++est + ")");
+            MessageBox.Show("Estación: " + est.ToString() + " (" + (int)est + ")");
         }
 
         private void btnInvierno_Click(object sender, EventArgs e)
         {
             Estacion est = Estacion.Invierno;
-            MessageBox.Show("Estación: " + est.ToString() + " (" + (int)++est + ")");
+            MessageBox.Show("Estación: " + est.ToString() + " (" + (int)est + ")");
         }
     }
 }
