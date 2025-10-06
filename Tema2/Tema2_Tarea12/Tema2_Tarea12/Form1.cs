@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Tema2_Tarea12
 {
-    const decimal Convert = 166.386m;
-    
     public partial class Form1 : Form
     {
+        const decimal Convert = 166.386m;
+
         public Form1()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace Tema2_Tarea12
             {
                 decimal euro = decimal.Parse(txtEuro.Text);
 
-                txtPeseta.Text = (euro * convert).ToString("N3");
+                txtPeseta.Text = (euro * Convert).ToString("N3");
             }
             catch (FormatException)
             {
@@ -40,7 +40,7 @@ namespace Tema2_Tarea12
             {
                 decimal peseta = decimal.Parse(txtPeseta.Text);
 
-                txtEuro.Text = (peseta / convert).ToString("N3");
+                txtEuro.Text = (peseta / Convert).ToString("N3");
             }
             catch (FormatException)
             {
