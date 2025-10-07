@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\zProgramacion\\Programacion DAW\\Tema2\\Tema2_Integrador\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7A91C29-F95E-49C3-A09E-307AD255380F}|Tema2_Integrador\\Tema2_Integrador.csproj|c:\\zprogramacion\\programacion daw\\tema2\\tema2_integrador\\tema2_integrador\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D7A91C29-F95E-49C3-A09E-307AD255380F}|Tema2_Integrador\\Tema2_Integrador.csproj|C:\\zProgramacion\\Programacion DAW\\Tema2\\Tema2_Integrador\\tema2_integrador\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D7A91C29-F95E-49C3-A09E-307AD255380F}|Tema2_Integrador\\Tema2_Integrador.csproj|solutionrelative:tema2_integrador\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A91C29-F95E-49C3-A09E-307AD255380F}|Tema2_Integrador\\Tema2_Integrador.csproj|c:\\zprogramacion\\programacion daw\\tema2\\tema2_integrador\\tema2_integrador\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A91C29-F95E-49C3-A09E-307AD255380F}|Tema2_Integrador\\Tema2_Integrador.csproj|solutionrelative:tema2_integrador\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,6 +31,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{6d4078d1-5951-4ed1-ac0e-0a8099c1cce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\zProgramacion\\Programacion DAW\\Tema2\\Tema2_Integrador\\Tema2_Integrador\\Form1.cs",
+              "RelativeDocumentMoniker": "Tema2_Integrador\\Form1.cs",
+              "ToolTip": "C:\\zProgramacion\\Programacion DAW\\Tema2\\Tema2_Integrador\\Tema2_Integrador\\Form1.cs",
+              "RelativeToolTip": "Tema2_Integrador\\Form1.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwCwAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T01:16:54.816Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

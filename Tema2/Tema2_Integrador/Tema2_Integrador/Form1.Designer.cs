@@ -31,11 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.grbDuracion = new System.Windows.Forms.GroupBox();
             this.lblDuracionTotal = new System.Windows.Forms.Label();
-            this.txtSegTrack1 = new System.Windows.Forms.TextBox();
             this.txtSegTrack3 = new System.Windows.Forms.TextBox();
             this.txtMinTrack3 = new System.Windows.Forms.TextBox();
             this.txtSegTrack2 = new System.Windows.Forms.TextBox();
             this.txtMinTrack2 = new System.Windows.Forms.TextBox();
+            this.txtSegTrack1 = new System.Windows.Forms.TextBox();
             this.txtMinTrack1 = new System.Windows.Forms.TextBox();
             this.lblTrack3 = new System.Windows.Forms.Label();
             this.lblTrack2 = new System.Windows.Forms.Label();
@@ -70,11 +70,11 @@
             // grbDuracion
             // 
             this.grbDuracion.Controls.Add(this.lblDuracionTotal);
-            this.grbDuracion.Controls.Add(this.txtSegTrack1);
             this.grbDuracion.Controls.Add(this.txtSegTrack3);
             this.grbDuracion.Controls.Add(this.txtMinTrack3);
             this.grbDuracion.Controls.Add(this.txtSegTrack2);
             this.grbDuracion.Controls.Add(this.txtMinTrack2);
+            this.grbDuracion.Controls.Add(this.txtSegTrack1);
             this.grbDuracion.Controls.Add(this.txtMinTrack1);
             this.grbDuracion.Controls.Add(this.lblTrack3);
             this.grbDuracion.Controls.Add(this.lblTrack2);
@@ -99,21 +99,13 @@
             this.lblDuracionTotal.TabIndex = 11;
             this.lblDuracionTotal.Text = "Duración total:";
             // 
-            // txtSegTrack1
-            // 
-            this.txtSegTrack1.Font = new System.Drawing.Font("Lato Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSegTrack1.Location = new System.Drawing.Point(400, 140);
-            this.txtSegTrack1.Name = "txtSegTrack1";
-            this.txtSegTrack1.Size = new System.Drawing.Size(150, 36);
-            this.txtSegTrack1.TabIndex = 10;
-            // 
             // txtSegTrack3
             // 
             this.txtSegTrack3.Font = new System.Drawing.Font("Lato Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSegTrack3.Location = new System.Drawing.Point(400, 346);
             this.txtSegTrack3.Name = "txtSegTrack3";
             this.txtSegTrack3.Size = new System.Drawing.Size(150, 36);
-            this.txtSegTrack3.TabIndex = 9;
+            this.txtSegTrack3.TabIndex = 10;
             // 
             // txtMinTrack3
             // 
@@ -121,7 +113,7 @@
             this.txtMinTrack3.Location = new System.Drawing.Point(179, 346);
             this.txtMinTrack3.Name = "txtMinTrack3";
             this.txtMinTrack3.Size = new System.Drawing.Size(150, 36);
-            this.txtMinTrack3.TabIndex = 8;
+            this.txtMinTrack3.TabIndex = 9;
             // 
             // txtSegTrack2
             // 
@@ -129,7 +121,7 @@
             this.txtSegTrack2.Location = new System.Drawing.Point(400, 241);
             this.txtSegTrack2.Name = "txtSegTrack2";
             this.txtSegTrack2.Size = new System.Drawing.Size(150, 36);
-            this.txtSegTrack2.TabIndex = 7;
+            this.txtSegTrack2.TabIndex = 8;
             // 
             // txtMinTrack2
             // 
@@ -137,7 +129,15 @@
             this.txtMinTrack2.Location = new System.Drawing.Point(179, 241);
             this.txtMinTrack2.Name = "txtMinTrack2";
             this.txtMinTrack2.Size = new System.Drawing.Size(150, 36);
-            this.txtMinTrack2.TabIndex = 6;
+            this.txtMinTrack2.TabIndex = 7;
+            // 
+            // txtSegTrack1
+            // 
+            this.txtSegTrack1.Font = new System.Drawing.Font("Lato Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSegTrack1.Location = new System.Drawing.Point(400, 140);
+            this.txtSegTrack1.Name = "txtSegTrack1";
+            this.txtSegTrack1.Size = new System.Drawing.Size(150, 36);
+            this.txtSegTrack1.TabIndex = 6;
             // 
             // txtMinTrack1
             // 
@@ -350,11 +350,11 @@
         private System.Windows.Forms.Label lblSegundos;
         private System.Windows.Forms.Label lblMinutos;
         private System.Windows.Forms.Label lblDuracionTotal;
-        private System.Windows.Forms.TextBox txtSegTrack1;
         private System.Windows.Forms.TextBox txtSegTrack3;
         private System.Windows.Forms.TextBox txtMinTrack3;
         private System.Windows.Forms.TextBox txtSegTrack2;
         private System.Windows.Forms.TextBox txtMinTrack2;
+        private System.Windows.Forms.TextBox txtSegTrack1;
         private System.Windows.Forms.Label lblTotalGBP;
         private System.Windows.Forms.Label lblTotalUSD;
         private System.Windows.Forms.Label lblTotalEUR;
