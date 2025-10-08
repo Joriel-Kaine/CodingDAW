@@ -1,4 +1,4 @@
-﻿namespace Tema2_Integrador
+﻿namespace Tema2_Integrador_Form
 {
     partial class Form1
     {

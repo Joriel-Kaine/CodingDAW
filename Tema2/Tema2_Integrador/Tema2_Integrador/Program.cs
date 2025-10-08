@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tema2_Integrador
+namespace Tema2_Integrador_Form
 {
     internal static class Program
     {

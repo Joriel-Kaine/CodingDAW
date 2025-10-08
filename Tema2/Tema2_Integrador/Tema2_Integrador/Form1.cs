@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tema2_Integrador
+namespace Tema2_Integrador_Form
 {
     public partial class Form1 : Form
     {
@@ -64,11 +64,19 @@ namespace Tema2_Integrador
                 decimal totalLibras = totalEuros * GBP;
 
                 // Mostramos en los label los resultados de las operaciones.
-                lblNeto.Text = 
+                lblNeto.Text = $"Neto: {neto:C2}";
+                lblIVA.Text = $"IVA: {iva:C2}";
+                lblTotalEUR.Text = $"Total (EUR): {totalEuros:C2}";
+                lblTotalUSD.Text = $"Total (USD): {totalDolares:N2}";
+                lblTotalGBP.Text = $"Total (GBP): {totalLibras:N2}";
             }
             catch (FormatException)
             {
                 MessageBox.Show("Introduce un valor numérico válido.", "Error de formato");
+            }
+            finally
+            {
+                txtMinTrack1.Focus();
             }
         }
     }

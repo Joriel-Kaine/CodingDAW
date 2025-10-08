@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tema2_Integrador.Properties
+namespace Tema2_Integrador_Form.Properties
 {
 
 
