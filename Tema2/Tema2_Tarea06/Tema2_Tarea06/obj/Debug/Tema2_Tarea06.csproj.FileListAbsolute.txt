@@ -9,3 +9,14 @@ C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\obj\Debug\Te
 C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\obj\Debug\Tema2_Tarea06.exe
 C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\obj\Debug\Tema2_Tarea06.pdb
 C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\obj\Debug\Tema2_Tarea06.exe.config
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\bin\Debug\Tema2_Tarea06.exe.config
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\bin\Debug\Tema2_Tarea06.exe
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\bin\Debug\Tema2_Tarea06.pdb
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\obj\Debug\Tema2_Tarea06.csproj.AssemblyReference.cache
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\obj\Debug\Tema2_Tarea06.exe.config
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\obj\Debug\Tema2_Tarea06.Form1.resources
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\obj\Debug\Tema2_Tarea06.Properties.Resources.resources
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\obj\Debug\Tema2_Tarea06.csproj.GenerateResource.cache
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\obj\Debug\Tema2_Tarea06.csproj.CoreCompileInputs.cache
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\obj\Debug\Tema2_Tarea06.exe
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Tarea06\Tema2_Tarea06\obj\Debug\Tema2_Tarea06.pdb

@@ -17,7 +17,7 @@ namespace Tema2_Tarea20
                 Console.Write("\nIntroduce un carácter: ");
                 char caracter = char.Parse(Console.ReadLine());
 
-                bool vocal = "a" == caracter;
+                bool vocal = 'a' == caracter;
                 bool digito = (0 <= caracter) && (caracter <= 9);
 
                 Console.WriteLine($"\n¿Es vocal?: {vocal}" +
