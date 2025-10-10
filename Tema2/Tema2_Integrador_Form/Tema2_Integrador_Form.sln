@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9
+VisualStudioVersion = 17.14.36518.9 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema2_Integrador_Form", "Tema2_Integrador\Tema2_Integrador_Form.csproj", "{D7A91C29-F95E-49C3-A09E-307AD255380F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema2_Integrador_Form", "Tema2_Integrador_Form\Tema2_Integrador_Form.csproj", "{D7A91C29-F95E-49C3-A09E-307AD255380F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7ECF057E-A375-4DED-ADD8-E5FE04D9CB91}
+		SolutionGuid = {2C2B14AF-962B-40E7-A86D-9F04595173FB}
 	EndGlobalSection
 EndGlobal

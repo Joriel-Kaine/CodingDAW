@@ -1,0 +1,11 @@
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Integrador_Form\Tema2_Integrador_Form\bin\Debug\Tema2_Integrador.exe.config
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Integrador_Form\Tema2_Integrador_Form\bin\Debug\Tema2_Integrador.exe
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Integrador_Form\Tema2_Integrador_Form\bin\Debug\Tema2_Integrador.pdb
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Integrador_Form\Tema2_Integrador_Form\obj\Debug\Tema2_Integrador_Form.csproj.AssemblyReference.cache
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Integrador_Form\Tema2_Integrador_Form\obj\Debug\Tema2_Integrador.exe.config
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Integrador_Form\Tema2_Integrador_Form\obj\Debug\Tema2_Integrador_Form.Form1.resources
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Integrador_Form\Tema2_Integrador_Form\obj\Debug\Tema2_Integrador.Properties.Resources.resources
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Integrador_Form\Tema2_Integrador_Form\obj\Debug\Tema2_Integrador_Form.csproj.GenerateResource.cache
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Integrador_Form\Tema2_Integrador_Form\obj\Debug\Tema2_Integrador_Form.csproj.CoreCompileInputs.cache
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Integrador_Form\Tema2_Integrador_Form\obj\Debug\Tema2_Integrador.exe
+C:\zProgramacion\CodingDAW\Tema2\Tema2_Integrador_Form\Tema2_Integrador_Form\obj\Debug\Tema2_Integrador.pdb
