@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\zProgramacion\\CodingDAW\\Tema2\\Tema2_Integrador_Form\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7A91C29-F95E-49C3-A09E-307AD255380F}|Tema2_Integrador_Form.csproj|c:\\zprogramacion\\codingdaw\\tema2\\tema2_integrador_form\\tema2_integrador_form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A91C29-F95E-49C3-A09E-307AD255380F}|Tema2_Integrador_Form.csproj|solutionrelative:tema2_integrador_form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7A91C29-F95E-49C3-A09E-307AD255380F}|Tema2_Integrador_Form\\Tema2_Integrador_Form.csproj|c:\\zprogramacion\\codingdaw\\tema2\\tema2_integrador_form\\tema2_integrador_form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D7A91C29-F95E-49C3-A09E-307AD255380F}|Tema2_Integrador_Form\\Tema2_Integrador_Form.csproj|solutionrelative:tema2_integrador_form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7A91C29-F95E-49C3-A09E-307AD255380F}|Tema2_Integrador_Form.csproj|c:\\zprogramacion\\codingdaw\\tema2\\tema2_integrador_form\\tema2_integrador_form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D7A91C29-F95E-49C3-A09E-307AD255380F}|Tema2_Integrador_Form.csproj|C:\\zProgramacion\\CodingDAW\\Tema2\\Tema2_Integrador_Form\\tema2_integrador_form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D7A91C29-F95E-49C3-A09E-307AD255380F}|Tema2_Integrador_Form.csproj|solutionrelative:tema2_integrador_form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A91C29-F95E-49C3-A09E-307AD255380F}|Tema2_Integrador_Form\\Tema2_Integrador_Form.csproj|c:\\zprogramacion\\codingdaw\\tema2\\tema2_integrador_form\\tema2_integrador_form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A91C29-F95E-49C3-A09E-307AD255380F}|Tema2_Integrador_Form\\Tema2_Integrador_Form.csproj|solutionrelative:tema2_integrador_form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,6 +43,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\zProgramacion\\CodingDAW\\Tema2\\Tema2_Integrador_Form\\Tema2_Integrador_Form\\Form1.cs",
+              "RelativeDocumentMoniker": "Tema2_Integrador_Form\\Form1.cs",
+              "ToolTip": "C:\\zProgramacion\\CodingDAW\\Tema2\\Tema2_Integrador_Form\\Tema2_Integrador_Form\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Tema2_Integrador_Form\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T16:44:38.92Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\zProgramacion\\CodingDAW\\Tema2\\Tema2_Integrador_Form\\Tema2_Integrador_Form\\Form1.cs",
               "RelativeDocumentMoniker": "Tema2_Integrador_Form\\Form1.cs",
@@ -58,8 +74,7 @@
               "ToolTip": "C:\\zProgramacion\\CodingDAW\\Tema2\\Tema2_Integrador_Form\\Tema2_Integrador_Form\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Tema2_Integrador_Form\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:40:40.07Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-10-10T16:40:40.07Z"
             }
           ]
         }
