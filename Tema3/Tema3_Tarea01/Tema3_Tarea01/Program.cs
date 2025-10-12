@@ -26,7 +26,7 @@ namespace Tema3_Tarea01
                     Console.WriteLine("\n\nEl número introducido NO es el 2\n\n");
                 }
             }
-            catch
+            catch (Exception)
             {
                 Console.Clear();
                 Console.WriteLine("\n\n\n\nIntroduce un valor numérico válido.\n\n\n\n");
