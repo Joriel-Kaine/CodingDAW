@@ -14,6 +14,8 @@ namespace Tema3_Tarea05
 
             try
             {
+                string calificacion;
+
                 Console.Write("Introduce la nota del alumno: ");
                 double nota = double.Parse(Console.ReadLine());
 
@@ -21,28 +23,31 @@ namespace Tema3_Tarea05
                 {
                     if (nota < 3)
                     {
-                        Console.WriteLine($"\n\nCon la nota de {nota} la calificación es MUY DEFICIENTE.\n\n");
+                        calificacion = "MUY DEFICIENTE";
                     }
                     else if (nota < 5)
                     {
-                        Console.WriteLine($"\n\nCon la nota de {nota} la calificación es INSUFICIENTE.\n\n");
+                        calificacion = "INSUFICIENTE";
                     }
                     else if (nota < 6)
                     {
-                        Console.WriteLine($"\n\nCon la nota de {nota} la calificación es SUFICIENTE.\n\n");
+                        calificacion = "SUFICIENTE";
                     }
                     else if (nota < 7)
                     {
-                        Console.WriteLine($"\n\nCon la nota de {nota} la calificación es BIEN.\n\n");
+                        calificacion = "BIEN";
                     }
                     else if (nota < 9)
                     {
-                        Console.WriteLine($"\n\nCon la nota de {nota} la calificación es NOTABLE.\n\n");
+                        calificacion = "NOTABLE";
                     }
                     else
                     {
+                        calificacion = "SOBRESALIENTE";
                         Console.WriteLine($"\n\nCon la nota de {nota} la calificación es SOBRESALIENTE.\n\n");
                     }
+
+                    Console.WriteLine($"\n\nCon la nota de {nota} la calificación es {calificacion}.\n\n");
                 }
                 else
                 {
