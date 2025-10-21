@@ -1,0 +1,11 @@
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea12\Tema3_Tarea12\bin\Debug\Tema3_Tarea12.exe.config
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea12\Tema3_Tarea12\bin\Debug\Tema3_Tarea12.exe
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea12\Tema3_Tarea12\bin\Debug\Tema3_Tarea12.pdb
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea12\Tema3_Tarea12\obj\Debug\Tema3_Tarea12.csproj.AssemblyReference.cache
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea12\Tema3_Tarea12\obj\Debug\Tema3_Tarea12.Form1.resources
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea12\Tema3_Tarea12\obj\Debug\Tema3_Tarea12.Properties.Resources.resources
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea12\Tema3_Tarea12\obj\Debug\Tema3_Tarea12.csproj.GenerateResource.cache
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea12\Tema3_Tarea12\obj\Debug\Tema3_Tarea12.csproj.CoreCompileInputs.cache
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea12\Tema3_Tarea12\obj\Debug\Tema3_Tarea12.exe
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea12\Tema3_Tarea12\obj\Debug\Tema3_Tarea12.pdb
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea12\Tema3_Tarea12\obj\Debug\Tema3_Tarea12.exe.config

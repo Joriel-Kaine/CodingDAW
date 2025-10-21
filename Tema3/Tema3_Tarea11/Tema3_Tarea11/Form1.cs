@@ -20,16 +20,168 @@ namespace Tema3_Tarea11
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             decimal dinero = decimal.Parse(txtValor.Text);
-            decimal quinientos = 0, doscientos = 0, cincuenta = 0, veinte = 0,
-                    diez = 0, cinco = 0, dos = 0, uno = 0, cincuentaCent = 0,
-                    veinteCent = 0, diezCent = 0, cincoCent = 0, dosCent = 0;
 
-            while (dinero > 1)
+            /*
+             * Redondeando los decimales SIEMPRE abajo con la fórmula Math.Floor.
+             * Hacemos casting de la cantidad introducida a entero (int).
+             */
+            int euros = (int)Math.Floor(dinero);
+            /*
+             * Multiplicamos la cantidad introducida (con decimales) por cien.
+             * Multiplicamos la cantidad de euros sin la parte decimal por cien también.
+             * Restamos la cantidad introducida menos la parte sin decimales.
+             * Hacemos casting de la operación a entero.
+             */
+            int centimos = (int)(dinero * 100 - euros * 100);
+
+            if (euros >= 500)
             {
-                if (dinero >= 500)
+                int resultado = euros / 500;
+                // Comprobamos si la salida es singular o plural.
+                if (resultado == 1)
                 {
-                    quinientos = dinero / 500;
+                    lblResultado.Text = $"{resultado} billete de 500 euros.\n";
+
                 }
+                else
+                {
+                    lblResultado.Text = $"{resultado} billetes de 500 euros.\n";
+                }
+                euros -= resultado * 500;
+            }
+
+            if (euros >= 200)
+            {
+                int resultado = euros / 200;
+                if (resultado == 1)
+                {
+                    // Concatenamos el resultado.
+                    lblResultado.Text += $"{resultado} billete de 200 euros.\n";
+
+                }
+                else
+                {
+                    lblResultado.Text += $"{resultado} billetes de 200 euros.\n";
+                }
+                euros -= resultado * 200;
+            }
+
+            if (euros >= 50)
+            {
+                int resultado = euros / 50;
+                if (resultado == 1)
+                {
+                    lblResultado.Text += $"{resultado} billete de 50 euros.\n";
+
+                }
+                else
+                {
+                    lblResultado.Text += $"{resultado} billetes de 50 euros.\n";
+                }
+                euros -= resultado * 50;
+            }
+
+            if (euros >= 10)
+            {
+                int resultado = euros / 10;
+                if (resultado == 1)
+                {
+                    lblResultado.Text += $"{resultado} billete de 10 euros.\n";
+
+                }
+                else
+                {
+                    lblResultado.Text += $"{resultado} billetes de 10 euros.\n";
+                }
+                euros -= resultado * 10;
+            }
+
+            if (euros >= 5)
+            {
+                int resultado = euros / 5;   
+                lblResultado.Text += $"{resultado} billete de 5 euros.\n";
+                euros -= resultado * 5;
+            }
+
+            if (euros >= 2)
+            {
+                int resultado = euros / 2;
+                if (resultado == 1)
+                {
+                    lblResultado.Text += $"{resultado} moneda de 2 euros.\n";
+
+                }
+                else
+                {
+                    lblResultado.Text += $"{resultado} monedas de 2 euros.\n";
+                }
+                euros -= resultado * 500;
+            }
+
+            if (euros >= 1)
+            {
+                int resultado = euros;    
+                lblResultado.Text += $"{resultado} moneda de 1 euro.\n";
+                euros -= resultado;
+            }
+
+            if (centimos >= 50)
+            {
+                int resultado = centimos / 50;
+                if (resultado == 1)
+                {
+                    lblResultado.Text += $"{resultado} moneda de 50 céntimos.\n";
+
+                }
+                else
+                {
+                    lblResultado.Text += $"{resultado} monedas de 50 céntimos.\n";
+                }
+                centimos -= resultado * 50;
+            }
+
+            if (centimos >= 20)
+            {
+                int resultado = centimos / 20;
+                if (resultado == 1)
+                {
+                    lblResultado.Text += $"{resultado} moneda de 20 céntimos.\n";
+
+                }
+                else
+                {
+                    lblResultado.Text += $"{resultado} monedas de 20 céntimos.\n";
+                }
+                centimos -= resultado * 20;
+            }
+
+            if (centimos >= 10)
+            {
+                int resultado = centimos / 10;     
+                lblResultado.Text += $"{resultado} moneda de 10 céntimos.\n";
+                centimos -= resultado * 10;
+            }
+
+            if (centimos >= 5)
+            {
+                int resultado = centimos / 5;           
+                lblResultado.Text += $"{resultado} moneda de 5 céntimos.\n";
+                centimos -= resultado * 5;
+            }
+
+            if (centimos >= 2)
+            {
+                int resultado = centimos / 2;
+                if (resultado == 1)
+                {
+                    lblResultado.Text += $"{resultado} moneda de 2 céntimos.\n";
+
+                }
+                else
+                {
+                    lblResultado.Text += $"{resultado} monedas de 2 céntimos.\n";
+                }
+                centimos -= resultado * 2;
             }
         }
 
