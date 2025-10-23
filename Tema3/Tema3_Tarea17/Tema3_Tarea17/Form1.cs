@@ -18,26 +18,45 @@ namespace Tema3_Tarea17
             InitializeComponent();
         }
 
-        private void btnFor_Click(object sender, EventArgs e)
-        {
-            int numero;
-
-            numero = int.Parse(Interaction.InputBox("Introduce un número", "Número mayor y número menor"));
-
-            if (numero >= 0)
-            {
-                if 
-            }
-        }
-
         private void btnWhile_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int numero, mayor, menor;
 
-        }
+                numero = int.Parse(Interaction.InputBox("Introduce un número entero", "Tarea 17", "numero"));
 
-        private void btnDoWhile_Click(object sender, EventArgs e)
-        {
+                if (numero >= 0)
+                {
+                    mayor = numero;
+                    menor = numero;
 
+                    while (numero >= 0)
+                    {
+                        if (numero >= mayor)
+                        {
+                            mayor = numero;
+                        }
+                        if (numero <= menor)
+                        {
+                            menor = numero;
+                        }
+
+                        numero = int.Parse(Interaction.InputBox("Introduce un número entero", "Tarea 17", "numero"));
+                    }
+
+                    MessageBox.Show($"El número mayor es: {mayor}\n" +
+                                    $"El número menor es: {menor}", "número mayor y número menor");
+                }
+                else
+                {
+                    MessageBox.Show("Introduce un número entero positivo.", "Número no válido");
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Introduce un número entero válido.", "Error de formato");
+            }
         }
     }
 }

@@ -8,3 +8,4 @@ C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea17\Tema3_Tarea17\obj\Debug\Tema3_Tar
 C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea17\Tema3_Tarea17\obj\Debug\Tema3_Tarea17.csproj.CoreCompileInputs.cache
 C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea17\Tema3_Tarea17\obj\Debug\Tema3_Tarea17.exe
 C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea17\Tema3_Tarea17\obj\Debug\Tema3_Tarea17.pdb
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea17\Tema3_Tarea17\obj\Debug\Tema3_Tarea17.exe.config
