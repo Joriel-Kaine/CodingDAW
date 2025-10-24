@@ -1,0 +1,8 @@
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea19\Tema3_Tarea19\bin\Debug\Tema3_Tarea19.exe.config
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea19\Tema3_Tarea19\bin\Debug\Tema3_Tarea19.exe
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea19\Tema3_Tarea19\bin\Debug\Tema3_Tarea19.pdb
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea19\Tema3_Tarea19\obj\Debug\Tema3_Tarea19.csproj.AssemblyReference.cache
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea19\Tema3_Tarea19\obj\Debug\Tema3_Tarea19.csproj.CoreCompileInputs.cache
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea19\Tema3_Tarea19\obj\Debug\Tema3_Tarea19.exe
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea19\Tema3_Tarea19\obj\Debug\Tema3_Tarea19.pdb
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea19\Tema3_Tarea19\obj\Debug\Tema3_Tarea19.exe.config
