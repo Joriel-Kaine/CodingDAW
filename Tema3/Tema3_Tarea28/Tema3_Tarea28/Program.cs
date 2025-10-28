@@ -14,7 +14,7 @@ namespace Tema3_Tarea28
                               "----------------------------");
 
             bool entrada;
-            bool primo = true;
+            bool esPrimo = true;
 
             Console.Write("\n\nIntroduce un número entero: ");
             entrada = int.TryParse(Console.ReadLine(), out int numero);
@@ -25,11 +25,11 @@ namespace Tema3_Tarea28
                 {
                     if (numero % i == 0)
                     {
-                        primo = false;
+                        esPrimo = false;
                     }
                 }
 
-                if (primo)
+                if (esPrimo)
                 {
                     Console.WriteLine($"\n\nEl número {numero} es un número pri1mo.");
                 }
