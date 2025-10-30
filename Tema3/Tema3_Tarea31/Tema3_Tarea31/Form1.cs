@@ -10,27 +10,45 @@ namespace Tema3_Tarea31
             InitializeComponent();
         }
 
+        const int MaxIntentos = 5;
         private void btnAccederSistema_Click(object sender, EventArgs e)
         {
-            string usuario;
-            string password;
-            int intentos = 1;
+            string usuario, password;
+            int intentos = 0;
+            bool esCorrecto = false;
 
-            usuario = Interaction.InputBox("Introduce el nombre de usuario", "Verificar usuario", "usuario");
-            password = Interaction.InputBox("Introduce la contraseña", "Verificar contraseña", "contraseña");
-
-            while (intentos <= 5)
+            while (!esCorrecto && intentos < MaxIntentos)
             {
+                usuario = Interaction.InputBox("Introduce el nombre de usuario", "Verificar usuario", "usuario");
+                password = Interaction.InputBox("Introduce la contraseña", "Verificar contraseña", "contraseña");
+
                 if (usuario != "root" && password != "1234")
                 {
-
-                    intentos++;
-                    MessageBox.Show($"Te quedan {intentos} intentos por usar.", "Intentos");
+                    if (intentos == 0)
+                    {
+                        intentos++;
+                        MessageBox.Show($"Has usado {intentos} intento para ingresar usuario y contraseña.", "Intentos");
+                    }
+                    else
+                    {
+                        intentos++;
+                        MessageBox.Show($"Has usado {intentos} intentos para ingresar usuario y contraseña.", "Intentos");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Bienvenido al sistema.", "Weldome");
+                    esCorrecto = true;
                 }
+            }
+
+
+            if (esCorrecto)
+            {
+                MessageBox.Show("Bienvenido al sistema", "Mensaje de bienvenida");
+            }
+            else
+            {
+                MessageBox.Show("Se ha superado el número de intentos permitido.", "Límite superado");
             }
         }
     }
