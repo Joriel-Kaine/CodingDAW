@@ -1,0 +1,17 @@
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\bin\Debug\net8.0-windows\Tema3_Tarea32.exe
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\bin\Debug\net8.0-windows\Tema3_Tarea32.deps.json
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\bin\Debug\net8.0-windows\Tema3_Tarea32.runtimeconfig.json
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\bin\Debug\net8.0-windows\Tema3_Tarea32.dll
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\bin\Debug\net8.0-windows\Tema3_Tarea32.pdb
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\obj\Debug\net8.0-windows\Tema3_Tarea32.Form1.resources
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\obj\Debug\net8.0-windows\Tema3_Tarea32.csproj.GenerateResource.cache
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\obj\Debug\net8.0-windows\Tema3_Tarea32.GeneratedMSBuildEditorConfig.editorconfig
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\obj\Debug\net8.0-windows\Tema3_Tarea32.AssemblyInfoInputs.cache
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\obj\Debug\net8.0-windows\Tema3_Tarea32.AssemblyInfo.cs
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\obj\Debug\net8.0-windows\Tema3_Tarea32.csproj.CoreCompileInputs.cache
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\obj\Debug\net8.0-windows\Tema3_Tarea32.sourcelink.json
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\obj\Debug\net8.0-windows\Tema3_Tarea32.dll
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\obj\Debug\net8.0-windows\refint\Tema3_Tarea32.dll
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\obj\Debug\net8.0-windows\Tema3_Tarea32.pdb
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\obj\Debug\net8.0-windows\Tema3_Tarea32.genruntimeconfig.cache
+C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea32\Tema3_Tarea32\obj\Debug\net8.0-windows\ref\Tema3_Tarea32.dll
