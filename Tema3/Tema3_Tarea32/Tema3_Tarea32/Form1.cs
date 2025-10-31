@@ -13,29 +13,44 @@ namespace Tema3_Tarea32
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            bool isTrue = false;
-            int entrada;
+            bool esCorrecto = false;
+            int entradas;
             int totalEntradas = 0;
 
-            while (totalEntradas < MaxAforo)
+            while (totalEntradas <= MaxAforo)
             {
-                isTrue = int.TryParse(Interaction.InputBox("Introduce el número de entradas que quieres.",
-                    "Entradas", "número"), out entrada);
+                esCorrecto = int.TryParse(Interaction.InputBox("Introduce el número de entradas que quieres" +
+                    "Pulsa -1 para salir.", "Entradas", "número"), out entradas);
 
-                if (isTrue)
+                if (esCorrecto)
                 {
-                    if (entrada < MaxAforo || entrada != -1)
+                    if (entradas == -1)
                     {
-                        totalEntradas += entrada;
+                        MessageBox.Show($"Número total de asistentes registrados: {totalEntradas}");
+                        break;
                     }
-                    MessageBox.Show("Hola");
+
+                    if (totalEntradas + entradas > MaxAforo)
+                    {
+                        MessageBox.Show($"No es posible el acceso, se supera el aforo.\n" +
+                                        $"Quedan {MaxAforo - totalEntradas} entradas disponibles.");
+                    }
+                    else
+                    {
+                        totalEntradas += entradas;
+                    }
+
+                    if (MaxAforo == totalEntradas)
+                    {
+                        MessageBox.Show("Aforo completado.");
+                        break;
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Introduce un valor númerico válido.");
                 }
             }
-
         }
     }
 }
