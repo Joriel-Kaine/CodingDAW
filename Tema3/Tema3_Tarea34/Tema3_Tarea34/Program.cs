@@ -33,9 +33,10 @@ namespace Tema3_Tarea34
                 {
                     totalProductos++;
                     totalVentas += precio;
-                    precioMedioProd = totalVentas / totalProductos;
                 }
             }
+
+            precioMedioProd = totalVentas / totalProductos;
 
             Console.WriteLine($"\n---- Resumen del día ----\n" +
                               $"Productos vendidos: {totalProductos}\n" +
