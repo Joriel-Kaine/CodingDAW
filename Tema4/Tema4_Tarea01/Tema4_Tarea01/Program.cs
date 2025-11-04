@@ -15,18 +15,20 @@
             Console.WriteLine("\nTema 3 - Tarea 1: Manuel MR ®\n" +
                               "═════════════════════════════\n\n");
 
-            bool esCorrecto = false;
+            bool esCorrecto1, esCorrecto2;
             int num1, num2, resultado;
 
             Console.Write("Introduce el primero número: ");
-            esCorrecto = int.TryParse(Console.ReadLine(), out num1);
+            esCorrecto1 = int.TryParse(Console.ReadLine(), out num1);
 
             Console.Write("\nIntroduce el segundo número: ");
-            esCorrecto = int.TryParse(Console.ReadLine(), out num2);
+            esCorrecto2 = int.TryParse(Console.ReadLine(), out num2);
 
-            resultado = SumarNumeros(num1, num2);
-
-            Console.WriteLine($"\n═> La suma de {num1} y {num2} es: {resultado}");
+            if (esCorrecto1 && esCorrecto2)
+            {
+                resultado = SumarNumeros(num1, num2);
+                Console.WriteLine($"\n═> La suma de {num1} y {num2} es: {resultado}");
+            }
 
             Console.WriteLine("\n\nPulsa una tecla para salir...");
             Console.ReadKey();

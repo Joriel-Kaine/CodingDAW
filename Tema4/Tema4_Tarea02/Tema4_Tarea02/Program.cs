@@ -17,32 +17,31 @@
             Console.WriteLine("\nTema 4 - Tarea 2: Manuel MR ®\n" +
                               "═════════════════════════════\n\n");
 
-            bool esCorrecto, resultado;
+            bool esCorrecto1, esCorrecto2;
             int num1, num2;
 
             try
             {
                 Console.Write("Introduce el primer número: ");
-                esCorrecto = int.TryParse(Console.ReadLine(), out num1);
+                esCorrecto1 = int.TryParse(Console.ReadLine(), out num1);
 
                 Console.Write("\nIntroduce el segundo número: ");
-                esCorrecto = int.TryParse(Console.ReadLine(), out num2);
-                if (esCorrecto)
-                {
-                    resultado = EsDivisible(num1, num2);
+                esCorrecto2 = int.TryParse(Console.ReadLine(), out num2);
 
-                    if (resultado)
+                if (esCorrecto1 && esCorrecto2)
+                {
+                    if (EsDivisible(num1, num2))
                     {
-                        Console.WriteLine($"\n{num1} es divisible por {num2}");
+                        Console.WriteLine($"\n═> {num1} es divisible por {num2}");
                     }
                     else
                     {
-                        Console.WriteLine($"\n{num1} no es divisible por {num2}");
+                        Console.WriteLine($"\n═> {num1} no es divisible por {num2}");
                     }
                 }
                 else
                 {
-                    Console.WriteLine("\nIntroduce un valor númerico válido.");
+                    Console.WriteLine("\nIntroduce valores númericos válidos.");
                 }
             }
             catch (DivideByZeroException)
