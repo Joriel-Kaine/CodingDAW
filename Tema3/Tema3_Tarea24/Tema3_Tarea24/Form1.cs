@@ -28,10 +28,13 @@ namespace Tema3_Tarea24
                 porcentajeTercerRango = 0, porcentajeCuartoRango = 0;
             double pesoTotal = 0, pesoMedio = 0;
 
+            // Hacemos un try - parse para asegurarnos que se introduce un valor numérico.
             try
             {
+                // Pedimos que introduzca un valor antes de iniciar el bucle.
                 peso = double.Parse(Interaction.InputBox("Introduce el peso del alumno", "Tarea 24", "peso"));
 
+                // Comprobamos en qué rango de peso está y realizamos los cálculos necesarios.
                 while (peso >= 0)
                 {
                     if (peso <= 50)
@@ -53,15 +56,18 @@ namespace Tema3_Tarea24
 
                     pesoTotal += peso;
 
+                    // Se siguen introduciendo valores hasta que se introduzca un -1.
                     peso = double.Parse(Interaction.InputBox("Introduce el peso del alumno", "Tarea 24", "peso"));
                 }
 
+                // Calculamos los porcentajes de cada alumno.
                 totalAlumnos = primerRango + segundoRango + tercerRango + cuartoRango;
                 porcentajePrimerRango = (primerRango * 100) / totalAlumnos;
                 porcentajeSegundoRango = (segundoRango * 100) / totalAlumnos;
                 porcentajeTercerRango = (tercerRango * 100) / totalAlumnos;
                 porcentajeCuartoRango = (cuartoRango * 100) / totalAlumnos;
 
+                // Calculamos el peso medio de todos los alumnos.
                 pesoMedio = pesoTotal / totalAlumnos;
 
                 MessageBox.Show($"Peso de alumnos con 50 kg o menos: {primerRango}\n" +

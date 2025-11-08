@@ -33,11 +33,17 @@ namespace Tema3_Tarea11
              * Hacemos casting de la operación a entero.
              */
             int centimos = (int)(dinero * 100 - euros * 100);
-
+            
+            /*
+             * Hacemos las comprobaciones de la cantidad introducida con los diferentes billetes y monedas.
+             * Almacenamos el resultado de la división de la cantidad entre el número del billete o moneda.
+             * Con esto sabemos cuantos billetes o monedas hay de esa cantidad.
+             * Por último actualizamos la cantidad introducida inicialmente quitando los billetes o monedas ya sacados.
+             */
             if (euros >= 500)
             {
                 int resultado = euros / 500;
-                // Comprobamos si la salida es singular o plural.
+                // Sacamos por el label un mensaje diferente dependiendo si es 1 o más billetes.
                 if (resultado == 1)
                 {
                     lblResultado.Text = $"{resultado} billete de 500 euros.\n";
@@ -125,9 +131,11 @@ namespace Tema3_Tarea11
                 euros -= resultado;
             }
 
+            // Hacemos lo mismo con los céntimos
             if (centimos >= 50)
             {
                 int resultado = centimos / 50;
+                // Sacamos por el label un mensaje diferente dependiendo si es 1 o más monedas.
                 if (resultado == 1)
                 {
                     lblResultado.Text += $"{resultado} moneda de 50 céntimos.\n";
@@ -187,6 +195,10 @@ namespace Tema3_Tarea11
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            /* 
+             * Limpiamos el label del resultado y las cajas de texto.
+             * Llevamos automáticamente el cursor a la primera caja de texto.
+             */
             lblResultado.Text = "";
             txtValor.Clear();
             txtValor.Focus();

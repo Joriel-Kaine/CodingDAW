@@ -13,12 +13,12 @@ namespace Tema3_Tarea34
             Console.WriteLine("\nTema 3 - Tarea 34: Manuel MR\n" +
                               "----------------------------\n\n");
 
-            bool esCorrecto = false;
+            bool esCorrecto = false; // Declaramos una variable booleana para el TryParse.
             decimal precio;
             int totalProductos = 0;
             decimal totalVentas = 0;
             decimal precioMedioProd = 0;
-            string salida = "";
+            string salida = ""; // Declaramos una variable string para controlar la salida con "fin".
 
             Console.WriteLine("---- Registro de Ventas ----\n" +
                               "Introduce el precio de cada producto vendido.\n" +
@@ -26,9 +26,20 @@ namespace Tema3_Tarea34
 
             while (salida != "fin")
             {
-                Console.Write("Precio del producto: ");
-                salida = Console.ReadLine();
+                Console.Write("Precio del producto: "); // Pedimos que se introduzca un valor.
+                salida = Console.ReadLine(); // Almacenamos ese valor en el string.
+                
+                /*
+                 * Si el valor es numérico, lo almacena en una variable y cambia el booleano a True.
+                 * Debe ir fuera del if, ya que si va dentro del if sumaría un producto sea o no un número.
+                 */
                 esCorrecto = decimal.TryParse(salida, out precio);
+
+                /*
+                 * Si el valor introducido no es la palabra "fin"
+                 * y el valor introducido es True (valor numérico)
+                 * añade ese producto a un contador y almacena acumulando el total de las ventas.
+                 */
                 if (salida != "fin" && esCorrecto)
                 {
                     totalProductos++;
@@ -36,6 +47,7 @@ namespace Tema3_Tarea34
                 }
             }
 
+            // Calculamos el precio medio a traves del total de las ventas y los productos introducidos.
             precioMedioProd = totalVentas / totalProductos;
 
             Console.WriteLine($"\n---- Resumen del día ----\n" +
