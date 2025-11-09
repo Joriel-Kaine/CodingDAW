@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\zProgramacion\\CodingDAW\\Tema4\\Tema4_Tarea03b\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{89D8A424-13B1-4846-800E-8C4C9371A31E}|Tema4_Tarea03b\\Tema4_Tarea03b.csproj|c:\\zprogramacion\\codingdaw\\tema4\\tema4_tarea03b\\tema4_tarea03b\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{89D8A424-13B1-4846-800E-8C4C9371A31E}|Tema4_Tarea03b\\Tema4_Tarea03b.csproj|c:\\zprogramacion\\codingdaw\\tema4\\tema4_tarea03b\\tema4_tarea03b\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89D8A424-13B1-4846-800E-8C4C9371A31E}|Tema4_Tarea03b\\Tema4_Tarea03b.csproj|solutionrelative:tema4_tarea03b\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89D8A424-13B1-4846-800E-8C4C9371A31E}|Tema4_Tarea03b\\Tema4_Tarea03b.csproj|C:\\zProgramacion\\CodingDAW\\Tema4\\Tema4_Tarea03b\\tema4_tarea03b\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{89D8A424-13B1-4846-800E-8C4C9371A31E}|Tema4_Tarea03b\\Tema4_Tarea03b.csproj|solutionrelative:tema4_tarea03b\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -35,14 +39,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
+              "Title": "Form1.cs",
               "DocumentMoniker": "C:\\zProgramacion\\CodingDAW\\Tema4\\Tema4_Tarea03b\\Tema4_Tarea03b\\Form1.cs",
               "RelativeDocumentMoniker": "Tema4_Tarea03b\\Form1.cs",
-              "ToolTip": "C:\\zProgramacion\\CodingDAW\\Tema4\\Tema4_Tarea03b\\Tema4_Tarea03b\\Form1.cs [Design]",
-              "RelativeToolTip": "Tema4_Tarea03b\\Form1.cs [Design]",
+              "ToolTip": "C:\\zProgramacion\\CodingDAW\\Tema4\\Tema4_Tarea03b\\Tema4_Tarea03b\\Form1.cs*",
+              "RelativeToolTip": "Tema4_Tarea03b\\Form1.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAcwCIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T03:25:53.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\zProgramacion\\CodingDAW\\Tema4\\Tema4_Tarea03b\\Tema4_Tarea03b\\Form1.cs",
+              "RelativeDocumentMoniker": "Tema4_Tarea03b\\Form1.cs",
+              "ToolTip": "C:\\zProgramacion\\CodingDAW\\Tema4\\Tema4_Tarea03b\\Tema4_Tarea03b\\Form1.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Tema4_Tarea03b\\Form1.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-09T03:15:13.957Z",
-              "EditorCaption": " [Design]"
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

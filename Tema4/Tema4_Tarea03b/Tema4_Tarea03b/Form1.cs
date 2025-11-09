@@ -7,7 +7,7 @@ namespace Tema4_Tarea03b
             InitializeComponent();
         }
 
-        int MayorDosNumeros (int num1, int num2)
+        int MayorDosNumeros(int num1, int num2)
         {
             int mayor = num1;
 
@@ -21,7 +21,30 @@ namespace Tema4_Tarea03b
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
+            bool esCorrecto1, esCorrecto2;
+            int num1, num2, mayor;
 
+            esCorrecto1 = int.TryParse(txtNum1.Text, out num1);
+            esCorrecto2 = int.TryParse(txtNum2.Text, out num2);
+
+            if (!esCorrecto1 || !esCorrecto2)
+            {
+                MessageBox.Show("Debes introducir valores numéricos.");
+            }
+            else
+            {
+                mayor = MayorDosNumeros(num1, num2);
+
+                lblResultado.Text = $"El número mayor es: {mayor}";
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtNum1.Clear();
+            txtNum2.Clear();
+            txtNum1.Focus();
+            lblResultado.Text = "";
         }
     }
 }

@@ -35,6 +35,7 @@
             btnCalcular = new Button();
             label1 = new Label();
             lblResultado = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // txtNum1
@@ -80,7 +81,7 @@
             btnCalcular.FlatAppearance.BorderSize = 2;
             btnCalcular.FlatStyle = FlatStyle.Flat;
             btnCalcular.Font = new Font("Lato", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCalcular.Location = new Point(131, 453);
+            btnCalcular.Location = new Point(64, 397);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(280, 100);
             btnCalcular.TabIndex = 4;
@@ -101,11 +102,26 @@
             // lblResultado
             // 
             lblResultado.AutoSize = true;
-            lblResultado.Font = new Font("Lato", 16F, FontStyle.Bold);
-            lblResultado.Location = new Point(377, 611);
+            lblResultado.Font = new Font("Lato", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblResultado.Location = new Point(131, 636);
             lblResultado.Name = "lblResultado";
-            lblResultado.Size = new Size(0, 39);
+            lblResultado.Size = new Size(0, 34);
             lblResultado.TabIndex = 6;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Wheat;
+            button1.FlatAppearance.BorderColor = Color.SlateGray;
+            button1.FlatAppearance.BorderSize = 2;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Lato", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(431, 463);
+            button1.Name = "button1";
+            button1.Size = new Size(220, 80);
+            button1.TabIndex = 7;
+            button1.Text = "Limpiar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
@@ -113,6 +129,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(778, 744);
+            Controls.Add(button1);
             Controls.Add(lblResultado);
             Controls.Add(label1);
             Controls.Add(btnCalcular);
@@ -135,5 +152,6 @@
         private Button btnCalcular;
         private Label label1;
         private Label lblResultado;
+        private Button button1;
     }
 }
