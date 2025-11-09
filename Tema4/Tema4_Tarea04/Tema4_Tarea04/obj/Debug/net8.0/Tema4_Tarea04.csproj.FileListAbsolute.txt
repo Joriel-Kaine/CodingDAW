@@ -1,0 +1,15 @@
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\bin\Debug\net8.0\Tema4_Tarea04.exe
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\bin\Debug\net8.0\Tema4_Tarea04.deps.json
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\bin\Debug\net8.0\Tema4_Tarea04.runtimeconfig.json
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\bin\Debug\net8.0\Tema4_Tarea04.dll
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\bin\Debug\net8.0\Tema4_Tarea04.pdb
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\obj\Debug\net8.0\Tema4_Tarea04.GeneratedMSBuildEditorConfig.editorconfig
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\obj\Debug\net8.0\Tema4_Tarea04.AssemblyInfoInputs.cache
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\obj\Debug\net8.0\Tema4_Tarea04.AssemblyInfo.cs
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\obj\Debug\net8.0\Tema4_Tarea04.csproj.CoreCompileInputs.cache
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\obj\Debug\net8.0\Tema4_Tarea04.sourcelink.json
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\obj\Debug\net8.0\Tema4_Tarea04.dll
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\obj\Debug\net8.0\refint\Tema4_Tarea04.dll
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\obj\Debug\net8.0\Tema4_Tarea04.pdb
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\obj\Debug\net8.0\Tema4_Tarea04.genruntimeconfig.cache
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea04\Tema4_Tarea04\obj\Debug\net8.0\ref\Tema4_Tarea04.dll
