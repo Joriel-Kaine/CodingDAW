@@ -23,7 +23,7 @@
             if (esCorrecto)
             {
                 absoluto = ValorAbsoluto(num);
-                Console.WriteLine($"\nEl valor absoluto de {num} es: {absoluto}");
+                Console.WriteLine($"\n═> El valor absoluto de {num} es: {absoluto}");
             }
             else
             {
