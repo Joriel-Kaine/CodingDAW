@@ -1,0 +1,17 @@
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\bin\Debug\net8.0-windows\Tema4_Tarea09b.exe
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\bin\Debug\net8.0-windows\Tema4_Tarea09b.deps.json
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\bin\Debug\net8.0-windows\Tema4_Tarea09b.runtimeconfig.json
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\bin\Debug\net8.0-windows\Tema4_Tarea09b.dll
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\bin\Debug\net8.0-windows\Tema4_Tarea09b.pdb
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\obj\Debug\net8.0-windows\Tema4_Tarea09b.Form1.resources
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\obj\Debug\net8.0-windows\Tema4_Tarea09b.csproj.GenerateResource.cache
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\obj\Debug\net8.0-windows\Tema4_Tarea09b.GeneratedMSBuildEditorConfig.editorconfig
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\obj\Debug\net8.0-windows\Tema4_Tarea09b.AssemblyInfoInputs.cache
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\obj\Debug\net8.0-windows\Tema4_Tarea09b.AssemblyInfo.cs
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\obj\Debug\net8.0-windows\Tema4_Tarea09b.csproj.CoreCompileInputs.cache
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\obj\Debug\net8.0-windows\Tema4_Tarea09b.sourcelink.json
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\obj\Debug\net8.0-windows\Tema4_Tarea09b.dll
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\obj\Debug\net8.0-windows\refint\Tema4_Tarea09b.dll
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\obj\Debug\net8.0-windows\Tema4_Tarea09b.pdb
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\obj\Debug\net8.0-windows\Tema4_Tarea09b.genruntimeconfig.cache
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea09b\Tema4_Tarea09b\obj\Debug\net8.0-windows\ref\Tema4_Tarea09b.dll
