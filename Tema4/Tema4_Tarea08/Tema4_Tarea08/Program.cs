@@ -26,7 +26,7 @@
             Console.WriteLine("\nTema 4 - Tarea 8: Manuel MR ®\n" +
                               "═════════════════════════════\n\n");
 
-            bool esCorrecto1, esCorrecto2, esDivisible = true;
+            bool esCorrecto1, esCorrecto2, esDivisible;
             int num1, num2, division, resto;
 
             Console.Write("Introduce el primer número: ");
