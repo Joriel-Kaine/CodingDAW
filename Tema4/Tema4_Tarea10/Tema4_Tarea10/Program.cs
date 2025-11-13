@@ -29,6 +29,23 @@
             return num;
         }
 
+        static int NumeroMenor (int num1, int num2)
+        {
+            int menor = num1;
+
+            if (num1 > num2)
+            {
+                menor = num2;
+            }
+
+            return menor;
+        }
+
+        static int MaximoComunDivisor (int num1, int num2)
+        {
+            int mcd;
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine(titulo);
