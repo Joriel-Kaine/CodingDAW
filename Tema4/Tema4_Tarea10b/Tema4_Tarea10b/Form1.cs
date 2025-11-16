@@ -16,7 +16,7 @@ namespace Tema4_Tarea10b
 
             if (!esCorrecto)   
             {
-                MessageBox.Show("Introduce un valor numérico válido.", "Error de formato");
+                MessageBox.Show("Introduce valores numéricos válidos.", "Error de formato");
             }
             
             return num;
@@ -53,10 +53,10 @@ namespace Tema4_Tarea10b
         {
             int num1, num2;
 
-            num1 = LeerNumero(txtNum1.Text);
+            num1 = LeerNumero(txtNum1.Text);      
             num2 = LeerNumero(txtNum2.Text);
 
-            lblResultado.Text = $"MCD: {MaximoComunDivisor(num1, num2)}";
+            lblResultado.Text = $"Máximo Común Divisor: {MaximoComunDivisor(num1, num2)}";
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

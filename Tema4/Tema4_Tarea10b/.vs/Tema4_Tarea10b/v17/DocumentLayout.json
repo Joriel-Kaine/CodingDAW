@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{59673AFA-DFC4-4B1A-8B57-6A5F3F57998A}|Tema4_Tarea10b\\Tema4_Tarea10b.csproj|solutionrelative:tema4_tarea10b\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59673AFA-DFC4-4B1A-8B57-6A5F3F57998A}|Tema4_Tarea10b\\Tema4_Tarea10b.csproj|c:\\zprogramacion\\codingdaw\\tema4\\tema4_tarea10b\\tema4_tarea10b\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{59673AFA-DFC4-4B1A-8B57-6A5F3F57998A}|Tema4_Tarea10b\\Tema4_Tarea10b.csproj|C:\\zProgramacion\\CodingDAW\\Tema4\\Tema4_Tarea10b\\tema4_tarea10b\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{59673AFA-DFC4-4B1A-8B57-6A5F3F57998A}|Tema4_Tarea10b\\Tema4_Tarea10b.csproj|solutionrelative:tema4_tarea10b\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "Tema4_Tarea10b\\Form1.cs",
               "ToolTip": "C:\\zProgramacion\\CodingDAW\\Tema4\\Tema4_Tarea10b\\Tema4_Tarea10b\\Form1.cs",
               "RelativeToolTip": "Tema4_Tarea10b\\Form1.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAgwA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-16T02:49:12.443Z",
               "EditorCaption": ""
@@ -58,8 +58,7 @@
               "ToolTip": "C:\\zProgramacion\\CodingDAW\\Tema4\\Tema4_Tarea10b\\Tema4_Tarea10b\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Tema4_Tarea10b\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T02:39:24.819Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-11-16T02:39:24.819Z"
             }
           ]
         }
