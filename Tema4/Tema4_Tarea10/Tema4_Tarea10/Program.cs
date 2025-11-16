@@ -43,7 +43,17 @@
 
         static int MaximoComunDivisor (int num1, int num2)
         {
-            int mcd;
+            int mcd = 0;
+
+            for (int i = 1; i <= NumeroMenor(num1, num2); i++)
+            {
+                if (num1 % i == 0 && num2 % i == 0)
+                {
+                    mcd = i;
+                }
+            }
+
+            return mcd;
         }
 
         static void Main(string[] args)
@@ -55,7 +65,7 @@
             num1 = LeerNumero("\nIntroduce el primer número: ");
             num2 = LeerNumero("\nIntroduce el segundo número: ");
 
-            Console.WriteLine(num1 + num2);
+            Console.WriteLine($"\n═> El Máximo Común Divisor es: {MaximoComunDivisor(num1, num2)}");
 
             Console.WriteLine("\n\nPulsa una tecla para salir...");
             Console.ReadKey();
