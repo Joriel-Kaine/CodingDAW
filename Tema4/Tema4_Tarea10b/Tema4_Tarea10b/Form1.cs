@@ -7,21 +7,6 @@ namespace Tema4_Tarea10b
             InitializeComponent();
         }
 
-        int LeerNumero (string mensaje)
-        {
-            int num;
-            bool esCorrecto;
-            
-            esCorrecto = int.TryParse(mensaje, out num);
-
-            if (!esCorrecto)   
-            {
-                MessageBox.Show("Introduce valores numéricos válidos.", "Error de formato");
-            }
-            
-            return num;
-        }
-
         int NumeroMenor (int num1, int num2)
         {
             int menor = num1;
@@ -36,9 +21,9 @@ namespace Tema4_Tarea10b
 
         int MaximoComunDivisor (int num1, int num2)
         {
-            int mcd = 0;
+            int mcd = 0, menor = NumeroMenor(num1, num2);
 
-            for (int i = 1; i <= NumeroMenor(num1, num2); i++)
+            for (int i = 1; i <= menor; i++)
             {
                 if (num1 % i == 0 && num2 % i == 0)
                 {
@@ -52,11 +37,19 @@ namespace Tema4_Tarea10b
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             int num1, num2;
+            bool esCorrecto1, esCorrecto2;
 
-            num1 = LeerNumero(txtNum1.Text);      
-            num2 = LeerNumero(txtNum2.Text);
+            esCorrecto1 = int.TryParse(txtNum1.Text, out num1);
+            esCorrecto2 = int.TryParse(txtNum2.Text, out num2);
 
-            lblResultado.Text = $"Máximo Común Divisor: {MaximoComunDivisor(num1, num2)}";
+            if (esCorrecto1 && esCorrecto2)
+            {
+                lblResultado.Text = $"Máximo Común Divisor: {MaximoComunDivisor(num1, num2)}";
+            }
+            else
+            {
+                MessageBox.Show("Introduce valores numéricos válidos.", "Error de formato");
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

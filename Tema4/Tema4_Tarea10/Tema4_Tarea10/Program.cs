@@ -43,9 +43,9 @@
 
         static int MaximoComunDivisor (int num1, int num2)
         {
-            int mcd = 0;
+            int mcd = 0, menor = NumeroMenor(num1, num2);
 
-            for (int i = 1; i <= NumeroMenor(num1, num2); i++)
+            for (int i = 1; i <= menor; i++)
             {
                 if (num1 % i == 0 && num2 % i == 0)
                 {
