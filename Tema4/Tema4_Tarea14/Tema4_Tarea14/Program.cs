@@ -24,15 +24,11 @@
 
         static bool EsBisiesto (int year)
         {
-            bool esBisiesto;
+            bool esBisiesto = false;
 
             if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
             {
                 esBisiesto = true;
-            }
-            else
-            {
-                esBisiesto = false;
             }
 
             return esBisiesto;
