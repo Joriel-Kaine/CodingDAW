@@ -23,28 +23,37 @@ namespace Tema3_Tarea12
             int minuto = int.Parse(txtMinuto.Text);
             int segundo = int.Parse(txtSegundo.Text);
 
-            /* Hacemos una comprobación para ver si el siguiente segundo no llega a los 60 segundos.
-             * Si lo hace, añadimos un minuto más y reseteamos el contador de segundos a 0.
-             */
-            if (segundo < 59)
+            if ((segundo >= 0 && segundo <= 59) && (minuto >= 0 && minuto <= 59) && (hora >= 0 && hora <= 23))
             {
                 segundo++;
-            }
-            else
-            {
-                minuto++;
-                segundo -= segundo;
-            }
+                /* Hacemos una comprobación para ver si el siguiente segundo no llega a los 60 segundos.
+                 * Si lo hace, añadimos un minuto más y reseteamos el contador de segundos a 0.
+                 */
+                if (segundo == 60)
+                {
+                    minuto++;
+                    segundo -= segundo;
 
-            /* Hacemos la misma comprobación, pero esta vez nos aseguramos de resetear los minutos después
-             * de haber comprobado que se ha llegado a 60 minutos.
-             */
-            if (minuto == 60)
-            {
-                hora++;
-                minuto -= minuto;
-            }
+                    /* Hacemos la misma comprobación, pero esta vez nos aseguramos de resetear los minutos después
+                     * de haber comprobado que se ha llegado a 60 minutos.
+                     */
+                    if (minuto == 60)
+                    {
+                        hora++;
+                        minuto -= minuto;
 
+                        // Resetamos las horas a 0.
+                        if (hora == 24)
+                        {
+                            hora -= hora;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Introduce valores correctos dentro del rango.", "Valores incorrectos");
+                }
+            }
             MessageBox.Show($"La hora siguiente será {hora:D2} : {minuto:D2} : {segundo:D2}", "Nueva hora");
         }
 
