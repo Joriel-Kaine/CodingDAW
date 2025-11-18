@@ -14,7 +14,7 @@
 
                 if (!esCorrecto)
                 {
-                    Console.WriteLine("Introduce valores numéricos válidos.");
+                    Console.WriteLine("\n\nIntroduce valores numéricos válidos.");
                 }
 
             } while (!esCorrecto);
@@ -90,9 +90,18 @@
             int dia, mes, year;
 
             dia = LeerNumero("Introduce el día: ");
-            mes = LeerNumero("Introduce el mes: ");
-            year = LeerNumero("Introduce el año: ");
+            mes = LeerNumero("\nIntroduce el mes: ");
+            year = LeerNumero("\nIntroduce el año: ");
 
+            if (EsFechaCorrecta(dia, mes, year))
+            {
+                Console.WriteLine($"\n═> La fecha {dia}/{mes}/{year} es correcta.");
+            }
+            else
+            {
+                Console.WriteLine($"\n═> La fecha {dia}/{mes}/{year} no es correcta.");
+            }
+            
             Console.WriteLine("\n\nPulsa una tecla para salir...");
             Console.ReadKey();
         }
