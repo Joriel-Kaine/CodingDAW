@@ -46,17 +46,17 @@
             {
                 minuto++;
                 segundo -= segundo;
-            }
 
-            if (minuto == 60)
-            {
-                hora++;
-                minuto -= minuto;
-            }
+                if (minuto == 60)
+                {
+                    hora++;
+                    minuto -= minuto;
 
-            if (hora == 24)
-            {
-                hora -= hora;
+                    if (hora == 24)
+                    {
+                        hora -= hora;
+                    }
+                }
             }
         }
 

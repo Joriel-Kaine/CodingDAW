@@ -48,9 +48,9 @@
             {
                 bbase = LeerNumero("\nIntroduce la base: ");
 
-                Console.WriteLine($"\n═> La potencia con exponente 2 es: {CalcularPotencia(bbase, exponente: 2)}" +
-                                  $"\n═> La potencia con exponente 5 es: {CalcularPotencia(bbase, exponente: 5)}" +
-                                  $"\n═> La potencia con exponente 7 es: {CalcularPotencia(bbase, exponente: 7)}");
+                Console.WriteLine($"\n═> La potencia con exponente 2 es: {CalcularPotencia(bbase: bbase, exponente: 2)}" +
+                                  $"\n═> La potencia con exponente 5 es: {CalcularPotencia(bbase: bbase, exponente: 5)}" +
+                                  $"\n═> La potencia con exponente 7 es: {CalcularPotencia(bbase: bbase, exponente: 7)}");
             }
             catch (OverflowException)
             {
