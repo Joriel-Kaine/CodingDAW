@@ -66,26 +66,32 @@
                               "══════════════════════════════\n\n");
 
             int hora, minuto, segundo;
+            bool esCorrecto;
 
-            hora = LeerNumero("Introduce las horas: ");
-            minuto = LeerNumero("\nIntroduce los minutos: ");
-            segundo = LeerNumero("\nIntroduce los segundos: ");
-
-
-            if (EsHoraCorrecta(hora, minuto, segundo))
+            do
             {
-                Console.WriteLine($"\n═> La hora introducida es: {hora:D2}:{minuto:D2}:{segundo:D2}");
-                Console.WriteLine("\nPulsa una tecla para sumar 1 segundo a la hora.");
-                Console.ReadKey();
+                hora = LeerNumero("\nIntroduce las horas: ");
+                minuto = LeerNumero("\nIntroduce los minutos: ");
+                segundo = LeerNumero("\nIntroduce los segundos: ");
 
-                HoraSiguiente(ref hora, ref minuto, ref segundo);
+                esCorrecto = EsHoraCorrecta(hora, minuto, segundo);
 
-                Console.WriteLine($"\n═> La nueva hora es: {hora:D2}:{minuto:D2}:{segundo:D2}");
-            }
-            else
-            {
-                Console.WriteLine($"\n═> La hora {hora:D2}:{minuto:D2}:{segundo:D2} introducida no es correcta.");
-            }
+                if (!esCorrecto)
+                {
+                    Console.WriteLine($"\n═> La hora {hora:D2}:{minuto:D2}:{segundo:D2} introducida no es correcta.\n" +
+                                      $"═> Pulsa una tecla para volver a introducir la hora.");
+                    Console.ReadKey();
+                }
+
+            } while (!esCorrecto);
+
+            Console.WriteLine($"\n═> La hora introducida es: {hora:D2}:{minuto:D2}:{segundo:D2}");
+            Console.WriteLine("\nPulsa una tecla para sumar 1 segundo a la hora.");
+            Console.ReadKey();
+
+            HoraSiguiente(ref hora, ref minuto, ref segundo);
+
+            Console.WriteLine($"\n═> La nueva hora es: {hora:D2}:{minuto:D2}:{segundo:D2}");
 
             Console.WriteLine("\n\nPulsa una tecla para salir...");
             Console.ReadKey();
