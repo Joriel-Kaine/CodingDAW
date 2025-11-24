@@ -1,0 +1,15 @@
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\bin\Debug\net8.0\Tema4_Tarea23.exe
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\bin\Debug\net8.0\Tema4_Tarea23.deps.json
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\bin\Debug\net8.0\Tema4_Tarea23.runtimeconfig.json
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\bin\Debug\net8.0\Tema4_Tarea23.dll
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\bin\Debug\net8.0\Tema4_Tarea23.pdb
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\obj\Debug\net8.0\Tema4_Tarea23.GeneratedMSBuildEditorConfig.editorconfig
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\obj\Debug\net8.0\Tema4_Tarea23.AssemblyInfoInputs.cache
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\obj\Debug\net8.0\Tema4_Tarea23.AssemblyInfo.cs
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\obj\Debug\net8.0\Tema4_Tarea23.csproj.CoreCompileInputs.cache
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\obj\Debug\net8.0\Tema4_Tarea23.sourcelink.json
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\obj\Debug\net8.0\Tema4_Tarea23.dll
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\obj\Debug\net8.0\refint\Tema4_Tarea23.dll
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\obj\Debug\net8.0\Tema4_Tarea23.pdb
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\obj\Debug\net8.0\Tema4_Tarea23.genruntimeconfig.cache
+C:\zProgramacion\CodingDAW\Tema4\Tema4_Tarea23\Tema4_Tarea23\obj\Debug\net8.0\ref\Tema4_Tarea23.dll
