@@ -7,6 +7,7 @@ namespace Tema4_Tarea17b
             InitializeComponent();
         }
 
+        // Comprobamos si el mes de febrero es bisiesto o no, según el año.
         bool EsBisiesto (int year)
         {
             bool esCorrecto = false;
@@ -19,6 +20,7 @@ namespace Tema4_Tarea17b
             return esCorrecto;
         }
 
+        // Hacemos una comprobación de que la fecha sea correcta. Día, mes y año son válidos.
         bool EsFechaCorrecta (int dia, int mes, int year)
         {
             bool esCorrecto = false;
@@ -67,6 +69,7 @@ namespace Tema4_Tarea17b
             return esCorrecto;
         }
 
+        // Hacemos un switch/case para separar los meses de 31, 30, o el mes de febrero.
         int DiaEnMes (int mes, int year)
         {
             int dia = 0;
@@ -103,6 +106,11 @@ namespace Tema4_Tarea17b
             return dia;
         }
 
+        /*
+         * Añadimos un día a la fecha, teniendo en cuenta los diferentes casos.
+         * Si el día era 31, hay que controlar que el siguiente no sea 32, si no 1 del mes siguiente.
+         * Lo mismo con el mes. Si es mes 12, no vamos al 13 si no al 1 del siguiente año.
+         */
         void DiaSiguiente (ref int dia, ref int mes, ref int year)
         {
             if (dia < DiaEnMes(mes, year))
@@ -122,6 +130,7 @@ namespace Tema4_Tarea17b
             }
         }
 
+        // En este botón comprobamos si la fecha introducida es valida o correcta.
         private void btnFecha_Click(object sender, EventArgs e)
         {
             int dia, mes, year;
@@ -131,10 +140,12 @@ namespace Tema4_Tarea17b
             esCorrecto2 = int.TryParse(txtMes.Text, out mes);
             esCorrecto3 = int.TryParse(txtYear.Text, out year);
 
+            // Aquí hacemos un if para que se introduzca la fecha correcta o válida.
             if (esCorrecto1 && esCorrecto2 && esCorrecto3)
             {
                 if (!EsFechaCorrecta(dia, mes, year))
                 {
+                    // Usamos :D2 para que sean siempre dos dígitos.
                     lblFecha.Text = $"La fecha {dia:D2}/{mes:D2}/{year:D2} no es correcta.";
                 }
                 else
@@ -148,6 +159,7 @@ namespace Tema4_Tarea17b
             }
         }
 
+        // En este botón añadimos un día siempre que la fecha sea correcta.
         private void btnDiaSiguiente_Click(object sender, EventArgs e)
         {
             int dia, mes, year;
@@ -161,6 +173,10 @@ namespace Tema4_Tarea17b
             {
                 if (EsFechaCorrecta(dia, mes, year))
                 {
+                    /*
+                     * Se introduce la fecha del día siguiente, usando ref para que tanto día, mes,
+                     * año se actualicen a la nueva fecha.
+                     */
                     DiaSiguiente(ref dia, ref mes, ref year);
 
                     lblDiaSiguiente.Text = $"La nueva fecha es {dia:D2}/{mes:D2}/{year:D2}";
@@ -172,6 +188,7 @@ namespace Tema4_Tarea17b
             }
         }
 
+        // Este botón es para limpiar todo y volver a introducir datos.
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             txtDia.Clear();

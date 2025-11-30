@@ -2,6 +2,8 @@
 {
     internal class Program
     {
+
+        // Comprobamos que la entrada es correcta.
         static int LeerNumero (string mensaje)
         {
             int num;
@@ -22,6 +24,7 @@
             return num;
         }
 
+        // Comprobamos si el mes de febrero es bisiesto o no, según el año.
         static bool EsBisiesto (int year)
         {
             bool esCorrecto = false;
@@ -34,6 +37,7 @@
             return esCorrecto;
         }
 
+        // Hacemos una comprobación de que la fecha sea correcta. Día, mes y año son válidos.
         static bool EsFechaCorrecta (int dia, int mes, int year)
         {
             bool esCorrecto = false;
@@ -82,6 +86,7 @@
             return esCorrecto;
         }
 
+        // Hacemos un switch/case para separar los meses de 31, 30, o el mes de febrero.
         static int DiasEnMes(int mes, int year)
         {
             int dia = 0;
@@ -118,6 +123,11 @@
             return dia;
         }
 
+        /*
+         * Añadimos un día a la fecha, teniendo en cuenta los diferentes casos.
+         * Si el día era 31, hay que controlar que el siguiente no sea 32, si no 1 del mes siguiente.
+         * Lo mismo con el mes. Si es mes 12, no vamos al 13 si no al 1 del siguiente año.
+         */
         static void DiaSiguiente (ref int dia, ref int mes, ref int year)
         {
             if (dia < DiasEnMes(mes, year))
@@ -147,6 +157,7 @@
             int dia, mes, year;
             bool esCorrecto;
 
+            // Aquí hacemos un bucle para que se siga introduciendo la fecha hasta que sea correcta.
             do
             {
                 dia = LeerNumero("\nIntroduce el día: ");
@@ -157,6 +168,7 @@
 
                 if (!esCorrecto)
                 {
+                    // Usamos :D2 para que sean siempre dos dígitos.
                     Console.WriteLine($"\n═> La fecha {dia:D2}/{mes:D2}/{year:D2} introducida no es correcta.");
                     Console.WriteLine("\nIntroduce una fecha correcta.");
                     Console.ReadKey();
@@ -171,6 +183,7 @@
             Console.WriteLine("\nPulsa una tecla para sumar 1 día a la fecha introducida.");
             Console.ReadKey();
 
+            // Se introduce la fecha del día siguiente, usando ref para que tanto día, mes, año se actualicen a la nueva fecha.
             DiaSiguiente(ref dia, ref mes, ref year);
 
             Console.WriteLine($"\n\n═> La nueva fecha es {dia:D2}/{mes:D2}/{year:D2}");

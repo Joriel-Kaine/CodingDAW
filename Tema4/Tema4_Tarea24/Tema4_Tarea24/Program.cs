@@ -2,6 +2,7 @@
 {
     internal class Program
     {
+        // Comprobamos si el número introducido es válido.
         static int LeerNumero(string mensaje)
         {
             int num;
@@ -22,6 +23,7 @@
             return num;
         }
 
+        // Calculamos el factorial a través de multiplicaciones.
         static double CalcularFactorial(int num)
         {
             int factorial = 1;
@@ -34,6 +36,7 @@
             return factorial;
         }
 
+        // Calculamos la potencia haciendo tantas multiplicaciones por la base como haya de exponente.
         static double CalcularPotencia(int bbase, int exponente)
         {
             int potencia = 1;
@@ -46,12 +49,14 @@
             return potencia;
         }
 
+        // Calculamos la serie con un bucle for en el que "n" será las veces que hay que pasar por él.
         static double CalcularSerie(int m, int n)
         {
             double serie = 0;
 
             for (int i = 1; i <= n; i++)
             {
+                // Vamos sacando cada vez un valor distinto usando "i" cuando llamamos a la función.
                 serie += CalcularPotencia(m, i) / CalcularFactorial(i);
             }
 
