@@ -98,10 +98,10 @@
             // 
             lblResultado.AllowDrop = true;
             lblResultado.AutoSize = true;
-            lblResultado.Font = new Font("Lato", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblResultado.Font = new Font("Lato", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblResultado.Location = new Point(268, 233);
             lblResultado.Name = "lblResultado";
-            lblResultado.Size = new Size(0, 36);
+            lblResultado.Size = new Size(0, 29);
             lblResultado.TabIndex = 5;
             // 
             // Form1

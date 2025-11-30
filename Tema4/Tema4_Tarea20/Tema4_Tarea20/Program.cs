@@ -51,7 +51,7 @@
 
                 cantidadEuros %= tipoBillete;
             }
-            else if (cantidadEuros >= tipoBillete && cantidadEuros > 1)
+            else if (cantidadEuros >= tipoBillete && cantidadEuros >= 1)
             {
                 numBillete = cantidadEuros / tipoBillete;
 
@@ -74,9 +74,13 @@
 
                 cantidadCentimos %= tipoMoneda;
             }
-            else if (cantidadCentimos == 1)
+            else if (cantidadCentimos >= tipoMoneda && cantidadCentimos == 1)
             {
-                texto += $"\n\nSobra {cantidadCentimos} céntimo de euro.";
+                numMoneda = cantidadCentimos / tipoMoneda;
+
+                texto += $"\n{numMoneda} {EuroSingularPlural(numMoneda, "moneda", "monedas")} de {tipoMoneda} céntimo de euro.";
+
+                cantidadCentimos %= tipoMoneda;
             }
         }
 
@@ -89,15 +93,14 @@
 
             CalcularBilletes(ref cantidadEuros, ref texto, 500);
             CalcularBilletes(ref cantidadEuros, ref texto, 200);
+            CalcularBilletes(ref cantidadEuros, ref texto, 100);
             CalcularBilletes(ref cantidadEuros, ref texto, 50);
             CalcularBilletes(ref cantidadEuros, ref texto, 20);
+            CalcularBilletes(ref cantidadEuros, ref texto, 10);
             CalcularBilletes(ref cantidadEuros, ref texto, 5);
             CalcularBilletes(ref cantidadEuros, ref texto, 2);
-            if (cantidadEuros == 1)
-            {
-                cantidadCentimos += cantidadEuros * 100;
-                cantidadEuros--;
-            }
+            CalcularBilletes(ref cantidadEuros, ref texto, 1);
+
             CalcularMonedas(ref cantidadCentimos, ref texto, 50);
             CalcularMonedas(ref cantidadCentimos, ref texto, 20);
             CalcularMonedas(ref cantidadCentimos, ref texto, 10);
