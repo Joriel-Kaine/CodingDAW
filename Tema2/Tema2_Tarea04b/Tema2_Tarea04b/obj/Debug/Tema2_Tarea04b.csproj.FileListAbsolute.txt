@@ -1,8 +1,0 @@
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea04b\Tema2_Tarea04b\bin\Debug\Tema2_Tarea04b.exe.config
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea04b\Tema2_Tarea04b\bin\Debug\Tema2_Tarea04b.exe
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea04b\Tema2_Tarea04b\bin\Debug\Tema2_Tarea04b.pdb
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea04b\Tema2_Tarea04b\obj\Debug\Tema2_Tarea04b.csproj.AssemblyReference.cache
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea04b\Tema2_Tarea04b\obj\Debug\Tema2_Tarea04b.csproj.CoreCompileInputs.cache
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea04b\Tema2_Tarea04b\obj\Debug\Tema2_Tarea04b.exe
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea04b\Tema2_Tarea04b\obj\Debug\Tema2_Tarea04b.pdb
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea04b\Tema2_Tarea04b\obj\Debug\Tema2_Tarea04b.exe.config

@@ -1,8 +1,0 @@
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea13\Tema3_Tarea13\bin\Debug\Tema3_Tarea13.exe.config
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea13\Tema3_Tarea13\bin\Debug\Tema3_Tarea13.exe
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea13\Tema3_Tarea13\bin\Debug\Tema3_Tarea13.pdb
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea13\Tema3_Tarea13\obj\Debug\Tema3_Tarea13.csproj.AssemblyReference.cache
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea13\Tema3_Tarea13\obj\Debug\Tema3_Tarea13.csproj.CoreCompileInputs.cache
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea13\Tema3_Tarea13\obj\Debug\Tema3_Tarea13.exe
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea13\Tema3_Tarea13\obj\Debug\Tema3_Tarea13.pdb
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea13\Tema3_Tarea13\obj\Debug\Tema3_Tarea13.exe.config

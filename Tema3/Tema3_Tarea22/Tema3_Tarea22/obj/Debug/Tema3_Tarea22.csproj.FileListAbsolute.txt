@@ -1,8 +1,0 @@
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea22\Tema3_Tarea22\bin\Debug\Tema3_Tarea22.exe.config
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea22\Tema3_Tarea22\bin\Debug\Tema3_Tarea22.exe
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea22\Tema3_Tarea22\bin\Debug\Tema3_Tarea22.pdb
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea22\Tema3_Tarea22\obj\Debug\Tema3_Tarea22.csproj.AssemblyReference.cache
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea22\Tema3_Tarea22\obj\Debug\Tema3_Tarea22.csproj.CoreCompileInputs.cache
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea22\Tema3_Tarea22\obj\Debug\Tema3_Tarea22.exe
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea22\Tema3_Tarea22\obj\Debug\Tema3_Tarea22.pdb
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea22\Tema3_Tarea22\obj\Debug\Tema3_Tarea22.exe.config

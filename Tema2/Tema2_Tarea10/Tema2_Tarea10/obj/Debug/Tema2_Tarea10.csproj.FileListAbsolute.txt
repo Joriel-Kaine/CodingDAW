@@ -1,7 +1,0 @@
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea10\Tema2_Tarea10\bin\Debug\Tema2_Tarea10.exe.config
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea10\Tema2_Tarea10\bin\Debug\Tema2_Tarea10.exe
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea10\Tema2_Tarea10\bin\Debug\Tema2_Tarea10.pdb
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea10\Tema2_Tarea10\obj\Debug\Tema2_Tarea10.csproj.AssemblyReference.cache
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea10\Tema2_Tarea10\obj\Debug\Tema2_Tarea10.csproj.CoreCompileInputs.cache
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea10\Tema2_Tarea10\obj\Debug\Tema2_Tarea10.exe
-C:\zProgramacion\Programacion DAW\Tema2\Tema2_Tarea10\Tema2_Tarea10\obj\Debug\Tema2_Tarea10.pdb

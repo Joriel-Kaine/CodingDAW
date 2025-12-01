@@ -1,7 +1,0 @@
-C:\zProgramacion\Programacion DAW\Tema2\Ejercicio01\Ejercicio01\bin\Debug\Ejercicio01.exe.config
-C:\zProgramacion\Programacion DAW\Tema2\Ejercicio01\Ejercicio01\bin\Debug\Ejercicio01.exe
-C:\zProgramacion\Programacion DAW\Tema2\Ejercicio01\Ejercicio01\bin\Debug\Ejercicio01.pdb
-C:\zProgramacion\Programacion DAW\Tema2\Ejercicio01\Ejercicio01\obj\Debug\Ejercicio01.csproj.AssemblyReference.cache
-C:\zProgramacion\Programacion DAW\Tema2\Ejercicio01\Ejercicio01\obj\Debug\Ejercicio01.csproj.CoreCompileInputs.cache
-C:\zProgramacion\Programacion DAW\Tema2\Ejercicio01\Ejercicio01\obj\Debug\Ejercicio01.exe
-C:\zProgramacion\Programacion DAW\Tema2\Ejercicio01\Ejercicio01\obj\Debug\Ejercicio01.pdb

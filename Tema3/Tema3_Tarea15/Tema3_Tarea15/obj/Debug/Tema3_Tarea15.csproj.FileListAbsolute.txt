@@ -1,8 +1,0 @@
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea15\Tema3_Tarea15\bin\Debug\Tema3_Tarea15.exe.config
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea15\Tema3_Tarea15\bin\Debug\Tema3_Tarea15.exe
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea15\Tema3_Tarea15\bin\Debug\Tema3_Tarea15.pdb
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea15\Tema3_Tarea15\obj\Debug\Tema3_Tarea15.csproj.AssemblyReference.cache
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea15\Tema3_Tarea15\obj\Debug\Tema3_Tarea15.csproj.CoreCompileInputs.cache
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea15\Tema3_Tarea15\obj\Debug\Tema3_Tarea15.exe
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea15\Tema3_Tarea15\obj\Debug\Tema3_Tarea15.pdb
-C:\zProgramacion\CodingDAW\Tema3\Tema3_Tarea15\Tema3_Tarea15\obj\Debug\Tema3_Tarea15.exe.config
