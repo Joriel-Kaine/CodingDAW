@@ -21,8 +21,7 @@ namespace Tema3_Tarea09
         {
             string texto = txtTexto.Text;
 
-            if (!(int.TryParse(texto, out int numEntero)) &&
-                !(decimal.TryParse(texto, out decimal numDecimal)))
+            if (!decimal.TryParse(texto, out decimal numDecimal))
             {
                 lblAddText.Text += ($"{texto}\n");
             }

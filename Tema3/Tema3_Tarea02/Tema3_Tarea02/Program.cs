@@ -16,20 +16,20 @@ namespace Tema3_Tarea02
             {
                 // Pedimos para introducir los dos números enteros.
                 Console.Write("Introduce el primer número: ");
-                int primerNum = int.Parse(Console.ReadLine());
+                int num1 = int.Parse(Console.ReadLine());
 
                 Console.Write("\nIntroduce el segundo número: ");
-                int segundoNum = int.Parse(Console.ReadLine());
+                int num2 = int.Parse(Console.ReadLine());
 
                 Console.Clear();
 
-                if (primerNum == segundoNum)
+                if (num1 == num2)
                 {
-                    Console.WriteLine($"\n\n\nLos numeros introducidos ({primerNum} y {segundoNum}) son iguales.\n\n\n");
+                    Console.WriteLine($"\n\n\nLos numeros introducidos ({num1} y {num2}) son iguales.\n\n\n");
                 }
                 else
                 {
-                    Console.WriteLine($"\n\n\nLos números introducidos ({primerNum} y {segundoNum}) son distintos.\n\n\n");
+                    Console.WriteLine($"\n\n\nLos números introducidos ({num1} y {num2}) son distintos.\n\n\n");
                 }
             }
             catch (FormatException)

@@ -44,7 +44,6 @@ namespace Tema3_Tarea05
                     else
                     {
                         calificacion = "SOBRESALIENTE";
-                        Console.WriteLine($"\n\nCon la nota de {nota} la calificación es SOBRESALIENTE.\n\n");
                     }
 
                     Console.WriteLine($"\n\nCon la nota de {nota} la calificación es {calificacion}.\n\n");

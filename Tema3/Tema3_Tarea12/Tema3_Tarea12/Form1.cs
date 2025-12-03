@@ -32,7 +32,7 @@ namespace Tema3_Tarea12
                 if (segundo == 60)
                 {
                     minuto++;
-                    segundo -= segundo;
+                    segundo = 0;
 
                     /* Hacemos la misma comprobación, pero esta vez nos aseguramos de resetear los minutos después
                      * de haber comprobado que se ha llegado a 60 minutos.
@@ -40,21 +40,21 @@ namespace Tema3_Tarea12
                     if (minuto == 60)
                     {
                         hora++;
-                        minuto -= minuto;
+                        minuto = 0;
 
                         // Resetamos las horas a 0.
                         if (hora == 24)
                         {
-                            hora -= hora;
+                            hora = 0;
                         }
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Introduce valores correctos dentro del rango.", "Valores incorrectos");
-                }
+                MessageBox.Show($"La hora siguiente será {hora:D2} : {minuto:D2} : {segundo:D2}", "Nueva hora");
             }
-            MessageBox.Show($"La hora siguiente será {hora:D2} : {minuto:D2} : {segundo:D2}", "Nueva hora");
+            else
+            {
+                MessageBox.Show("Introduce valores correctos dentro del rango.", "Valores incorrectos");
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

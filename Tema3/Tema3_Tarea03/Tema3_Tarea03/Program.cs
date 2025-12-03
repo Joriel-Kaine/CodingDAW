@@ -16,20 +16,20 @@ namespace Tema3_Tarea03
             try
             {
                 Console.Write("Introduce el primer número entero: ");
-                int primerNum = int.Parse(Console.ReadLine());
+                int num1 = int.Parse(Console.ReadLine());
 
                 Console.Write("\nIntroduce el segundo número entero: ");
-                int segundoNum = int.Parse(Console.ReadLine());
+                int num2 = int.Parse(Console.ReadLine());
 
-                if (primerNum >= segundoNum)
+                if (num1 >= num2)
                 {
                     Console.Clear();
-                    Console.WriteLine($"\n\nEl número {primerNum} es el mayor de los dos.\n\n");
+                    Console.WriteLine($"\n\nEl número {num1} es el mayor de los dos.\n\n");
                 }
                 else
                 {
                     Console.Clear();
-                    Console.WriteLine($"\n\nEl número {segundoNum} es el mayor de los dos.\n\n");
+                    Console.WriteLine($"\n\nEl número {num2} es el mayor de los dos.\n\n");
                 }
 
                 Console.WriteLine("Pulsa una tecla para salir...");
