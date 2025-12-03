@@ -13,13 +13,13 @@ namespace Tema3_Tarea28
             Console.WriteLine("\nTema 3 - Tarea 28: Manuel MR\n" +
                               "----------------------------");
 
-            bool entrada;
+            bool esCorrecto;
             bool esPrimo = true;
 
             Console.Write("\n\nIntroduce un número entero: ");
-            entrada = int.TryParse(Console.ReadLine(), out int numero);
+            esCorrecto = int.TryParse(Console.ReadLine(), out int numero);
 
-            if (entrada)
+            if (esCorrecto)
             {
                 for (int i = 2; i < numero; i++)
                 {
