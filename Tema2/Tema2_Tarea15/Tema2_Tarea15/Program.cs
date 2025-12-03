@@ -20,7 +20,7 @@ namespace Tema2_Tarea15
                 Console.Write("\nEscribe el interés anual: ");
                 decimal interes = decimal.Parse(Console.ReadLine());
 
-                Console.WriteLine($"\nEl cliente tiene {cuenta} euros en su cuenta y el interés anual es del {interes}%.");
+                Console.WriteLine($"\nEl cliente tiene {cuenta} euros en su cuenta y el interés anual es del {interes:F0} %.");
 
                 decimal capital = cuenta + (cuenta * (interes / 100));
                 Console.WriteLine($"\nCapital final: {capital} euros.");

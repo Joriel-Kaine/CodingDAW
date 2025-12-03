@@ -8,6 +8,8 @@ namespace Tema2_Tarea14
 {
     internal class Program
     {
+        const decimal IVA = 0.21m;
+
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
@@ -15,8 +17,6 @@ namespace Tema2_Tarea14
             try
             {
                 Console.WriteLine("Tarea 14: Manuel MR\n");
-
-                const decimal IVA = 0.21m;
 
                 Console.Write("Introduce el precio del primer producto: ");
                 decimal productoA = decimal.Parse(Console.ReadLine());

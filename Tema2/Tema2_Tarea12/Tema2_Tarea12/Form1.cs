@@ -13,13 +13,13 @@ namespace Tema2_Tarea12
 {
     public partial class Form1 : Form
     {
-        const decimal Convert = 166.386m;
-
         public Form1()
         {
             InitializeComponent();
         }
-        
+
+        const decimal Convert = 166.386m;
+
         private void btnPeseta_Click(object sender, EventArgs e)
         {
             try
