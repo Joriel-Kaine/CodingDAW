@@ -38,7 +38,7 @@
         {
             bool esFechaCorrecta = false;
 
-            if (mes >= 1 && mes <= 12)
+            if ((mes >= 1 && mes <= 12) && (year >= 1 && year <= 3000))
             {
                 switch (mes)
                 {

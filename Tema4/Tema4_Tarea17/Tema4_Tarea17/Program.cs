@@ -42,7 +42,7 @@
         {
             bool esCorrecto = false;
 
-            if ((mes >= 1 && mes <= 12) && (year >= 0 && year <= 3000))
+            if ((mes >= 1 && mes <= 12) && (year >= 1 && year <= 3000))
             {
                 switch (mes)
                 {

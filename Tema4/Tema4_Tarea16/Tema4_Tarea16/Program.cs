@@ -45,16 +45,16 @@
             else
             {
                 minuto++;
-                segundo -= segundo;
+                segundo = 0;
 
                 if (minuto == 60)
                 {
                     hora++;
-                    minuto -= minuto;
+                    minuto = 0;
 
                     if (hora == 24)
                     {
-                        hora -= hora;
+                        hora = 0;
                     }
                 }
             }

@@ -4,11 +4,11 @@
     {
         static void Intercambiar (ref int num1, ref int num2)
         {
-            int intercambio;
+            int aux;
 
-            intercambio = num1;
+            aux = num1;
             num1 = num2;
-            num2 = intercambio;
+            num2 = aux;
         }
 
         static void Main(string[] args)

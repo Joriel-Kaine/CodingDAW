@@ -69,6 +69,7 @@
             if (cantidadCentimos >= tipoMoneda && cantidadCentimos > 1)
             {
                 numMoneda = cantidadCentimos / tipoMoneda;
+                //string ese = numMoneda > 1 ? "s" : "";
 
                 texto += $"\n{numMoneda} {EuroSingularPlural(numMoneda, "moneda", "monedas")} de {tipoMoneda} céntimos de euro.";
 

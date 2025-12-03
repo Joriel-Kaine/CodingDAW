@@ -31,6 +31,7 @@
 
         static int NumeroMenor (int num1, int num2)
         {
+            /*
             int menor = num1;
 
             if (num1 > num2)
@@ -39,6 +40,11 @@
             }
 
             return menor;
+            */
+
+            int menor;
+
+            return menor = (num1 > num2) ? num2 : num1;
         }
 
         static int MaximoComunDivisor (int num1, int num2)

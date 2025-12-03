@@ -4,9 +4,9 @@
     {
         static int ValorAbsoluto (int num)
         {
-            int absoluto = (num < 0) ? -num : num;
+            int absoluto;
 
-            return absoluto;
+            return absoluto = (num < 0) ? -num : num;
         }
 
         static void Main(string[] args)
@@ -27,7 +27,7 @@
             }
             else
             {
-                Console.WriteLine("Introduce un valor numérico.");
+                Console.WriteLine("Introduce valores numéricos válidos.");
             }
 
             Console.WriteLine("\n\nPulsa una tecla para salir...");

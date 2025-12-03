@@ -4,12 +4,14 @@
     {
         static bool EsDivisible (int num1, int num2)
         {
+            bool esDivisible = false;
+
             if (num1 % num2 == 0)
             {
-                return true;
+                esDivisible = true;
             }
 
-            return false;
+            return esDivisible;
         }
 
         static void Main(string[] args)

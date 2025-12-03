@@ -4,10 +4,10 @@
     {
         static int SumarNumeros(int num1, int num2)
         {
-            int resultado;
-            resultado = num1 + num2;
+            int suma;
+            suma = num1 + num2;
 
-            return resultado;
+            return suma;
         }
 
         static void Main(string[] args)
@@ -16,7 +16,7 @@
                               "═════════════════════════════\n\n");
 
             bool esCorrecto1, esCorrecto2;
-            int num1, num2, resultado;
+            int num1, num2, suma;
 
             Console.Write("Introduce el primero número: ");
             esCorrecto1 = int.TryParse(Console.ReadLine(), out num1);
@@ -26,11 +26,15 @@
 
             if (esCorrecto1 && esCorrecto2)
             {
-                resultado = SumarNumeros(num1, num2);
-                Console.WriteLine($"\n═> La suma de {num1} y {num2} es: {resultado}");
+                suma = SumarNumeros(num1, num2);
+                Console.WriteLine($"\n═> La suma de {num1} y {num2} es: {suma}");
+            }
+            else
+            {
+                Console.WriteLine("\nIntroduce valores numéricos válidos.");
             }
 
-            Console.WriteLine("\n\nPulsa una tecla para salir...");
+                Console.WriteLine("\n\nPulsa una tecla para salir...");
             Console.ReadKey();
         }
     }
