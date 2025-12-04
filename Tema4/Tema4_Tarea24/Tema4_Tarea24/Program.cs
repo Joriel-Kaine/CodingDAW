@@ -15,7 +15,7 @@
 
                 if (!esCorrecto)
                 {
-                    Console.WriteLine("\n\nIntroduce valores numéricos válidos.");
+                    Console.WriteLine("\nIntroduce valores numéricos válidos.");
                 }
 
             } while (!esCorrecto);
@@ -70,10 +70,10 @@
 
             int m, n;
 
-            m = LeerNumero("Introduce el primer número: ");
-            n = LeerNumero("Introduce el segundo número: ");
+            m = LeerNumero("\nIntroduce el primer número: ");
+            n = LeerNumero("\nIntroduce el segundo número: ");
 
-            Console.WriteLine($"La serie de los numeros {m} y {n} es: {CalcularSerie(m, n):F2}");
+            Console.WriteLine($"\n═> La serie de los numeros {m} y {n} es: {CalcularSerie(m, n):F2}");
 
             Console.WriteLine("\n\nPulsa una tecla para salir...");
         }
