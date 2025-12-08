@@ -14,7 +14,7 @@
 
                 if (!esCorrecto)
                 {
-                    Console.WriteLine("\n\nIntroduce valores numéricos válidos.");
+                    Console.WriteLine("\nIntroduce valores numéricos válidos.");
                 }
 
             } while (!esCorrecto);
