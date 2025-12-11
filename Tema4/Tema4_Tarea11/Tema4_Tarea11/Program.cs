@@ -14,7 +14,7 @@
 
                 if (!esCorrecto || num < 0 || num > 10)
                 {
-                    Console.WriteLine("\n\nIntroduce un valor numérico entre 0 y 10.");
+                    Console.WriteLine("\nIntroduce un valor numérico entre 0 y 10.");
                 }
 
             } while (!esCorrecto || num < 0 || num > 10);
