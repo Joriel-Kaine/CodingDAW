@@ -14,7 +14,7 @@
 
                 if (!esCorrecto)
                 {
-                    Console.WriteLine("\n\n Introduce valores numéricos válidos.");
+                    Console.WriteLine("\nIntroduce valores numéricos válidos.");
                 }
 
             } while (!esCorrecto);
@@ -84,7 +84,7 @@
             int dinero;
             int diezMil = 0, cincoMil = 0, dosMil = 0, cien = 0, veintiCinco = 0, uno = 0;
 
-            dinero = LeerNumero("Introduce la cantidad en pesetas: ");
+            dinero = LeerNumero("\nIntroduce la cantidad en pesetas: ");
 
             SepararPesetas(ref dinero, ref diezMil, ref cincoMil, ref dosMil, ref cien, ref veintiCinco, ref uno);
 
