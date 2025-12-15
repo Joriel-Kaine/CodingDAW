@@ -18,7 +18,7 @@
             bool esCorrecto;
             int num;
 
-            Console.Write("Introduce un número: ");
+            Console.Write("\nIntroduce un número: ");
             esCorrecto = int.TryParse(Console.ReadLine(), out num);
 
             if (esCorrecto)
@@ -28,7 +28,7 @@
             }
             else
             {
-                Console.WriteLine("\n\nIntroduce un valor numérico.");
+                Console.WriteLine("\nIntroduce un valor numérico.");
             }
 
             Console.WriteLine("\n\nPulsa una tecla para salir...");
