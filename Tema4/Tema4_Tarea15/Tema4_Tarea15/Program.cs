@@ -14,7 +14,7 @@
 
                 if (!esCorrecto)
                 {
-                    Console.WriteLine("\n\nIntroduce valores numéricos válidos.");
+                    Console.WriteLine("\nIntroduce valores numéricos válidos.");
                 }
 
             } while (!esCorrecto);
@@ -89,7 +89,7 @@
 
             int dia, mes, year;
 
-            dia = LeerNumero("Introduce el día: ");
+            dia = LeerNumero("\nIntroduce el día: ");
             mes = LeerNumero("\nIntroduce el mes: ");
             year = LeerNumero("\nIntroduce el año: ");
 
