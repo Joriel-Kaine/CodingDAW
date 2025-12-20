@@ -14,7 +14,7 @@
 
                 if (!esCorrecto)
                 {
-                    Console.WriteLine("Introduce valores numéricos válidos.");
+                    Console.WriteLine("\nIntroduce valores numéricos válidos.");
                 }
 
             } while (!esCorrecto);
@@ -41,7 +41,7 @@
 
             int year;
 
-            year = LeerNumero("Introduce el año: "); 
+            year = LeerNumero("\nIntroduce el año: "); 
 
             if (EsBisiesto(year))
             {
