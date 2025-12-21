@@ -29,7 +29,7 @@
             bool esCorrecto1, esCorrecto2, esDivisible;
             int num1, num2, division, resto;
 
-            Console.Write("Introduce el primer número: ");
+            Console.Write("\nIntroduce el primer número: ");
             esCorrecto1 = int.TryParse(Console.ReadLine(), out num1);
 
             Console.Write("\nIntroduce el segundo número: ");
@@ -44,7 +44,7 @@
             }
             else
             {
-                Console.WriteLine("\n\nIntroduce un valor numérico");
+                Console.WriteLine("\nIntroduce valores numéricos válidos.");
             }
 
             Console.WriteLine("\n\nPulsa una tecla para salir...");
