@@ -14,7 +14,7 @@
 
                 if (!esCorrecto)
                 {
-                    Console.WriteLine("\n\nIntroduce valores numéricos válidos.");
+                    Console.WriteLine("\nIntroduce valores numéricos válidos.");
                 }
 
             } while (!esCorrecto);
@@ -54,7 +54,7 @@
             }
             catch (OverflowException)
             {
-                Console.WriteLine("\n\nError de OverFlow en la operación.");
+                Console.WriteLine("\nError de OverFlow en la operación.");
             }
 
             Console.WriteLine("\n\nPulsa una tecla para salir...");
