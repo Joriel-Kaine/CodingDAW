@@ -12,7 +12,7 @@
                 Console.Write(mensaje);
                 esCorrecto = int.TryParse(Console.ReadLine(), out num);
 
-                if (!esCorto)
+                if (!esCorrecto)
                 {
                     Console.WriteLine("\nIntroduce valores numéricos válidos.");
                 }
