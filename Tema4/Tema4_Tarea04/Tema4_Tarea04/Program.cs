@@ -17,7 +17,7 @@
             bool esCorrecto;
             int num, absoluto;
 
-            Console.Write("Introduce un número: ");
+            Console.Write("\nIntroduce un número: ");
             esCorrecto = int.TryParse(Console.ReadLine(), out num);
 
             if (esCorrecto)
@@ -27,7 +27,7 @@
             }
             else
             {
-                Console.WriteLine("Introduce valores numéricos válidos.");
+                Console.WriteLine("\nIntroduce valores numéricos válidos.");
             }
 
             Console.WriteLine("\n\nPulsa una tecla para salir...");
