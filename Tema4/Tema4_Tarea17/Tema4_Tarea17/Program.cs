@@ -186,7 +186,7 @@
             // Se introduce la fecha del día siguiente, usando ref para que tanto día, mes, año se actualicen a la nueva fecha.
             DiaSiguiente(ref dia, ref mes, ref year);
 
-            Console.WriteLine($"\n\n═> La nueva fecha es {dia:D2}/{mes:D2}/{year:D2}");
+            Console.WriteLine($"\n═> La nueva fecha es {dia:D2}/{mes:D2}/{year:D2}");
             
             Console.WriteLine("\n\nPulsa una tecla para salir...");
             Console.ReadKey();
