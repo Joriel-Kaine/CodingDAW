@@ -3,7 +3,7 @@
     internal class Program
     {
 
-        // Comprobamos que la entrada es correcta.
+        // Comprobamos que la entrada del número es correcta.
         static int LeerNumero (string mensaje)
         {
             int num;
