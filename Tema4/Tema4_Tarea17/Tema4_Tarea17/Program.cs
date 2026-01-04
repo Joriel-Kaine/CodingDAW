@@ -16,7 +16,7 @@
 
                 if (!esCorrecto)
                 {
-                    Console.WriteLine("\n═> Introduce valores numéricos válidos.");
+                    Console.WriteLine("\nIntroduce valores numéricos válidos.");
                 }
 
             } while (!esCorrecto);
