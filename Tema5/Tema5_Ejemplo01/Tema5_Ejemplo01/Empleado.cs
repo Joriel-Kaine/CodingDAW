@@ -83,7 +83,7 @@ namespace Tema5_Ejemplo01
                     texto += $"{_ventas[i]}, ";
                 }
 
-                texto += texto + "\n";
+                texto += "\n";
             }
             else
             {
