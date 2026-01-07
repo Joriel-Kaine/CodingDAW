@@ -10,6 +10,7 @@ namespace Tema5_Ejemplo01b
         private void btnIntroDatosEmp_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void btnMostrarDatos_Click(object sender, EventArgs e)
