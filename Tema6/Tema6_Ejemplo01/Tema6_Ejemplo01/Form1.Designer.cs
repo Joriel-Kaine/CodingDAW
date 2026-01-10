@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             btnLeer = new Button();
-            btnMostrar = new Button();
             label1 = new Label();
+            btnMostrar = new Button();
             SuspendLayout();
             // 
             // btnLeer
@@ -40,13 +40,23 @@
             btnLeer.FlatAppearance.BorderSize = 2;
             btnLeer.FlatStyle = FlatStyle.Flat;
             btnLeer.Font = new Font("Lato", 19F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLeer.Location = new Point(63, 161);
+            btnLeer.Location = new Point(60, 171);
             btnLeer.Name = "btnLeer";
             btnLeer.Size = new Size(320, 80);
-            btnLeer.TabIndex = 0;
+            btnLeer.TabIndex = 1;
             btnLeer.Text = "Leer Vector";
             btnLeer.UseVisualStyleBackColor = false;
             btnLeer.Click += btnLeer_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Lato", 19F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(129, 37);
+            label1.Name = "label1";
+            label1.Size = new Size(503, 46);
+            label1.TabIndex = 3;
+            label1.Text = "Vector de 5 números enteros";
             // 
             // btnMostrar
             // 
@@ -55,23 +65,13 @@
             btnMostrar.FlatAppearance.BorderSize = 2;
             btnMostrar.FlatStyle = FlatStyle.Flat;
             btnMostrar.Font = new Font("Lato", 19F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMostrar.Location = new Point(389, 161);
+            btnMostrar.Location = new Point(386, 171);
             btnMostrar.Name = "btnMostrar";
             btnMostrar.Size = new Size(320, 80);
-            btnMostrar.TabIndex = 1;
+            btnMostrar.TabIndex = 4;
             btnMostrar.Text = "Mostrar Vector";
             btnMostrar.UseVisualStyleBackColor = false;
             btnMostrar.Click += btnMostrar_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Lato", 19F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(141, 33);
-            label1.Name = "label1";
-            label1.Size = new Size(503, 46);
-            label1.TabIndex = 2;
-            label1.Text = "Vector de 5 números enteros";
             // 
             // Form1
             // 
@@ -79,8 +79,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(778, 344);
-            Controls.Add(label1);
             Controls.Add(btnMostrar);
+            Controls.Add(label1);
             Controls.Add(btnLeer);
             Name = "Form1";
             Text = "Tema 6 - Ejemplo 1: Manuel MR ®";
@@ -91,7 +91,7 @@
         #endregion
 
         private Button btnLeer;
-        private Button btnMostrar;
         private Label label1;
+        private Button btnMostrar;
     }
 }

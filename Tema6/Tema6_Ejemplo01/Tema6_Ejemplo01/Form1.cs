@@ -1,5 +1,4 @@
 using Microsoft.VisualBasic;
-using System.Numerics;
 
 namespace Tema6_Ejemplo01
 {
@@ -61,7 +60,7 @@ namespace Tema6_Ejemplo01
 
         private void btnLeer_Click(object sender, EventArgs e)
         {
-            LeerVector(vector);
+            LeerVector(vector); 
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
