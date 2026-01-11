@@ -42,7 +42,7 @@ namespace Tema6_Ejemplo01
 
             for (int i = 0; i < vector.Length; i++)
             {
-                mensaje = $"Introduzca el valor de la posición {i}: ";
+                mensaje = $"Introduce el valor de la posición {i}: ";
 
                 vector[i] = LeerNumero(mensaje);
             }
