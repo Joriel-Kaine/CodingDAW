@@ -29,7 +29,7 @@
                         break;
                     case 4:
                         double notaMedia = Funciones.CalcularNotaMedia(notas);
-                        Console.WriteLine($"La nota media es {notaMedia}");
+                        Console.WriteLine($"\nLa nota media es {notaMedia}");
                         break;
                 }
 
