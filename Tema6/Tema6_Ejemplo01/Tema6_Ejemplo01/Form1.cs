@@ -17,7 +17,7 @@ namespace Tema6_Ejemplo01
 
             do
             {
-                texto = Interaction.InputBox(mensaje, "Leer Vector");
+                texto = Interaction.InputBox(mensaje, "Leer vector");
 
                 esCorrecto = int.TryParse(texto, out num);
 
