@@ -13,12 +13,13 @@ namespace Tema6_Ejemplo01
         {
             int num;
             bool esCorrecto;
+            string texto;
 
             do
             {
-                mensaje = Interaction.InputBox("Introduzca el elemento: ", "Leer Vector");
+                texto = Interaction.InputBox(mensaje, "Leer Vector");
 
-                esCorrecto = int.TryParse(mensaje, out num);
+                esCorrecto = int.TryParse(texto, out num);
 
                 if (!esCorrecto)
                 {
@@ -41,7 +42,9 @@ namespace Tema6_Ejemplo01
 
             for (int i = 0; i < vector.Length; i++)
             {
-                vector[i] = LeerNumero(mensaje) + i;
+                mensaje = $"Introduzca el valor de la posición {i}: ";
+
+                vector[i] = LeerNumero(mensaje);
             }
         }
 
