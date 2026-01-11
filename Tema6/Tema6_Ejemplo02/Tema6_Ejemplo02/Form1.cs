@@ -22,7 +22,7 @@ namespace Tema6_Ejemplo02
 
             do
             {
-                texto = Interaction.InputBox(mensaje, "Leer Vector");
+                texto = Interaction.InputBox(mensaje, "Leer vector");
 
                 esCorrecto = int.TryParse(texto, out num);
 
