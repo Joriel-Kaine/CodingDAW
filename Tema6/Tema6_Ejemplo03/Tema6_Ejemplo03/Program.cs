@@ -29,7 +29,7 @@
             // Leemos todos los elementos del vector.
             for (int i = 0; i < vector.Length; i++)
             {
-                vector[i] = LeerNumero($"\nIntroduce el valor de la posición {i}: ");
+                vector[i] = LeerNumero($"Introduce el valor de la posición {i}: ");
             }
         }
 
