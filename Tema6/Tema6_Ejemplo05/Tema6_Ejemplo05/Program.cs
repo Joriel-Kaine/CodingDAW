@@ -33,7 +33,7 @@
 
                         if (posicion >= 0)
                         {
-                            Console.WriteLine($"\nAlumno: {vectorAlumnos[posicion]} Nota: {vectorNotas[posicion]}");
+                            Console.WriteLine($"Alumno: {vectorAlumnos[posicion]} Nota: {vectorNotas[posicion]}");
                         }
                         else
                         {
