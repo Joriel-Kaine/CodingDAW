@@ -24,7 +24,7 @@
                         FuncionesAlumnos.LeerAlumnosYNotas(vectorAlumnos, vectorNotas);
                         break;
                     case 2:
-                        FuncionesAlumnos.MostrarAlumnosYNotas(vectorAlumnos, vectorNotas);
+                        Console.WriteLine(FuncionesAlumnos.MostrarAlumnosYNotas(vectorAlumnos, vectorNotas));
                         break;
                     case 3:
                         Console.Write("\nIntroduce el nombre del alumno a buscar: ");
@@ -48,11 +48,10 @@
                         break;
                 }
 
-                Console.WriteLine("\nFin del programa.");
-
             } while (opcion != 6);
 
-            Console.WriteLine("\n\nPulsa una tecla para salir...");
+            Console.WriteLine("\n\nFin del programa.\n" +
+                              "Pulsa una tecla para salir...");
             Console.ReadKey();
         }
     }
