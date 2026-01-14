@@ -34,13 +34,18 @@ namespace Tema6_Tarea01
 
             for (int i = 0; i < tamano; i++)
             {
-                vector[i] = LeerNumero($"\nIntroduce el valor (posición {i} de {tamano}");
+                vector[i] = LeerNumero($"Introduce el valor ({i + 1} de {tamano}): ");
             }
         }
 
         public static string MostrarVector(int[] vector)
         {
-            string texto = "Elementos que tiene el vector: \n";
+            string texto = "═> Elementos que tiene el vector: \n";
+
+            for (int i = 0; i < vector.Length; i++)
+            {
+                texto += $"{vector[i]}, ";
+            }
 
             return texto;
         }
@@ -54,7 +59,9 @@ namespace Tema6_Tarea01
                               "\n2. Mostrar Vectores." +
                               "\n3. Salir del programa.");
 
-            opcion = "\nIntroduce"
+            opcion = LeerNumero("\nIntroduce una opción del menú: ");
+
+            Console.WriteLine();
 
             return opcion;
         }
