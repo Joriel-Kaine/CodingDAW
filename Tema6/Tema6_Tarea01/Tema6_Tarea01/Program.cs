@@ -24,17 +24,14 @@ namespace Tema6_Tarea01
                         OperacionesVector.LeerVector(numeros);
                         break;
                     case 2:
-                        OperacionesVector.MostrarVector(numeros);
+                        Console.WriteLine($"\n{OperacionesVector.MostrarVector(numeros)}");
                         break;
                 }
 
-                Console.WriteLine("\nFin del programa.");
-
             } while (opcion != 3);
 
-            Console.WriteLine($"\n{OperacionesVector.MostrarVector(numeros)}");
-
-            Console.WriteLine("\n\nPulsa una tecla para salir...");
+            Console.WriteLine("\n\nFin del programa." +
+                              "\nPulsa una tecla para salir...");
             Console.ReadKey();
         }
     }
