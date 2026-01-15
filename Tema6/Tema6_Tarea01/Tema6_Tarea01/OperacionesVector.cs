@@ -60,7 +60,6 @@ namespace Tema6_Tarea01
                               "\n3. Salir del programa.");
 
             opcion = LeerNumero("\nIntroduce una opción del menú: ");
-
             Console.WriteLine();
 
             return opcion;
