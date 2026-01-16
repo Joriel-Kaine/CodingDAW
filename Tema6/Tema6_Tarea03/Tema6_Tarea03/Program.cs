@@ -12,7 +12,24 @@
             int[] numeros = new int[Tamano];
             int opcion;
 
+            do
+            {
+                opcion = OperacionesVector.Menu();
 
+                switch (opcion)
+                {
+                    case 1:
+                        OperacionesVector.LeerVector(numeros);
+                        break;
+                    case 2:
+                        Console.WriteLine(OperacionesVector.GenerarTextoVector(numeros));
+                        break;
+                    case 3:
+                        Console.WriteLine(OperacionesVector.MenorValorVector(numeros));
+                        break;
+                }
+
+            } while (opcion != 4);
 
             Console.WriteLine("\n\nFin del programa." +
                               "\nPulsa una tecla para salir...");
