@@ -38,9 +38,19 @@ namespace Tema6_Tarea02
             }
         }
 
-        public static 
+        public static string MostrarVector(int[] vector)
+        {
+            string texto = "Elementos que tiene el vector: \n";
 
-        public static int SumarVector(int[] vector)
+            for (int i = 0; i < vector.Length; i++)
+            {
+                texto += $"{vector[i]}, ";
+            }
+
+            return texto;
+        }
+
+        private static int SumarVector(int[] vector)
         {
             int suma = 0;
 
@@ -52,14 +62,29 @@ namespace Tema6_Tarea02
             return suma;
         }
 
-        public static double MostrarMediaVector(string[] vector)
+        public static double MediaVector(int[] vector)
         {
+            double media;
 
+            media = (double)SumarVector(vector) / vector.Length;
+
+            return media;
         }
 
         public static int Menu()
         {
+            int opcion;
 
+            Console.WriteLine("\n   MENÚ\n" +
+                  "\n1. Leer vectores." +
+                  "\n2. Mostrar vectores." +
+                  "\n3. Media vectores." +
+                  "\n4. Salir del programa.");
+
+            opcion = LeerNumero("\nIntroduce una opción del menú: ");
+            Console.WriteLine();
+
+            return opcion;
         }
     }
 }
