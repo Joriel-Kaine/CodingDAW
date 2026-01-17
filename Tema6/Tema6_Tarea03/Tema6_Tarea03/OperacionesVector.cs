@@ -42,7 +42,7 @@ namespace Tema6_Tarea03
         {
             int tamano = vector.Length;
 
-            string texto = "═> Elementos que tiene el vector: \n";
+            string texto = "═> Elementos del vector: \n";
 
             for (int i = 0; i < tamano; i++)
             {

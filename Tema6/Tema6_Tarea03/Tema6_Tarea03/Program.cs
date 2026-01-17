@@ -25,7 +25,8 @@
                         Console.WriteLine(OperacionesVector.GenerarTextoVector(numeros));
                         break;
                     case 3:
-                        Console.WriteLine(OperacionesVector.MenorValorVector(numeros));
+                        Console.WriteLine($"El vector de menor valor es: " +
+                                          $"{OperacionesVector.MenorValorVector(numeros)}");
                         break;
                 }
 
