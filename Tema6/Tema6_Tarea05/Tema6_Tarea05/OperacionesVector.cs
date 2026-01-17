@@ -8,29 +8,101 @@ namespace Tema6_Tarea05
 {
     public class OperacionesVector
     {
-        public static int LeerNumero()
+        public static int LeerNumero(string mensaje)
         {
-            return 0;
+            int num;
+            bool esCorrecto;
+
+            do
+            {
+                Console.Write(mensaje);
+                esCorrecto = int.TryParse(Console.ReadLine(), out num);
+
+                if (!esCorrecto)
+                {
+                    Console.WriteLine("\nIntroduce valores numéricos válidos.");
+                }
+
+            } while (!esCorrecto);
+
+            return num;
         }
 
-        public static void LeerVector()
+        public static void LeerVector(int[] vector)
         {
+            int tamano = vector.Length;
 
+            for (int i = 0; i < tamano; i++)
+            {
+                vector[i] = LeerNumero($"Introduce un valor ({i + 1} de {tamano}): ");
+            }
         }
 
-        public static string GenerarTextoVector()
+        public static string GenerarTextoVector(int[] vector)
         {
-            return "";
+            string texto = "═> Elementos del vector:\n";
+            int tamano = vector.Length;
+
+            for (int i = 0; i < tamano; i++)
+            {
+                if (i < tamano - 1)
+                {
+                    texto += $"{vector[i]}, ";
+                }
+                else
+                {
+                    texto += $"{vector[i]}";
+                }
+            }
+
+            return texto;
         }
 
-        public static int BuscarValorVector()
+        public static int BuscarValorVector(int[] vector, int valor)
         {
-            return 0;
+            int resultado = -1;
+
+            for (int i = 0; i < vector.Length; i++)
+            {
+                if (vector[i] == valor)
+                {
+                    resultado = i;
+                    break;
+                }
+            }
+
+            return resultado;
+        }
+
+        public static int ValorRepetidoVector(int[] vector, int valor)
+        {
+            int contador = 0;
+
+            for (int i = 0; i < vector.Length; i++)
+            {
+                if (vector[i] == valor)
+                {
+                    contador++;
+                }
+            }
+
+            return contador;
         }
 
         public static int Menu()
         {
-            return 0;
+            int opcion;
+
+            Console.WriteLine("\n   MENÚ\n" +
+                              "\n1. Leer vector." +
+                              "\n2. Mostrar vector." +
+                              "\n3. Primera posición del valor y repeticiones." +
+                              "\n4. Salir del programa.");
+
+            opcion = LeerNumero("\nIntroduce una opción del menú: ");
+            Console.WriteLine();
+
+            return opcion;
         }
     }
 }
