@@ -24,7 +24,7 @@ namespace Tema6_Tarea01
                         OperacionesVector.LeerVector(numeros);
                         break;
                     case 2:
-                        Console.WriteLine($"\n{OperacionesVector.MostrarVector(numeros)}");
+                        Console.WriteLine(OperacionesVector.MostrarVector(numeros));
                         break;
                 }
 

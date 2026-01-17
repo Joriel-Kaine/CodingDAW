@@ -40,11 +40,19 @@ namespace Tema6_Tarea01
 
         public static string MostrarVector(int[] vector)
         {
-            string texto = "═> Elementos que tiene el vector: \n";
+            string texto = "═> Elementos del vector: \n";
+            int tamano = vector.Length;
 
-            for (int i = 0; i < vector.Length; i++)
+            for (int i = 0; i < tamano; i++)
             {
-                texto += $"{vector[i]}, ";
+                if (i != tamano - 1)
+                {
+                    texto += $"{vector[i]}, ";
+                }
+                else
+                {
+                    texto += $"{vector[i]}";
+                }
             }
 
             return texto;
