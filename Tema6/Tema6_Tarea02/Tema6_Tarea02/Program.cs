@@ -25,14 +25,15 @@
                         Console.WriteLine(OperacionesVector.MostrarVector(numeros));
                         break;
                     case 3:
-                        Console.WriteLine($"La media es: {OperacionesVector.MediaVector(numeros)}");
+                        Console.WriteLine($"La media de los elementos del vector es: " +
+                                          $"{OperacionesVector.MediaVector(numeros)}");
                         break;
                 }
 
             } while (opcion != 4);
 
             Console.WriteLine("\n\nFin del programa." +
-                              "Pulsa una tecla para salir...");
+                              "\nPulsa una tecla para salir...");
             Console.ReadKey();
         }
     }
