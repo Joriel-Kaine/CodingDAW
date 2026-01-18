@@ -8,6 +8,7 @@ namespace Tema6_Tarea06
 {
     public class OperacionesVector
     {
+
         public static int LeerNumero(string mensaje)
         {
             int num;
@@ -58,6 +59,18 @@ namespace Tema6_Tarea06
             return texto;
         }
 
+        public static void DesplazarValorVector(int[] vector)
+        {
+            int ultimoValor = vector[vector.Length -1], tamano = vector.Length;
+
+            for (int i = tamano - 1; i >= 1; i--)
+            {
+                vector[i] = vector[i - 1];
+            }
+
+            vector[0] = ultimoValor;
+        }
+
         public static int Menu()
         {
             int opcion;
@@ -73,5 +86,6 @@ namespace Tema6_Tarea06
 
             return opcion;
         }
+
     }
 }
