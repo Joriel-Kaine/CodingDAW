@@ -104,7 +104,31 @@ namespace Tema6_Tarea07
         {
             return (double)ObtenerSumaTemperatura(vector) / vector.Length;
         }
+        /*
+        public static void ObtenerDatos(int[] vector, out int mayor, out int menor, out double media)
+        {
+            mayor = vector[0];
+            menor = vector[0];
+            int suma = 0;
 
+            for (int i = 0; i < vector.Length; i++)
+            {
+                if (menor > vector[i])
+                {
+                    menor = vector[i];
+                }
+                
+                if (mayor < vector[i])
+                {
+                    mayor = vector[i];
+                }
+
+                suma += vector[i];
+            }
+
+            media = (double)suma / vector.Length;
+        }
+        */
         public static int Menu()
         {
             int opcion;
