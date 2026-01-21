@@ -80,5 +80,105 @@ namespace Tema6_Tarea08_Integrador1
 
             return texto;
         }
+
+        public static string BuscarIP(string[] IP, int[] latencia, string direccionIP)
+        {
+            string resultado = "";
+            bool esEncontrado = false;
+
+            for (int i = 0; i < IP.Length; i++)
+            {
+                if (IP[i] == direccionIP)
+                {
+                    resultado += $"IP {IP[i]} - latencia: {latencia[i]}\n";
+                    esEncontrado = true;
+                }
+            }
+
+            if (!esEncontrado)
+            {
+                resultado = "\nNo se ha encontrado la dirección IP.";
+            }
+
+            return resultado;
+        }
+
+        public static void ObtenerEstadisticas(int[] latencia, out int mayor,
+                                                out int menor, out double media)
+        {
+            int suma = 0;
+            mayor = latencia[0]; menor = latencia[0];
+
+            for (int i = 0; i < latencia.Length; i++)
+            {
+                if (mayor < latencia[i])
+                {
+                    mayor = latencia[i];
+                }
+
+                if (menor > latencia[i])
+                {
+                    menor = latencia[i];
+                }
+
+                suma += latencia[i];
+            }
+
+            media = (double)suma / latencia.Length;
+        }
+
+        private static void IntercambiarIP(ref string IP1, ref string IP2)
+        {
+            string aux;
+
+            aux = IP1;
+            IP1 = IP2;
+            IP2 = aux;
+        }
+
+        private static void IntercambiarLatencia(ref int latencia1, ref int latencia2)
+        {
+            int aux;
+
+            aux = latencia1;
+            latencia1 = latencia2;
+            latencia2 = aux;
+        }
+
+        public static void OrdenarPorLatencia(string[] IP, int[] latencia)
+        {
+            int tamano = latencia.Length;
+
+            for (int i = 0; i < tamano - 1; i++)
+            {
+                for (int j = i + 1; j < tamano; j++)
+                {
+                    if (latencia[i] > latencia[j])
+                    {
+                        IntercambiarLatencia(ref latencia[i], ref latencia[j]);
+                        IntercambiarIP(ref IP[i], ref IP[j]);
+                    }
+                }
+            }
+        }
+
+        public static int Menu()
+        {
+            int opcion;
+
+            Console.WriteLine("\nIPs + Latencias\n" +
+                              "\n1. Cargar datos manualmente." +
+                              "\n2. Cargar datos automáticamente (para pruebas)." +
+                              "\n3. Listar equipos." +
+                              "\n4. Buscar una IP y mostrar latencia." +
+                              "\n5. Mostrar estadísticas (max, min, media)." +
+                              "\n6. Ordenar por latencia (menor a mayor)." +
+                              "\n7. Salir del programa.");
+
+            opcion = LeerNumero("\nIntroduce una opción del menú: ");
+            Console.WriteLine();
+
+            return opcion;
+        }
     }
 }
