@@ -21,6 +21,35 @@
             int opcion;
             bool esLeido = false;
 
+            do
+            {
+                opcion = MonitorEquipos.Menu();
+
+                switch (opcion)
+                {
+                    case 1:
+                        MonitorEquipos.LeerDatosRed(IP, latencia);
+                        esLeido = true;
+                        break;
+                    case 2:
+
+                        break;
+                    case 3:
+
+                        break;
+                    case 4:
+
+                        break;
+                    case 5:
+
+                        break;
+                    case 6:
+
+                        break;
+                }
+
+            } while (opcion != 7);
+
             Console.WriteLine("\n\nFin del programa." +
                               "\nPulsa una tecla para salir...");
         }
