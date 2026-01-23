@@ -3,7 +3,7 @@
     internal class Program
     {
         const int Tamano = 10;
-        const string texto = "\nDebes introducir valores en el vector.";
+        const string texto = "\nDebes cargar los datos primero (opción 1 ó 2).";
 
         static void Main(string[] args)
         {
@@ -18,7 +18,8 @@
                              "196.168.8.2", "196.168.90.5", "196.168.1.11", "196.168.6.3"};
             int[] latencia2 = { 56, 8, 44, 12, 25, 10, 68, 20, 15, 2 };
 
-            int opcion;
+            int opcion, mayor, menor;
+            double media;
             bool esLeido = false;
 
             do
@@ -32,19 +33,47 @@
                         esLeido = true;
                         break;
                     case 2:
-
+                        MonitorEquipos.CargarDatosAutomatico(IP, IP2, latencia, latencia2);
+                        esLeido = true;
                         break;
                     case 3:
-
+                        if (!esLeido)
+                        {
+                            Console.WriteLine(texto);
+                        }
+                        else
+                        {
+                            Console.WriteLine(MonitorEquipos.ObtenerListadoRed(IP, latencia));
+                        }
                         break;
                     case 4:
-
+                        if (!esLeido)
+                        {
+                            Console.WriteLine(texto);
+                        }
+                        else
+                        {
+                            Console.Write("\nIntroduce la IP a buscar: ");
+                            string direccionIP = Console.ReadLine();
+                            Console.WriteLine(MonitorEquipos.BuscarIP(IP, latencia, direccionIP));
+                        }
                         break;
                     case 5:
-
+                        if (!esLeido)
+                        {
+                            Console.WriteLine(texto);
+                        }
+                        else
+                        {
+                            MonitorEquipos.ObtenerEstadisticas(latencia, out mayor, out menor, out media);
+                            Console.WriteLine($"\nLa latencia mayor es: {mayor}\n" +
+                                              $"La latencia menor es: {menor}\n" +
+                                              $"La latencia media es: {media}");
+                        }
                         break;
                     case 6:
-
+                        MonitorEquipos.OrdenarPorLatencia(IP, latencia);
+                        Console.WriteLine("\nSe han ordenado los valores con éxito.");
                         break;
                 }
 

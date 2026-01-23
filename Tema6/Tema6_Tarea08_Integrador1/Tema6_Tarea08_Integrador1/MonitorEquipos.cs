@@ -61,6 +61,16 @@ namespace Tema6_Tarea08_Integrador1
             }
         }
 
+        public static void CargarDatosAutomatico(string[] IP, string[] IP2,
+                                                 int[] latencia, int[] latencia2)
+        {
+            for (int i = 0; i < IP.Length; i++)
+            {
+                IP[i] = IP2[i];
+                latencia[i] = latencia2[i];
+            }
+        }
+
         public static string ObtenerListadoRed(string[] IP, int[] latencia)
         {
             string texto = "Listado de direcciones IP y latencias:\n";
@@ -104,7 +114,7 @@ namespace Tema6_Tarea08_Integrador1
         }
 
         public static void ObtenerEstadisticas(int[] latencia, out int mayor,
-                                                out int menor, out double media)
+                                               out int menor, out double media)
         {
             int suma = 0;
             mayor = latencia[0]; menor = latencia[0];
