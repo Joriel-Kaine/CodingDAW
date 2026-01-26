@@ -2,12 +2,13 @@
 {
     internal class Program
     {
-        const string texto = "Debes introducir valores en la lista.";
+        const string texto = "Debes introducir valores en la lista.",
+                     titulo = "\nTema 6 - Tarea 11: Manuel MR ®\n" +
+                              "══════════════════════════════\n\n";
 
         static void Main(string[] args)
         {
-            Console.WriteLine("\nTema 6 - Tarea 11: Manuel MR ®\n" +
-                              "══════════════════════════════\n\n");
+            Console.WriteLine(titulo);
 
             List<int> listaBase = new(), listaExponente = new(), listaPotencia = new();
             int opcion;
@@ -54,6 +55,9 @@
                         }
                         break;
                 }
+                Console.ReadKey();
+                Console.Clear();
+                Console.WriteLine(titulo);
 
             } while (opcion != 5);
 
