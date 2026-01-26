@@ -62,6 +62,7 @@
 
             Console.WriteLine("\n\nFin del programa." +
                               "\nPulsa una tecla para salir...");
+            Console.ReadKey();
         }
     }
 }
