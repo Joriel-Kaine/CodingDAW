@@ -10,7 +10,7 @@
         {
             Console.WriteLine(titulo);
 
-
+            List<int> lista1 = new(), lista2 = new(), lista3 = new();
 
             Console.WriteLine("\n\nFin del programa." +
                               "\nPulsa una tecla para salir...");
