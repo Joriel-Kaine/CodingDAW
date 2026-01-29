@@ -45,7 +45,7 @@ namespace Tema6_Tarea08_Integrador1
                         Console.WriteLine("La IP no puede estar vacía.");
                     }
 
-                } while (IP[i] is null || IP[i] == "");
+                } while (IP[i] == "");
 
 
                 do
@@ -91,23 +91,16 @@ namespace Tema6_Tarea08_Integrador1
             return texto;
         }
 
-        public static string BuscarIP(string[] IP, int[] latencia, string direccionIP)
+        public static int BuscarIP(string[] IP, string direccionIP)
         {
-            string resultado = "";
-            bool esEncontrado = false;
+            int resultado = -1;
 
             for (int i = 0; i < IP.Length; i++)
             {
                 if (IP[i] == direccionIP)
                 {
-                    resultado += $"IP {IP[i]} - latencia: {latencia[i]}\n";
-                    esEncontrado = true;
+                    resultado = i;
                 }
-            }
-
-            if (!esEncontrado)
-            {
-                resultado = "\nNo se ha encontrado la dirección IP.";
             }
 
             return resultado;

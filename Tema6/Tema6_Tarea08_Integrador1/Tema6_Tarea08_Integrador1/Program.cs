@@ -19,7 +19,7 @@
                              "196.168.8.2", "196.168.90.5", "196.168.12.15", "196.168.6.3"};
             int[] latencia2 = { 56, 8, 44, 12, 25, 10, 68, 20, 15, 2 };
 
-            int opcion, mayor, menor;
+            int opcion, posicion, mayor, menor;
             double media;
             bool esLeido = false;
 
@@ -56,7 +56,17 @@
                         {
                             Console.Write("\nIntroduce la IP a buscar: ");
                             string direccionIP = Console.ReadLine();
-                            Console.WriteLine(MonitorEquipos.BuscarIP(IP, latencia, direccionIP));
+
+                            posicion = MonitorEquipos.BuscarIP(IP, direccionIP);
+                            
+                            if (posicion >= 0)
+                            {
+                                Console.WriteLine($"La latencia de {IP[posicion]} es de: {latencia[posicion]}");
+                            }
+                            else
+                            {
+                                Console.WriteLine("\nNo se ha encontrado la dirección IP.");
+                            }
                         }
                         break;
                     case 5:
