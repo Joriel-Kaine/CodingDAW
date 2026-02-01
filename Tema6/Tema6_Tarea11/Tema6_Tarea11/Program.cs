@@ -21,11 +21,11 @@
                 switch (opcion)
                 {
                     case 1:
-                        OperacionesList.LeerListaBase(listaBase);
+                        OperacionesList.LeerLista(listaBase);
                         esBaseLeida = true;
                         break;
                     case 2:
-                        OperacionesList.LeerListaExponente(listaExponente);
+                        OperacionesList.LeerLista(listaExponente);
                         esExponenteLeido = true;
                         break;
                     case 3:

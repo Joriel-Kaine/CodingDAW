@@ -28,33 +28,16 @@ namespace Tema6_Tarea11
             return num;
         }
 
-        public static void LeerListaBase(List<int> listaBase)
+        public static void LeerLista(List<int> listaNumero)
         {
             int bbase;
             string respuesta = "";
 
             do
             {
-                bbase = LeerNumero($"Introduce un número (posición {listaBase.Count} de la lista): ");
+                bbase = LeerNumero($"Introduce un número (posición {listaNumero.Count} de la lista): ");
 
-                listaBase.Add(bbase);
-
-                Console.Write("¿Quieres introducir otro valor? (S/N): ");
-                respuesta = Console.ReadLine();
-
-            } while (respuesta.ToUpper() == "S");
-        }
-
-        public static void LeerListaExponente(List<int> listaExponente)
-        {
-            int exponente;
-            string respuesta = "";
-
-            do
-            {
-                exponente = LeerNumero($"Introduce un número (posición {listaExponente.Count} de la lista): ");
-
-                listaExponente.Add(exponente);
+                listaNumero.Add(bbase);
 
                 Console.Write("¿Quieres introducir otro valor? (S/N): ");
                 respuesta = Console.ReadLine();
