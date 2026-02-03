@@ -106,11 +106,12 @@ namespace Tema6_Tarea12
             int opcion;
 
             Console.WriteLine("\nIntercalar Listas\n" +
-                              "\n1. Leer la primera lista." +
-                              "\n2. Leer la segunda lista." +
-                              "\n3. Intercalar las listas." +
-                              "\n4. Mostrar las listas." +
-                              "\n5. Salir del programa.");
+                              "\n1. Introducir número de elementos." +
+                              "\n2. Leer la primera lista." +
+                              "\n3. Leer la segunda lista." +
+                              "\n4. Intercalar las listas." +
+                              "\n5. Mostrar las listas." +
+                              "\n6. Salir del programa.");
 
             opcion = LeerNumero("Introduce una opción del menú: ");
             Console.WriteLine();
