@@ -8,24 +8,19 @@ namespace Tema6_Tarea13
 {
     public class OperacionesList
     {
-        public static int LeerNumero(string mensaje)
+        private static List<string> InsertarOrdenado(ref string palabra)
         {
-            int num;
-            bool esCorrecto;
+            int pos;
+            List<string> lista = new();
 
-            do
-            {
-                Console.Write(mensaje);
-                esCorrecto = int.TryParse(Console.ReadLine(), out num);
+            lista.Add(palabra);
+            
+            lista.Insert(palabra);
+        }
 
-                if (!esCorrecto)
-                {
-                    Console.WriteLine("Introduce valores numéricos válidos.");
-                }
+        public static string GestionarListaPalabras()
+        {
 
-            } while (!esCorrecto);
-
-            return num;
         }
     }
 }
