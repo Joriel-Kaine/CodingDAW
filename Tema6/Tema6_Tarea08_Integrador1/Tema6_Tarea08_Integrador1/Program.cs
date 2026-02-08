@@ -3,13 +3,13 @@
     internal class Program
     {
         const int Tamano = 10;
-        const string texto = "\nDebes cargar los datos primero (opción 1 ó 2).", 
-                     titulo = "\nTema 6 - Integrador 1: Manuel MR ®\n" +
+        const string Texto = "\nDebes cargar los datos primero (opción 1 ó 2).", 
+                     Titulo = "\nTema 6 - Integrador 1: Manuel MR ®\n" +
                               "══════════════════════════════════\n\n";
 
         static void Main(string[] args)
         {
-            Console.WriteLine(titulo);
+            Console.WriteLine(Titulo);
 
             string[] IP = new string[Tamano];
             int[] latencia = new int[Tamano];
@@ -36,11 +36,12 @@
                     case 2:
                         MonitorEquipos.CargarDatosAutomatico(IP, IP2, latencia, latencia2);
                         esLeido = true;
+                        Console.WriteLine("\nSe han cargado automáticamente los datos.");
                         break;
                     case 3:
                         if (!esLeido)
                         {
-                            Console.WriteLine(texto);
+                            Console.WriteLine(Texto);
                         }
                         else
                         {
@@ -50,7 +51,7 @@
                     case 4:
                         if (!esLeido)
                         {
-                            Console.WriteLine(texto);
+                            Console.WriteLine(Texto);
                         }
                         else
                         {
@@ -61,7 +62,7 @@
                             
                             if (posicion >= 0)
                             {
-                                Console.WriteLine($"La latencia de {IP[posicion]} es de: {latencia[posicion]}");
+                                Console.WriteLine($"\nLa latencia de {IP[posicion]} es de: {latencia[posicion]}");
                             }
                             else
                             {
@@ -72,14 +73,14 @@
                     case 5:
                         if (!esLeido)
                         {
-                            Console.WriteLine(texto);
+                            Console.WriteLine(Texto);
                         }
                         else
                         {
                             MonitorEquipos.ObtenerEstadisticas(latencia, out mayor, out menor, out media);
-                            Console.WriteLine($"\nLa latencia mayor es: {mayor}\n" +
-                                              $"La latencia menor es: {menor}\n" +
-                                              $"La latencia media es: {media}");
+                            Console.WriteLine($"\nLa latencia mayor es: {mayor}" +
+                                              $"\nLa latencia menor es: {menor}" +
+                                              $"\nLa latencia media es: {media}");
                         }
                         break;
                     case 6:
@@ -87,9 +88,20 @@
                         Console.WriteLine("\nSe han ordenado los valores con éxito.");
                         break;
                 }
-                Console.ReadKey();
-                Console.Clear();
-                Console.WriteLine(titulo);
+
+                if (opcion != 7)
+                {
+                    Console.WriteLine("\nPulsa una tecla para volver al menú...");
+                    Console.ReadKey();
+                    Console.Clear();
+                    Console.WriteLine(Titulo);
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine(Titulo);
+                }
+
 
             } while (opcion != 7);
 
