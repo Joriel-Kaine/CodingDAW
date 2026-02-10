@@ -29,7 +29,17 @@ namespace Tema7_Tarea01
         public string Nombre
         {
             get { return _nombre; }
-            set { _nombre = value; }
+            set
+            {
+                if (value != "")
+                {
+                    _nombre = value;
+                }
+                else
+                {
+                    throw new Exception("Debes introducir un nombre");
+                }
+            }
         }
 
         public int Edad
@@ -43,7 +53,7 @@ namespace Tema7_Tarea01
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException("\nLa edad debe estar entre 0 y 100.");
+                    throw new ArgumentOutOfRangeException("La edad debe estar entre 0 y 100.");
                 }
             }
         }
@@ -67,37 +77,30 @@ namespace Tema7_Tarea01
         }
 
         // Constructor.
-        public Persona(string nombre)
+        public Persona()
         {
-            if (nombre != "")
-            {
-                _nombre = nombre;
-            }
-            else
-            {
-                throw new Exception("\nDebes introducir un nombre.");
-            }
+            _nombre = "";
             _edad = 0;
             _telefono = "";
             _sexo = Genero.NoIndicado;
             _casado = false;
         }
 
-        // Métodos de la clase (PascalCase).
-        public void IntroducirDatos(string nombre, int edad, string telefono, Genero sexo, bool casado)
+        public Persona(string nombre, int edad, string telefono, Genero sexo, bool EsCasado)
         {
             Nombre = nombre;
             Edad = edad;
             Telefono = telefono;
             Sexo = sexo;
-            Casado = casado;
+            Casado = EsCasado;
         }
 
+        // Métodos de la clase (PascalCase).
         public string MostrarDatos()
         {
             string texto = "";
 
-            texto += $"{_nombre} - {_edad} - {_telefono} - {_sexo} - {_casado}\n";
+            texto = $"{Nombre} - {Edad} - {Telefono} - {Sexo} - {Casado}\n";
 
             return texto;
         }
