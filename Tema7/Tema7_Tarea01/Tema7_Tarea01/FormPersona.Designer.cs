@@ -1,6 +1,6 @@
 ﻿namespace Tema7_Tarea01
 {
-    partial class Form1
+    partial class FormPersona
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblTitulo = new Label();
             btnIntroducir = new Button();
             btnMostrar = new Button();
             btnActualizar = new Button();
+            lblMostrar = new Label();
             SuspendLayout();
             // 
-            // label1
+            // lblTitulo
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Maiandra GD", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(178, 39);
-            label1.Name = "label1";
-            label1.Size = new Size(770, 57);
-            label1.TabIndex = 0;
-            label1.Text = "Trabajar con una lista de personas";
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Maiandra GD", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(178, 39);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(770, 57);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Trabajar con una lista de personas";
             // 
             // btnIntroducir
             // 
@@ -51,7 +52,7 @@
             btnIntroducir.FlatAppearance.BorderSize = 3;
             btnIntroducir.FlatStyle = FlatStyle.Flat;
             btnIntroducir.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnIntroducir.Location = new Point(95, 235);
+            btnIntroducir.Location = new Point(40, 170);
             btnIntroducir.Name = "btnIntroducir";
             btnIntroducir.Size = new Size(420, 80);
             btnIntroducir.TabIndex = 1;
@@ -66,9 +67,9 @@
             btnMostrar.FlatAppearance.BorderSize = 3;
             btnMostrar.FlatStyle = FlatStyle.Flat;
             btnMostrar.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMostrar.Location = new Point(195, 401);
+            btnMostrar.Location = new Point(506, 170);
             btnMostrar.Name = "btnMostrar";
-            btnMostrar.Size = new Size(320, 80);
+            btnMostrar.Size = new Size(280, 80);
             btnMostrar.TabIndex = 2;
             btnMostrar.Text = "Mostrar Lista";
             btnMostrar.UseVisualStyleBackColor = false;
@@ -81,24 +82,34 @@
             btnActualizar.FlatAppearance.BorderSize = 3;
             btnActualizar.FlatStyle = FlatStyle.Flat;
             btnActualizar.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnActualizar.Location = new Point(195, 570);
+            btnActualizar.Location = new Point(850, 170);
             btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new Size(320, 80);
+            btnActualizar.Size = new Size(280, 80);
             btnActualizar.TabIndex = 3;
             btnActualizar.Text = "Limpiar Todo";
             btnActualizar.UseVisualStyleBackColor = false;
             // 
-            // Form1
+            // lblMostrar
+            // 
+            lblMostrar.AutoSize = true;
+            lblMostrar.Font = new Font("Maiandra GD", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMostrar.Location = new Point(178, 311);
+            lblMostrar.Name = "lblMostrar";
+            lblMostrar.Size = new Size(0, 31);
+            lblMostrar.TabIndex = 4;
+            // 
+            // FormPersona
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(1178, 744);
+            Controls.Add(lblMostrar);
             Controls.Add(btnActualizar);
             Controls.Add(btnMostrar);
             Controls.Add(btnIntroducir);
-            Controls.Add(label1);
-            Name = "Form1";
+            Controls.Add(lblTitulo);
+            Name = "FormPersona";
             Text = "Tema 7 - Tarea 1: Manuel MR ®";
             ResumeLayout(false);
             PerformLayout();
@@ -106,9 +117,10 @@
 
         #endregion
 
-        private Label label1;
+        private Label lblTitulo;
         private Button btnIntroducir;
         private Button btnMostrar;
         private Button btnActualizar;
+        private Label lblMostrar;
     }
 }

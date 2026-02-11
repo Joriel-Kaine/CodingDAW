@@ -17,6 +17,7 @@ namespace Tema7_Tarea01
             _lista = new();
         }
 
+        // Métodos.
         public void AddPersona(string nombre, int edad, string telefono, Genero sexo, bool esCasado)
         {
             Persona persona = new(nombre, edad, telefono, sexo, esCasado);
@@ -26,7 +27,7 @@ namespace Tema7_Tarea01
 
         public string MostrarListaPersonas()
         {
-            string texto = "Nombre - Edad - Teléfono - Género - ¿Casado?\n";
+            string texto = "Nombre - Edad - Teléfono - Género - ¿Casado?\n\n";
 
             foreach (Persona persona in _lista)
             {

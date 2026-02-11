@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Tema7_Tarea01
 {
-    public class FuncionesInterfaz
+    public static class FuncionesInterfaz
     {
         const string Mensaje = "Introduce valores válidos.";
 
-        public static int LeerEntero(string mensaje)
+        private static int LeerEntero(string mensaje)
         {
             int num;
             bool esCorrecto;
@@ -91,7 +91,6 @@ namespace Tema7_Tarea01
             } while (!esCorrecto);
 
             listaPersonas.AddPersona(nombre, edad, telefono, sexo, esCasado);
-            
         }
     }
 }
