@@ -2,9 +2,17 @@
 {
     internal class Program
     {
+        const string Titulo = "\nTema 7 - Tarea 2: Manuel MR ®\n" +
+                              "═════════════════════════════\n\n";
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine(Titulo);
+
+
+
+            Console.WriteLine("\n\nFin del programa." +
+                              "\nPulsa una tecla para finalizar...");
         }
     }
 }
