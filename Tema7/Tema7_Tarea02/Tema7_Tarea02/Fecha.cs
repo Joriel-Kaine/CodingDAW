@@ -121,7 +121,7 @@ namespace Tema7_Tarea02
             return dias;
         }
 
-        public bool FechaValida()
+        public bool EsFechaValida()
         {
             bool esValida = false;
 
@@ -131,6 +131,20 @@ namespace Tema7_Tarea02
             }
 
             return esValida;
+        }
+
+        public bool EsFechaMasActual(Fecha otraFecha)
+        {
+            bool esMasActual = false;
+
+            if ((Year > otraFecha.Year) ||
+                (Year == otraFecha.Year && Mes > otraFecha.Mes) ||
+                (Year == otraFecha.Year && Mes == otraFecha.Mes && Dia > otraFecha.Dia))
+            {
+                esMasActual = true;
+            }
+
+            return esMasActual;
         }
 
         public string MostrarFecha()
