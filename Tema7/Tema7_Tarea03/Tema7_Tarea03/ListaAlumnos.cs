@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tema7_Tarea03
+{
+    public class ListaAlumnos
+    {
+        private List<Alumno> _listaAlumnos;
+
+        public ListaAlumnos()
+        {
+            _listaAlumnos = new();
+        }
+
+
+    }
+}
