@@ -1,8 +1,8 @@
 namespace Tema7_Tarea04
 {
-    public partial class Form1 : Form
+    public partial class FormAlumno : Form
     {
-        public Form1()
+        public FormAlumno()
         {
             InitializeComponent();
         }
