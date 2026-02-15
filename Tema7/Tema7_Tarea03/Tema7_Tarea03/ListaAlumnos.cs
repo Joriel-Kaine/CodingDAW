@@ -39,7 +39,7 @@ namespace Tema7_Tarea03
 
             foreach (Alumno alumno in _listaAlumnos)
             {
-                texto += $"{posicion} - {alumno.Nombre}";
+                texto += $"{posicion} - {alumno.Nombre}\n";
                 posicion++;
             }
 
@@ -67,22 +67,71 @@ namespace Tema7_Tarea03
 
         public bool AddNotaAlumno(string nombre, double nota)
         {
+            int posicion;
+            Alumno alumno;
+            bool esEncontrado = false;
 
+            posicion = BuscarAlumno(nombre);
+
+            if (posicion >= 0)
+            {
+                alumno = _listaAlumnos[posicion];
+                alumno.AddNota(nota);
+                esEncontrado = true;
+            }
+
+            return esEncontrado;
         }
 
         public bool BirthdayAlumno(string nombre)
         {
+            int posicion;
+            Alumno alumno;
+            bool esEncontrado = false;
 
+            posicion = BuscarAlumno(nombre);
+
+            if (posicion >= 0)
+            {
+                alumno = _listaAlumnos[posicion];
+                alumno.Birthday();
+                esEncontrado = true;
+            }
+
+            return esEncontrado;
         }
 
         public string MostrarDatosAlumno(string nombre)
         {
+            int posicion;
+            Alumno alumno;
+            string datos = "Alumno no encontrado.";
 
+            posicion = BuscarAlumno(nombre);
+
+            if (posicion >= 0)
+            {
+                alumno = _listaAlumnos[posicion];
+                datos = alumno.MostrarDatos();
+            }
+
+            return datos;
         }
         
         public bool EliminarAlumno(string nombre)
         {
+            int posicion;
+            bool esEncontrado = false;
 
+            posicion = BuscarAlumno(nombre);
+
+            if (posicion >= 0)
+            {
+                _listaAlumnos.RemoveAt(posicion);
+                esEncontrado = true;
+            }
+
+            return esEncontrado;
         }
     }
 }
