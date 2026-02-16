@@ -31,11 +31,12 @@
             components = new System.ComponentModel.Container();
             lblTitulo = new Label();
             groupBox1 = new GroupBox();
+            btnMostrarAlumno = new Button();
+            btnBirthday = new Button();
+            btnAddNota = new Button();
             btnLeerAlumno = new Button();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            btnAddNota = new Button();
-            btnBirthday = new Button();
-            btnMostrarAlumno = new Button();
+            lblListaNombres = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -66,6 +67,45 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Alumnos";
             // 
+            // btnMostrarAlumno
+            // 
+            btnMostrarAlumno.BackColor = Color.LightBlue;
+            btnMostrarAlumno.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnMostrarAlumno.FlatAppearance.BorderSize = 3;
+            btnMostrarAlumno.FlatStyle = FlatStyle.Flat;
+            btnMostrarAlumno.Location = new Point(551, 207);
+            btnMostrarAlumno.Name = "btnMostrarAlumno";
+            btnMostrarAlumno.Size = new Size(360, 100);
+            btnMostrarAlumno.TabIndex = 3;
+            btnMostrarAlumno.Text = "Mostrar Datos de un Alumno";
+            btnMostrarAlumno.UseVisualStyleBackColor = false;
+            // 
+            // btnBirthday
+            // 
+            btnBirthday.BackColor = Color.LightBlue;
+            btnBirthday.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnBirthday.FlatAppearance.BorderSize = 3;
+            btnBirthday.FlatStyle = FlatStyle.Flat;
+            btnBirthday.Location = new Point(78, 207);
+            btnBirthday.Name = "btnBirthday";
+            btnBirthday.Size = new Size(360, 100);
+            btnBirthday.TabIndex = 2;
+            btnBirthday.Text = "Cumpleaños de un Alumno";
+            btnBirthday.UseVisualStyleBackColor = false;
+            // 
+            // btnAddNota
+            // 
+            btnAddNota.BackColor = Color.LightBlue;
+            btnAddNota.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnAddNota.FlatAppearance.BorderSize = 3;
+            btnAddNota.FlatStyle = FlatStyle.Flat;
+            btnAddNota.Location = new Point(551, 67);
+            btnAddNota.Name = "btnAddNota";
+            btnAddNota.Size = new Size(360, 80);
+            btnAddNota.TabIndex = 1;
+            btnAddNota.Text = "Añadir Nota";
+            btnAddNota.UseVisualStyleBackColor = false;
+            // 
             // btnLeerAlumno
             // 
             btnLeerAlumno.BackColor = Color.LightBlue;
@@ -85,44 +125,15 @@
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // btnAddNota
+            // lblListaNombres
             // 
-            btnAddNota.BackColor = Color.LightBlue;
-            btnAddNota.FlatAppearance.BorderColor = Color.SteelBlue;
-            btnAddNota.FlatAppearance.BorderSize = 3;
-            btnAddNota.FlatStyle = FlatStyle.Flat;
-            btnAddNota.Location = new Point(551, 67);
-            btnAddNota.Name = "btnAddNota";
-            btnAddNota.Size = new Size(360, 80);
-            btnAddNota.TabIndex = 1;
-            btnAddNota.Text = "Añadir Nota";
-            btnAddNota.UseVisualStyleBackColor = false;
-            // 
-            // btnBirthday
-            // 
-            btnBirthday.BackColor = Color.LightBlue;
-            btnBirthday.FlatAppearance.BorderColor = Color.SteelBlue;
-            btnBirthday.FlatAppearance.BorderSize = 3;
-            btnBirthday.FlatStyle = FlatStyle.Flat;
-            btnBirthday.Location = new Point(78, 207);
-            btnBirthday.Name = "btnBirthday";
-            btnBirthday.Size = new Size(360, 100);
-            btnBirthday.TabIndex = 2;
-            btnBirthday.Text = "Cumpleaños de un Alumno";
-            btnBirthday.UseVisualStyleBackColor = false;
-            // 
-            // btnMostrarAlumno
-            // 
-            btnMostrarAlumno.BackColor = Color.LightBlue;
-            btnMostrarAlumno.FlatAppearance.BorderColor = Color.SteelBlue;
-            btnMostrarAlumno.FlatAppearance.BorderSize = 3;
-            btnMostrarAlumno.FlatStyle = FlatStyle.Flat;
-            btnMostrarAlumno.Location = new Point(551, 207);
-            btnMostrarAlumno.Name = "btnMostrarAlumno";
-            btnMostrarAlumno.Size = new Size(360, 100);
-            btnMostrarAlumno.TabIndex = 3;
-            btnMostrarAlumno.Text = "Mostrar Datos de un Alumno";
-            btnMostrarAlumno.UseVisualStyleBackColor = false;
+            lblListaNombres.AutoSize = true;
+            lblListaNombres.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblListaNombres.Location = new Point(1191, 164);
+            lblListaNombres.Name = "lblListaNombres";
+            lblListaNombres.Size = new Size(248, 34);
+            lblListaNombres.TabIndex = 2;
+            lblListaNombres.Text = "Lista de Alumnos:";
             // 
             // FormAlumno
             // 
@@ -130,6 +141,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(1658, 1144);
+            Controls.Add(lblListaNombres);
             Controls.Add(groupBox1);
             Controls.Add(lblTitulo);
             Name = "FormAlumno";
@@ -148,5 +160,6 @@
         private Button btnMostrarAlumno;
         private Button btnBirthday;
         private Button btnAddNota;
+        private Label lblListaNombres;
     }
 }
