@@ -34,7 +34,7 @@ namespace Tema7_Tarea04
         {
             string texto;
 
-            return texto = Interaction.InputBox("Introduce el nombre: ");
+            return texto = Interaction.InputBox("Introduce el nombre:");
         }
 
         public static double LeerNota(string mensaje)
@@ -45,7 +45,7 @@ namespace Tema7_Tarea04
 
             do
             {
-                texto = Interaction.InputBox("Introduce la nota: ");
+                texto = Interaction.InputBox("Introduce la nota:");
                 esCorrecto = double.TryParse(texto, out nota);
 
                 if ((nota < 0 || nota > 10) && !esCorrecto)
@@ -58,6 +58,36 @@ namespace Tema7_Tarea04
             return nota;
         }
 
+        public static void AddAlumno(ListaAlumnos listaAlumnos)
+        {
+            Alumno alumno = new();
 
+            alumno.Nombre = LeerNombre();
+            alumno.Edad = LeerEntero("Introduce la edad:");
+
+            if (listaAlumnos.AddAlumno(alumno))
+            {
+                MessageBox.Show("Alumno añadido.", "ALUMNO");
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido añadir el alumno.", "ERROR");
+            }
+        }
+
+        public static void AddNota(ListaAlumnos listaAlumnos)
+        {
+            string nombre = LeerNombre();
+            double nota = LeerNota("Introduce la nota");
+
+            if (listaAlumnos.AddNotaAlumno(nombre, nota))
+            {
+                MessageBox.Show("Nota añadida.", "NOTA");
+            }
+            else
+            {
+                MessageBox.Show($"El alumno {nombre} no se ha encontrado.", "ERROR");
+            }
+        }
     }
 }

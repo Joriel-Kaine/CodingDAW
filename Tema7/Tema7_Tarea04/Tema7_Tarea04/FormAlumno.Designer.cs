@@ -105,6 +105,7 @@
             btnAddNota.TabIndex = 1;
             btnAddNota.Text = "Añadir Nota";
             btnAddNota.UseVisualStyleBackColor = false;
+            btnAddNota.Click += btnAddNota_Click;
             // 
             // btnLeerAlumno
             // 
@@ -118,6 +119,7 @@
             btnLeerAlumno.TabIndex = 0;
             btnLeerAlumno.Text = "Introducir Alumno";
             btnLeerAlumno.UseVisualStyleBackColor = false;
+            btnLeerAlumno.Click += btnLeerAlumno_Click;
             // 
             // contextMenuStrip1
             // 
