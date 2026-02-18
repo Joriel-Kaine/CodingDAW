@@ -90,8 +90,7 @@ namespace Tema7_Tarea04
         {
             string texto;
 
-            texto = $"\nDatos del alumno:\n" +
-                    $"Nombre: {Nombre}\n" +
+            texto = $"Nombre: {Nombre}\n" +
                     $"Edad: {Edad}\n" +
                     MostrarNotas();
 

@@ -32,24 +32,34 @@ namespace Tema7_Tarea04
             return posicion;
         }
 
-        public bool AddAlumno(Alumno alumno)
+        public Alumno? DevolverAlumno(string nombre)
         {
-            bool esCorrecto = false;
+            int posicion;
+            Alumno? alumno;
 
-            if (alumno != null)
+            posicion = BuscarAlumno(nombre);
+
+            if (posicion >= 0)
             {
-                _listaAlumnos.Add(alumno);
-                esCorrecto = true;
+                alumno = _listaAlumnos[posicion];
+            }
+            else
+            {
+                alumno = null;
             }
 
-            return esCorrecto;
+            return alumno;
         }
 
-        public bool AddNotaAlumno(string nombre, double nota)
+        public void AddAlumno(Alumno alumno)
+        {   
+            _listaAlumnos.Add(alumno);
+        }
+
+        public Alumno? AddNotaAlumno(string nombre, double nota)
         {
-            bool esCorrecto = false;
             int posicion;
-            Alumno alumno;
+            Alumno? alumno;
 
             posicion = BuscarAlumno(nombre);
 
@@ -57,17 +67,19 @@ namespace Tema7_Tarea04
             {
                 alumno = _listaAlumnos[posicion];
                 alumno.AddNota(nota);
-                esCorrecto = true;
+            }
+            else
+            {
+                alumno = null;
             }
 
-            return esCorrecto;
+            return alumno;
         }
 
-        public bool BirthdayAlumno(string nombre)
+        public Alumno? BirthdayAlumno(string nombre)
         {
-            bool esCorrecto = false;
             int posicion;
-            Alumno alumno;
+            Alumno? alumno;
 
             posicion = BuscarAlumno(nombre);
 
@@ -75,10 +87,13 @@ namespace Tema7_Tarea04
             {
                 alumno = _listaAlumnos[posicion];
                 alumno.Birthday();
-                esCorrecto = true;
+            }
+            else
+            {
+                alumno = null;
             }
 
-            return esCorrecto;
+            return alumno;
         }
 
         public string MostrarDatosAlumno(string nombre)

@@ -79,6 +79,7 @@
             btnMostrarAlumno.TabIndex = 3;
             btnMostrarAlumno.Text = "Mostrar Datos de un Alumno";
             btnMostrarAlumno.UseVisualStyleBackColor = false;
+            btnMostrarAlumno.Click += btnMostrarAlumno_Click;
             // 
             // btnBirthday
             // 
@@ -92,6 +93,7 @@
             btnBirthday.TabIndex = 2;
             btnBirthday.Text = "Cumpleaños de un Alumno";
             btnBirthday.UseVisualStyleBackColor = false;
+            btnBirthday.Click += btnBirthday_Click;
             // 
             // btnAddNota
             // 
@@ -148,6 +150,7 @@
             Controls.Add(lblTitulo);
             Name = "FormAlumno";
             Text = "Tema 7 - Tarea 4: Manuel MR ®";
+            Load += FormAlumno_Load;
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

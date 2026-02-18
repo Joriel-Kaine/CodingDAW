@@ -22,19 +22,17 @@ namespace Tema7_Tarea04
 
                 if (!esCorrecto)
                 {
-                    MessageBox.Show("Introduce valores numéricos válidos.", "Error de formato");
+                    MessageBox.Show("Introduce valores numéricos válidos.", "ERROR FORMATO");
                 }
 
-            } while (!esCorrecto);
+            } while (!esCorrecto || (num < 0 || num > 100));
 
             return num;
         }
 
         public static string LeerNombre()
         {
-            string texto;
-
-            return texto = Interaction.InputBox("Introduce el nombre:");
+            return Interaction.InputBox("Introduce el nombre:");
         }
 
         public static double LeerNota(string mensaje)
@@ -45,49 +43,100 @@ namespace Tema7_Tarea04
 
             do
             {
-                texto = Interaction.InputBox("Introduce la nota:");
+                texto = Interaction.InputBox(mensaje);
                 esCorrecto = double.TryParse(texto, out nota);
 
-                if ((nota < 0 || nota > 10) && !esCorrecto)
+                if (!esCorrecto)
                 {
-                    MessageBox.Show("La nota debe ser numérica y entre 0 y 10.", "Error de formato");
+                    MessageBox.Show("Introduce valores numéricos válidos.", "ERROR FORMATO");
                 }
 
-            } while (!esCorrecto);
+                if (nota < 0 || nota > 10)
+                {
+                    MessageBox.Show("La nota debe estar entre 0 y 10.", "ERROR RANGO");
+                }
+
+            } while (!esCorrecto || (nota < 0 || nota > 10));
 
             return nota;
         }
 
-        public static void AddAlumno(ListaAlumnos listaAlumnos)
+        public static Alumno? AddAlumno(ListaAlumnos listaAlumnos)
         {
-            Alumno alumno = new();
+            Alumno? alumno = null;
+            string nombre = LeerNombre();
 
-            alumno.Nombre = LeerNombre();
-            alumno.Edad = LeerEntero("Introduce la edad:");
+            try
+            {
+                if (nombre.Trim() != "")
+                {
+                    alumno = new();
+                    alumno.Nombre = nombre;
+                    alumno.Edad = LeerEntero("Introduce la edad:");
+                    listaAlumnos.AddAlumno(alumno);
+                    MessageBox.Show("Alumno añadido.", "ALUMNO");
+                }
+                else
+                {
+                    MessageBox.Show("No se puede añadir el alumno.", "ERROR ALUMNO");
+                }
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("La edad debe estar entre 0 y 100.", "ERROR EDAD");
+            }
 
-            if (listaAlumnos.AddAlumno(alumno))
-            {
-                MessageBox.Show("Alumno añadido.", "ALUMNO");
-            }
-            else
-            {
-                MessageBox.Show("No se ha podido añadir el alumno.", "ERROR");
-            }
+            return alumno;
         }
 
         public static void AddNota(ListaAlumnos listaAlumnos)
         {
             string nombre = LeerNombre();
-            double nota = LeerNota("Introduce la nota");
+            double nota = LeerNota("Introduce la nota:");
+            Alumno? alumno = listaAlumnos.AddNotaAlumno(nombre, nota);
 
-            if (listaAlumnos.AddNotaAlumno(nombre, nota))
+            if (alumno != null)
             {
                 MessageBox.Show("Nota añadida.", "NOTA");
             }
             else
             {
-                MessageBox.Show($"El alumno {nombre} no se ha encontrado.", "ERROR");
+                MessageBox.Show($"El alumno {nombre} no se ha encontrado.", "ERROR ALUMNO");
             }
+        }
+
+        public static void AddBirthday(ListaAlumnos listaAlumnos)
+        {
+            string nombre = LeerNombre();
+            Alumno? alumno = listaAlumnos.BirthdayAlumno(nombre);
+
+            if (alumno != null)
+            {
+                MessageBox.Show($"¡Feliz cumpleaños, {nombre}!");
+            }
+            else
+            {
+                MessageBox.Show($"El alumno {nombre} no se ha encontrado.", "ERROR ALUMNO");
+            }
+        }
+
+        public static void MostrarDatosAlumno(ListaAlumnos listaAlumnos)
+        {
+            string nombre = LeerNombre();
+
+            MessageBox.Show(listaAlumnos.MostrarDatosAlumno(nombre), "DATOS ALUMNO");
+        }
+
+        public static void DatosEjemplo(ListaAlumnos listaAlumnos)
+        {
+            listaAlumnos.AddAlumno(new("Manu", 43));
+            listaAlumnos.AddAlumno(new("Lito", 34));
+            listaAlumnos.AddAlumno(new("Marina", 28));
+            listaAlumnos.AddAlumno(new("Lidia", 38));
+            listaAlumnos.AddAlumno(new("Carlos", 51));
+            listaAlumnos.AddAlumno(new("Kathy", 25));
+            listaAlumnos.AddAlumno(new("Lina", 45));
+            listaAlumnos.AddAlumno(new("Pedro", 20));
         }
     }
 }
