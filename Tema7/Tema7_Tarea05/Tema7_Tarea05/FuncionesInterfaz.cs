@@ -52,9 +52,30 @@ namespace Tema7_Tarea05
             return edad;
         }
 
-        public static string LeerNombre()
+        public static string LeerNombre(string mensaje)
         {
-            return Interaction.InputBox("Introduce el nombre:");
+            int num;
+            string nombre;
+            bool esCorrecto;
+
+            do
+            {
+                nombre = Interaction.InputBox(mensaje);
+                esCorrecto = int.TryParse(nombre, out num);
+
+                if (nombre.Trim() == "")
+                {
+                    MessageBox.Show("El nombre no puede estar vacío.", "ERROR NOMBRE");
+                }
+
+                if (esCorrecto)
+                {
+                    MessageBox.Show("Introduce un nombre válido.", "ERROR FORMATO");
+                }
+
+            } while (nombre.Trim() == "" || esCorrecto);
+
+            return nombre;
         }
 
         public static double LeerNota(string mensaje)
@@ -86,22 +107,15 @@ namespace Tema7_Tarea05
         public static Alumno? AddAlumno(ListaAlumnos listaAlumnos)
         {
             Alumno? alumno = null;
-            string nombre = LeerNombre();
+            string nombre = LeerNombre("Introduce el nombre del alumno a añadir:");
 
             try
-            {
-                if (nombre.Trim() != "")
-                {
-                    alumno = new();
-                    alumno.Nombre = nombre;
-                    alumno.Edad = LeerEdad("Introduce la edad:");
-                    listaAlumnos.AddAlumno(alumno);
-                    MessageBox.Show("Alumno añadido.", "ALUMNO");
-                }
-                else
-                {
-                    MessageBox.Show("No se puede añadir el alumno.", "ERROR ALUMNO");
-                }
+            { 
+                alumno = new();  
+                alumno.Nombre = nombre;  
+                alumno.Edad = LeerEdad("Introduce la edad:");  
+                listaAlumnos.AddAlumno(alumno);
+                MessageBox.Show("Alumno añadido.", "ALUMNO");
             }
             catch (ArgumentOutOfRangeException)
             {
@@ -113,8 +127,8 @@ namespace Tema7_Tarea05
 
         public static void AddNota(ListaAlumnos listaAlumnos)
         {
-            string nombre = LeerNombre();
-            double nota = LeerNota("Introduce la nota:");
+            string nombre = LeerNombre("Introduce el nombre del alumno al que añadir la nota:");
+            double nota = LeerNota("Introduce la nota del alumno:");
             Alumno? alumno = listaAlumnos.AddNotaAlumno(nombre, nota);
 
             if (alumno != null)
@@ -129,7 +143,7 @@ namespace Tema7_Tarea05
 
         public static void AddBirthday(ListaAlumnos listaAlumnos)
         {
-            string nombre = LeerNombre();
+            string nombre = LeerNombre("Introduce el nombre del alumno que cumple años:");
             Alumno? alumno = listaAlumnos.BirthdayAlumno(nombre);
 
             if (alumno != null)
@@ -144,7 +158,7 @@ namespace Tema7_Tarea05
 
         public static void MostrarDatosAlumno(ListaAlumnos listaAlumnos)
         {
-            string nombre = LeerNombre();
+            string nombre = LeerNombre("Introduce el nombre del alumno a mostrar:");
 
             MessageBox.Show(listaAlumnos.MostrarDatosAlumno(nombre), "DATOS ALUMNO");
         }
@@ -191,7 +205,9 @@ namespace Tema7_Tarea05
 
         public static void EliminarPorNombre(ListaAlumnos listaAlumnos)
         {
-            string nombre = LeerNombre();
+            string nombre = LeerNombre("Introduce el nombre del alumno a eliminar:");
+
+            listaAlumnos.EliminarAlumnoPorNombre(nombre);
         }
     }
 }

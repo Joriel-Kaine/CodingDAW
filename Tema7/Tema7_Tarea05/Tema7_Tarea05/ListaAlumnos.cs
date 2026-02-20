@@ -148,7 +148,11 @@ namespace Tema7_Tarea05
 
         public void EliminarAlumnoPorNombre(string nombre)
         {
-            _listaAlumnos.Remove(nombre);
+            int posicion;
+
+            posicion = BuscarAlumno(nombre);
+
+            _listaAlumnos.RemoveAt(posicion);
         }
     }
 }

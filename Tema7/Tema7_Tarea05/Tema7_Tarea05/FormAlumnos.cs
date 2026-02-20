@@ -53,7 +53,8 @@ namespace Tema7_Tarea05
 
         private void btnEliminarNombre_Click(object sender, EventArgs e)
         {
-
+            FuncionesInterfaz.EliminarPorNombre(_listaAlumnos);
+            lblListaNombres.Text = _listaAlumnos.MostrarListaNombres();
         }
     }
 }
