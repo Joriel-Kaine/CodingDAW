@@ -47,6 +47,12 @@ namespace Tema7_Tarea05
 
         private void btnEliminarPosicion_Click(object sender, EventArgs e)
         {
+            FuncionesInterfaz.EliminarPorPosicion(_listaAlumnos);
+            lblListaNombres.Text = _listaAlumnos.MostrarListaNombres();
+        }
+
+        private void btnEliminarNombre_Click(object sender, EventArgs e)
+        {
 
         }
     }

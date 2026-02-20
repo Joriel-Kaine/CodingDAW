@@ -63,7 +63,7 @@ namespace Tema7_Tarea05
 
             if (_notas.Count > 0)
             {
-                texto = "Notas:";
+                texto = "Notas: ";
 
                 for (int i = 0; i < _notas.Count; i++)
                 {

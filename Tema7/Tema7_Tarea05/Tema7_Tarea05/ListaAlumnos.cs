@@ -132,20 +132,23 @@ namespace Tema7_Tarea05
         // Método que cuenta los alumnos que hay y devuelve un entero con el total.
         public int CountAlumnos()
         {
-            int contador;
-
-            return contador = _listaAlumnos.Count;
+            return _listaAlumnos.Count;
         }
 
-        // Método que devuelve la posición de un alumno.
-        public Alumno MostrarPosicion(int posicion)
+        // Método que devuelve a un alumno mediante su posición.
+        public Alumno DevolverAlumnoPorPosicion(int posicion)
         {
             return _listaAlumnos[posicion];
         }
 
-        public void EliminarPosicion()
+        public void EliminarAlumnoPorPosición(int posicion)
         {
+            _listaAlumnos.RemoveAt(posicion);
+        }
 
+        public void EliminarAlumnoPorNombre(string nombre)
+        {
+            _listaAlumnos.Remove(nombre);
         }
     }
 }

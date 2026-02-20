@@ -117,6 +117,7 @@
             btnEliminarNombre.TabIndex = 4;
             btnEliminarNombre.Text = "Eliminar a un alumno por nombre";
             btnEliminarNombre.UseVisualStyleBackColor = false;
+            btnEliminarNombre.Click += btnEliminarNombre_Click;
             // 
             // btnMostrarAlumno
             // 
@@ -244,7 +245,7 @@
             btnMayorMedia.Text = "Mostrar alumno con mayor nota media";
             btnMayorMedia.UseVisualStyleBackColor = false;
             // 
-            // FormAlumno
+            // FormAlumnos
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -254,7 +255,7 @@
             Controls.Add(lblListaNombres);
             Controls.Add(groupBox1);
             Controls.Add(lblTitulo);
-            Name = "FormAlumno";
+            Name = "FormAlumnos";
             Text = "Tema 7 - Tarea 4: Manuel MR ®";
             Load += FormAlumno_Load;
             groupBox1.ResumeLayout(false);

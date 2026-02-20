@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,12 +23,33 @@ namespace Tema7_Tarea05
 
                 if (!esCorrecto)
                 {
+                    MessageBox.Show("Introduce valores numéricos válidos.", "EROR FORMATO");
+                }
+
+            } while (!esCorrecto);
+
+            return num;
+        }
+
+        public static int LeerEdad(string mensaje)
+        {
+            int edad;
+            bool esCorrecto;
+            string texto;
+
+            do
+            {
+                texto = Interaction.InputBox(mensaje);
+                esCorrecto = int.TryParse(texto, out edad);
+
+                if (!esCorrecto)
+                {
                     MessageBox.Show("Introduce valores numéricos válidos.", "ERROR FORMATO");
                 }
 
-            } while (!esCorrecto || (num < 0 || num > 100));
+            } while (!esCorrecto || (edad < 0 || edad > 100));
 
-            return num;
+            return edad;
         }
 
         public static string LeerNombre()
@@ -72,7 +94,7 @@ namespace Tema7_Tarea05
                 {
                     alumno = new();
                     alumno.Nombre = nombre;
-                    alumno.Edad = LeerEntero("Introduce la edad:");
+                    alumno.Edad = LeerEdad("Introduce la edad:");
                     listaAlumnos.AddAlumno(alumno);
                     MessageBox.Show("Alumno añadido.", "ALUMNO");
                 }
@@ -145,9 +167,31 @@ namespace Tema7_Tarea05
 
             for (int i = 0; i < contador; i++)
             {
-                Alumno alumno = listaAlumnos.MostrarPosicion(i);
+                Alumno alumno = listaAlumnos.DevolverAlumnoPorPosicion(i);
                 MessageBox.Show(alumno.MostrarDatos(), $"DATOS ALUMNO {i + 1}");
             }
+        }
+
+        public static void EliminarPorPosicion(ListaAlumnos listaAlumnos)
+        {
+            int posicion;
+
+            posicion = LeerEntero("Introduce la posición del alumno a eliminar:"); 
+
+            if (posicion > 0 && posicion < listaAlumnos.CountAlumnos())
+            {
+                listaAlumnos.EliminarAlumnoPorPosición(posicion);
+                MessageBox.Show($"Alumno eliminado correctamente.", "ALUMNO");
+            }
+            else
+            {
+                MessageBox.Show("Posición introducida fuera de rango.", "ERROR RANGO");
+            }
+        }
+
+        public static void EliminarPorNombre(ListaAlumnos listaAlumnos)
+        {
+            string nombre = LeerNombre();
         }
     }
 }
