@@ -96,5 +96,38 @@ namespace Tema7_Tarea05
 
             return texto;
         }
+
+        private double SumaNotas()
+        {
+            double suma = 0.0;
+
+            for (int i = 0; i < _notas.Count; i++)
+            {
+                suma += _notas[i];
+            }
+
+            return suma;
+        }
+
+        public int CountNotas()
+        {
+            return _notas.Count;
+        }
+
+        public double MediaNotas()
+        {
+            double media;
+
+            if (_notas.Count != 0)
+            {
+                media = SumaNotas() / CountNotas();
+            }
+            else
+            {
+                media = 0.0;
+            }
+
+            return media;
+        }
     }
 }

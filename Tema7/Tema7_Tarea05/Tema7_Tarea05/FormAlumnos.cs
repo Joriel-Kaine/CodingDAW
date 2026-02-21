@@ -10,7 +10,7 @@ namespace Tema7_Tarea05
 
         private void btnLeerAlumno_Click(object sender, EventArgs e)
         {
-            Alumno? alumno = FuncionesInterfaz.AddAlumno(_listaAlumnos);
+            Alumno? alumno = FuncionesInterfazAlumno.AddAlumno(_listaAlumnos);
             int posicion = _listaAlumnos.CountAlumnos();
 
             if (alumno != null)
@@ -21,39 +21,56 @@ namespace Tema7_Tarea05
 
         private void btnAddNota_Click(object sender, EventArgs e)
         {
-            FuncionesInterfaz.AddNota(_listaAlumnos);
+            FuncionesInterfazAlumno.AddNota(_listaAlumnos);
         }
 
         private void btnBirthday_Click(object sender, EventArgs e)
         {
-            FuncionesInterfaz.AddBirthday(_listaAlumnos);
+            FuncionesInterfazAlumno.AddBirthday(_listaAlumnos);
         }
 
         private void btnMostrarAlumno_Click(object sender, EventArgs e)
         {
-            FuncionesInterfaz.MostrarDatosAlumno(_listaAlumnos);
+            FuncionesInterfazAlumno.MostrarDatosAlumno(_listaAlumnos);
         }
 
         private void FormAlumno_Load(object sender, EventArgs e)
         {
-            FuncionesInterfaz.DatosEjemplo(_listaAlumnos);
+            FuncionesInterfazAlumno.DatosEjemplo(_listaAlumnos);
             lblListaNombres.Text = _listaAlumnos.MostrarListaNombres();
         }
 
         private void btnMostrarTodos_Click(object sender, EventArgs e)
         {
-            FuncionesInterfaz.MostrarTodo(_listaAlumnos);
+            FuncionesInterfazAlumno.MostrarTodo(_listaAlumnos);
         }
 
         private void btnEliminarPosicion_Click(object sender, EventArgs e)
         {
-            FuncionesInterfaz.EliminarPorPosicion(_listaAlumnos);
+            FuncionesInterfazAlumno.EliminarPorPosicion(_listaAlumnos);
             lblListaNombres.Text = _listaAlumnos.MostrarListaNombres();
         }
 
         private void btnEliminarNombre_Click(object sender, EventArgs e)
         {
-            FuncionesInterfaz.EliminarPorNombre(_listaAlumnos);
+            FuncionesInterfazAlumno.EliminarPorNombre(_listaAlumnos);
+            lblListaNombres.Text = _listaAlumnos.MostrarListaNombres();
+        }
+
+        private void btnMayorMedia_Click(object sender, EventArgs e)
+        {
+            FuncionesInterfazAlumno.MostrarAlumnoMayorNotaMedia(_listaAlumnos);
+        }
+
+        private void btnOrdenAlfabetico_Click(object sender, EventArgs e)
+        {
+            FuncionesInterfazAlumno.OrdenarPorOrdenAlfabetico(_listaAlumnos);
+            lblListaNombres.Text = _listaAlumnos.MostrarListaNombres();
+        }
+
+        private void btnOrdenarNotaMedia_Click(object sender, EventArgs e)
+        {
+            FuncionesInterfazAlumno.OrdenarPorNotaMedia(_listaAlumnos);
             lblListaNombres.Text = _listaAlumnos.MostrarListaNombres();
         }
     }

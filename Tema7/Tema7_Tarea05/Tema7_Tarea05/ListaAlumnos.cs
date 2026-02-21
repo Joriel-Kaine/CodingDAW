@@ -146,13 +146,133 @@ namespace Tema7_Tarea05
             _listaAlumnos.RemoveAt(posicion);
         }
 
-        public void EliminarAlumnoPorNombre(string nombre)
+        public bool EliminarAlumnoPorNombre(string nombre)
         {
             int posicion;
+            bool esCorrecto = false;
 
             posicion = BuscarAlumno(nombre);
 
-            _listaAlumnos.RemoveAt(posicion);
+            if (posicion >= 0)
+            {
+                _listaAlumnos.RemoveAt(posicion);
+                esCorrecto = true;
+            }
+
+            return esCorrecto;
+        }
+
+        public Alumno? MostrarMayorMediaAlumnos()
+        {
+            double mayorMedia = 0.0;
+            Alumno? alumnoMediaMayor = null;
+
+            foreach (Alumno alumno in _listaAlumnos)
+            {
+                double media = alumno.MediaNotas();
+
+                if (mayorMedia < media)
+                {
+                    mayorMedia = media;
+                    alumnoMediaMayor = alumno;
+                }
+            }
+
+            return alumnoMediaMayor;
+        }
+
+        private int StringMasCorto(string alfa, string beta)
+        {
+            int menorLongitud;
+
+            if (alfa.Length < beta.Length)
+            {
+                menorLongitud = alfa.Length;
+            }
+            else
+            {
+                menorLongitud = beta.Length;
+            }
+
+            return menorLongitud;
+        }
+
+        private bool EsMenorAlfabeto(string alfa, string beta)
+        {
+            bool esCorrecto = false, esDistintaLongitud = false;
+
+            int menor = StringMasCorto(alfa, beta);
+
+            for (int i = 0; i < menor; i++)
+            {
+                if (alfa[i] < beta[i])
+                {
+                    esCorrecto = true;
+                    esDistintaLongitud = true;
+                    break;
+                }
+                else if (alfa[i] > beta[i])
+                {
+                    esCorrecto = false;
+                    esDistintaLongitud = true;
+                    break;
+                }
+            }
+
+            if (!esDistintaLongitud)
+            {
+                esCorrecto = alfa.Length < beta.Length;
+            }
+
+            return esCorrecto;
+        }
+
+        private void Swap(int i, int j)
+        {
+            Alumno aux;
+
+            aux = _listaAlumnos[i];
+            _listaAlumnos[i] = _listaAlumnos[j];
+            _listaAlumnos[j] = aux;
+        }
+
+        public void OrdenarPorNombre()
+        {
+            int contador = CountAlumnos();
+
+            for (int i = 0; i < contador - 1; i++)
+            {
+                for (int j = i + 1; j < contador; j++)
+                {
+                    if (!EsMenorAlfabeto(_listaAlumnos[i].Nombre, _listaAlumnos[j].Nombre))
+                    {
+                        Swap(i, j);
+                    }
+
+                    /*
+                    if(_listaAlumnos[i].Nombre.CompareTo(_listaAlumnos[j].Nombre) > 0)
+                    {
+                        Swap(i, j);
+                    }
+                    */
+                }
+            }
+        }
+
+        public void OrdenarPorNotaMedia()
+        {
+            int contador = CountAlumnos();
+
+            for (int i = 0; i < contador - 1; i++)
+            {
+                for (int j = i + 1; j < contador; j++)
+                {
+                    if (_listaAlumnos[i].MediaNotas() > _listaAlumnos[j].MediaNotas())
+                    {
+                        Swap(i, j);
+                    }
+                }
+            }
         }
     }
 }

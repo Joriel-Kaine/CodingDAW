@@ -218,6 +218,7 @@
             btnOrdenarNotaMedia.TabIndex = 4;
             btnOrdenarNotaMedia.Text = "Ordenar por nota media";
             btnOrdenarNotaMedia.UseVisualStyleBackColor = false;
+            btnOrdenarNotaMedia.Click += btnOrdenarNotaMedia_Click;
             // 
             // btnOrdenAlfabetico
             // 
@@ -231,6 +232,7 @@
             btnOrdenAlfabetico.TabIndex = 3;
             btnOrdenAlfabetico.Text = "Ordenar por orden alfabético";
             btnOrdenAlfabetico.UseVisualStyleBackColor = false;
+            btnOrdenAlfabetico.Click += btnOrdenAlfabetico_Click;
             // 
             // btnMayorMedia
             // 
@@ -244,6 +246,7 @@
             btnMayorMedia.TabIndex = 2;
             btnMayorMedia.Text = "Mostrar alumno con mayor nota media";
             btnMayorMedia.UseVisualStyleBackColor = false;
+            btnMayorMedia.Click += btnMayorMedia_Click;
             // 
             // FormAlumnos
             // 
