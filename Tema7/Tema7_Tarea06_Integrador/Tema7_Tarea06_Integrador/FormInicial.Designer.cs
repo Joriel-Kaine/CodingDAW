@@ -38,7 +38,7 @@
             // 
             lblTituloInicial.AutoSize = true;
             lblTituloInicial.Font = new Font("Maiandra GD", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTituloInicial.ForeColor = Color.DarkBlue;
+            lblTituloInicial.ForeColor = Color.Navy;
             lblTituloInicial.Location = new Point(88, 57);
             lblTituloInicial.Name = "lblTituloInicial";
             lblTituloInicial.Size = new Size(792, 86);
@@ -59,7 +59,7 @@
             btnGestionCursos.TabIndex = 1;
             btnGestionCursos.Text = "Gestion Cursos";
             btnGestionCursos.UseVisualStyleBackColor = false;
-            btnGestionCursos.Click += this.btnGestionCursos_Click;
+            btnGestionCursos.Click += btnGestionCursos_Click;
             // 
             // btnGestionAlumnos
             // 
@@ -75,7 +75,7 @@
             btnGestionAlumnos.TabIndex = 2;
             btnGestionAlumnos.Text = "Gestion Alumnos";
             btnGestionAlumnos.UseVisualStyleBackColor = false;
-            btnGestionAlumnos.Click += this.btnGestionAlumnos_Click;
+            btnGestionAlumnos.Click += btnGestionAlumnos_Click;
             // 
             // btnGestionProfesores
             // 
@@ -91,6 +91,7 @@
             btnGestionProfesores.TabIndex = 3;
             btnGestionProfesores.Text = "Gestion Profesores";
             btnGestionProfesores.UseVisualStyleBackColor = false;
+            btnGestionProfesores.Click += btnGestionProfesores_Click;
             // 
             // FormInicial
             // 
@@ -104,6 +105,7 @@
             Controls.Add(lblTituloInicial);
             Name = "FormInicial";
             Text = "Tema 7 - Integrador: Manuel MR ®";
+            Load += FormInicial_Load;
             ResumeLayout(false);
             PerformLayout();
         }
