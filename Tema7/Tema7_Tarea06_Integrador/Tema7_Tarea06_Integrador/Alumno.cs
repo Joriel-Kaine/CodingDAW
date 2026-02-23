@@ -10,6 +10,7 @@ namespace Tema7_Tarea06_Integrador
     {
         // Campo.
         public string Nombre { get; set; }
+        public string DNI { get; set; }
         private int _edad;
         private List<double> _notas = new();
 
@@ -35,12 +36,14 @@ namespace Tema7_Tarea06_Integrador
         {
             Nombre = "";
             Edad = 0;
+            DNI = "";
         }
 
-        public Alumno(string nombre, int edad)
+        public Alumno(string nombre, int edad, string dni)
         {
             Nombre = nombre;
             Edad = edad;
+            DNI = dni;
         }
 
         // Método.
