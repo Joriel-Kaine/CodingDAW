@@ -97,15 +97,43 @@ namespace Tema7_Tarea06_Integrador
 
         public static void EliminarPorNombre(ListaAlumnos listaAlumnos)
         {
+            bool esEncontrado = false;
+
             string nombre = FuncionesInterfaz.LeerNombre("Introduce el nombre del alumno a eliminar:");
 
-            if (listaAlumnos.EliminarAlumnoPorNombre(nombre))
+            for (int i = 0; i < listaAlumnos.CountAlumnos(); i++)
             {
-                MessageBox.Show("Alumno eliminado correctamente.", "ALUMNO");
+                if (nombre == listaAlumnos.DevolverAlumnoPorPosicion(i).Nombre)
+                {
+                    esEncontrado = true;
+                    break;
+                }
+            }
+            
+            if (esEncontrado)
+            {
+                MessageBox.Show("Hay más de 1 coincidencia con ese nombre, se requiere el DNI.");
+                string dni = FuncionesInterfaz.LeerDNI("Introduce el DNI del alumno a eliminar.");
+
+                if (listaAlumnos.EliminarAlumnoPorDNI(dni))
+                {
+                    MessageBox.Show("Alumno eliminado correctamente.", "ALUMNO");
+                }
+                else
+                {
+                    MessageBox.Show("No existe el DNI del alumno a eliminar.");
+                }
             }
             else
             {
-                MessageBox.Show("No existe el alumno a eliminar.");
+                if (listaAlumnos.EliminarAlumnoPorNombre(nombre))
+                {
+                    MessageBox.Show("Alumno eliminado correctamente.", "ALUMNO");
+                }
+                else
+                {
+                    MessageBox.Show("No existe el alumno a eliminar.");
+                }
             }
         }
 

@@ -12,7 +12,7 @@ namespace Tema7_Tarea06_Integrador
         private List<Alumno> _listaAlumnos = new();
 
         // Método.
-        private int BuscarAlumno(string nombre)
+        private int BuscarAlumnoPorDNI(string dni)
         {
             int posicion = -1;
             bool esEncontrado = false;
@@ -22,7 +22,7 @@ namespace Tema7_Tarea06_Integrador
                 Alumno alumno;
                 alumno = _listaAlumnos[i];
 
-                if (alumno.Nombre.ToLower() == nombre.ToLower())
+                if (alumno.DNI.ToLower() == dni.ToLower())
                 {
                     posicion = i;
                     esEncontrado = true;
@@ -32,12 +32,32 @@ namespace Tema7_Tarea06_Integrador
             return posicion;
         }
 
-        public Alumno? DevolverAlumno(string nombre)
+        private int BuscarAlumnoPorNombre(string nombre)
+        {
+            int posicion = -1;
+            bool esEncontrado = false;
+
+            for (int i = 0; i < _listaAlumnos.Count && !esEncontrado; i++)
+            {
+                Alumno alumno;
+                alumno = _listaAlumnos[i];
+
+                if (alumno.DNI.ToLower() == nombre.ToLower())
+                {
+                    posicion = i;
+                    esEncontrado = true;
+                }
+            }
+
+            return posicion;
+        }
+
+        public Alumno? DevolverAlumno(string dni)
         {
             int posicion;
             Alumno? alumno;
 
-            posicion = BuscarAlumno(nombre);
+            posicion = BuscarAlumnoPorDNI(dni);
 
             if (posicion >= 0)
             {
@@ -56,12 +76,12 @@ namespace Tema7_Tarea06_Integrador
             _listaAlumnos.Add(alumno);
         }
 
-        public Alumno? AddNotaAlumno(string nombre, double nota)
+        public Alumno? AddNotaAlumno(string dni, double nota)
         {
             int posicion;
             Alumno? alumno;
 
-            posicion = BuscarAlumno(nombre);
+            posicion = BuscarAlumnoPorDNI(dni);
 
             if (posicion >= 0)
             {
@@ -76,12 +96,12 @@ namespace Tema7_Tarea06_Integrador
             return alumno;
         }
 
-        public Alumno? BirthdayAlumno(string nombre)
+        public Alumno? BirthdayAlumno(string dni)
         {
             int posicion;
             Alumno? alumno;
 
-            posicion = BuscarAlumno(nombre);
+            posicion = BuscarAlumnoPorDNI(dni);
 
             if (posicion >= 0)
             {
@@ -97,13 +117,13 @@ namespace Tema7_Tarea06_Integrador
         }
 
         // Método que muestra los datos de un alumno.
-        public string MostrarDatosAlumno(string nombre)
+        public string MostrarDatosAlumno(string dni)
         {
             string datos = "Alumno no encontrado.";
             int posicion;
             Alumno alumno;
 
-            posicion = BuscarAlumno(nombre);
+            posicion = BuscarAlumnoPorDNI(dni);
 
             if (posicion >= 0)
             {
@@ -151,7 +171,23 @@ namespace Tema7_Tarea06_Integrador
             int posicion;
             bool esCorrecto = false;
 
-            posicion = BuscarAlumno(nombre);
+            posicion = BuscarAlumnoPorNombre(nombre);
+
+            if (posicion >= 0)
+            {
+                _listaAlumnos.RemoveAt(posicion);
+                esCorrecto = true;
+            }
+
+            return esCorrecto;
+        }
+
+        public bool EliminarAlumnoPorDNI(string dni)
+        {
+            int posicion;
+            bool esCorrecto = false;
+
+            posicion = BuscarAlumnoPorDNI(dni);
 
             if (posicion >= 0)
             {

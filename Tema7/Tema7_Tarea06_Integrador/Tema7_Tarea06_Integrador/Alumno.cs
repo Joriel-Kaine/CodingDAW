@@ -10,8 +10,9 @@ namespace Tema7_Tarea06_Integrador
     {
         // Campo.
         public string Nombre { get; set; }
-        public string DNI { get; set; }
         private int _edad;
+        public string DNI { get; set; }
+        public int CodCurso { get; set; }
         private List<double> _notas = new();
 
         // Propiedad.
@@ -37,13 +38,15 @@ namespace Tema7_Tarea06_Integrador
             Nombre = "";
             Edad = 0;
             DNI = "";
+            CodCurso = -1;
         }
 
-        public Alumno(string nombre, int edad, string dni)
+        public Alumno(string nombre, int edad, string dni, int codCurso)
         {
             Nombre = nombre;
             Edad = edad;
             DNI = dni;
+            CodCurso = codCurso;
         }
 
         // Método.
@@ -95,6 +98,8 @@ namespace Tema7_Tarea06_Integrador
 
             texto = $"Nombre: {Nombre}\n" +
                     $"Edad: {Edad}\n" +
+                    $"DNI: {DNI}\n" +
+                    $"Código de curso: {CodCurso}\n" +
                     MostrarNotas();
 
             return texto;

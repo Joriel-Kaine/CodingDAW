@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -102,6 +103,61 @@ namespace Tema7_Tarea06_Integrador
             } while (!esCorrecto || (nota < 0 || nota > 10));
 
             return nota;
+        }
+
+        private static bool Contiene(char dni)
+        {
+            List<char> listaNum = new() { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+            bool esCorrecto = false;
+
+            for (int i = 0; i < listaNum.Count; i++)
+            {
+                if (dni == listaNum[i])
+                {
+                    esCorrecto = true;
+                    break;
+                }
+            }
+
+            return esCorrecto;
+        }
+
+        public static string LeerDNI(string mensaje)
+        {
+            string dni, parteNum, parteLetra;
+            int contador;
+
+            do
+            {
+                contador = 0; parteNum = ""; parteLetra = "";
+
+                dni = Interaction.InputBox(mensaje);
+
+                for (int i = 0; i < dni.Length; i++)
+                {
+                    if (Contiene(dni[i]))
+                    {
+                        parteNum += dni[i];
+                        contador++;
+                    }
+
+                    if (i == dni.Length - 1 && !Contiene(dni[i]))
+                    {
+                        parteLetra += dni[i];
+                        contador++;
+                    }
+                }
+
+                if (dni.Length > 8 || contador != 9)
+                {
+                    MessageBox.Show("Introduce un número de identidad válido.", "ERROR FORMATO");
+                }
+
+            } while (dni.Length > 8 || contador != 9);
+
+            dni = parteNum + parteLetra;
+
+            return dni;
         }
     }
 }
