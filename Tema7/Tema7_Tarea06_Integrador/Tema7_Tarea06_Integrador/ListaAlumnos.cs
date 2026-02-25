@@ -12,26 +12,6 @@ namespace Tema7_Tarea06_Integrador
         private List<Alumno> _listaAlumnos = new();
 
         // Método.
-        private int BuscarAlumnoPorDNI(string dni)
-        {
-            int posicion = -1;
-            bool esEncontrado = false;
-
-            for (int i = 0; i < _listaAlumnos.Count && !esEncontrado; i++)
-            {
-                Alumno alumno;
-                alumno = _listaAlumnos[i];
-
-                if (alumno.DNI.ToLower() == dni.ToLower())
-                {
-                    posicion = i;
-                    esEncontrado = true;
-                }
-            }
-
-            return posicion;
-        }
-
         private int BuscarAlumnoPorNombre(string nombre)
         {
             int posicion = -1;
@@ -52,12 +32,33 @@ namespace Tema7_Tarea06_Integrador
             return posicion;
         }
 
-        public Alumno? DevolverAlumno(string dni)
+        private int BuscarAlumno(string nombre, string dni)
+        {
+            int posicion = -1;
+            bool esEncontrado = false;
+
+            for (int i = 0; i < _listaAlumnos.Count && !esEncontrado; i++)
+            {
+                Alumno alumno;
+                alumno = _listaAlumnos[i];
+
+                if ((alumno.Nombre.ToLower() == nombre.ToLower()) &&
+                    (alumno.DNI.ToLower() == dni.ToLower()))
+                {
+                    posicion = i;
+                    esEncontrado = true;
+                }
+            }
+
+            return posicion;
+        }
+
+        public Alumno? DevolverAlumno(string nombre, string dni)
         {
             int posicion;
             Alumno? alumno;
 
-            posicion = BuscarAlumnoPorDNI(dni);
+            posicion = BuscarAlumno(nombre, dni);
 
             if (posicion >= 0)
             {
@@ -76,54 +77,50 @@ namespace Tema7_Tarea06_Integrador
             _listaAlumnos.Add(alumno);
         }
 
-        public Alumno? AddNotaAlumno(string dni, double nota)
+        public bool AddNotaAlumno(string nombre, string dni, double nota)
         {
             int posicion;
-            Alumno? alumno;
+            Alumno alumno;
+            bool esEncontrado = false;
 
-            posicion = BuscarAlumnoPorDNI(dni);
+            posicion = BuscarAlumno(nombre, dni);
 
             if (posicion >= 0)
             {
                 alumno = _listaAlumnos[posicion];
                 alumno.AddNota(nota);
-            }
-            else
-            {
-                alumno = null;
+                esEncontrado = true;
             }
 
-            return alumno;
+            return esEncontrado;
         }
 
-        public Alumno? BirthdayAlumno(string dni)
+        public bool BirthdayAlumno(string nombre, string dni)
         {
             int posicion;
-            Alumno? alumno;
+            Alumno alumno;
+            bool esEncontrado = false;
 
-            posicion = BuscarAlumnoPorDNI(dni);
+            posicion = BuscarAlumno(nombre, dni);
 
             if (posicion >= 0)
             {
                 alumno = _listaAlumnos[posicion];
                 alumno.Birthday();
-            }
-            else
-            {
-                alumno = null;
+                esEncontrado = true;
             }
 
-            return alumno;
+            return esEncontrado;
         }
 
         // Método que muestra los datos de un alumno.
-        public string MostrarDatosAlumno(string dni)
+        public string MostrarDatosAlumno(string nombre, string dni)
         {
             string datos = "Alumno no encontrado.";
             int posicion;
             Alumno alumno;
 
-            posicion = BuscarAlumnoPorDNI(dni);
+            posicion = BuscarAlumno(nombre, dni);
 
             if (posicion >= 0)
             {
@@ -182,12 +179,12 @@ namespace Tema7_Tarea06_Integrador
             return esCorrecto;
         }
 
-        public bool EliminarAlumnoPorDNI(string dni)
+        public bool EliminarAlumnoPorDNI(string nombre, string dni)
         {
             int posicion;
             bool esCorrecto = false;
 
-            posicion = BuscarAlumnoPorDNI(dni);
+            posicion = BuscarAlumno(nombre, dni);
 
             if (posicion >= 0)
             {
@@ -217,52 +214,6 @@ namespace Tema7_Tarea06_Integrador
             return alumnoMediaMayor;
         }
 
-        private int StringMasCorto(string alfa, string beta)
-        {
-            int menorLongitud;
-
-            if (alfa.Length < beta.Length)
-            {
-                menorLongitud = alfa.Length;
-            }
-            else
-            {
-                menorLongitud = beta.Length;
-            }
-
-            return menorLongitud;
-        }
-
-        private bool EsMenorAlfabeto(string alfa, string beta)
-        {
-            bool esCorrecto = false, esDistintaLongitud = false;
-
-            int menor = StringMasCorto(alfa, beta);
-
-            for (int i = 0; i < menor; i++)
-            {
-                if (alfa[i] < beta[i])
-                {
-                    esCorrecto = true;
-                    esDistintaLongitud = true;
-                    break;
-                }
-                else if (alfa[i] > beta[i])
-                {
-                    esCorrecto = false;
-                    esDistintaLongitud = true;
-                    break;
-                }
-            }
-
-            if (!esDistintaLongitud)
-            {
-                esCorrecto = alfa.Length < beta.Length;
-            }
-
-            return esCorrecto;
-        }
-
         private void Swap(int i, int j)
         {
             Alumno aux;
@@ -280,17 +231,10 @@ namespace Tema7_Tarea06_Integrador
             {
                 for (int j = i + 1; j < contador; j++)
                 {
-                    if (!EsMenorAlfabeto(_listaAlumnos[i].Nombre, _listaAlumnos[j].Nombre))
-                    {
-                        Swap(i, j);
-                    }
-
-                    /*
                     if(_listaAlumnos[i].Nombre.CompareTo(_listaAlumnos[j].Nombre) > 0)
                     {
                         Swap(i, j);
                     }
-                    */
                 }
             }
         }
@@ -303,7 +247,7 @@ namespace Tema7_Tarea06_Integrador
             {
                 for (int j = i + 1; j < contador; j++)
                 {
-                    if (_listaAlumnos[i].MediaNotas() > _listaAlumnos[j].MediaNotas())
+                    if (_listaAlumnos[i].MediaNotas() < _listaAlumnos[j].MediaNotas())
                     {
                         Swap(i, j);
                     }

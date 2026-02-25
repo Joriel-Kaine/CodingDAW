@@ -48,6 +48,11 @@ namespace Tema7_Tarea06_Integrador
                     MessageBox.Show("Introduce valores numéricos válidos.", "ERROR FORMATO");
                 }
 
+                if (edad < 0 || edad > 100)
+                {
+                    MessageBox.Show("La edad debe estar entre 0 y 100.", "ERROR EDAD");
+                }
+
             } while (!esCorrecto || (edad < 0 || edad > 100));
 
             return edad;
@@ -105,18 +110,25 @@ namespace Tema7_Tarea06_Integrador
             return nota;
         }
 
-        private static bool Contiene(char dni)
+        private static bool ContieneNum(char caracter)
         {
-            List<char> listaNum = new() { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
             bool esCorrecto = false;
 
-            for (int i = 0; i < listaNum.Count; i++)
+            if (caracter >= '0' && caracter <= '9')
             {
-                if (dni == listaNum[i])
-                {
-                    esCorrecto = true;
-                    break;
-                }
+                esCorrecto = true;
+            }
+
+            return esCorrecto;
+        }
+
+        private static bool ContieneLetra(char caracter)
+        {
+            bool esCorrecto = false;
+
+            if (caracter >= 'A' && caracter <= 'Z')
+            {
+                esCorrecto = true;
             }
 
             return esCorrecto;
@@ -125,35 +137,32 @@ namespace Tema7_Tarea06_Integrador
         public static string LeerDNI(string mensaje)
         {
             string dni, parteNum, parteLetra;
-            int contador;
 
             do
             {
-                contador = 0; parteNum = ""; parteLetra = "";
+                parteNum = ""; parteLetra = "";
 
                 dni = Interaction.InputBox(mensaje);
 
                 for (int i = 0; i < dni.Length; i++)
                 {
-                    if (Contiene(dni[i]))
+                    if (ContieneNum(dni[i]) && parteNum.Length <= 8)
                     {
                         parteNum += dni[i];
-                        contador++;
                     }
 
-                    if (i == dni.Length - 1 && !Contiene(dni[i]))
+                    if (i == dni.Length - 1 && ContieneLetra(char.ToUpper(dni[i])))
                     {
-                        parteLetra += dni[i];
-                        contador++;
+                        parteLetra += char.ToUpper(dni[i]);
                     }
                 }
 
-                if (dni.Length > 8 || contador != 9)
+                if (parteNum.Length != 8 || parteLetra.Length != 1)
                 {
                     MessageBox.Show("Introduce un número de identidad válido.", "ERROR FORMATO");
                 }
 
-            } while (dni.Length > 8 || contador != 9);
+            } while (parteNum.Length != 8 || parteLetra.Length != 1);
 
             dni = parteNum + parteLetra;
 

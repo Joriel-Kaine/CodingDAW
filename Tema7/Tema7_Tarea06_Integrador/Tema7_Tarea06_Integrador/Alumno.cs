@@ -124,15 +124,11 @@ namespace Tema7_Tarea06_Integrador
 
         public double MediaNotas()
         {
-            double media;
+            double media = 0.0;
 
-            if (_notas.Count != 0)
+            if (_notas.Count > 0)
             {
                 media = SumaNotas() / CountNotas();
-            }
-            else
-            {
-                media = 0.0;
             }
 
             return media;

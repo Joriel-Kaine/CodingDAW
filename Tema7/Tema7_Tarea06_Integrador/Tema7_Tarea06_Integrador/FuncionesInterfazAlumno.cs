@@ -12,12 +12,17 @@ namespace Tema7_Tarea06_Integrador
         {
             Alumno? alumno = null;
             string nombre = FuncionesInterfaz.LeerNombre("Introduce el nombre del alumno a añadir:");
+            int edad = FuncionesInterfaz.LeerEdad("Introduce la edad:");
+            string dni = FuncionesInterfaz.LeerDNI("Introduce el DNI:");
+            int codCurso = FuncionesInterfaz.LeerEntero("Introduce el código del curso al que pertenece:");
 
             try
             {
                 alumno = new();
                 alumno.Nombre = nombre;
-                alumno.Edad = FuncionesInterfaz.LeerEdad("Introduce la edad:");
+                alumno.Edad = edad;
+                alumno.DNI = dni;
+                alumno.CodCurso = codCurso;
                 listaAlumnos.AddAlumno(alumno);
                 MessageBox.Show("Alumno añadido.", "ALUMNO");
             }
@@ -32,10 +37,11 @@ namespace Tema7_Tarea06_Integrador
         public static void AddNota(ListaAlumnos listaAlumnos)
         {
             string nombre = FuncionesInterfaz.LeerNombre("Introduce el nombre del alumno al que añadir la nota:");
+            string dni = FuncionesInterfaz.LeerDNI("Introduce su DNI:");
             double nota = FuncionesInterfaz.LeerNota("Introduce la nota del alumno:");
-            Alumno? alumno = listaAlumnos.AddNotaAlumno(nombre, nota);
+            bool esEncontrado = listaAlumnos.AddNotaAlumno(nombre, dni, nota);
 
-            if (alumno != null)
+            if (esEncontrado)
             {
                 MessageBox.Show("Nota añadida.", "NOTA");
             }
@@ -48,9 +54,10 @@ namespace Tema7_Tarea06_Integrador
         public static void AddBirthday(ListaAlumnos listaAlumnos)
         {
             string nombre = FuncionesInterfaz.LeerNombre("Introduce el nombre del alumno que cumple años:");
-            Alumno? alumno = listaAlumnos.BirthdayAlumno(nombre);
+            string dni = FuncionesInterfaz.LeerDNI("Introduce su DNI:");
+            bool esEncontrado = listaAlumnos.BirthdayAlumno(nombre, dni);
 
-            if (alumno != null)
+            if (esEncontrado)
             {
                 MessageBox.Show($"¡Feliz cumpleaños, {nombre}!");
             }
@@ -63,8 +70,9 @@ namespace Tema7_Tarea06_Integrador
         public static void MostrarDatosAlumno(ListaAlumnos listaAlumnos)
         {
             string nombre = FuncionesInterfaz.LeerNombre("Introduce el nombre del alumno a mostrar:");
+            string dni = FuncionesInterfaz.LeerDNI("Introduce su DNI:");
 
-            MessageBox.Show(listaAlumnos.MostrarDatosAlumno(nombre), "DATOS ALUMNO");
+            MessageBox.Show(listaAlumnos.MostrarDatosAlumno(nombre, dni), "DATOS ALUMNO");
         }
 
         public static void MostrarTodo(ListaAlumnos listaAlumnos)
@@ -115,7 +123,7 @@ namespace Tema7_Tarea06_Integrador
                 MessageBox.Show("Hay más de 1 coincidencia con ese nombre, se requiere el DNI.");
                 string dni = FuncionesInterfaz.LeerDNI("Introduce el DNI del alumno a eliminar.");
 
-                if (listaAlumnos.EliminarAlumnoPorDNI(dni))
+                if (listaAlumnos.EliminarAlumnoPorDNI(nombre, dni))
                 {
                     MessageBox.Show("Alumno eliminado correctamente.", "ALUMNO");
                 }
