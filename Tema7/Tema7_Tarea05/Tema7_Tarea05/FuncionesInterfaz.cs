@@ -103,5 +103,57 @@ namespace Tema7_Tarea05
 
             return nota;
         }
+
+        private static bool Contiene(char dni)
+        {
+            List<char> listaNum = new() { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+            bool esCorrecto = false;
+
+            for (int i = 0; i < listaNum.Count; i++)
+            {
+                if (dni == listaNum[i])
+                {
+                    esCorrecto = true;
+                    break;
+                }
+            }
+
+            return esCorrecto;
+        }
+
+        public static string LeerDNI(string mensaje)
+        {
+            string dni, parteNum, parteLetra;
+
+            do
+            {
+                parteNum = ""; parteLetra = "";
+
+                dni = Interaction.InputBox(mensaje);
+
+                for (int i = 0; i < dni.Length; i++)
+                {
+                    if (Contiene(dni[i]) && parteNum.Length <= 8)
+                    {
+                        parteNum += dni[i];
+                    }
+
+                    if (i == dni.Length - 1 && !Contiene(dni[i]))
+                    {
+                        parteLetra += dni[i];
+                    }
+                }
+
+                if (parteNum.Length != 8 || parteLetra.Length != 1)
+                {
+                    MessageBox.Show("Introduce un número de identidad válido.", "ERROR FORMATO");
+                }
+
+            } while (parteNum.Length != 8 || parteLetra.Length != 1);
+
+            dni = parteNum + parteLetra;
+
+            return dni;
+        }
     }
 }
