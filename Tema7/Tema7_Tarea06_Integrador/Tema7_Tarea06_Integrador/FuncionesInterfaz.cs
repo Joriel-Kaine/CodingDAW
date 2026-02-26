@@ -60,26 +60,40 @@ namespace Tema7_Tarea06_Integrador
 
         public static string LeerNombre(string mensaje)
         {
-            int num;
             string nombre;
             bool esCorrecto;
 
             do
             {
                 nombre = Interaction.InputBox(mensaje);
-                esCorrecto = int.TryParse(nombre, out num);
+                nombre = nombre.Trim();
+                esCorrecto = true;
 
-                if (nombre.Trim() == "")
+                if (nombre == "")
                 {
                     MessageBox.Show("El nombre no puede estar vacío.", "ERROR NOMBRE");
+                    esCorrecto = false;
                 }
 
-                if (esCorrecto)
+                for (int i = 0; i < nombre.Length; i++)
+                {
+                    if (nombre[i] == ' ' && i + 1 < nombre.Length && nombre[i + 1] == ' ')
+                    {
+                        esCorrecto = false;
+                    }
+
+                    if (nombre[i] != ' ' && !ContieneLetraNombre(nombre[i]))
+                    {
+                        esCorrecto = false;
+                    }
+                }
+
+                if (!esCorrecto)
                 {
                     MessageBox.Show("Introduce un nombre válido.", "ERROR FORMATO");
                 }
 
-            } while (nombre.Trim() == "" || esCorrecto);
+            } while (!esCorrecto);
 
             return nombre;
         }
@@ -125,8 +139,24 @@ namespace Tema7_Tarea06_Integrador
         private static bool ContieneLetra(char caracter)
         {
             bool esCorrecto = false;
+            caracter = char.ToUpper(caracter);
 
             if (caracter >= 'A' && caracter <= 'Z')
+            {
+                esCorrecto = true;
+            }
+
+            return esCorrecto;
+        }
+
+        private static bool ContieneLetraNombre(char caracter)
+        {
+            bool esCorrecto = false;
+            caracter = char.ToUpper(caracter);
+
+            if ((caracter >= 'A' && caracter <= 'Z') || caracter == 'Ñ' ||
+                caracter == 'Á' || caracter == 'É' || caracter == 'Í' ||
+                caracter == 'Ó' || caracter == 'Ú')
             {
                 esCorrecto = true;
             }
@@ -151,9 +181,9 @@ namespace Tema7_Tarea06_Integrador
                         parteNum += dni[i];
                     }
 
-                    if (i == dni.Length - 1 && ContieneLetra(char.ToUpper(dni[i])))
+                    if (i == dni.Length - 1 && ContieneLetra(dni[i]))
                     {
-                        parteLetra += char.ToUpper(dni[i]);
+                        parteLetra += dni[i];
                     }
                 }
 
@@ -167,6 +197,11 @@ namespace Tema7_Tarea06_Integrador
             dni = parteNum + parteLetra;
 
             return dni;
+        }
+
+        public static int LeerCodigoCurso(string mensaje)
+        {
+            return 0;
         }
     }
 }
