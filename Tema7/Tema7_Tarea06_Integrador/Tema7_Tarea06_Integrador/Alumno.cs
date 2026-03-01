@@ -96,13 +96,11 @@ namespace Tema7_Tarea06_Integrador
         {
             string texto;
 
-            texto = $"Nombre: {Nombre}\n" +
-                    $"Edad: {Edad}\n" +
-                    $"DNI: {DNI}\n" +
-                    $"Código de curso: {CodCurso}\n" +
-                    MostrarNotas();
-
-            return texto;
+            return texto = $"Nombre: {Nombre}\n" +
+                           $"Edad: {Edad}\n" +
+                           $"DNI: {DNI}\n" +
+                           $"Código de curso: {CodCurso}\n" +
+                           MostrarNotas();
         }
 
         private double SumaNotas()

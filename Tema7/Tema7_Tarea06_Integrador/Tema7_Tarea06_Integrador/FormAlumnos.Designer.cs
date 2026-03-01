@@ -56,11 +56,11 @@
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Maiandra GD", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.Navy;
-            lblTitulo.Location = new Point(445, 49);
+            lblTitulo.Location = new Point(343, 57);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(683, 67);
+            lblTitulo.Size = new Size(476, 67);
             lblTitulo.TabIndex = 0;
-            lblTitulo.Text = "=> Lista de Alumnos <=";
+            lblTitulo.Text = "=> Alumnos <=";
             // 
             // groupBox1
             // 
@@ -74,9 +74,9 @@
             groupBox1.Controls.Add(btnLeerAlumno);
             groupBox1.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.Indigo;
-            groupBox1.Location = new Point(96, 165);
+            groupBox1.Location = new Point(90, 164);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1000, 602);
+            groupBox1.Size = new Size(1000, 600);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Alumnos";
@@ -88,7 +88,7 @@
             btnAlumnosEnCurso.FlatAppearance.BorderSize = 4;
             btnAlumnosEnCurso.FlatStyle = FlatStyle.Flat;
             btnAlumnosEnCurso.ForeColor = Color.Indigo;
-            btnAlumnosEnCurso.Location = new Point(205, 504);
+            btnAlumnosEnCurso.Location = new Point(219, 508);
             btnAlumnosEnCurso.Name = "btnAlumnosEnCurso";
             btnAlumnosEnCurso.Size = new Size(590, 60);
             btnAlumnosEnCurso.TabIndex = 7;
@@ -102,7 +102,7 @@
             btnMostrarTodos.FlatAppearance.BorderSize = 4;
             btnMostrarTodos.FlatStyle = FlatStyle.Flat;
             btnMostrarTodos.ForeColor = Color.Indigo;
-            btnMostrarTodos.Location = new Point(551, 67);
+            btnMostrarTodos.Location = new Point(551, 52);
             btnMostrarTodos.Name = "btnMostrarTodos";
             btnMostrarTodos.Size = new Size(360, 100);
             btnMostrarTodos.TabIndex = 6;
@@ -117,7 +117,7 @@
             btnEliminarPosicion.FlatAppearance.BorderSize = 4;
             btnEliminarPosicion.FlatStyle = FlatStyle.Flat;
             btnEliminarPosicion.ForeColor = Color.Indigo;
-            btnEliminarPosicion.Location = new Point(78, 359);
+            btnEliminarPosicion.Location = new Point(78, 356);
             btnEliminarPosicion.Name = "btnEliminarPosicion";
             btnEliminarPosicion.Size = new Size(360, 100);
             btnEliminarPosicion.TabIndex = 5;
@@ -132,7 +132,7 @@
             btnEliminarNombre.FlatAppearance.BorderSize = 4;
             btnEliminarNombre.FlatStyle = FlatStyle.Flat;
             btnEliminarNombre.ForeColor = Color.Indigo;
-            btnEliminarNombre.Location = new Point(551, 359);
+            btnEliminarNombre.Location = new Point(551, 356);
             btnEliminarNombre.Name = "btnEliminarNombre";
             btnEliminarNombre.Size = new Size(360, 100);
             btnEliminarNombre.TabIndex = 4;
@@ -147,7 +147,7 @@
             btnMostrarAlumno.FlatAppearance.BorderSize = 4;
             btnMostrarAlumno.FlatStyle = FlatStyle.Flat;
             btnMostrarAlumno.ForeColor = Color.Indigo;
-            btnMostrarAlumno.Location = new Point(551, 211);
+            btnMostrarAlumno.Location = new Point(551, 204);
             btnMostrarAlumno.Name = "btnMostrarAlumno";
             btnMostrarAlumno.Size = new Size(360, 100);
             btnMostrarAlumno.TabIndex = 3;
@@ -162,7 +162,7 @@
             btnBirthday.FlatAppearance.BorderSize = 4;
             btnBirthday.FlatStyle = FlatStyle.Flat;
             btnBirthday.ForeColor = Color.Indigo;
-            btnBirthday.Location = new Point(78, 211);
+            btnBirthday.Location = new Point(78, 204);
             btnBirthday.Name = "btnBirthday";
             btnBirthday.Size = new Size(360, 100);
             btnBirthday.TabIndex = 2;
@@ -177,7 +177,7 @@
             btnLeerAlumno.FlatAppearance.BorderSize = 4;
             btnLeerAlumno.FlatStyle = FlatStyle.Flat;
             btnLeerAlumno.ForeColor = Color.Indigo;
-            btnLeerAlumno.Location = new Point(78, 67);
+            btnLeerAlumno.Location = new Point(78, 52);
             btnLeerAlumno.Name = "btnLeerAlumno";
             btnLeerAlumno.Size = new Size(360, 100);
             btnLeerAlumno.TabIndex = 0;
@@ -192,7 +192,7 @@
             btnAddNota.FlatAppearance.BorderSize = 4;
             btnAddNota.FlatStyle = FlatStyle.Flat;
             btnAddNota.ForeColor = Color.Indigo;
-            btnAddNota.Location = new Point(84, 81);
+            btnAddNota.Location = new Point(84, 65);
             btnAddNota.Name = "btnAddNota";
             btnAddNota.Size = new Size(360, 100);
             btnAddNota.TabIndex = 1;
@@ -229,7 +229,7 @@
             groupBox2.ForeColor = Color.Indigo;
             groupBox2.Location = new Point(90, 789);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1006, 515);
+            groupBox2.Size = new Size(1000, 520);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             groupBox2.Text = "Notas y Ordenación";
@@ -241,7 +241,7 @@
             btnAlumnosSuspensos.FlatAppearance.BorderSize = 4;
             btnAlumnosSuspensos.FlatStyle = FlatStyle.Flat;
             btnAlumnosSuspensos.ForeColor = Color.Indigo;
-            btnAlumnosSuspensos.Location = new Point(557, 378);
+            btnAlumnosSuspensos.Location = new Point(557, 369);
             btnAlumnosSuspensos.Name = "btnAlumnosSuspensos";
             btnAlumnosSuspensos.Size = new Size(360, 100);
             btnAlumnosSuspensos.TabIndex = 6;
@@ -255,7 +255,7 @@
             btnAlumnosAprobados.FlatAppearance.BorderSize = 4;
             btnAlumnosAprobados.FlatStyle = FlatStyle.Flat;
             btnAlumnosAprobados.ForeColor = Color.Indigo;
-            btnAlumnosAprobados.Location = new Point(84, 378);
+            btnAlumnosAprobados.Location = new Point(84, 369);
             btnAlumnosAprobados.Name = "btnAlumnosAprobados";
             btnAlumnosAprobados.Size = new Size(360, 100);
             btnAlumnosAprobados.TabIndex = 5;
@@ -269,7 +269,7 @@
             btnOrdenarNotaMedia.FlatAppearance.BorderSize = 4;
             btnOrdenarNotaMedia.FlatStyle = FlatStyle.Flat;
             btnOrdenarNotaMedia.ForeColor = Color.Indigo;
-            btnOrdenarNotaMedia.Location = new Point(557, 231);
+            btnOrdenarNotaMedia.Location = new Point(557, 217);
             btnOrdenarNotaMedia.Name = "btnOrdenarNotaMedia";
             btnOrdenarNotaMedia.Size = new Size(360, 100);
             btnOrdenarNotaMedia.TabIndex = 4;
@@ -284,7 +284,7 @@
             btnOrdenAlfabetico.FlatAppearance.BorderSize = 4;
             btnOrdenAlfabetico.FlatStyle = FlatStyle.Flat;
             btnOrdenAlfabetico.ForeColor = Color.Indigo;
-            btnOrdenAlfabetico.Location = new Point(84, 231);
+            btnOrdenAlfabetico.Location = new Point(84, 217);
             btnOrdenAlfabetico.Name = "btnOrdenAlfabetico";
             btnOrdenAlfabetico.Size = new Size(360, 100);
             btnOrdenAlfabetico.TabIndex = 3;
@@ -299,7 +299,7 @@
             btnMayorMedia.FlatAppearance.BorderSize = 4;
             btnMayorMedia.FlatStyle = FlatStyle.Flat;
             btnMayorMedia.ForeColor = Color.Indigo;
-            btnMayorMedia.Location = new Point(557, 81);
+            btnMayorMedia.Location = new Point(557, 65);
             btnMayorMedia.Name = "btnMayorMedia";
             btnMayorMedia.Size = new Size(360, 100);
             btnMayorMedia.TabIndex = 2;
@@ -318,7 +318,7 @@
             Controls.Add(groupBox1);
             Controls.Add(lblTitulo);
             Name = "FormAlumnos";
-            Text = "Tema 7 - Tarea 4: Manuel MR ®";
+            Text = "Formulario de Alumnos";
             Load += FormAlumno_Load;
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);

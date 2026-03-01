@@ -53,9 +53,9 @@
             btnGestionCursos.FlatStyle = FlatStyle.Flat;
             btnGestionCursos.Font = new Font("Maiandra GD", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGestionCursos.ForeColor = Color.Indigo;
-            btnGestionCursos.Location = new Point(172, 297);
+            btnGestionCursos.Location = new Point(172, 256);
             btnGestionCursos.Name = "btnGestionCursos";
-            btnGestionCursos.Size = new Size(600, 100);
+            btnGestionCursos.Size = new Size(600, 140);
             btnGestionCursos.TabIndex = 1;
             btnGestionCursos.Text = "Gestion Cursos";
             btnGestionCursos.UseVisualStyleBackColor = false;
@@ -69,9 +69,9 @@
             btnGestionAlumnos.FlatStyle = FlatStyle.Flat;
             btnGestionAlumnos.Font = new Font("Maiandra GD", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGestionAlumnos.ForeColor = Color.Indigo;
-            btnGestionAlumnos.Location = new Point(172, 564);
+            btnGestionAlumnos.Location = new Point(172, 548);
             btnGestionAlumnos.Name = "btnGestionAlumnos";
-            btnGestionAlumnos.Size = new Size(600, 100);
+            btnGestionAlumnos.Size = new Size(600, 140);
             btnGestionAlumnos.TabIndex = 2;
             btnGestionAlumnos.Text = "Gestion Alumnos";
             btnGestionAlumnos.UseVisualStyleBackColor = false;
@@ -87,7 +87,7 @@
             btnGestionProfesores.ForeColor = Color.Indigo;
             btnGestionProfesores.Location = new Point(172, 840);
             btnGestionProfesores.Name = "btnGestionProfesores";
-            btnGestionProfesores.Size = new Size(600, 100);
+            btnGestionProfesores.Size = new Size(600, 140);
             btnGestionProfesores.TabIndex = 3;
             btnGestionProfesores.Text = "Gestion Profesores";
             btnGestionProfesores.UseVisualStyleBackColor = false;
