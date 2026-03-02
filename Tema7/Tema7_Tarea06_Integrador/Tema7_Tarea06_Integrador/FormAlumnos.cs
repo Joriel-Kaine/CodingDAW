@@ -2,7 +2,7 @@ namespace Tema7_Tarea06_Integrador
 {
     public partial class FormAlumnos : Form
     {
-        private ListaAlumnos _listaAlumnos = new();
+        private ListaAlumnos _listaAlumnos;
         public FormAlumnos(ListaAlumnos listaAlumnos)
         {
             InitializeComponent();

@@ -201,7 +201,28 @@ namespace Tema7_Tarea06_Integrador
 
         public static int LeerCodigoCurso(string mensaje)
         {
-            return 0;
+            int num;
+            bool esCorrecto;
+            string texto;
+
+            do
+            {
+                texto = Interaction.InputBox(mensaje);
+                esCorrecto = int.TryParse(texto, out num);
+
+                if (!esCorrecto)
+                {
+                    MessageBox.Show("Introduce valores numéricos válidos.", "ERROR FORMATO");
+                }
+
+                if ( num < 100 || num > 200)
+                {
+                    MessageBox.Show("El código tiene que estar entre 100 y 200.", "ERROR RANGO");
+                }
+
+            } while (!esCorrecto);
+
+            return num;
         }
     }
 }

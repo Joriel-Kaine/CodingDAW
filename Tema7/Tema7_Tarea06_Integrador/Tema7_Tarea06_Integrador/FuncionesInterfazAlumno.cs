@@ -14,7 +14,7 @@ namespace Tema7_Tarea06_Integrador
             string nombre = FuncionesInterfaz.LeerNombre("Introduce el nombre del alumno a añadir:");
             int edad = FuncionesInterfaz.LeerEdad("Introduce la edad:");
             string dni = FuncionesInterfaz.LeerDNI("Introduce el DNI:");
-            int codCurso = FuncionesInterfaz.LeerEntero("Introduce el código del curso al que pertenece:");
+            int codCurso = FuncionesInterfaz.LeerCodigoCurso("Introduce el código del curso al que pertenece:");
 
             try
             {
@@ -28,7 +28,7 @@ namespace Tema7_Tarea06_Integrador
             }
             catch (ArgumentOutOfRangeException)
             {
-                MessageBox.Show("La edad debe estar entre 0 y 100.", "ERROR EDAD");
+                MessageBox.Show("Datos introducidos fuera de rango.", "ERROR RANGO");
             }
 
             return alumno;
@@ -106,6 +106,7 @@ namespace Tema7_Tarea06_Integrador
         public static void EliminarPorNombre(ListaAlumnos listaAlumnos)
         {
             bool esEncontrado = false;
+            int contador = 0;
 
             string nombre = FuncionesInterfaz.LeerNombre("Introduce el nombre del alumno a eliminar:");
 
@@ -114,13 +115,13 @@ namespace Tema7_Tarea06_Integrador
                 if (nombre == listaAlumnos.DevolverAlumnoPorPosicion(i).Nombre)
                 {
                     esEncontrado = true;
-                    break;
+                    contador++;
                 }
             }
             
-            if (esEncontrado)
+            if (esEncontrado && contador > 1)
             {
-                MessageBox.Show("Hay más de 1 coincidencia con ese nombre, se requiere el DNI.");
+                MessageBox.Show("Coincidencias en el nombre, se requiere DNI del alumno.");
                 string dni = FuncionesInterfaz.LeerDNI("Introduce el DNI del alumno a eliminar.");
 
                 if (listaAlumnos.EliminarAlumnoPorDNI(nombre, dni))
@@ -129,7 +130,7 @@ namespace Tema7_Tarea06_Integrador
                 }
                 else
                 {
-                    MessageBox.Show("No existe el DNI del alumno a eliminar.");
+                    MessageBox.Show("El DNI del alumno no es correcto.");
                 }
             }
             else

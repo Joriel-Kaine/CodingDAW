@@ -64,7 +64,7 @@
             // 
             // btnMostrarTodos
             // 
-            btnMostrarTodos.BackColor = Color.Lavender;
+            btnMostrarTodos.BackColor = Color.LemonChiffon;
             btnMostrarTodos.FlatAppearance.BorderColor = Color.DarkSlateBlue;
             btnMostrarTodos.FlatAppearance.BorderSize = 4;
             btnMostrarTodos.FlatStyle = FlatStyle.Flat;
@@ -78,7 +78,7 @@
             // 
             // btnEliminarPosicion
             // 
-            btnEliminarPosicion.BackColor = Color.Lavender;
+            btnEliminarPosicion.BackColor = Color.LemonChiffon;
             btnEliminarPosicion.FlatAppearance.BorderColor = Color.DarkSlateBlue;
             btnEliminarPosicion.FlatAppearance.BorderSize = 4;
             btnEliminarPosicion.FlatStyle = FlatStyle.Flat;
@@ -92,7 +92,7 @@
             // 
             // btnEliminarNombre
             // 
-            btnEliminarNombre.BackColor = Color.Lavender;
+            btnEliminarNombre.BackColor = Color.LemonChiffon;
             btnEliminarNombre.FlatAppearance.BorderColor = Color.DarkSlateBlue;
             btnEliminarNombre.FlatAppearance.BorderSize = 4;
             btnEliminarNombre.FlatStyle = FlatStyle.Flat;
@@ -106,7 +106,7 @@
             // 
             // btnMostrarProfesor
             // 
-            btnMostrarProfesor.BackColor = Color.Lavender;
+            btnMostrarProfesor.BackColor = Color.LemonChiffon;
             btnMostrarProfesor.FlatAppearance.BorderColor = Color.DarkSlateBlue;
             btnMostrarProfesor.FlatAppearance.BorderSize = 4;
             btnMostrarProfesor.FlatStyle = FlatStyle.Flat;
@@ -120,7 +120,7 @@
             // 
             // btnLeerProfesor
             // 
-            btnLeerProfesor.BackColor = Color.Lavender;
+            btnLeerProfesor.BackColor = Color.LemonChiffon;
             btnLeerProfesor.FlatAppearance.BorderColor = Color.DarkSlateBlue;
             btnLeerProfesor.FlatAppearance.BorderSize = 4;
             btnLeerProfesor.FlatStyle = FlatStyle.Flat;
@@ -149,7 +149,7 @@
             // 
             // btnMostrarProfesorConAsignaturas
             // 
-            btnMostrarProfesorConAsignaturas.BackColor = Color.Lavender;
+            btnMostrarProfesorConAsignaturas.BackColor = Color.LemonChiffon;
             btnMostrarProfesorConAsignaturas.FlatAppearance.BorderColor = Color.DarkSlateBlue;
             btnMostrarProfesorConAsignaturas.FlatAppearance.BorderSize = 4;
             btnMostrarProfesorConAsignaturas.FlatStyle = FlatStyle.Flat;
@@ -163,7 +163,7 @@
             // 
             // btnOrdenAlfabetico
             // 
-            btnOrdenAlfabetico.BackColor = Color.Lavender;
+            btnOrdenAlfabetico.BackColor = Color.LemonChiffon;
             btnOrdenAlfabetico.FlatAppearance.BorderColor = Color.DarkSlateBlue;
             btnOrdenAlfabetico.FlatAppearance.BorderSize = 4;
             btnOrdenAlfabetico.FlatStyle = FlatStyle.Flat;
@@ -177,7 +177,7 @@
             // 
             // btnEliminarAsignatura
             // 
-            btnEliminarAsignatura.BackColor = Color.Lavender;
+            btnEliminarAsignatura.BackColor = Color.LemonChiffon;
             btnEliminarAsignatura.FlatAppearance.BorderColor = Color.DarkSlateBlue;
             btnEliminarAsignatura.FlatAppearance.BorderSize = 4;
             btnEliminarAsignatura.FlatStyle = FlatStyle.Flat;
@@ -191,7 +191,7 @@
             // 
             // btnAddNota
             // 
-            btnAddNota.BackColor = Color.Lavender;
+            btnAddNota.BackColor = Color.LemonChiffon;
             btnAddNota.FlatAppearance.BorderColor = Color.DarkSlateBlue;
             btnAddNota.FlatAppearance.BorderSize = 4;
             btnAddNota.FlatStyle = FlatStyle.Flat;

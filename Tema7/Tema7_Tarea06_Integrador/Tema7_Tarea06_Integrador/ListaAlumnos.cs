@@ -53,25 +53,6 @@ namespace Tema7_Tarea06_Integrador
             return posicion;
         }
 
-        public Alumno? DevolverAlumno(string nombre, string dni)
-        {
-            int posicion;
-            Alumno? alumno;
-
-            posicion = BuscarAlumno(nombre, dni);
-
-            if (posicion >= 0)
-            {
-                alumno = _listaAlumnos[posicion];
-            }
-            else
-            {
-                alumno = null;
-            }
-
-            return alumno;
-        }
-
         public void AddAlumno(Alumno alumno)
         {   
             _listaAlumnos.Add(alumno);
