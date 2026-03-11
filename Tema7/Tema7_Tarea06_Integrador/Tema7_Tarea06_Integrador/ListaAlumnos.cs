@@ -22,7 +22,7 @@ namespace Tema7_Tarea06_Integrador
                 Alumno alumno;
                 alumno = _listaAlumnos[i];
 
-                if (alumno.DNI.ToLower() == nombre.ToLower())
+                if (alumno.Nombre.ToLower() == nombre.ToLower())
                 {
                     posicion = i;
                     esEncontrado = true;
@@ -60,11 +60,9 @@ namespace Tema7_Tarea06_Integrador
 
         public bool AddNotaAlumno(string nombre, string dni, double nota)
         {
-            int posicion;
             Alumno alumno;
             bool esEncontrado = false;
-
-            posicion = BuscarAlumno(nombre, dni);
+            int posicion = BuscarAlumno(nombre, dni);
 
             if (posicion >= 0)
             {
@@ -78,11 +76,9 @@ namespace Tema7_Tarea06_Integrador
 
         public bool BirthdayAlumno(string nombre, string dni)
         {
-            int posicion;
             Alumno alumno;
             bool esEncontrado = false;
-
-            posicion = BuscarAlumno(nombre, dni);
+            int posicion = BuscarAlumno(nombre, dni);
 
             if (posicion >= 0)
             {
@@ -98,10 +94,8 @@ namespace Tema7_Tarea06_Integrador
         public string MostrarDatosAlumno(string nombre, string dni)
         {
             string datos = "Alumno no encontrado.";
-            int posicion;
             Alumno alumno;
-
-            posicion = BuscarAlumno(nombre, dni);
+            int posicion = BuscarAlumno(nombre, dni);
 
             if (posicion >= 0)
             {
@@ -127,7 +121,7 @@ namespace Tema7_Tarea06_Integrador
             return texto;
         }
 
-        // Método que cuenta los alumnos que hay y devuelve un entero con el total.
+        // Método que devuelve un entero con el total de alumnos.
         public int CountAlumnos()
         {
             return _listaAlumnos.Count;
@@ -162,10 +156,8 @@ namespace Tema7_Tarea06_Integrador
 
         public bool EliminarAlumnoPorDNI(string nombre, string dni)
         {
-            int posicion;
             bool esCorrecto = false;
-
-            posicion = BuscarAlumno(nombre, dni);
+            int posicion = BuscarAlumno(nombre, dni);
 
             if (posicion >= 0)
             {
