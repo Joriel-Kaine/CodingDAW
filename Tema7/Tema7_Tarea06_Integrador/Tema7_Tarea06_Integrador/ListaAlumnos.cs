@@ -189,9 +189,7 @@ namespace Tema7_Tarea06_Integrador
 
         private void Swap(int i, int j)
         {
-            Alumno aux;
-
-            aux = _listaAlumnos[i];
+            Alumno aux = _listaAlumnos[i];
             _listaAlumnos[i] = _listaAlumnos[j];
             _listaAlumnos[j] = aux;
         }
