@@ -49,6 +49,7 @@
             btnLeerCurso.TabIndex = 1;
             btnLeerCurso.Text = "Añadir un curso";
             btnLeerCurso.UseVisualStyleBackColor = false;
+            btnLeerCurso.Click += btnLeerCurso_Click;
             // 
             // lblTitulo
             // 
@@ -75,6 +76,7 @@
             btnEliminarCurso.TabIndex = 3;
             btnEliminarCurso.Text = "Eliminar un curso";
             btnEliminarCurso.UseVisualStyleBackColor = false;
+            btnEliminarCurso.Click += btnEliminarCurso_Click;
             // 
             // btnMostrarTodo
             // 
@@ -90,6 +92,7 @@
             btnMostrarTodo.TabIndex = 4;
             btnMostrarTodo.Text = "Mostrar todos los cursos";
             btnMostrarTodo.UseVisualStyleBackColor = false;
+            btnMostrarTodo.Click += btnMostrarTodo_Click;
             // 
             // btnMostrarAlumnosDeCurso
             // 
@@ -105,6 +108,7 @@
             btnMostrarAlumnosDeCurso.TabIndex = 5;
             btnMostrarAlumnosDeCurso.Text = "Mostrar los alumnos pertenecientes a un curso";
             btnMostrarAlumnosDeCurso.UseVisualStyleBackColor = false;
+            btnMostrarAlumnosDeCurso.Click += btnMostrarAlumnosDeCurso_Click;
             // 
             // FormCursos
             // 

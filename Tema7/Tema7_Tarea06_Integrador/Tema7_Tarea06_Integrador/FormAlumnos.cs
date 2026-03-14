@@ -37,7 +37,7 @@ namespace Tema7_Tarea06_Integrador
 
         private void FormAlumno_Load(object sender, EventArgs e)
         {
-            lblListaNombres.Text = _listaAlumnos.MostrarListaNombres();
+            lblListaNombres.Text = _listaAlumnos.GenerarTextoListaNombres();
         }
 
         private void btnMostrarTodos_Click(object sender, EventArgs e)
@@ -48,13 +48,13 @@ namespace Tema7_Tarea06_Integrador
         private void btnEliminarPosicion_Click(object sender, EventArgs e)
         {
             FuncionesInterfazAlumno.EliminarPorPosicion(_listaAlumnos);
-            lblListaNombres.Text = _listaAlumnos.MostrarListaNombres();
+            lblListaNombres.Text = _listaAlumnos.GenerarTextoListaNombres();
         }
 
         private void btnEliminarNombre_Click(object sender, EventArgs e)
         {
             FuncionesInterfazAlumno.EliminarPorNombre(_listaAlumnos);
-            lblListaNombres.Text = _listaAlumnos.MostrarListaNombres();
+            lblListaNombres.Text = _listaAlumnos.GenerarTextoListaNombres();
         }
 
         private void btnMayorMedia_Click(object sender, EventArgs e)
@@ -65,13 +65,13 @@ namespace Tema7_Tarea06_Integrador
         private void btnOrdenAlfabetico_Click(object sender, EventArgs e)
         {
             FuncionesInterfazAlumno.OrdenarPorOrdenAlfabetico(_listaAlumnos);
-            lblListaNombres.Text = _listaAlumnos.MostrarListaNombres();
+            lblListaNombres.Text = _listaAlumnos.GenerarTextoListaNombres();
         }
 
         private void btnOrdenarNotaMedia_Click(object sender, EventArgs e)
         {
             FuncionesInterfazAlumno.OrdenarPorNotaMedia(_listaAlumnos);
-            lblListaNombres.Text = _listaAlumnos.MostrarListaNombres();
+            lblListaNombres.Text = _listaAlumnos.GenerarTextoListaNombres();
         }
     }
 }

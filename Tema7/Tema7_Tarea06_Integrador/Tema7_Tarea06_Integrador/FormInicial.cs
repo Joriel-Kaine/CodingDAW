@@ -3,6 +3,7 @@ namespace Tema7_Tarea06_Integrador
     public partial class FormInicial : Form
     {
         private ListaAlumnos _listaAlumnos = new();
+        private ListaCursos _listaCursos = new();
 
         public FormInicial()
         {
@@ -11,7 +12,9 @@ namespace Tema7_Tarea06_Integrador
 
         private void btnGestionCursos_Click(object sender, EventArgs e)
         {
+            FormCursos formCursos = new(_listaCursos);
 
+            formCursos.ShowDialog();
         }
 
         private void btnGestionAlumnos_Click(object sender, EventArgs e)

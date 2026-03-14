@@ -12,9 +12,32 @@ namespace Tema7_Tarea06_Integrador
 {
     public partial class FormCursos : Form
     {
-        public FormCursos()
+        private ListaCursos _listaCursos;
+
+        public FormCursos(ListaCursos listaCursos)
         {
             InitializeComponent();
+            this._listaCursos = listaCursos;
+        }
+
+        private void btnLeerCurso_Click(object sender, EventArgs e)
+        {
+            FuncionesInterfazCurso.AddCurso(_listaCursos);
+        }
+
+        private void btnEliminarCurso_Click(object sender, EventArgs e)
+        {
+            FuncionesInterfazCurso.EliminarCurso(_listaCursos);
+        }
+
+        private void btnMostrarTodo_Click(object sender, EventArgs e)
+        {
+            FuncionesInterfazCurso.MostrarTodo(_listaCursos);
+        }
+
+        private void btnMostrarAlumnosDeCurso_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

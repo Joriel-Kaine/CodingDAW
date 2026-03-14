@@ -24,7 +24,7 @@ namespace Tema7_Tarea06_Integrador
 
                 if (!esCorrecto)
                 {
-                    MessageBox.Show("Introduce valores numéricos válidos.", "ERROR FORMATO");
+                    MessageBox.Show("Introduce valores numéricos válidos.", "");
                 }
 
             } while (!esCorrecto);
@@ -45,12 +45,12 @@ namespace Tema7_Tarea06_Integrador
 
                 if (!esCorrecto)
                 {
-                    MessageBox.Show("Introduce valores numéricos válidos.", "ERROR FORMATO");
+                    MessageBox.Show("Introduce valores numéricos válidos.", "");
                 }
 
-                if (edad < 0 || edad > 100)
+                if (esCorrecto && edad < 0 || edad > 100)
                 {
-                    MessageBox.Show("La edad debe estar entre 0 y 100.", "ERROR EDAD");
+                    MessageBox.Show("La edad debe estar entre 0 y 100.", "");
                 }
 
             } while (!esCorrecto || (edad < 0 || edad > 100));
@@ -66,31 +66,43 @@ namespace Tema7_Tarea06_Integrador
             do
             {
                 nombre = Interaction.InputBox(mensaje);
-                nombre = nombre.Trim();
+                nombre = nombre.Trim(); // Aseguramos que no hay espacios ni al principio ni al final del nombre.
                 esCorrecto = true;
 
+                // Comprobamos si el nombre introducido es una cadena de caracteres vacía.
                 if (nombre == "")
                 {
-                    MessageBox.Show("El nombre no puede estar vacío.", "ERROR NOMBRE");
+                    MessageBox.Show("El nombre no puede estar vacío.", "");
                     esCorrecto = false;
                 }
 
-                for (int i = 0; i < nombre.Length; i++)
+                 /* Recorremos los caracteres del nombre y aseguramos que todos contengan los
+                  * caracteres permitidos para un nombre válido en el programa. */
+
+                for (int i = 0; i < nombre.Length; i++) /* Usamos "Length" porque el nombre es un string hecho
+                                                         * con un array (vector) de caracteres. */
                 {
+                    /* En esta condición comprobamos que el valor (caracter) es un espacio en blanco.
+                     * Si lo es, se ejecuta la segunda condición y se comprueba la segunda condición.
+                     * Aquí comprobamos que el índice + 1 esté dentro del número de valores del string.
+                     * Si es correcto, pasamos a la última condición.
+                     * Si hay 2 espacios seguidos, el booleano pasa a ser falso. */
                     if (nombre[i] == ' ' && i + 1 < nombre.Length && nombre[i + 1] == ' ')
                     {
                         esCorrecto = false;
                     }
 
+                    // Aquí aseguramos que después del espacio el nombre siga siendo válido.
                     if (nombre[i] != ' ' && !ContieneLetraNombre(nombre[i]))
                     {
                         esCorrecto = false;
                     }
                 }
 
-                if (!esCorrecto)
+
+                if (!esCorrecto && nombre != "")
                 {
-                    MessageBox.Show("Introduce un nombre válido.", "ERROR FORMATO");
+                    MessageBox.Show("Introduce un nombre válido.", "");
                 }
 
             } while (!esCorrecto);
@@ -111,12 +123,12 @@ namespace Tema7_Tarea06_Integrador
 
                 if (!esCorrecto)
                 {
-                    MessageBox.Show("Introduce valores numéricos válidos.", "ERROR FORMATO");
+                    MessageBox.Show("Introduce valores numéricos válidos.", "");
                 }
 
-                if (nota < 0 || nota > 10)
+                if (esCorrecto && nota < 0 || nota > 10)
                 {
-                    MessageBox.Show("La nota debe estar entre 0 y 10.", "ERROR RANGO");
+                    MessageBox.Show("La nota debe estar entre 0 y 10.", "");
                 }
 
             } while (!esCorrecto || (nota < 0 || nota > 10));
@@ -164,6 +176,22 @@ namespace Tema7_Tarea06_Integrador
             return esCorrecto;
         }
 
+        private static bool ContieneLetraNombreCurso(char caracter)
+        {
+            bool esCorrecto = false;
+            caracter = char.ToUpper(caracter);
+
+            if ((caracter >= 'A' && caracter <= 'Z') || caracter == 'Ñ' ||
+                caracter == 'Á' || caracter == 'É' || caracter == 'Í' ||
+                caracter == 'Ó' || caracter == 'Ú' || caracter == 'º' ||
+                caracter == '-')
+            {
+                esCorrecto = true;
+            }
+
+            return esCorrecto;
+        }
+
         public static string LeerDNI(string mensaje)
         {
             string dni, parteNum, parteLetra;
@@ -189,7 +217,7 @@ namespace Tema7_Tarea06_Integrador
 
                 if (parteNum.Length != 8 || parteLetra.Length != 1)
                 {
-                    MessageBox.Show("Introduce un número de identidad válido.", "ERROR FORMATO");
+                    MessageBox.Show("Introduce un número de identidad válido.", "");
                 }
 
             } while (parteNum.Length != 8 || parteLetra.Length != 1);
@@ -212,15 +240,15 @@ namespace Tema7_Tarea06_Integrador
 
                 if (!esCorrecto)
                 {
-                    MessageBox.Show("Introduce valores numéricos válidos.", "ERROR FORMATO");
+                    MessageBox.Show("Introduce valores numéricos válidos.", "");
                 }
 
-                if ( num < 100 || num > 200)
+                if (esCorrecto && num < 100 || num > 200)
                 {
-                    MessageBox.Show("El código tiene que estar entre 100 y 200.", "ERROR RANGO");
+                    MessageBox.Show("El código tiene que estar entre 100 y 200.", "");
                 }
 
-            } while (!esCorrecto);
+            } while (!esCorrecto || (num < 100 || num > 200));
 
             return num;
         }

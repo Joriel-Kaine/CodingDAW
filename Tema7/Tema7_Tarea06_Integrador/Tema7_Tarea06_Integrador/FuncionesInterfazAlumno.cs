@@ -18,17 +18,13 @@ namespace Tema7_Tarea06_Integrador
 
             try
             {
-                alumno = new();
-                alumno.Nombre = nombre;
-                alumno.Edad = edad;
-                alumno.DNI = dni;
-                alumno.CodCurso = codCurso;
+                alumno = new(nombre, edad, dni, codCurso);
                 listaAlumnos.AddAlumno(alumno);
-                MessageBox.Show("Alumno añadido.", "ALUMNO");
+                MessageBox.Show("Alumno añadido.", "");
             }
             catch (ArgumentOutOfRangeException)
             {
-                MessageBox.Show("Datos introducidos fuera de rango.", "ERROR RANGO");
+                MessageBox.Show("Datos introducidos fuera de rango.", "");
             }
 
             return alumno;
@@ -43,11 +39,11 @@ namespace Tema7_Tarea06_Integrador
 
             if (esEncontrado)
             {
-                MessageBox.Show("Nota añadida.", "NOTA");
+                MessageBox.Show("Nota añadida.", "");
             }
             else
             {
-                MessageBox.Show($"El alumno {nombre} no se ha encontrado.", "ERROR ALUMNO");
+                MessageBox.Show($"El alumno {nombre} no se ha encontrado.", "");
             }
         }
 
@@ -59,11 +55,11 @@ namespace Tema7_Tarea06_Integrador
 
             if (esEncontrado)
             {
-                MessageBox.Show($"¡Feliz cumpleaños, {nombre}!");
+                MessageBox.Show($"¡Feliz cumpleaños, {nombre}!", "");
             }
             else
             {
-                MessageBox.Show($"El alumno {nombre} no se ha encontrado.", "ERROR ALUMNO");
+                MessageBox.Show($"El alumno {nombre} no se ha encontrado.", "");
             }
         }
 
@@ -72,7 +68,7 @@ namespace Tema7_Tarea06_Integrador
             string nombre = FuncionesInterfaz.LeerNombre("Introduce el nombre del alumno a mostrar:");
             string dni = FuncionesInterfaz.LeerDNI("Introduce su DNI:");
 
-            MessageBox.Show(listaAlumnos.MostrarDatosAlumno(nombre, dni), "DATOS ALUMNO");
+            MessageBox.Show(listaAlumnos.GenerarTextoDatosAlumno(nombre, dni), "");
         }
 
         public static void MostrarTodo(ListaAlumnos listaAlumnos)
@@ -82,7 +78,7 @@ namespace Tema7_Tarea06_Integrador
             for (int i = 0; i < contador; i++)
             {
                 Alumno alumno = listaAlumnos.DevolverAlumnoPorPosicion(i);
-                MessageBox.Show(alumno.MostrarDatos(), $"DATOS ALUMNO {i + 1}");
+                MessageBox.Show(alumno.MostrarDatos(), $"Alumno {alumno.Nombre}");
             }
         }
 
@@ -95,11 +91,11 @@ namespace Tema7_Tarea06_Integrador
             if (posicion >= 0 && posicion < listaAlumnos.CountAlumnos())
             {
                 listaAlumnos.EliminarAlumnoPorPosición(posicion);
-                MessageBox.Show("Alumno eliminado correctamente.", "ALUMNO");
+                MessageBox.Show("Alumno eliminado correctamente.", "");
             }
             else
             {
-                MessageBox.Show("Posición introducida fuera de rango.", "ERROR RANGO");
+                MessageBox.Show("Posición introducida fuera de rango.", "");
             }
         }
 
@@ -121,27 +117,27 @@ namespace Tema7_Tarea06_Integrador
             
             if (esEncontrado && contador > 1)
             {
-                MessageBox.Show("Coincidencias en el nombre, se requiere DNI del alumno.");
+                MessageBox.Show("Coincidencias en el nombre, se requiere DNI del alumno.", "");
                 string dni = FuncionesInterfaz.LeerDNI("Introduce el DNI del alumno a eliminar.");
 
                 if (listaAlumnos.EliminarAlumnoPorDNI(nombre, dni))
                 {
-                    MessageBox.Show("Alumno eliminado correctamente.", "ALUMNO");
+                    MessageBox.Show("Alumno eliminado correctamente.", "");
                 }
                 else
                 {
-                    MessageBox.Show("El DNI del alumno no es correcto.");
+                    MessageBox.Show("El DNI del alumno no es correcto.", "");
                 }
             }
             else
             {
                 if (listaAlumnos.EliminarAlumnoPorNombre(nombre))
                 {
-                    MessageBox.Show("Alumno eliminado correctamente.", "ALUMNO");
+                    MessageBox.Show("Alumno eliminado correctamente.", "");
                 }
                 else
                 {
-                    MessageBox.Show("No existe el alumno a eliminar.");
+                    MessageBox.Show("No existe el alumno a eliminar.", "");
                 }
             }
         }
@@ -152,11 +148,11 @@ namespace Tema7_Tarea06_Integrador
 
             if (alumno != null)
             {
-                MessageBox.Show($"{alumno.MostrarDatos()}\nNota media: {alumno.MediaNotas()}", "MAYOR MEDIA");
+                MessageBox.Show($"{alumno.MostrarDatos()}\nNota media: {alumno.MediaNotas()}", "");
             }
             else
             {
-                MessageBox.Show("El alumno no existe.");
+                MessageBox.Show("El alumno no existe.", "");
             }
         }
 
@@ -164,14 +160,14 @@ namespace Tema7_Tarea06_Integrador
         {
             listaAlumnos.OrdenarPorNombre();
 
-            MessageBox.Show("Lista de alumnos ordenados alfabéticamente.", "ALUMNO");
+            MessageBox.Show("Lista de alumnos ordenados alfabéticamente.", "");
         }
 
         public static void OrdenarPorNotaMedia(ListaAlumnos listaAlumnos)
         {
             listaAlumnos.OrdenarPorNotaMedia();
 
-            MessageBox.Show("Lista de alumnos ordenados por nota media.", "ALUMNO");
+            MessageBox.Show("Lista de alumnos ordenados por nota media.", "");
         }
     }
 }

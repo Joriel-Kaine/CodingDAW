@@ -19,8 +19,7 @@ namespace Tema7_Tarea06_Integrador
 
             for (int i = 0; i < _listaAlumnos.Count && !esEncontrado; i++)
             {
-                Alumno alumno;
-                alumno = _listaAlumnos[i];
+                Alumno alumno = _listaAlumnos[i];
 
                 if (alumno.Nombre.ToLower() == nombre.ToLower())
                 {
@@ -39,8 +38,7 @@ namespace Tema7_Tarea06_Integrador
 
             for (int i = 0; i < _listaAlumnos.Count && !esEncontrado; i++)
             {
-                Alumno alumno;
-                alumno = _listaAlumnos[i];
+                Alumno alumno = _listaAlumnos[i];
 
                 if ((alumno.Nombre.ToLower() == nombre.ToLower()) &&
                     (alumno.DNI.ToLower() == dni.ToLower()))
@@ -91,7 +89,7 @@ namespace Tema7_Tarea06_Integrador
         }
 
         // Método que muestra los datos de un alumno.
-        public string MostrarDatosAlumno(string nombre, string dni)
+        public string GenerarTextoDatosAlumno(string nombre, string dni)
         {
             string datos = "Alumno no encontrado.";
             Alumno alumno;
@@ -107,7 +105,7 @@ namespace Tema7_Tarea06_Integrador
         }
 
         // Método que devuelve una lista precargada de nombres de los alumnos.
-        public string MostrarListaNombres()
+        public string GenerarTextoListaNombres()
         {
             string texto = "Lista de alumnos:";
             int posicion = 1;
@@ -140,10 +138,8 @@ namespace Tema7_Tarea06_Integrador
 
         public bool EliminarAlumnoPorNombre(string nombre)
         {
-            int posicion;
             bool esCorrecto = false;
-
-            posicion = BuscarAlumnoPorNombre(nombre);
+            int posicion = BuscarAlumnoPorNombre(nombre);
 
             if (posicion >= 0)
             {

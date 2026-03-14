@@ -200,7 +200,7 @@
             btnAddNota.Name = "btnAddNota";
             btnAddNota.Size = new Size(360, 100);
             btnAddNota.TabIndex = 1;
-            btnAddNota.Text = "Añadir Nota a un Alumno";
+            btnAddNota.Text = "Añadir asignatura a un profesor";
             btnAddNota.UseVisualStyleBackColor = false;
             // 
             // lblTitulo
