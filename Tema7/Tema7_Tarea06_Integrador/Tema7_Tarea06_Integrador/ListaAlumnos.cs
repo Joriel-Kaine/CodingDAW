@@ -8,20 +8,21 @@ namespace Tema7_Tarea06_Integrador
 {
     public class ListaAlumnos
     {
-        // Campo.
+        // Campos.
         private List<Alumno> _listaAlumnos = new();
 
-        // Método.
+        // Métodos.
         private int BuscarAlumnoPorNombre(string nombre)
         {
             int posicion = -1;
             bool esEncontrado = false;
+            nombre = nombre.ToLower();
 
             for (int i = 0; i < _listaAlumnos.Count && !esEncontrado; i++)
             {
                 Alumno alumno = _listaAlumnos[i];
 
-                if (alumno.Nombre.ToLower() == nombre.ToLower())
+                if (alumno.Nombre.ToLower() == nombre)
                 {
                     posicion = i;
                     esEncontrado = true;
@@ -35,13 +36,14 @@ namespace Tema7_Tarea06_Integrador
         {
             int posicion = -1;
             bool esEncontrado = false;
+            nombre = nombre.ToLower();
 
             for (int i = 0; i < _listaAlumnos.Count && !esEncontrado; i++)
             {
                 Alumno alumno = _listaAlumnos[i];
 
-                if ((alumno.Nombre.ToLower() == nombre.ToLower()) &&
-                    (alumno.DNI.ToLower() == dni.ToLower()))
+                if ((alumno.Nombre.ToLower() == nombre) &&
+                    (alumno.DNI == dni))
                 {
                     posicion = i;
                     esEncontrado = true;
@@ -98,7 +100,7 @@ namespace Tema7_Tarea06_Integrador
             if (posicion >= 0)
             {
                 alumno = _listaAlumnos[posicion];
-                datos = alumno.MostrarDatos();
+                datos = alumno.GenerarTextoDatos();
             }
 
             return datos;
@@ -192,11 +194,9 @@ namespace Tema7_Tarea06_Integrador
 
         public void OrdenarPorNombre()
         {
-            int contador = CountAlumnos();
-
-            for (int i = 0; i < contador - 1; i++)
+            for (int i = 0; i < _listaAlumnos.Count - 1; i++)
             {
-                for (int j = i + 1; j < contador; j++)
+                for (int j = i + 1; j < _listaAlumnos.Count; j++)
                 {
                     if(_listaAlumnos[i].Nombre.CompareTo(_listaAlumnos[j].Nombre) > 0)
                     {
@@ -208,11 +208,9 @@ namespace Tema7_Tarea06_Integrador
 
         public void OrdenarPorNotaMedia()
         {
-            int contador = CountAlumnos();
-
-            for (int i = 0; i < contador - 1; i++)
+            for (int i = 0; i < _listaAlumnos.Count - 1; i++)
             {
-                for (int j = i + 1; j < contador; j++)
+                for (int j = i + 1; j < _listaAlumnos.Count; j++)
                 {
                     if (_listaAlumnos[i].MediaNotas() < _listaAlumnos[j].MediaNotas())
                     {

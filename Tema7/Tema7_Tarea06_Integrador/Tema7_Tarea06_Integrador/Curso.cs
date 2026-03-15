@@ -8,11 +8,11 @@ namespace Tema7_Tarea06_Integrador
 {
     public class Curso
     {
-        // Campo.
+        // Campos.
         public string Nombre { get; set; }
         private int _codCurso;
 
-        // Propiedad.
+        // Propiedades.
         public int CodCurso
         {
             get { return _codCurso; }
@@ -29,11 +29,11 @@ namespace Tema7_Tarea06_Integrador
             }
         }
 
-        // Constructor.
+        // Constructores.
         public Curso()
         {
             Nombre = "";
-            CodCurso = -1;
+            _codCurso = -1;
         }
 
         public Curso(string nombre, int codCurso)
@@ -42,13 +42,11 @@ namespace Tema7_Tarea06_Integrador
             CodCurso = codCurso;
         }
 
-        // Método.
+        // Métodos.
         public string MostrarDatos()
         {
-            string texto;
-
-            return texto = $"Nombre del Curso: {Nombre}\n" +
-                           $"Código del curso: {CodCurso}";
+            return $"Nombre del Curso: {Nombre}\n" +
+                   $"Código del curso: {CodCurso}";
         }
     }
 }

@@ -8,13 +8,13 @@ namespace Tema7_Tarea06_Integrador
 {
     public class Profesor
     {
-        // Campo.
+        // Campos.
         public string Nombre { get; set; }
         public string DNI { get; set; }
         public int CodCursoTutor { get; set; }
         private List<string> _listaAsignaturas = new();
 
-        // Constructor.
+        // Constructores.
         public Profesor()
         {
             Nombre = "";
@@ -29,7 +29,39 @@ namespace Tema7_Tarea06_Integrador
             CodCursoTutor = codCursoTutor;
         }
 
-        // Método.
+        // Métodos.
+        public void AddAsignatura(string asignatura)
+        {       
+            _listaAsignaturas.Add(asignatura);
+        }
 
+        private string GenerarTextoAsignaturas()
+        {
+            string texto;
+
+            if (_listaAsignaturas.Count > 0)
+            {
+                texto = "Asignaturas:\n";
+
+                for (int i = 0; i < _listaAsignaturas.Count; i++)
+                {     
+                    texto += $"{_listaAsignaturas[i]}\n";
+                }
+            }
+            else
+            {
+                texto = "Profesor sin asignaturas.";
+            }
+
+            return texto;
+        }
+
+        public string GenerarTextoDatos()
+        {
+            return  $"Nombre: {Nombre}\n" +
+                    $"DNI: {DNI}\n" +
+                    $"Código de curso: {CodCursoTutor}\n" +
+                    GenerarTextoAsignaturas();
+        }
     }
 }

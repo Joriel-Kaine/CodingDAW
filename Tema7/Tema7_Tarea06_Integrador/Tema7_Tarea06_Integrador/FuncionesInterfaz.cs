@@ -58,6 +58,7 @@ namespace Tema7_Tarea06_Integrador
             return edad;
         }
 
+        // Método para asegurarse que el nombre introducido es correcto según reglas puestas.
         public static string LeerNombre(string mensaje)
         {
             string nombre;
@@ -84,7 +85,7 @@ namespace Tema7_Tarea06_Integrador
                 {
                     /* En esta condición comprobamos que el valor (caracter) es un espacio en blanco.
                      * Si lo es, se ejecuta la segunda condición y se comprueba la segunda condición.
-                     * Aquí comprobamos que el índice + 1 esté dentro del número de valores del string.
+                     * Aquí comprobamos que el índice + 1 esté dentro del total de valores del string.
                      * Si es correcto, pasamos a la última condición.
                      * Si hay 2 espacios seguidos, el booleano pasa a ser falso. */
                     if (nombre[i] == ' ' && i + 1 < nombre.Length && nombre[i + 1] == ' ')
@@ -181,10 +182,9 @@ namespace Tema7_Tarea06_Integrador
             bool esCorrecto = false;
             caracter = char.ToUpper(caracter);
 
-            if ((caracter >= 'A' && caracter <= 'Z') || caracter == 'Ñ' ||
-                caracter == 'Á' || caracter == 'É' || caracter == 'Í' ||
-                caracter == 'Ó' || caracter == 'Ú' || caracter == 'º' ||
-                caracter == '-')
+            if ((caracter >= '0' && caracter <= '9') || (caracter >= 'A' && caracter <= 'Z')
+                || caracter == 'Ñ' || caracter == 'Á' || caracter == 'É' || caracter == 'Í'
+                || caracter == 'Ó' || caracter == 'Ú' || caracter == 'º' || caracter == '-')
             {
                 esCorrecto = true;
             }
@@ -201,6 +201,7 @@ namespace Tema7_Tarea06_Integrador
                 parteNum = ""; parteLetra = "";
 
                 dni = Interaction.InputBox(mensaje);
+                dni = dni.Trim().ToUpper();
 
                 for (int i = 0; i < dni.Length; i++)
                 {
@@ -251,6 +252,48 @@ namespace Tema7_Tarea06_Integrador
             } while (!esCorrecto || (num < 100 || num > 200));
 
             return num;
+        }
+
+        // Mismo método que LeerNombre, pero con unas reglas distintas para el método Contiene.
+        public static string LeerNombreCurso(string mensaje)
+        {
+            string nombre;
+            bool esCorrecto;
+
+            do
+            {
+                nombre = Interaction.InputBox(mensaje);
+                nombre = nombre.Trim();
+                esCorrecto = true;
+
+                if (nombre == "")
+                {
+                    MessageBox.Show("El nombre no puede estar vacío.", "");
+                    esCorrecto = false;
+                }
+
+                for (int i = 0; i < nombre.Length; i++)
+                {
+                    if (nombre[i] == ' ' && i + 1 < nombre.Length && nombre[i + 1] == ' ')
+                    {
+                        esCorrecto = false;
+                    }
+
+                    if (nombre[i] != ' ' && !ContieneLetraNombreCurso(nombre[i]))
+                    {
+                        esCorrecto = false;
+                    }
+                }
+
+
+                if (!esCorrecto && nombre != "")
+                {
+                    MessageBox.Show("Introduce un nombre válido.", "");
+                }
+
+            } while (!esCorrecto);
+
+            return nombre;
         }
     }
 }

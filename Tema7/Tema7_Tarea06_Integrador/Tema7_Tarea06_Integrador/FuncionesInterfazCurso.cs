@@ -10,7 +10,7 @@ namespace Tema7_Tarea06_Integrador
     {
         public static void AddCurso(ListaCursos listaCursos)
         {
-            string nombre = FuncionesInterfaz.LeerNombre("Introduce el nombre del curso a añadir:");
+            string nombre = FuncionesInterfaz.LeerNombreCurso("Introduce el nombre del curso a añadir:");
             int codCurso = FuncionesInterfaz.LeerCodigoCurso("Introduce el código del curso al que pertenece:");
 
             try

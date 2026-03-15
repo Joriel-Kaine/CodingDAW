@@ -8,10 +8,10 @@ namespace Tema7_Tarea06_Integrador
 {
     public class ListaCursos
     {
-        // Campo.
+        // Campos.
         private List<Curso> _listaCursos = new();
 
-        // Método.
+        // Métodos.
         public int BuscarCurso(int codCurso)
         {
             int posicion = -1;

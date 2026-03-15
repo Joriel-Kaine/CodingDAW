@@ -8,14 +8,14 @@ namespace Tema7_Tarea06_Integrador
 {
     public class Alumno
     {
-        // Campo.
+        // Campos.
         public string Nombre { get; set; }
         private int _edad;
         public string DNI { get; set; }
         public int CodCurso { get; set; }
-        private List<double> _notas = new();
+        private List<double> _listaNotas = new();
 
-        // Propiedad.
+        // Propiedades.
         public int Edad
         {
             get { return _edad; }
@@ -32,7 +32,7 @@ namespace Tema7_Tarea06_Integrador
             }
         }
 
-        // Constructor.
+        // Constructores.
         public Alumno()
         {
             Nombre = "";
@@ -49,7 +49,7 @@ namespace Tema7_Tarea06_Integrador
             CodCurso = codCurso;
         }
 
-        // Método.
+        // Métodos.
         public void Birthday()
         {
             Edad++;
@@ -57,29 +57,26 @@ namespace Tema7_Tarea06_Integrador
 
         public void AddNota(double nota)
         {
-            if (nota >= 0 && nota <= 10)
-            {
-                _notas.Add(nota);
-            }
+            _listaNotas.Add(nota);
         }
 
-        private string MostrarNotas()
+        private string GenerarTextoNotas()
         {
             string texto;
 
-            if (_notas.Count > 0)
+            if (_listaNotas.Count > 0)
             {
                 texto = "Notas: ";
 
-                for (int i = 0; i < _notas.Count; i++)
+                for (int i = 0; i < _listaNotas.Count; i++)
                 {
-                    if (i != _notas.Count - 1)
+                    if (i != _listaNotas.Count - 1)
                     {
-                        texto += $"{_notas[i]} - ";
+                        texto += $"{_listaNotas[i]} - ";
                     }
                     else
                     {
-                        texto += _notas[i];
+                        texto += _listaNotas[i];
                     }
                     
                 }
@@ -92,41 +89,34 @@ namespace Tema7_Tarea06_Integrador
             return texto;
         }
 
-        public string MostrarDatos()
+        public string GenerarTextoDatos()
         {
-            string texto;
-
-            return texto = $"Nombre: {Nombre}\n" +
-                           $"Edad: {Edad}\n" +
-                           $"DNI: {DNI}\n" +
-                           $"Código de curso: {CodCurso}\n" +
-                           MostrarNotas();
+            return $"Nombre: {Nombre}\n" +
+                   $"Edad: {Edad}\n" +
+                   $"DNI: {DNI}\n" +
+                   $"Código de curso: {CodCurso}\n" +
+                   GenerarTextoNotas();
         }
 
         private double SumaNotas()
         {
             double suma = 0.0;
 
-            for (int i = 0; i < _notas.Count; i++)
+            for (int i = 0; i < _listaNotas.Count; i++)
             {
-                suma += _notas[i];
+                suma += _listaNotas[i];
             }
 
             return suma;
-        }
-
-        public int CountNotas()
-        {
-            return _notas.Count;
         }
 
         public double MediaNotas()
         {
             double media = 0.0;
 
-            if (_notas.Count > 0)
+            if (_listaNotas.Count > 0)
             {
-                media = SumaNotas() / CountNotas();
+                media = SumaNotas() / _listaNotas.Count;
             }
 
             return media;

@@ -12,9 +12,71 @@ namespace Tema7_Tarea06_Integrador
 {
     public partial class FormProfesores : Form
     {
-        public FormProfesores()
+        private ListaProfesores _listaProfesores;
+
+        public FormProfesores(ListaProfesores listaProfesores)
         {
             InitializeComponent();
+            this._listaProfesores = listaProfesores;
+        }
+
+        private void btnLeerProfesor_Click(object sender, EventArgs e)
+        {
+            Profesor? profesor = FuncionesInterfazProfesor.AddProfesor(_listaProfesores);
+            int posicion = _listaProfesores.CountProfesores();
+
+            if (profesor != null)
+            {
+                lblListaNombresProfesores.Text += $"\n{posicion} - {profesor.Nombre}";
+            }
+        }
+
+        private void btnMostrarTodos_Click(object sender, EventArgs e)
+        {
+            FuncionesInterfazProfesor.MostrarTodo(_listaProfesores);
+        }
+
+        private void btnMostrarProfesor_Click(object sender, EventArgs e)
+        {
+            FuncionesInterfazProfesor.MostrarDatosProfesor(_listaProfesores);
+        }
+
+        private void btnEliminarPosicion_Click(object sender, EventArgs e)
+        {
+            FuncionesInterfazProfesor.EliminarPorPosicion(_listaProfesores);
+            lblListaNombresProfesores.Text = _listaProfesores.GenerarTextoListaNombres();
+        }
+
+        private void btnEliminarNombre_Click(object sender, EventArgs e)
+        {
+            FuncionesInterfazProfesor.EliminarPorNombre(_listaProfesores);
+            lblListaNombresProfesores.Text = _listaProfesores.GenerarTextoListaNombres();
+        }
+
+        private void btnAddAsignatura_Click(object sender, EventArgs e)
+        {
+            FuncionesInterfazProfesor.AddAsignatura(_listaProfesores);
+        }
+
+        private void btnEliminarAsignatura_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOrdenAlfabetico_Click(object sender, EventArgs e)
+        {
+            FuncionesInterfazProfesor.OrdenarPorOrdenAlfabetico(_listaProfesores);
+            lblListaNombresProfesores.Text = _listaProfesores.GenerarTextoListaNombres();
+        }
+
+        private void btnMostrarProfesorConAsignaturas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormProfesores_Load(object sender, EventArgs e)
+        {
+            lblListaNombresProfesores.Text = _listaProfesores.GenerarTextoListaNombres();
         }
     }
 }

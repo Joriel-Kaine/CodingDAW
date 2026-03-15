@@ -35,11 +35,6 @@ namespace Tema7_Tarea06_Integrador
             FuncionesInterfazAlumno.MostrarDatosAlumno(_listaAlumnos);
         }
 
-        private void FormAlumno_Load(object sender, EventArgs e)
-        {
-            lblListaNombres.Text = _listaAlumnos.GenerarTextoListaNombres();
-        }
-
         private void btnMostrarTodos_Click(object sender, EventArgs e)
         {
             FuncionesInterfazAlumno.MostrarTodo(_listaAlumnos);
@@ -71,6 +66,11 @@ namespace Tema7_Tarea06_Integrador
         private void btnOrdenarNotaMedia_Click(object sender, EventArgs e)
         {
             FuncionesInterfazAlumno.OrdenarPorNotaMedia(_listaAlumnos);
+            lblListaNombres.Text = _listaAlumnos.GenerarTextoListaNombres();
+        }
+
+        private void FormAlumno_Load(object sender, EventArgs e)
+        {
             lblListaNombres.Text = _listaAlumnos.GenerarTextoListaNombres();
         }
     }

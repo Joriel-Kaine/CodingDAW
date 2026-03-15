@@ -78,7 +78,7 @@ namespace Tema7_Tarea06_Integrador
             for (int i = 0; i < contador; i++)
             {
                 Alumno alumno = listaAlumnos.DevolverAlumnoPorPosicion(i);
-                MessageBox.Show(alumno.MostrarDatos(), $"Alumno {alumno.Nombre}");
+                MessageBox.Show(alumno.GenerarTextoDatos(), $"Alumno {alumno.Nombre}");
             }
         }
 
@@ -148,7 +148,7 @@ namespace Tema7_Tarea06_Integrador
 
             if (alumno != null)
             {
-                MessageBox.Show($"{alumno.MostrarDatos()}\nNota media: {alumno.MediaNotas()}", "");
+                MessageBox.Show($"{alumno.GenerarTextoDatos()}\nNota media: {alumno.MediaNotas()}", "");
             }
             else
             {

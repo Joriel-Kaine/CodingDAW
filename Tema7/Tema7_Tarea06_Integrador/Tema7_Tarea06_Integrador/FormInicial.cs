@@ -4,6 +4,7 @@ namespace Tema7_Tarea06_Integrador
     {
         private ListaAlumnos _listaAlumnos = new();
         private ListaCursos _listaCursos = new();
+        private ListaProfesores _listaProfesores = new();
 
         public FormInicial()
         {
@@ -26,12 +27,16 @@ namespace Tema7_Tarea06_Integrador
 
         private void btnGestionProfesores_Click(object sender, EventArgs e)
         {
+            FormProfesores formProfesores = new(_listaProfesores);
 
+            formProfesores.ShowDialog();
         }
 
         private void FormInicial_Load(object sender, EventArgs e)
         {
             DatosEjemploCentroEscolar.DatosEjemploAlumnos(_listaAlumnos);
+            DatosEjemploCentroEscolar.DatosEjemploCursos(_listaCursos);
+            DatosEjemploCentroEscolar.DatosEjemploProfesores(_listaProfesores);
         }
     }
 }
