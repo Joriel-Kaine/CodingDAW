@@ -8,6 +8,7 @@ namespace Tema7_Tarea06_Integrador
 {
     public static class DatosEjemploCentroEscolar
     {
+        // Datos de ejemplo.
         public static void DatosEjemploAlumnos(ListaAlumnos listaAlumnos)
         {
             listaAlumnos.AddAlumno(new("Manu", 43, "82280208M", 119));

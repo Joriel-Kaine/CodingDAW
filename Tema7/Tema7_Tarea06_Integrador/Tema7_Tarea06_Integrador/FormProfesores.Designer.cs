@@ -30,13 +30,13 @@
         {
             groupBox1 = new GroupBox();
             btnMostrarTodos = new Button();
+            btnOrdenAlfabetico = new Button();
             btnEliminarPosicion = new Button();
             btnEliminarNombre = new Button();
             btnMostrarProfesor = new Button();
             btnLeerProfesor = new Button();
             groupBox2 = new GroupBox();
             btnMostrarProfesorConAsignaturas = new Button();
-            btnOrdenAlfabetico = new Button();
             btnEliminarAsignatura = new Button();
             btnAddAsignatura = new Button();
             lblTitulo = new Label();
@@ -49,6 +49,7 @@
             // 
             groupBox1.BackColor = Color.LightGray;
             groupBox1.Controls.Add(btnMostrarTodos);
+            groupBox1.Controls.Add(btnOrdenAlfabetico);
             groupBox1.Controls.Add(btnEliminarPosicion);
             groupBox1.Controls.Add(btnEliminarNombre);
             groupBox1.Controls.Add(btnMostrarProfesor);
@@ -76,6 +77,21 @@
             btnMostrarTodos.Text = "Mostrar todos los datos";
             btnMostrarTodos.UseVisualStyleBackColor = false;
             btnMostrarTodos.Click += btnMostrarTodos_Click;
+            // 
+            // btnOrdenAlfabetico
+            // 
+            btnOrdenAlfabetico.BackColor = Color.LemonChiffon;
+            btnOrdenAlfabetico.FlatAppearance.BorderColor = Color.DarkSlateBlue;
+            btnOrdenAlfabetico.FlatAppearance.BorderSize = 4;
+            btnOrdenAlfabetico.FlatStyle = FlatStyle.Flat;
+            btnOrdenAlfabetico.ForeColor = Color.Indigo;
+            btnOrdenAlfabetico.Location = new Point(557, 252);
+            btnOrdenAlfabetico.Name = "btnOrdenAlfabetico";
+            btnOrdenAlfabetico.Size = new Size(360, 100);
+            btnOrdenAlfabetico.TabIndex = 5;
+            btnOrdenAlfabetico.Text = "Ordenar por orden alfabético";
+            btnOrdenAlfabetico.UseVisualStyleBackColor = false;
+            btnOrdenAlfabetico.Click += btnOrdenAlfabetico_Click;
             // 
             // btnEliminarPosicion
             // 
@@ -114,9 +130,9 @@
             btnMostrarProfesor.FlatAppearance.BorderSize = 4;
             btnMostrarProfesor.FlatStyle = FlatStyle.Flat;
             btnMostrarProfesor.ForeColor = Color.Indigo;
-            btnMostrarProfesor.Location = new Point(189, 252);
+            btnMostrarProfesor.Location = new Point(84, 252);
             btnMostrarProfesor.Name = "btnMostrarProfesor";
-            btnMostrarProfesor.Size = new Size(590, 100);
+            btnMostrarProfesor.Size = new Size(360, 100);
             btnMostrarProfesor.TabIndex = 3;
             btnMostrarProfesor.Text = "Mostrar datos de un profesor";
             btnMostrarProfesor.UseVisualStyleBackColor = false;
@@ -140,7 +156,6 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(btnMostrarProfesorConAsignaturas);
-            groupBox2.Controls.Add(btnOrdenAlfabetico);
             groupBox2.Controls.Add(btnEliminarAsignatura);
             groupBox2.Controls.Add(btnAddAsignatura);
             groupBox2.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -159,28 +174,13 @@
             btnMostrarProfesorConAsignaturas.FlatAppearance.BorderSize = 4;
             btnMostrarProfesorConAsignaturas.FlatStyle = FlatStyle.Flat;
             btnMostrarProfesorConAsignaturas.ForeColor = Color.Indigo;
-            btnMostrarProfesorConAsignaturas.Location = new Point(557, 301);
+            btnMostrarProfesorConAsignaturas.Location = new Point(189, 300);
             btnMostrarProfesorConAsignaturas.Name = "btnMostrarProfesorConAsignaturas";
-            btnMostrarProfesorConAsignaturas.Size = new Size(360, 100);
+            btnMostrarProfesorConAsignaturas.Size = new Size(590, 100);
             btnMostrarProfesorConAsignaturas.TabIndex = 6;
             btnMostrarProfesorConAsignaturas.Text = "Mostrar profesores que imparten asignaturas";
             btnMostrarProfesorConAsignaturas.UseVisualStyleBackColor = false;
             btnMostrarProfesorConAsignaturas.Click += btnMostrarProfesorConAsignaturas_Click;
-            // 
-            // btnOrdenAlfabetico
-            // 
-            btnOrdenAlfabetico.BackColor = Color.LemonChiffon;
-            btnOrdenAlfabetico.FlatAppearance.BorderColor = Color.DarkSlateBlue;
-            btnOrdenAlfabetico.FlatAppearance.BorderSize = 4;
-            btnOrdenAlfabetico.FlatStyle = FlatStyle.Flat;
-            btnOrdenAlfabetico.ForeColor = Color.Indigo;
-            btnOrdenAlfabetico.Location = new Point(84, 301);
-            btnOrdenAlfabetico.Name = "btnOrdenAlfabetico";
-            btnOrdenAlfabetico.Size = new Size(360, 100);
-            btnOrdenAlfabetico.TabIndex = 5;
-            btnOrdenAlfabetico.Text = "Ordenar por orden alfabético";
-            btnOrdenAlfabetico.UseVisualStyleBackColor = false;
-            btnOrdenAlfabetico.Click += btnOrdenAlfabetico_Click;
             // 
             // btnEliminarAsignatura
             // 

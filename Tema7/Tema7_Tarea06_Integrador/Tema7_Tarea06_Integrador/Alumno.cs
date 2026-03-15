@@ -15,6 +15,8 @@ namespace Tema7_Tarea06_Integrador
         public int CodCurso { get; set; }
         private List<double> _listaNotas = new();
 
+
+
         // Propiedades.
         public int Edad
         {
@@ -32,6 +34,8 @@ namespace Tema7_Tarea06_Integrador
             }
         }
 
+
+
         // Constructores.
         public Alumno()
         {
@@ -48,6 +52,8 @@ namespace Tema7_Tarea06_Integrador
             DNI = dni;
             CodCurso = codCurso;
         }
+
+
 
         // Métodos.
         public void Birthday()
@@ -78,7 +84,6 @@ namespace Tema7_Tarea06_Integrador
                     {
                         texto += _listaNotas[i];
                     }
-                    
                 }
             }
             else

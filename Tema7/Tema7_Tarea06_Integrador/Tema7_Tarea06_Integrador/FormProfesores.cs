@@ -20,6 +20,9 @@ namespace Tema7_Tarea06_Integrador
             this._listaProfesores = listaProfesores;
         }
 
+
+
+        // Profesores.
         private void btnLeerProfesor_Click(object sender, EventArgs e)
         {
             Profesor? profesor = FuncionesInterfazProfesor.AddProfesor(_listaProfesores);
@@ -41,6 +44,12 @@ namespace Tema7_Tarea06_Integrador
             FuncionesInterfazProfesor.MostrarDatosProfesor(_listaProfesores);
         }
 
+        private void btnOrdenAlfabetico_Click(object sender, EventArgs e)
+        {
+            FuncionesInterfazProfesor.OrdenarPorOrdenAlfabetico(_listaProfesores);
+            lblListaNombresProfesores.Text = _listaProfesores.GenerarTextoListaNombres();
+        }
+
         private void btnEliminarPosicion_Click(object sender, EventArgs e)
         {
             FuncionesInterfazProfesor.EliminarPorPosicion(_listaProfesores);
@@ -53,6 +62,9 @@ namespace Tema7_Tarea06_Integrador
             lblListaNombresProfesores.Text = _listaProfesores.GenerarTextoListaNombres();
         }
 
+
+
+        // Asignaturas.
         private void btnAddAsignatura_Click(object sender, EventArgs e)
         {
             FuncionesInterfazProfesor.AddAsignatura(_listaProfesores);
@@ -60,20 +72,17 @@ namespace Tema7_Tarea06_Integrador
 
         private void btnEliminarAsignatura_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnOrdenAlfabetico_Click(object sender, EventArgs e)
-        {
-            FuncionesInterfazProfesor.OrdenarPorOrdenAlfabetico(_listaProfesores);
-            lblListaNombresProfesores.Text = _listaProfesores.GenerarTextoListaNombres();
+            FuncionesInterfazProfesor.EliminarAsignaturasProfesor(_listaProfesores);
         }
 
         private void btnMostrarProfesorConAsignaturas_Click(object sender, EventArgs e)
         {
-
+            FuncionesInterfazProfesor.MostrarProfesoresConAsignaturas(_listaProfesores);
         }
 
+
+
+        // Load.
         private void FormProfesores_Load(object sender, EventArgs e)
         {
             lblListaNombresProfesores.Text = _listaProfesores.GenerarTextoListaNombres();

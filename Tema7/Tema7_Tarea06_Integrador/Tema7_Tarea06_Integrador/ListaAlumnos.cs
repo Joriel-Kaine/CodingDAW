@@ -11,7 +11,7 @@ namespace Tema7_Tarea06_Integrador
         // Campos.
         private List<Alumno> _listaAlumnos = new();
 
-        // Métodos.
+        // Métodos auxiliares.
         private int BuscarAlumnoPorNombre(string nombre)
         {
             int posicion = -1;
@@ -53,6 +53,28 @@ namespace Tema7_Tarea06_Integrador
             return posicion;
         }
 
+        // Método que devuelve un entero con el total de alumnos.
+        public int CountAlumnos()
+        {
+            return _listaAlumnos.Count;
+        }
+
+        // Método que devuelve a un alumno mediante su posición.
+        public Alumno DevolverAlumnoPorPosicion(int posicion)
+        {
+            return _listaAlumnos[posicion];
+        }
+
+        private void Swap(int i, int j)
+        {
+            Alumno aux = _listaAlumnos[i];
+            _listaAlumnos[i] = _listaAlumnos[j];
+            _listaAlumnos[j] = aux;
+        }
+
+
+
+        // Métodos principales.
         public void AddAlumno(Alumno alumno)
         {   
             _listaAlumnos.Add(alumno);
@@ -121,18 +143,6 @@ namespace Tema7_Tarea06_Integrador
             return texto;
         }
 
-        // Método que devuelve un entero con el total de alumnos.
-        public int CountAlumnos()
-        {
-            return _listaAlumnos.Count;
-        }
-
-        // Método que devuelve a un alumno mediante su posición.
-        public Alumno DevolverAlumnoPorPosicion(int posicion)
-        {
-            return _listaAlumnos[posicion];
-        }
-
         public void EliminarAlumnoPorPosición(int posicion)
         {
             _listaAlumnos.RemoveAt(posicion);
@@ -185,13 +195,6 @@ namespace Tema7_Tarea06_Integrador
             return alumnoMediaMayor;
         }
 
-        private void Swap(int i, int j)
-        {
-            Alumno aux = _listaAlumnos[i];
-            _listaAlumnos[i] = _listaAlumnos[j];
-            _listaAlumnos[j] = aux;
-        }
-
         public void OrdenarPorNombre()
         {
             for (int i = 0; i < _listaAlumnos.Count - 1; i++)
@@ -218,6 +221,51 @@ namespace Tema7_Tarea06_Integrador
                     }
                 }
             }
+        }
+
+        public List<Alumno> AlumnosEnCurso(int codCurso)
+        {
+            List<Alumno> listaAlumnosEnCurso = new();
+
+            foreach (Alumno alumno in _listaAlumnos)
+            {
+                if (alumno.CodCurso == codCurso)
+                {
+                    listaAlumnosEnCurso.Add(alumno);
+                }
+            }
+
+            return listaAlumnosEnCurso;
+        }
+
+        public List<Alumno> AlumnosAprobados()
+        {
+            List<Alumno> listaAprobados = new();
+
+            foreach (Alumno alumno in _listaAlumnos)
+            {
+                if (alumno.MediaNotas() >= 5)
+                {
+                    listaAprobados.Add(alumno);
+                }
+            }
+
+            return listaAprobados;
+        }
+
+        public List<Alumno> AlumnosSuspendidos()
+        {
+            List<Alumno> listaSuspensos = new();
+
+            foreach (Alumno alumno in _listaAlumnos)
+            {
+                if (alumno.MediaNotas() < 5)
+                {
+                    listaSuspensos.Add(alumno);
+                }
+            }
+
+            return listaSuspensos;
         }
     }
 }

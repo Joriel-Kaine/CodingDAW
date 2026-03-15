@@ -14,6 +14,8 @@ namespace Tema7_Tarea06_Integrador
         public int CodCursoTutor { get; set; }
         private List<string> _listaAsignaturas = new();
 
+
+
         // Constructores.
         public Profesor()
         {
@@ -28,6 +30,8 @@ namespace Tema7_Tarea06_Integrador
             DNI = dni;
             CodCursoTutor = codCursoTutor;
         }
+
+
 
         // Métodos.
         public void AddAsignatura(string asignatura)
@@ -62,6 +66,16 @@ namespace Tema7_Tarea06_Integrador
                     $"DNI: {DNI}\n" +
                     $"Código de curso: {CodCursoTutor}\n" +
                     GenerarTextoAsignaturas();
+        }
+
+        public void EliminarAsignaturas()
+        {
+            _listaAsignaturas.Clear();
+        }
+
+        public int CountAsignaturas()
+        {
+            return _listaAsignaturas.Count;
         }
     }
 }

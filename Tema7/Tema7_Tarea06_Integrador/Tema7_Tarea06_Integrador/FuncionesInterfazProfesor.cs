@@ -19,11 +19,11 @@ namespace Tema7_Tarea06_Integrador
             {
                 profesor = new(nombre, dni, codCurso);
                 listaProfesores.AddProfesor(profesor);
-                MessageBox.Show("Profesor añadido.", "");
+                MessageBox.Show("Profesor añadido.");
             }
             catch (ArgumentOutOfRangeException)
             {
-                MessageBox.Show("Datos introducidos fuera de rango.", "");
+                MessageBox.Show("Datos introducidos fuera de rango.");
             }
 
             return profesor;
@@ -44,7 +44,7 @@ namespace Tema7_Tarea06_Integrador
         {
             string dni = FuncionesInterfaz.LeerDNI("Introduce el DNI:");
 
-            MessageBox.Show(listaProfesores.GenerarTextoDatosProfesor(dni), "");
+            MessageBox.Show(listaProfesores.GenerarTextoDatosProfesor(dni));
         }
 
         public static void EliminarPorPosicion(ListaProfesores listaProfesores)
@@ -56,11 +56,11 @@ namespace Tema7_Tarea06_Integrador
             if (posicion >= 0 && posicion < listaProfesores.CountProfesores())
             {
                 listaProfesores.EliminarProfesorPorPosición(posicion);
-                MessageBox.Show("Profesor eliminado correctamente.", "");
+                MessageBox.Show("Profesor eliminado correctamente.");
             }
             else
             {
-                MessageBox.Show("Posición introducida fuera de rango.", "");
+                MessageBox.Show("Posición introducida fuera de rango.");
             }
         }
 
@@ -82,27 +82,27 @@ namespace Tema7_Tarea06_Integrador
 
             if (esEncontrado && contador > 1)
             {
-                MessageBox.Show("Coincidencias en el nombre, se requiere DNI del profesor.", "");
+                MessageBox.Show("Coincidencias en el nombre, se requiere DNI del profesor.");
                 string dni = FuncionesInterfaz.LeerDNI("Introduce el DNI del profesor a eliminar.");
 
                 if (listaProfesores.EliminarProfesorPorNombre(dni))
                 {
-                    MessageBox.Show("Profesor eliminado correctamente.", "");
+                    MessageBox.Show("Profesor eliminado correctamente.");
                 }
                 else
                 {
-                    MessageBox.Show("El DNI del profesor no es correcto.", "");
+                    MessageBox.Show("El DNI del profesor no es correcto.");
                 }
             }
             else
             {
                 if (listaProfesores.EliminarProfesorPorNombre(nombre))
                 {
-                    MessageBox.Show("Profesor eliminado correctamente.", "");
+                    MessageBox.Show("Profesor eliminado correctamente.");
                 }
                 else
                 {
-                    MessageBox.Show("No existe el profesor a eliminar.", "");
+                    MessageBox.Show("No existe el profesor a eliminar.");
                 }
             }
         }
@@ -115,11 +115,11 @@ namespace Tema7_Tarea06_Integrador
 
             if (esEncontrado)
             {
-                MessageBox.Show("Asignatura añadida.", "");
+                MessageBox.Show("Asignatura añadida.");
             }
             else
             {
-                MessageBox.Show("El profesor no se ha encontrado.", "");
+                MessageBox.Show("El profesor no se ha encontrado.");
             }
         }
 
@@ -127,7 +127,49 @@ namespace Tema7_Tarea06_Integrador
         {
             listaProfesores.OrdenarPorNombre();
 
-            MessageBox.Show("Lista de profesores ordenados alfabéticamente.", "");
+            MessageBox.Show("Lista de profesores ordenados alfabéticamente.");
+        }
+
+        public static void EliminarAsignaturasProfesor(ListaProfesores listaProfesores)
+        {
+            string dni = FuncionesInterfaz.LeerDNI("Introduce el DNI del profesor:");
+            int posicion = listaProfesores.BuscarProfesor(dni);
+
+            if (posicion >= 0)
+            {
+                Profesor profesor = listaProfesores.DevolverProfesorPorPosicion(posicion);
+
+                profesor.EliminarAsignaturas();
+
+                MessageBox.Show($"{profesor.GenerarTextoDatos()}");
+            }
+            else
+            {
+                MessageBox.Show("El DNI no pertenece a ningún profesor.");
+            }
+        }
+
+        public static void MostrarProfesoresConAsignaturas(ListaProfesores listaProfesores)
+        {
+            int contador = 1;
+            List<Profesor> listaProfesoresConAsignaturas = listaProfesores.ProfesoresConAsignaturas();
+
+            if (listaProfesoresConAsignaturas.Count > 0)
+            {
+                string texto = $"Profesores con asignaturas:\n";
+
+                foreach (Profesor profesor in listaProfesoresConAsignaturas)
+                {
+                    texto += $"{contador} - {profesor.Nombre}\n";
+                    contador++;
+                }
+
+                MessageBox.Show(texto);
+            }
+            else
+            {
+                MessageBox.Show("No hay profesores con asignaturas.");
+            }
         }
     }
 }

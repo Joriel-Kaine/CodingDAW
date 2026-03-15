@@ -11,6 +11,8 @@ namespace Tema7_Tarea06_Integrador
         // Campos.
         private List<Profesor> _listaProfesores = new();
 
+
+
         // Métodos auxiliares.
         private int BuscarProfesorPorNombre(string nombre)
         {
@@ -32,7 +34,7 @@ namespace Tema7_Tarea06_Integrador
             return posicion;
         }
 
-        private int BuscarProfesor(string dni)
+        public int BuscarProfesor(string dni)
         {
             int posicion = -1;
             bool esEncontrado = false;
@@ -67,6 +69,8 @@ namespace Tema7_Tarea06_Integrador
             _listaProfesores[i] = _listaProfesores[j];
             _listaProfesores[j] = aux;
         }
+
+
 
         // Métodos principales.
         public void AddProfesor(Profesor profesor)
@@ -150,6 +154,21 @@ namespace Tema7_Tarea06_Integrador
             }
 
             return texto;
+        }
+
+        public List<Profesor> ProfesoresConAsignaturas()
+        {
+            List<Profesor> listaProfesoresAsignaturas = new();
+
+            foreach (Profesor profesor in _listaProfesores)
+            {
+                if (profesor.CountAsignaturas() > 0)
+                {
+                    listaProfesoresAsignaturas.Add(profesor);
+                }
+            }
+
+            return listaProfesoresAsignaturas;
         }
     }
 }

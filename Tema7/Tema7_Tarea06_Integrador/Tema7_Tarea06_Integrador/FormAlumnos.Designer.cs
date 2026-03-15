@@ -94,6 +94,7 @@
             btnAlumnosEnCurso.TabIndex = 7;
             btnAlumnosEnCurso.Text = "Alumnos pertenecientes a un curso";
             btnAlumnosEnCurso.UseVisualStyleBackColor = false;
+            btnAlumnosEnCurso.Click += btnAlumnosEnCurso_Click;
             // 
             // btnMostrarTodos
             // 
@@ -247,6 +248,7 @@
             btnAlumnosSuspensos.TabIndex = 6;
             btnAlumnosSuspensos.Text = "Alumnos que están suspensos";
             btnAlumnosSuspensos.UseVisualStyleBackColor = false;
+            btnAlumnosSuspensos.Click += btnAlumnosSuspensos_Click;
             // 
             // btnAlumnosAprobados
             // 
@@ -261,6 +263,7 @@
             btnAlumnosAprobados.TabIndex = 5;
             btnAlumnosAprobados.Text = "Alumnos que están aprobados";
             btnAlumnosAprobados.UseVisualStyleBackColor = false;
+            btnAlumnosAprobados.Click += btnAlumnosAprobados_Click;
             // 
             // btnOrdenarNotaMedia
             // 

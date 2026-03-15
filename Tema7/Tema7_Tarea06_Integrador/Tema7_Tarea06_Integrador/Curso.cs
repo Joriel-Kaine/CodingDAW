@@ -12,6 +12,8 @@ namespace Tema7_Tarea06_Integrador
         public string Nombre { get; set; }
         private int _codCurso;
 
+
+
         // Propiedades.
         public int CodCurso
         {
@@ -29,6 +31,8 @@ namespace Tema7_Tarea06_Integrador
             }
         }
 
+
+
         // Constructores.
         public Curso()
         {
@@ -41,6 +45,8 @@ namespace Tema7_Tarea06_Integrador
             Nombre = nombre;
             CodCurso = codCurso;
         }
+
+
 
         // Métodos.
         public string MostrarDatos()

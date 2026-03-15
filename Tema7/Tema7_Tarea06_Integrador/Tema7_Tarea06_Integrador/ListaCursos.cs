@@ -11,7 +11,9 @@ namespace Tema7_Tarea06_Integrador
         // Campos.
         private List<Curso> _listaCursos = new();
 
-        // Métodos.
+
+
+        // Métodos auxiliares.
         public int BuscarCurso(int codCurso)
         {
             int posicion = -1;
@@ -41,6 +43,9 @@ namespace Tema7_Tarea06_Integrador
             return _listaCursos[posicion];
         }
 
+
+
+        // Métodos principales.
         public void AddCurso(Curso curso)
         {
             _listaCursos.Add(curso);

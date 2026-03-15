@@ -13,14 +13,14 @@ namespace Tema7_Tarea06_Integrador
 
         private void btnGestionCursos_Click(object sender, EventArgs e)
         {
-            FormCursos formCursos = new(_listaCursos);
+            FormCursos formCursos = new(_listaCursos, _listaAlumnos);
 
             formCursos.ShowDialog();
         }
 
         private void btnGestionAlumnos_Click(object sender, EventArgs e)
         {
-            FormAlumnos formAlumnos = new(_listaAlumnos);
+            FormAlumnos formAlumnos = new(_listaAlumnos, _listaCursos);
 
             formAlumnos.ShowDialog();
         }
