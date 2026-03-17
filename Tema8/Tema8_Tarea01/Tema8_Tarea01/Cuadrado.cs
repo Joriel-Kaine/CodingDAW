@@ -9,21 +9,38 @@ namespace Tema8_Tarea01
     public class Cuadrado : Figura
     {
         // Campos.
-        private int _area;
+        private int _lado;
 
         // Propiedades.
-        public int Area
+        public int Lado
         {
-            get { return _area; }
-            set { _area = value; }
+            get { return _lado; }
+            set { _lado = value; }
         }
 
-        // Constructores.
-        public Cuadrado(int x, int y, string color, int area) : base(x, y, color)
+        // Constructores. LLama al constructor de Figura.
+        public Cuadrado(int x, int y, string color, int lado) : base(x, y, color)
         {
-            _area = area;
+            Lado = lado;
         }
 
         // Métodos.
+
+        // Sobreescritura del método virtual.
+        public override string QuienSoy()
+        {
+            return "Soy un cuadrado.\n";
+        }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()}\n" +
+                   $"Lado: {Lado}";
+        }
+
+        public override double Area()
+        {
+            return Lado * Lado;
+        }
     }
 }

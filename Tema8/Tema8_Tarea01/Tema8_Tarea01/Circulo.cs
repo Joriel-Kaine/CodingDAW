@@ -20,7 +20,7 @@ namespace Tema8_Tarea01
         }
 
 
-        // Constructores.
+        // Constructores. Llama al constructor de Figura.
         public Circulo(int x, int y, string color, int radio) : base(x, y, color)
         {
             _radio = radio;
@@ -28,5 +28,22 @@ namespace Tema8_Tarea01
 
 
         // Métodos.
+
+        // Sobreescritura del método virtual.
+        public override string QuienSoy()
+        {
+            return "Soy un círculo.\n";
+        }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()}\n" +
+                   $"Radio: {Radio}";
+        }
+
+        public override double Area()
+        {
+            return Math.PI * Radio * Radio;
+        }
     }
 }

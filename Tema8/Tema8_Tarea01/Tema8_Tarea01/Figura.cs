@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tema8_Tarea01
 {
-    public class Figura
+    public abstract class Figura
     {
         // Campos.
         private int _posicionX;
@@ -15,6 +15,18 @@ namespace Tema8_Tarea01
 
 
         //Propiedades.
+        public int PosicionX
+        {
+            get { return _posicionX; }
+            set { _posicionX = value; }
+        }
+
+        public int PosicionY
+        {
+            get { return _posicionY; }
+            set { _posicionY = value; }
+        }
+
         public string Color
         {
             get { return _color; }
@@ -32,5 +44,22 @@ namespace Tema8_Tarea01
 
 
         // Métodos.
+
+        // Método virtual. Se puede reescribir en las clases que heredan.
+        public virtual string QuienSoy()
+        {
+            return "Soy una figura.";
+        }
+
+        // Sobreescritura de un método que heredamos de System.Object
+        public override string ToString()
+        {
+            return $"Posición X: {PosicionX}\n" +
+                   $"Posición Y: {PosicionY}\n" +
+                   $"Color: {Color}";
+        }
+
+        // Método abastracto. No tiene cuerpo. Se reescribe en las clases que heredan.
+        public abstract double Area();
     }
 }
