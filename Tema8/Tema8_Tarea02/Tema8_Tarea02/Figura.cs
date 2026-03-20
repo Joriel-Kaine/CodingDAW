@@ -1,0 +1,65 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tema8_Tarea02
+{
+    public abstract class Figura
+    {
+        // Campos.
+        private int _posicionX;
+        private int _posicionY;
+        private string _color;
+
+
+        //Propiedades.
+        public int PosicionX
+        {
+            get { return _posicionX; }
+            set { _posicionX = value; }
+        }
+
+        public int PosicionY
+        {
+            get { return _posicionY; }
+            set { _posicionY = value; }
+        }
+
+        public string Color
+        {
+            get { return _color; }
+            set { _color = value; }
+        }
+
+
+        // Constructores.
+        public Figura(int x, int y, string color)
+        {
+            _posicionX = x;
+            _posicionY = y;
+            _color = color;
+        }
+
+
+        // Métodos.
+
+        // Método virtual. Se puede reescribir en las clases que heredan.
+        public virtual string QuienSoy()
+        {
+            return "Soy una figura.";
+        }
+
+        // Sobreescritura de un método que heredamos de System.Object
+        public override string ToString()
+        {
+            return $"Posición X: {PosicionX}\n" +
+                   $"Posición Y: {PosicionY}\n" +
+                   $"Color: {Color}";
+        }
+
+        // Método abastracto. No tiene cuerpo. Se reescribe en las clases que heredan.
+        public abstract double Area();
+    }
+}
