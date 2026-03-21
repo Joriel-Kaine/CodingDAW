@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tema8_Tarea02
+namespace Tema8_Tarea02.Interfaz
 {
-    public class ListaFiguras
+    public static class FuncionesInterfazFigura
     {
-        private List<Figura> _listaFiguras = new();
+
     }
 }

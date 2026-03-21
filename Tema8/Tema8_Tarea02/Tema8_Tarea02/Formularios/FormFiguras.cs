@@ -1,3 +1,5 @@
+using Tema8_Tarea02.Base.Figuras;
+
 namespace Tema8_Tarea02
 {
     public partial class FormFiguras : Form

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tema8_Tarea02
+namespace Tema8_Tarea02.Base
 {
     public abstract class Figura
     {

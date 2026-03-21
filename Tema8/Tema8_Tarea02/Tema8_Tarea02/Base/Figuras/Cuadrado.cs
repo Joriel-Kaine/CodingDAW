@@ -3,47 +3,45 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tema8_Tarea02.Base;
 
-namespace Tema8_Tarea02
+namespace Tema8_Tarea02.Base.Figuras
 {
-    public class Circulo : Figura
+    public class Cuadrado : Figura
     {
         // Campos.
-        private int _radio;
-
+        private int _lado;
 
         // Propiedades.
-        public int Radio
+        public int Lado
         {
-            get { return _radio; }
-            set { _radio = value; }
+            get { return _lado; }
+            set { _lado = value; }
         }
 
-
-        // Constructores. Llama al constructor de Figura.
-        public Circulo(int x, int y, string color, int radio) : base(x, y, color)
+        // Constructores. LLama al constructor de Figura.
+        public Cuadrado(int x, int y, string color, int lado) : base(x, y, color)
         {
-            _radio = radio;
+            Lado = lado;
         }
-
 
         // Métodos.
 
         // Sobreescritura del método virtual.
         public override string QuienSoy()
         {
-            return "Soy un círculo.\n";
+            return "Soy un cuadrado.\n";
         }
 
         public override string ToString()
         {
             return $"{base.ToString()}\n" +
-                   $"Radio: {Radio}";
+                   $"Lado: {Lado}";
         }
 
         public override double Area()
         {
-            return Math.PI * Radio * Radio;
+            return Lado * Lado;
         }
     }
 }
