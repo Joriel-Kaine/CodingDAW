@@ -14,12 +14,9 @@ namespace Tema8_Tarea02.Listas
         private List<Figura> _listaFiguras = new();
 
 
-        // Subprograma que devuelve posiciones x e y, y el color.
-        public void ObtenerPosicionesColor(out int posX, out int posY, out string color)
+        public void AddFigura(Figura figura)
         {
-            posX = FuncionesInterfaz.LeerEntero("Introduce el valor de X:");
-            posY = FuncionesInterfaz.LeerEntero("Introduce el valor de Y:");
-            color = FuncionesInterfaz.LeerTexto("Introduce el color:");
+            _listaFiguras.Add(figura);
         }
     }
 }
