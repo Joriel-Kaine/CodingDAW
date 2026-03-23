@@ -18,5 +18,10 @@ namespace Tema8_Tarea02.Listas
         {
             _listaFiguras.Add(figura);
         }
+
+        public List<Figura> DevolverFiguras()
+        {
+            return _listaFiguras;
+        }
     }
 }

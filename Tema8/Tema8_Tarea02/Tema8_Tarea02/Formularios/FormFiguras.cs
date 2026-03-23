@@ -15,27 +15,27 @@ namespace Tema8_Tarea02
 
         private void btnCrearCirculo_Click(object sender, EventArgs e)
         {
-
+            FuncionesInterfazFigura.CrearCirculo(_listaFiguras);
         }
 
         private void btnCrearCuadrado_Click(object sender, EventArgs e)
         {
-
+            FuncionesInterfazFigura.CrearCuadrado(_listaFiguras);
         }
 
         private void btnMostrarFiguras_Click(object sender, EventArgs e)
         {
-
+            FuncionesInterfazFigura.MostrarTodasFiguras(_listaFiguras);
         }
 
         private void btnMostrarCirculos_Click(object sender, EventArgs e)
         {
-
+            FuncionesInterfazFigura.MostrarCirculos(_listaFiguras);
         }
 
         private void btnMostrarCuadrados_Click(object sender, EventArgs e)
         {
-
+            FuncionesInterfazFigura.MostrarCuadrados(_listaFiguras);
         }
     }
 }

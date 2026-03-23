@@ -61,5 +61,12 @@ namespace Tema8_Tarea02.Base
 
         // Método abastracto. No tiene cuerpo. Se reescribe en las clases que heredan.
         public abstract double Area();
+
+        public string GenerarTextoFigura()
+        {
+            return $"{QuienSoy()}\n" +
+                   $"{ToString()}\n" +
+                   $"Mi área es {Area()}";
+        }
     }
 }
