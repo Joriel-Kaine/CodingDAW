@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tema8_Tarea02.Base;
-using Tema8_Tarea02.Base.Figuras;
-using Tema8_Tarea02.Listas;
+using Tema8_Tarea02.Modelos;
 
 namespace Tema8_Tarea02.Interfaz
 {
@@ -20,7 +18,7 @@ namespace Tema8_Tarea02.Interfaz
         }
 
         // Métodos de creación de círculos y cuadrados.
-        public static void CrearCirculo(ListaFiguras listaFiguras)
+        public static void CrearCirculo(List<Figura> listaFiguras)
         {
             int posX, posY, radio;
             string color;
@@ -33,10 +31,10 @@ namespace Tema8_Tarea02.Interfaz
             Circulo circulo = new(posX, posY, color, radio);
 
             // Se añade a la lista de figuras.
-            listaFiguras.AddFigura(circulo);
+            listaFiguras.Add(circulo);
         }
 
-        public static void CrearCuadrado(ListaFiguras listaFiguras)
+        public static void CrearCuadrado(List<Figura> listaFiguras)
         {
             int posX, posY, lado;
             string color;
@@ -46,15 +44,15 @@ namespace Tema8_Tarea02.Interfaz
 
             Cuadrado cuadrado = new(posX, posY, color, lado);
 
-            listaFiguras.AddFigura(cuadrado);
+            listaFiguras.Add(cuadrado);
         }
 
-        public static void MostrarTodasFiguras(ListaFiguras listaFiguras)
+        public static void MostrarTodasFiguras(List<Figura> listaFiguras)
         {
             int contador = 1;
             string texto;
 
-            foreach (Figura figura in listaFiguras.DevolverFiguras())
+            foreach (Figura figura in listaFiguras)
             {
                 texto = $"Figura num {contador}\n" +
                         figura.GenerarTextoFigura();
@@ -64,14 +62,14 @@ namespace Tema8_Tarea02.Interfaz
             }
         }
 
-        public static void MostrarCirculos(ListaFiguras listaFiguras)
+        public static void MostrarCirculos(List<Figura> listaFiguras)
         {
             int contador = 1;
             string texto;
 
-            foreach (Figura figura in listaFiguras.DevolverFiguras())
+            foreach (Figura figura in listaFiguras)
             {
-                if (figura.GetType() == typeof(Circulo))
+                if (figura is Circulo circulo)
                 {
                     texto = $"Figura num {contador}\n" +
                             figura.GenerarTextoFigura();
@@ -82,14 +80,14 @@ namespace Tema8_Tarea02.Interfaz
             }
         }
 
-        public static void MostrarCuadrados(ListaFiguras listaFiguras)
+        public static void MostrarCuadrados(List<Figura> listaFiguras)
         {
             int contador = 1;
             string texto;
 
-            foreach (Figura figura in listaFiguras.DevolverFiguras())
+            foreach (Figura figura in listaFiguras)
             {
-                if (figura.GetType() == typeof(Cuadrado))
+                if (figura is Cuadrado cuadrado)
                 {
                     texto = $"Figura num {contador}\n" +
                             figura.GenerarTextoFigura();

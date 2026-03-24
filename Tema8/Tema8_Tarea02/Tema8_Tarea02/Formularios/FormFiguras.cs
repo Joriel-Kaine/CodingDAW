@@ -1,12 +1,11 @@
-using Tema8_Tarea02.Base.Figuras;
 using Tema8_Tarea02.Interfaz;
-using Tema8_Tarea02.Listas;
+using Tema8_Tarea02.Modelos;
 
 namespace Tema8_Tarea02
 {
     public partial class FormFiguras : Form
     {
-        private ListaFiguras _listaFiguras = new();
+        private List<Figura> _listaFiguras = new();
 
         public FormFiguras()
         {

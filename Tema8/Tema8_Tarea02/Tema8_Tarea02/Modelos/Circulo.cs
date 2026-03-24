@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tema8_Tarea02.Base;
 
-namespace Tema8_Tarea02.Base.Figuras
+namespace Tema8_Tarea02.Modelos
 {
     public class Circulo : Figura
     {
-        // Campos.
         private int _radio;
 
 
-        // Propiedades.
         public int Radio
         {
             get { return _radio; }
@@ -27,8 +24,6 @@ namespace Tema8_Tarea02.Base.Figuras
             _radio = radio;
         }
 
-
-        // Métodos.
 
         // Sobreescritura del método virtual.
         public override string QuienSoy()

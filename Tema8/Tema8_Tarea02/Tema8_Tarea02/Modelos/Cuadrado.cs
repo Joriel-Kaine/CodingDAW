@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tema8_Tarea02.Base;
 
-namespace Tema8_Tarea02.Base.Figuras
+namespace Tema8_Tarea02.Modelos
 {
     public class Cuadrado : Figura
     {

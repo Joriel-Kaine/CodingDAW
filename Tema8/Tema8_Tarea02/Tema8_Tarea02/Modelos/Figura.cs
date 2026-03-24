@@ -4,17 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tema8_Tarea02.Base
+namespace Tema8_Tarea02.Modelos
 {
     public abstract class Figura
     {
-        // Campos.
         private int _posicionX;
         private int _posicionY;
         private string _color;
 
 
-        //Propiedades.
         public int PosicionX
         {
             get { return _posicionX; }
@@ -34,7 +32,6 @@ namespace Tema8_Tarea02.Base
         }
 
 
-        // Constructores.
         public Figura(int x, int y, string color)
         {
             _posicionX = x;
@@ -42,8 +39,6 @@ namespace Tema8_Tarea02.Base
             _color = color;
         }
 
-
-        // Métodos.
 
         // Método virtual. Se puede reescribir en las clases que heredan.
         public virtual string QuienSoy()
