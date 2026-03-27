@@ -14,27 +14,31 @@ namespace Tema8_Tarea03
 
         private void btnCrearCirculo_Click(object sender, EventArgs e)
         {
-            FuncionesInterfazFigura.CrearCirculo(_listaFiguras);
+            FormCirculos formCirculos = new(_listaFiguras);
+
+            formCirculos.ShowDialog();
         }
 
         private void btnCrearCuadrado_Click(object sender, EventArgs e)
         {
-            FuncionesInterfazFigura.CrearCuadrado(_listaFiguras);
+            FormCuadrados formCuadrados = new(_listaFiguras);
+
+            formCuadrados.ShowDialog();
         }
 
         private void btnMostrarFiguras_Click(object sender, EventArgs e)
         {
-            FuncionesInterfazFigura.MostrarTodasFiguras(_listaFiguras);
+            FuncionesInterfazFiguras.MostrarTodasFiguras(_listaFiguras);
         }
 
         private void btnMostrarCirculos_Click(object sender, EventArgs e)
         {
-            FuncionesInterfazFigura.MostrarCirculos(_listaFiguras);
+            FuncionesInterfazFiguras.MostrarCirculos(_listaFiguras);
         }
 
         private void btnMostrarCuadrados_Click(object sender, EventArgs e)
         {
-            FuncionesInterfazFigura.MostrarCuadrados(_listaFiguras);
+            FuncionesInterfazFiguras.MostrarCuadrados(_listaFiguras);
         }
     }
 }

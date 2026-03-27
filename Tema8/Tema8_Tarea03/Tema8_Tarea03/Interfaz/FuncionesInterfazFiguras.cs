@@ -7,7 +7,7 @@ using Tema8_Tarea03.Modelos;
 
 namespace Tema8_Tarea03.Interfaz
 {
-    public static class FuncionesInterfazFigura
+    public static class FuncionesInterfazFiguras
     {
         // Método que devuelve posiciones x e y, y el color.
         private static void ObtenerPosicionesColor(out int posX, out int posY, out string color)

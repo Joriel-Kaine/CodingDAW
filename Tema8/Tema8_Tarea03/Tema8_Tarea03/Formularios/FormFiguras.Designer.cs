@@ -33,9 +33,9 @@
             btnCrearCuadrado = new Button();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
+            btnMostrarCuadrados = new Button();
             btnMostrarFiguras = new Button();
             btnMostrarCirculos = new Button();
-            btnMostrarCuadrados = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -59,7 +59,7 @@
             btnCrearCirculo.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCrearCirculo.Location = new Point(71, 103);
             btnCrearCirculo.Name = "btnCrearCirculo";
-            btnCrearCirculo.Size = new Size(281, 180);
+            btnCrearCirculo.Size = new Size(280, 180);
             btnCrearCirculo.TabIndex = 1;
             btnCrearCirculo.Text = "Crear Círculo";
             btnCrearCirculo.UseVisualStyleBackColor = false;
@@ -74,7 +74,7 @@
             btnCrearCuadrado.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCrearCuadrado.Location = new Point(71, 403);
             btnCrearCuadrado.Name = "btnCrearCuadrado";
-            btnCrearCuadrado.Size = new Size(281, 180);
+            btnCrearCuadrado.Size = new Size(280, 180);
             btnCrearCuadrado.TabIndex = 2;
             btnCrearCuadrado.Text = "Crear Cuadrado";
             btnCrearCuadrado.UseVisualStyleBackColor = false;
@@ -105,6 +105,21 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Mostrar Datos";
             // 
+            // btnMostrarCuadrados
+            // 
+            btnMostrarCuadrados.BackColor = Color.LemonChiffon;
+            btnMostrarCuadrados.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnMostrarCuadrados.FlatAppearance.BorderSize = 4;
+            btnMostrarCuadrados.FlatStyle = FlatStyle.Flat;
+            btnMostrarCuadrados.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMostrarCuadrados.Location = new Point(80, 487);
+            btnMostrarCuadrados.Name = "btnMostrarCuadrados";
+            btnMostrarCuadrados.Size = new Size(280, 140);
+            btnMostrarCuadrados.TabIndex = 3;
+            btnMostrarCuadrados.Text = "Mostrar Cuadrados";
+            btnMostrarCuadrados.UseVisualStyleBackColor = false;
+            btnMostrarCuadrados.Click += btnMostrarCuadrados_Click;
+            // 
             // btnMostrarFiguras
             // 
             btnMostrarFiguras.BackColor = Color.LemonChiffon;
@@ -114,7 +129,7 @@
             btnMostrarFiguras.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMostrarFiguras.Location = new Point(80, 64);
             btnMostrarFiguras.Name = "btnMostrarFiguras";
-            btnMostrarFiguras.Size = new Size(281, 180);
+            btnMostrarFiguras.Size = new Size(280, 180);
             btnMostrarFiguras.TabIndex = 1;
             btnMostrarFiguras.Text = "Mostrar todas las figuras";
             btnMostrarFiguras.UseVisualStyleBackColor = false;
@@ -129,26 +144,11 @@
             btnMostrarCirculos.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMostrarCirculos.Location = new Point(80, 322);
             btnMostrarCirculos.Name = "btnMostrarCirculos";
-            btnMostrarCirculos.Size = new Size(281, 140);
+            btnMostrarCirculos.Size = new Size(280, 140);
             btnMostrarCirculos.TabIndex = 2;
             btnMostrarCirculos.Text = "Mostrar Circulos";
             btnMostrarCirculos.UseVisualStyleBackColor = false;
             btnMostrarCirculos.Click += btnMostrarCirculos_Click;
-            // 
-            // btnMostrarCuadrados
-            // 
-            btnMostrarCuadrados.BackColor = Color.LemonChiffon;
-            btnMostrarCuadrados.FlatAppearance.BorderColor = Color.SteelBlue;
-            btnMostrarCuadrados.FlatAppearance.BorderSize = 4;
-            btnMostrarCuadrados.FlatStyle = FlatStyle.Flat;
-            btnMostrarCuadrados.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMostrarCuadrados.Location = new Point(80, 487);
-            btnMostrarCuadrados.Name = "btnMostrarCuadrados";
-            btnMostrarCuadrados.Size = new Size(281, 140);
-            btnMostrarCuadrados.TabIndex = 3;
-            btnMostrarCuadrados.Text = "Mostrar Cuadrados";
-            btnMostrarCuadrados.UseVisualStyleBackColor = false;
-            btnMostrarCuadrados.Click += btnMostrarCuadrados_Click;
             // 
             // FormFiguras
             // 
