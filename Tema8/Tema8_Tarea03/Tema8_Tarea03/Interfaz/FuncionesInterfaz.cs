@@ -9,49 +9,33 @@ namespace Tema8_Tarea03.Interfaz
 {
     public static class FuncionesInterfaz
     {
-        public static int LeerEntero(string mensaje)
+        public static int ValidarEntero(string texto)
         {
             int num;
-            bool esCorrecto;
-            string texto;
-
-            do
+            bool esCorrecto = int.TryParse(texto, out num);
+            
+            if (!esCorrecto)
             {
-                texto = Interaction.InputBox(mensaje);
-                esCorrecto = int.TryParse(texto, out num);
-
-                if (!esCorrecto)
-                {
-                    MessageBox.Show("Introduce valores numéricos válidos");
-                }
-
-            } while (!esCorrecto);
+                MessageBox.Show("Introduce valores numéricos válidos");
+            }
 
             return num;
         }
 
-        public static string LeerTexto(string mensaje)
+        public static string ValidarTexto(string texto)
         {
-            string texto;
-            bool esCorrecto;
-
-            do
-            {
-                esCorrecto = true;
-                texto = Interaction.InputBox(mensaje);
-
-                if (string.IsNullOrEmpty(texto))
-                {
-                    MessageBox.Show("No se permiten textos vacíos o nulos.");
-                    esCorrecto = false;
-                }
-                else if (!texto.All(char.IsLetter))
-                {
-                    MessageBox.Show("Introduce textos válidos.");
-                    esCorrecto = false;
-                }
-
-            } while (!esCorrecto);
+            string correcto = texto;
+            
+            if (string.IsNullOrEmpty(texto))   
+            {    
+                MessageBox.Show("No se permiten textos vacíos o nulos.");  
+                correcto = null;
+            }  
+            else if (!texto.All(char.IsLetter))
+            {     
+                MessageBox.Show("Introduce textos válidos.");   
+                correcto = null;
+            }
 
             return texto;
         }

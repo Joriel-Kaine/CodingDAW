@@ -12,9 +12,9 @@ namespace Tema8_Tarea03.Interfaz
         // Método que devuelve posiciones x e y, y el color.
         private static void ObtenerPosicionesColor(out int posX, out int posY, out string color)
         {
-            posX = FuncionesInterfaz.LeerEntero("Introduce el valor de X:");
-            posY = FuncionesInterfaz.LeerEntero("Introduce el valor de Y:");
-            color = FuncionesInterfaz.LeerTexto("Introduce el color:");
+            posX = FuncionesInterfaz.ValidarEntero("Introduce el valor de X:");
+            posY = FuncionesInterfaz.ValidarEntero("Introduce el valor de Y:");
+            color = FuncionesInterfaz.ValidarTexto("Introduce el color:");
         }
 
         // Métodos de creación de círculos y cuadrados.
@@ -25,7 +25,7 @@ namespace Tema8_Tarea03.Interfaz
 
             // Obtención de los datos del círculo.
             ObtenerPosicionesColor(out posX, out posY, out color);
-            radio = FuncionesInterfaz.LeerEntero("Introduce el radio del círculo:");
+            radio = FuncionesInterfaz.ValidarEntero("Introduce el radio del círculo:");
 
             // Creación del círculo.
             Circulo circulo = new(posX, posY, color, radio);
@@ -40,7 +40,7 @@ namespace Tema8_Tarea03.Interfaz
             string color;
 
             ObtenerPosicionesColor(out posX, out posY, out color);
-            lado = FuncionesInterfaz.LeerEntero("Introduce el lado del cuadrado:");
+            lado = FuncionesInterfaz.ValidarEntero("Introduce el lado del cuadrado:");
 
             Cuadrado cuadrado = new(posX, posY, color, lado);
 

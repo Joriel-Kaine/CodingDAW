@@ -24,6 +24,11 @@ namespace Tema8_Tarea03
 
         private void btnAddCuadrado_Click(object sender, EventArgs e)
         {
+            string posX = txtPosX.Text,
+                   posY = txtPosY.Text,
+                   color = txtColor.Text,
+                   lado = txtLado.Text;
+
 
         }
     }

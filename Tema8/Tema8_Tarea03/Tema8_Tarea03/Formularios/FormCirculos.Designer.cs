@@ -38,11 +38,13 @@
             lblColor = new Label();
             lblPosY = new Label();
             lblPosX = new Label();
+            btnLimpiar = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnLimpiar);
             groupBox1.Controls.Add(btnAddCirculo);
             groupBox1.Controls.Add(txtRadio);
             groupBox1.Controls.Add(txtColor);
@@ -141,6 +143,18 @@
             lblPosX.TabIndex = 0;
             lblPosX.Text = "Posición X:";
             // 
+            // btnLimpiar
+            // 
+            btnLimpiar.BackColor = Color.DarkSeaGreen;
+            btnLimpiar.FlatAppearance.BorderSize = 4;
+            btnLimpiar.FlatStyle = FlatStyle.Flat;
+            btnLimpiar.Image = Properties.Resources.imagen;
+            btnLimpiar.Location = new Point(571, 590);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(100, 100);
+            btnLimpiar.TabIndex = 12;
+            btnLimpiar.UseVisualStyleBackColor = false;
+            // 
             // FormCirculos
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -170,5 +184,6 @@
         private TextBox txtColor;
         private TextBox txtPosY;
         private Button btnAddCirculo;
+        private Button btnLimpiar;
     }
 }
