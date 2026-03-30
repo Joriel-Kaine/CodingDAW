@@ -33,7 +33,7 @@ namespace Tema8_Tarea03
             // Se validan los valores introducidos en los cuadros de texto.
             int posX, posY, radio;
             string color;
-            bool esCorrecto = false;
+            bool esCorrecto = true;
 
             // Se comprueba (con un AND) si esCorrecto o no esCorrecto.
             esCorrecto &= FuncionesInterfaz.ValidarEntero(posXBox, out posX);
@@ -61,6 +61,11 @@ namespace Tema8_Tarea03
             txtColor.Text = null;
             txtRadio.Text = "0";
             txtPosX.Focus();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

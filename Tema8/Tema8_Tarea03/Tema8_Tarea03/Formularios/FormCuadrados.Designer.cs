@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnAtras = new Button();
             btnLimpiar = new Button();
             btnAddCuadrado = new Button();
             txtLado = new TextBox();
@@ -44,6 +45,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnAtras);
             groupBox1.Controls.Add(btnLimpiar);
             groupBox1.Controls.Add(btnAddCuadrado);
             groupBox1.Controls.Add(txtLado);
@@ -61,6 +63,19 @@
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Introduce los datos del Cuadrado";
+            // 
+            // btnAtras
+            // 
+            btnAtras.BackColor = Color.DarkSeaGreen;
+            btnAtras.FlatAppearance.BorderSize = 4;
+            btnAtras.FlatStyle = FlatStyle.Flat;
+            btnAtras.Image = Properties.Resources.imagenBack;
+            btnAtras.Location = new Point(59, 590);
+            btnAtras.Name = "btnAtras";
+            btnAtras.Size = new Size(100, 100);
+            btnAtras.TabIndex = 12;
+            btnAtras.UseVisualStyleBackColor = false;
+            btnAtras.Click += btnAtras_Click;
             // 
             // btnLimpiar
             // 
@@ -184,5 +199,6 @@
         private Label lblPosX;
         private Button btnAddCuadrado;
         private Button btnLimpiar;
+        private Button btnAtras;
     }
 }

@@ -36,6 +36,7 @@
             btnMostrarCuadrados = new Button();
             btnMostrarFiguras = new Button();
             btnMostrarCirculos = new Button();
+            btnCerrar = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -150,12 +151,26 @@
             btnMostrarCirculos.UseVisualStyleBackColor = false;
             btnMostrarCirculos.Click += btnMostrarCirculos_Click;
             // 
+            // btnCerrar
+            // 
+            btnCerrar.BackColor = Color.LemonChiffon;
+            btnCerrar.FlatAppearance.BorderSize = 4;
+            btnCerrar.FlatStyle = FlatStyle.Flat;
+            btnCerrar.Image = Properties.Resources.imagenExit;
+            btnCerrar.Location = new Point(977, 30);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(100, 100);
+            btnCerrar.TabIndex = 13;
+            btnCerrar.UseVisualStyleBackColor = false;
+            btnCerrar.Click += btnCerrar_Click;
+            // 
             // FormFiguras
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(1178, 944);
+            Controls.Add(btnCerrar);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(lblTitulo);
@@ -177,5 +192,6 @@
         private Button btnMostrarFiguras;
         private Button btnMostrarCirculos;
         private Button btnMostrarCuadrados;
+        private Button btnCerrar;
     }
 }

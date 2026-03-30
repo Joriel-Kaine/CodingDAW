@@ -40,5 +40,10 @@ namespace Tema8_Tarea03
         {
             FuncionesInterfazFiguras.MostrarCuadrados(_listaFiguras);
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -17,6 +17,9 @@ namespace Tema8_Tarea03.Interfaz
 
             // Se añade a la lista de figuras.
             listaFiguras.Add(circulo);
+
+            // Mostramos por consola si se ha creado correctamente.
+            MessageBox.Show($"Nuevo círculo creado:\n\n{circulo}");
         }
 
         public static void CrearCuadrado(List<Figura> listaFiguras, int posX, int posY, string color, int lado)
@@ -26,6 +29,9 @@ namespace Tema8_Tarea03.Interfaz
 
             // Se añade a la lista de figuras.
             listaFiguras.Add(cuadrado);
+
+            // Mostramos por consola si se ha creado correctamente.
+            MessageBox.Show($"Nuevo cuadrado creado:\n\n{cuadrado}");
         }
 
         public static void MostrarTodasFiguras(List<Figura> listaFiguras)
