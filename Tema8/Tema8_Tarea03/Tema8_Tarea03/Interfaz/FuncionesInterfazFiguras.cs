@@ -9,24 +9,9 @@ namespace Tema8_Tarea03.Interfaz
 {
     public static class FuncionesInterfazFiguras
     {
-        // Método que devuelve posiciones x e y, y el color.
-        private static void ObtenerPosicionesColor(out int posX, out int posY, out string color)
-        {
-            posX = FuncionesInterfaz.ValidarEntero("Introduce el valor de X:");
-            posY = FuncionesInterfaz.ValidarEntero("Introduce el valor de Y:");
-            color = FuncionesInterfaz.ValidarTexto("Introduce el color:");
-        }
-
         // Métodos de creación de círculos y cuadrados.
-        public static void CrearCirculo(List<Figura> listaFiguras)
+        public static void CrearCirculo(List<Figura> listaFiguras, int posX, int posY, string color, int radio)
         {
-            int posX, posY, radio;
-            string color;
-
-            // Obtención de los datos del círculo.
-            ObtenerPosicionesColor(out posX, out posY, out color);
-            radio = FuncionesInterfaz.ValidarEntero("Introduce el radio del círculo:");
-
             // Creación del círculo.
             Circulo circulo = new(posX, posY, color, radio);
 
@@ -34,16 +19,12 @@ namespace Tema8_Tarea03.Interfaz
             listaFiguras.Add(circulo);
         }
 
-        public static void CrearCuadrado(List<Figura> listaFiguras)
+        public static void CrearCuadrado(List<Figura> listaFiguras, int posX, int posY, string color, int lado)
         {
-            int posX, posY, lado;
-            string color;
-
-            ObtenerPosicionesColor(out posX, out posY, out color);
-            lado = FuncionesInterfaz.ValidarEntero("Introduce el lado del cuadrado:");
-
+            // Creación del cuadrado.
             Cuadrado cuadrado = new(posX, posY, color, lado);
 
+            // Se añade a la lista de figuras.
             listaFiguras.Add(cuadrado);
         }
 

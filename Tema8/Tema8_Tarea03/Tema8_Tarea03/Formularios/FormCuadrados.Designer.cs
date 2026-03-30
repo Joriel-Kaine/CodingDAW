@@ -73,6 +73,7 @@
             btnLimpiar.Size = new Size(100, 100);
             btnLimpiar.TabIndex = 11;
             btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // btnAddCuadrado
             // 
@@ -164,6 +165,7 @@
             Controls.Add(groupBox1);
             Name = "FormCuadrados";
             Text = "Cuadrado";
+            Load += FormCuadrados_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

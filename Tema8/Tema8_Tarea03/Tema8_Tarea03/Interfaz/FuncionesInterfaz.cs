@@ -9,35 +9,35 @@ namespace Tema8_Tarea03.Interfaz
 {
     public static class FuncionesInterfaz
     {
-        public static int ValidarEntero(string texto)
+        public static bool ValidarEntero(string mensaje, out int num)
         {
-            int num;
-            bool esCorrecto = int.TryParse(texto, out num);
+            bool esCorrecto = int.TryParse(mensaje, out num);
             
             if (!esCorrecto)
             {
                 MessageBox.Show("Introduce valores numéricos válidos");
             }
 
-            return num;
+            return esCorrecto;
         }
 
-        public static string ValidarTexto(string texto)
+        public static bool ValidarTexto(string mensaje, out string texto)
         {
-            string correcto = texto;
+            bool esCorrecto = true;
+            texto = mensaje;
             
-            if (string.IsNullOrEmpty(texto))   
+            if (string.IsNullOrEmpty(mensaje))   
             {    
                 MessageBox.Show("No se permiten textos vacíos o nulos.");  
-                correcto = null;
+                esCorrecto = false;
             }  
-            else if (!texto.All(char.IsLetter))
+            else if (!mensaje.All(char.IsLetter))
             {     
                 MessageBox.Show("Introduce textos válidos.");   
-                correcto = null;
+                esCorrecto = false;
             }
 
-            return texto;
+            return esCorrecto;
         }
     }
 }

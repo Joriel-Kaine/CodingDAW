@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnLimpiar = new Button();
             btnAddCirculo = new Button();
             txtRadio = new TextBox();
             txtColor = new TextBox();
@@ -38,7 +39,6 @@
             lblColor = new Label();
             lblPosY = new Label();
             lblPosX = new Label();
-            btnLimpiar = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,6 +61,19 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Introduce los datos del Círculo";
+            // 
+            // btnLimpiar
+            // 
+            btnLimpiar.BackColor = Color.DarkSeaGreen;
+            btnLimpiar.FlatAppearance.BorderSize = 4;
+            btnLimpiar.FlatStyle = FlatStyle.Flat;
+            btnLimpiar.Image = Properties.Resources.imagen;
+            btnLimpiar.Location = new Point(571, 590);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(100, 100);
+            btnLimpiar.TabIndex = 12;
+            btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // btnAddCirculo
             // 
@@ -142,18 +155,6 @@
             lblPosX.Size = new Size(162, 34);
             lblPosX.TabIndex = 0;
             lblPosX.Text = "Posición X:";
-            // 
-            // btnLimpiar
-            // 
-            btnLimpiar.BackColor = Color.DarkSeaGreen;
-            btnLimpiar.FlatAppearance.BorderSize = 4;
-            btnLimpiar.FlatStyle = FlatStyle.Flat;
-            btnLimpiar.Image = Properties.Resources.imagen;
-            btnLimpiar.Location = new Point(571, 590);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(100, 100);
-            btnLimpiar.TabIndex = 12;
-            btnLimpiar.UseVisualStyleBackColor = false;
             // 
             // FormCirculos
             // 
