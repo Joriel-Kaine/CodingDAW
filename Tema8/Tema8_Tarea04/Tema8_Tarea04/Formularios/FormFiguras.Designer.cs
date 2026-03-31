@@ -37,6 +37,14 @@
             btnMostrarFiguras = new Button();
             btnMostrarCirculos = new Button();
             btnCerrar = new Button();
+            listaFiguras = new ListBox();
+            btnMostrarFigura = new Button();
+            btnEliminarFigura = new Button();
+            button1 = new Button();
+            btnMostrarTriangulos = new Button();
+            btnMostrarRectangulos = new Button();
+            btnCrearTriangulo = new Button();
+            btnCrearRectangulo = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -58,9 +66,9 @@
             btnCrearCirculo.FlatAppearance.BorderSize = 4;
             btnCrearCirculo.FlatStyle = FlatStyle.Flat;
             btnCrearCirculo.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCrearCirculo.Location = new Point(71, 103);
+            btnCrearCirculo.Location = new Point(80, 260);
             btnCrearCirculo.Name = "btnCrearCirculo";
-            btnCrearCirculo.Size = new Size(280, 180);
+            btnCrearCirculo.Size = new Size(280, 140);
             btnCrearCirculo.TabIndex = 1;
             btnCrearCirculo.Text = "Crear Círculo";
             btnCrearCirculo.UseVisualStyleBackColor = false;
@@ -73,9 +81,9 @@
             btnCrearCuadrado.FlatAppearance.BorderSize = 4;
             btnCrearCuadrado.FlatStyle = FlatStyle.Flat;
             btnCrearCuadrado.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCrearCuadrado.Location = new Point(71, 403);
+            btnCrearCuadrado.Location = new Point(80, 406);
             btnCrearCuadrado.Name = "btnCrearCuadrado";
-            btnCrearCuadrado.Size = new Size(280, 180);
+            btnCrearCuadrado.Size = new Size(280, 140);
             btnCrearCuadrado.TabIndex = 2;
             btnCrearCuadrado.Text = "Crear Cuadrado";
             btnCrearCuadrado.UseVisualStyleBackColor = false;
@@ -83,25 +91,30 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnCrearRectangulo);
+            groupBox1.Controls.Add(btnCrearTriangulo);
+            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(btnCrearCirculo);
             groupBox1.Controls.Add(btnCrearCuadrado);
             groupBox1.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(91, 190);
+            groupBox1.Location = new Point(90, 190);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(444, 664);
+            groupBox1.Size = new Size(450, 900);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Introducir Datos";
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(btnMostrarRectangulos);
+            groupBox2.Controls.Add(btnMostrarTriangulos);
             groupBox2.Controls.Add(btnMostrarCuadrados);
             groupBox2.Controls.Add(btnMostrarFiguras);
             groupBox2.Controls.Add(btnMostrarCirculos);
             groupBox2.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox2.Location = new Point(633, 190);
+            groupBox2.Location = new Point(615, 190);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(444, 664);
+            groupBox2.Size = new Size(450, 900);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Mostrar Datos";
@@ -113,9 +126,9 @@
             btnMostrarCuadrados.FlatAppearance.BorderSize = 4;
             btnMostrarCuadrados.FlatStyle = FlatStyle.Flat;
             btnMostrarCuadrados.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMostrarCuadrados.Location = new Point(80, 487);
+            btnMostrarCuadrados.Location = new Point(80, 444);
             btnMostrarCuadrados.Name = "btnMostrarCuadrados";
-            btnMostrarCuadrados.Size = new Size(280, 140);
+            btnMostrarCuadrados.Size = new Size(280, 120);
             btnMostrarCuadrados.TabIndex = 3;
             btnMostrarCuadrados.Text = "Mostrar Cuadrados";
             btnMostrarCuadrados.UseVisualStyleBackColor = false;
@@ -143,9 +156,9 @@
             btnMostrarCirculos.FlatAppearance.BorderSize = 4;
             btnMostrarCirculos.FlatStyle = FlatStyle.Flat;
             btnMostrarCirculos.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMostrarCirculos.Location = new Point(80, 322);
+            btnMostrarCirculos.Location = new Point(80, 318);
             btnMostrarCirculos.Name = "btnMostrarCirculos";
-            btnMostrarCirculos.Size = new Size(280, 140);
+            btnMostrarCirculos.Size = new Size(280, 120);
             btnMostrarCirculos.TabIndex = 2;
             btnMostrarCirculos.Text = "Mostrar Circulos";
             btnMostrarCirculos.UseVisualStyleBackColor = false;
@@ -164,12 +177,124 @@
             btnCerrar.UseVisualStyleBackColor = false;
             btnCerrar.Click += btnCerrar_Click;
             // 
+            // listaFiguras
+            // 
+            listaFiguras.Font = new Font("Maiandra GD", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            listaFiguras.ForeColor = Color.Black;
+            listaFiguras.FormattingEnabled = true;
+            listaFiguras.ItemHeight = 29;
+            listaFiguras.Location = new Point(1177, 225);
+            listaFiguras.Name = "listaFiguras";
+            listaFiguras.Size = new Size(695, 613);
+            listaFiguras.TabIndex = 14;
+            // 
+            // btnMostrarFigura
+            // 
+            btnMostrarFigura.BackColor = Color.LemonChiffon;
+            btnMostrarFigura.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnMostrarFigura.FlatAppearance.BorderSize = 4;
+            btnMostrarFigura.FlatStyle = FlatStyle.Flat;
+            btnMostrarFigura.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMostrarFigura.Location = new Point(1209, 929);
+            btnMostrarFigura.Name = "btnMostrarFigura";
+            btnMostrarFigura.Size = new Size(280, 80);
+            btnMostrarFigura.TabIndex = 15;
+            btnMostrarFigura.Text = "Mostrar Figura";
+            btnMostrarFigura.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminarFigura
+            // 
+            btnEliminarFigura.BackColor = Color.LemonChiffon;
+            btnEliminarFigura.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnEliminarFigura.FlatAppearance.BorderSize = 4;
+            btnEliminarFigura.FlatStyle = FlatStyle.Flat;
+            btnEliminarFigura.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminarFigura.Location = new Point(1557, 929);
+            btnEliminarFigura.Name = "btnEliminarFigura";
+            btnEliminarFigura.Size = new Size(280, 80);
+            btnEliminarFigura.TabIndex = 16;
+            btnEliminarFigura.Text = "Eliminar Figura";
+            btnEliminarFigura.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.LemonChiffon;
+            button1.FlatAppearance.BorderColor = Color.SteelBlue;
+            button1.FlatAppearance.BorderSize = 4;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(80, 64);
+            button1.Name = "button1";
+            button1.Size = new Size(280, 100);
+            button1.TabIndex = 4;
+            button1.Text = "Autorelleno";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // btnMostrarTriangulos
+            // 
+            btnMostrarTriangulos.BackColor = Color.LemonChiffon;
+            btnMostrarTriangulos.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnMostrarTriangulos.FlatAppearance.BorderSize = 4;
+            btnMostrarTriangulos.FlatStyle = FlatStyle.Flat;
+            btnMostrarTriangulos.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMostrarTriangulos.Location = new Point(80, 570);
+            btnMostrarTriangulos.Name = "btnMostrarTriangulos";
+            btnMostrarTriangulos.Size = new Size(280, 120);
+            btnMostrarTriangulos.TabIndex = 4;
+            btnMostrarTriangulos.Text = "Mostrar Triángulos";
+            btnMostrarTriangulos.UseVisualStyleBackColor = false;
+            // 
+            // btnMostrarRectangulos
+            // 
+            btnMostrarRectangulos.BackColor = Color.LemonChiffon;
+            btnMostrarRectangulos.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnMostrarRectangulos.FlatAppearance.BorderSize = 4;
+            btnMostrarRectangulos.FlatStyle = FlatStyle.Flat;
+            btnMostrarRectangulos.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMostrarRectangulos.Location = new Point(80, 696);
+            btnMostrarRectangulos.Name = "btnMostrarRectangulos";
+            btnMostrarRectangulos.Size = new Size(280, 120);
+            btnMostrarRectangulos.TabIndex = 5;
+            btnMostrarRectangulos.Text = "Mostrar Rectángulos";
+            btnMostrarRectangulos.UseVisualStyleBackColor = false;
+            // 
+            // btnCrearTriangulo
+            // 
+            btnCrearTriangulo.BackColor = Color.LemonChiffon;
+            btnCrearTriangulo.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnCrearTriangulo.FlatAppearance.BorderSize = 4;
+            btnCrearTriangulo.FlatStyle = FlatStyle.Flat;
+            btnCrearTriangulo.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCrearTriangulo.Location = new Point(80, 552);
+            btnCrearTriangulo.Name = "btnCrearTriangulo";
+            btnCrearTriangulo.Size = new Size(280, 140);
+            btnCrearTriangulo.TabIndex = 5;
+            btnCrearTriangulo.Text = "Crear Triángulo";
+            btnCrearTriangulo.UseVisualStyleBackColor = false;
+            // 
+            // btnCrearRectangulo
+            // 
+            btnCrearRectangulo.BackColor = Color.LemonChiffon;
+            btnCrearRectangulo.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnCrearRectangulo.FlatAppearance.BorderSize = 4;
+            btnCrearRectangulo.FlatStyle = FlatStyle.Flat;
+            btnCrearRectangulo.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCrearRectangulo.Location = new Point(80, 698);
+            btnCrearRectangulo.Name = "btnCrearRectangulo";
+            btnCrearRectangulo.Size = new Size(280, 140);
+            btnCrearRectangulo.TabIndex = 6;
+            btnCrearRectangulo.Text = "Crear Rectángulo";
+            btnCrearRectangulo.UseVisualStyleBackColor = false;
+            // 
             // FormFiguras
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            ClientSize = new Size(1778, 1144);
+            ClientSize = new Size(1978, 1144);
+            Controls.Add(btnEliminarFigura);
+            Controls.Add(btnMostrarFigura);
+            Controls.Add(listaFiguras);
             Controls.Add(btnCerrar);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -193,5 +318,13 @@
         private Button btnMostrarCirculos;
         private Button btnMostrarCuadrados;
         private Button btnCerrar;
+        private ListBox listaFiguras;
+        private Button btnMostrarFigura;
+        private Button btnCrearTriangulo;
+        private Button button1;
+        private Button btnMostrarRectangulos;
+        private Button btnMostrarTriangulos;
+        private Button btnEliminarFigura;
+        private Button btnCrearRectangulo;
     }
 }
