@@ -57,6 +57,8 @@ namespace Tema8_Tarea04.Modelos
         // Método abastracto. No tiene cuerpo. Se reescribe en las clases que heredan.
         public abstract double Area();
 
+        public abstract double Perimetro();
+
         public string GenerarTextoFigura()
         {
             return $"{QuienSoy()}\n" +
