@@ -41,5 +41,10 @@ namespace Tema8_Tarea04.Modelos
         {
             return Math.PI * Radio * Radio;
         }
+
+        public override double Perimetro()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

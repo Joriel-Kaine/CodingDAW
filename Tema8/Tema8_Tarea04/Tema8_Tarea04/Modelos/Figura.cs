@@ -59,6 +59,8 @@ namespace Tema8_Tarea04.Modelos
 
         public abstract double Perimetro();
 
+
+        // Método normal.
         public string GenerarTextoFigura()
         {
             return $"{QuienSoy()}\n" +

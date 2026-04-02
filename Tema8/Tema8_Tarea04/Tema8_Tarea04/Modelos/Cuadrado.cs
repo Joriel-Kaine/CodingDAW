@@ -42,5 +42,10 @@ namespace Tema8_Tarea04.Modelos
         {
             return Lado * Lado;
         }
+
+        public override double Perimetro()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

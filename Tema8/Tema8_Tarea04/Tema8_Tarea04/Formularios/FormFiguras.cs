@@ -45,5 +45,12 @@ namespace Tema8_Tarea04
         {
             Close();
         }
+
+        private void btnAutorrelleno_Click(object sender, EventArgs e)
+        {
+            FuncionesInterfazFiguras.Autorrelleno(_listaFiguras);
+
+            _listaFiguras.
+        }
     }
 }

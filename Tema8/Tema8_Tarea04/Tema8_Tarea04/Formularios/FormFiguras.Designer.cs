@@ -32,7 +32,12 @@
             btnCrearCirculo = new Button();
             btnCrearCuadrado = new Button();
             groupBox1 = new GroupBox();
+            btnCrearRectangulo = new Button();
+            btnCrearTriangulo = new Button();
+            btnAutorelleno = new Button();
             groupBox2 = new GroupBox();
+            btnMostrarRectangulos = new Button();
+            btnMostrarTriangulos = new Button();
             btnMostrarCuadrados = new Button();
             btnMostrarFiguras = new Button();
             btnMostrarCirculos = new Button();
@@ -40,11 +45,6 @@
             listaFiguras = new ListBox();
             btnMostrarFigura = new Button();
             btnEliminarFigura = new Button();
-            button1 = new Button();
-            btnMostrarTriangulos = new Button();
-            btnMostrarRectangulos = new Button();
-            btnCrearTriangulo = new Button();
-            btnCrearRectangulo = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -93,7 +93,7 @@
             // 
             groupBox1.Controls.Add(btnCrearRectangulo);
             groupBox1.Controls.Add(btnCrearTriangulo);
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(btnAutorelleno);
             groupBox1.Controls.Add(btnCrearCirculo);
             groupBox1.Controls.Add(btnCrearCuadrado);
             groupBox1.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -103,6 +103,49 @@
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Introducir Datos";
+            // 
+            // btnCrearRectangulo
+            // 
+            btnCrearRectangulo.BackColor = Color.LemonChiffon;
+            btnCrearRectangulo.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnCrearRectangulo.FlatAppearance.BorderSize = 4;
+            btnCrearRectangulo.FlatStyle = FlatStyle.Flat;
+            btnCrearRectangulo.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCrearRectangulo.Location = new Point(80, 698);
+            btnCrearRectangulo.Name = "btnCrearRectangulo";
+            btnCrearRectangulo.Size = new Size(280, 140);
+            btnCrearRectangulo.TabIndex = 6;
+            btnCrearRectangulo.Text = "Crear Rectángulo";
+            btnCrearRectangulo.UseVisualStyleBackColor = false;
+            // 
+            // btnCrearTriangulo
+            // 
+            btnCrearTriangulo.BackColor = Color.LemonChiffon;
+            btnCrearTriangulo.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnCrearTriangulo.FlatAppearance.BorderSize = 4;
+            btnCrearTriangulo.FlatStyle = FlatStyle.Flat;
+            btnCrearTriangulo.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCrearTriangulo.Location = new Point(80, 552);
+            btnCrearTriangulo.Name = "btnCrearTriangulo";
+            btnCrearTriangulo.Size = new Size(280, 140);
+            btnCrearTriangulo.TabIndex = 5;
+            btnCrearTriangulo.Text = "Crear Triángulo";
+            btnCrearTriangulo.UseVisualStyleBackColor = false;
+            // 
+            // btnAutorelleno
+            // 
+            btnAutorelleno.BackColor = Color.LemonChiffon;
+            btnAutorelleno.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnAutorelleno.FlatAppearance.BorderSize = 4;
+            btnAutorelleno.FlatStyle = FlatStyle.Flat;
+            btnAutorelleno.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAutorelleno.Location = new Point(80, 64);
+            btnAutorelleno.Name = "btnAutorelleno";
+            btnAutorelleno.Size = new Size(280, 100);
+            btnAutorelleno.TabIndex = 4;
+            btnAutorelleno.Text = "Autorelleno";
+            btnAutorelleno.UseVisualStyleBackColor = false;
+            btnAutorelleno.Click += btnAutorrelleno_Click;
             // 
             // groupBox2
             // 
@@ -118,6 +161,34 @@
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Mostrar Datos";
+            // 
+            // btnMostrarRectangulos
+            // 
+            btnMostrarRectangulos.BackColor = Color.LemonChiffon;
+            btnMostrarRectangulos.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnMostrarRectangulos.FlatAppearance.BorderSize = 4;
+            btnMostrarRectangulos.FlatStyle = FlatStyle.Flat;
+            btnMostrarRectangulos.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMostrarRectangulos.Location = new Point(80, 696);
+            btnMostrarRectangulos.Name = "btnMostrarRectangulos";
+            btnMostrarRectangulos.Size = new Size(280, 120);
+            btnMostrarRectangulos.TabIndex = 5;
+            btnMostrarRectangulos.Text = "Mostrar Rectángulos";
+            btnMostrarRectangulos.UseVisualStyleBackColor = false;
+            // 
+            // btnMostrarTriangulos
+            // 
+            btnMostrarTriangulos.BackColor = Color.LemonChiffon;
+            btnMostrarTriangulos.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnMostrarTriangulos.FlatAppearance.BorderSize = 4;
+            btnMostrarTriangulos.FlatStyle = FlatStyle.Flat;
+            btnMostrarTriangulos.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMostrarTriangulos.Location = new Point(80, 570);
+            btnMostrarTriangulos.Name = "btnMostrarTriangulos";
+            btnMostrarTriangulos.Size = new Size(280, 120);
+            btnMostrarTriangulos.TabIndex = 4;
+            btnMostrarTriangulos.Text = "Mostrar Triángulos";
+            btnMostrarTriangulos.UseVisualStyleBackColor = false;
             // 
             // btnMostrarCuadrados
             // 
@@ -216,76 +287,6 @@
             btnEliminarFigura.Text = "Eliminar Figura";
             btnEliminarFigura.UseVisualStyleBackColor = false;
             // 
-            // button1
-            // 
-            button1.BackColor = Color.LemonChiffon;
-            button1.FlatAppearance.BorderColor = Color.SteelBlue;
-            button1.FlatAppearance.BorderSize = 4;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(80, 64);
-            button1.Name = "button1";
-            button1.Size = new Size(280, 100);
-            button1.TabIndex = 4;
-            button1.Text = "Autorelleno";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // btnMostrarTriangulos
-            // 
-            btnMostrarTriangulos.BackColor = Color.LemonChiffon;
-            btnMostrarTriangulos.FlatAppearance.BorderColor = Color.SteelBlue;
-            btnMostrarTriangulos.FlatAppearance.BorderSize = 4;
-            btnMostrarTriangulos.FlatStyle = FlatStyle.Flat;
-            btnMostrarTriangulos.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMostrarTriangulos.Location = new Point(80, 570);
-            btnMostrarTriangulos.Name = "btnMostrarTriangulos";
-            btnMostrarTriangulos.Size = new Size(280, 120);
-            btnMostrarTriangulos.TabIndex = 4;
-            btnMostrarTriangulos.Text = "Mostrar Triángulos";
-            btnMostrarTriangulos.UseVisualStyleBackColor = false;
-            // 
-            // btnMostrarRectangulos
-            // 
-            btnMostrarRectangulos.BackColor = Color.LemonChiffon;
-            btnMostrarRectangulos.FlatAppearance.BorderColor = Color.SteelBlue;
-            btnMostrarRectangulos.FlatAppearance.BorderSize = 4;
-            btnMostrarRectangulos.FlatStyle = FlatStyle.Flat;
-            btnMostrarRectangulos.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMostrarRectangulos.Location = new Point(80, 696);
-            btnMostrarRectangulos.Name = "btnMostrarRectangulos";
-            btnMostrarRectangulos.Size = new Size(280, 120);
-            btnMostrarRectangulos.TabIndex = 5;
-            btnMostrarRectangulos.Text = "Mostrar Rectángulos";
-            btnMostrarRectangulos.UseVisualStyleBackColor = false;
-            // 
-            // btnCrearTriangulo
-            // 
-            btnCrearTriangulo.BackColor = Color.LemonChiffon;
-            btnCrearTriangulo.FlatAppearance.BorderColor = Color.SteelBlue;
-            btnCrearTriangulo.FlatAppearance.BorderSize = 4;
-            btnCrearTriangulo.FlatStyle = FlatStyle.Flat;
-            btnCrearTriangulo.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCrearTriangulo.Location = new Point(80, 552);
-            btnCrearTriangulo.Name = "btnCrearTriangulo";
-            btnCrearTriangulo.Size = new Size(280, 140);
-            btnCrearTriangulo.TabIndex = 5;
-            btnCrearTriangulo.Text = "Crear Triángulo";
-            btnCrearTriangulo.UseVisualStyleBackColor = false;
-            // 
-            // btnCrearRectangulo
-            // 
-            btnCrearRectangulo.BackColor = Color.LemonChiffon;
-            btnCrearRectangulo.FlatAppearance.BorderColor = Color.SteelBlue;
-            btnCrearRectangulo.FlatAppearance.BorderSize = 4;
-            btnCrearRectangulo.FlatStyle = FlatStyle.Flat;
-            btnCrearRectangulo.Font = new Font("Maiandra GD", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCrearRectangulo.Location = new Point(80, 698);
-            btnCrearRectangulo.Name = "btnCrearRectangulo";
-            btnCrearRectangulo.Size = new Size(280, 140);
-            btnCrearRectangulo.TabIndex = 6;
-            btnCrearRectangulo.Text = "Crear Rectángulo";
-            btnCrearRectangulo.UseVisualStyleBackColor = false;
-            // 
             // FormFiguras
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -321,7 +322,7 @@
         private ListBox listaFiguras;
         private Button btnMostrarFigura;
         private Button btnCrearTriangulo;
-        private Button button1;
+        private Button btnAutorelleno;
         private Button btnMostrarRectangulos;
         private Button btnMostrarTriangulos;
         private Button btnEliminarFigura;

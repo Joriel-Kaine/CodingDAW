@@ -34,6 +34,30 @@ namespace Tema8_Tarea04.Interfaz
             MessageBox.Show($"Nuevo cuadrado creado:\n\n{cuadrado}");
         }
 
+        public static void CrearTriangulo(List<Figura> listaFiguras, int posX, int posY, string color, int lado)
+        {
+            // Creación del cuadrado.
+            Triangulo triangulo = new(posX, posY, color, lado);
+
+            // Se añade a la lista de figuras.
+            listaFiguras.Add(triangulo);
+
+            // Mostramos por consola si se ha creado correctamente.
+            MessageBox.Show($"Nuevo cuadrado creado:\n\n{triangulo}");
+        }
+
+        public static void CrearRectangulo(List<Figura> listaFiguras, int posX, int posY, string color, int ancho, int alto)
+        {
+            // Creación del rectangulo.
+            Rectangulo rectangulo = new(posX, posY, color, ancho, alto);
+
+            // Se añade a la lista de figuras.
+            listaFiguras.Add(rectangulo);
+
+            // Mostramos por consola si se ha creado correctamente.
+            MessageBox.Show($"Nuevo cuadrado creado:\n\n{rectangulo}");
+        }
+
         public static void MostrarTodasFiguras(List<Figura> listaFiguras)
         {
             int contador = 1;
@@ -82,6 +106,33 @@ namespace Tema8_Tarea04.Interfaz
                     MessageBox.Show(texto);
                     contador++;
                 }
+            }
+        }
+
+        public static void Autorrelleno(List<Figura> listaFiguras)
+        {
+            CrearCirculo(listaFiguras, 28, 16, "Amarillo", 8);
+            CrearCuadrado(listaFiguras, 85, 25, "Magenta", 12);
+            CrearCuadrado(listaFiguras, 44, 23, "Azul", 6);
+            CrearTriangulo(listaFiguras, 23, 8, "Marrón", 4);
+            CrearCirculo(listaFiguras, 62, 39, "Negro", 20);
+            CrearCirculo(listaFiguras, 58, 22, "Lila", 16);
+            CrearRectangulo(listaFiguras, 48, 20, "Celeste", 24, 14);
+            CrearRectangulo(listaFiguras, 82, 47, "Rosa", 46, 31);
+            CrearCuadrado(listaFiguras, 70, 60, "Verde", 55);
+            CrearTriangulo(listaFiguras, 69, 40, "Lima", 38);
+            CrearTriangulo(listaFiguras, 74, 68, "Rojo", 43);
+            CrearRectangulo(listaFiguras, 72, 64, "Violeta", 53, 37);
+
+        }
+
+        public static void MostrarListaFiguras(List<Figura> listaFiguras)
+        {
+            int contador = 1;
+
+            foreach (Figura figura in listaFiguras)
+            {
+
             }
         }
     }
