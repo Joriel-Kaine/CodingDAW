@@ -12,11 +12,11 @@ using Tema8_Tarea04.Modelos;
 
 namespace Tema8_Tarea04
 {
-    public partial class FormCuadrados : Form
+    public partial class FormRectangulos : Form
     {
         private List<Figura> _listaFiguras;
 
-        public FormCuadrados(List<Figura> listaFiguras)
+        public FormRectangulos(List<Figura> listaFiguras)
         {
             InitializeComponent();
             this._listaFiguras = listaFiguras;
@@ -24,16 +24,17 @@ namespace Tema8_Tarea04
 
 
         // Métodos.
-        private void CrearCuadrado()
+        private void CrearRectangulo()
         {
             // Declaración de variables con los datos de los cuadros de texto.
             string posXBox = txtPosX.Text,
                    posYBox = txtPosY.Text,
                    colorBox = txtColor.Text,
-                   ladoBox = txtLado.Text;
+                   anchoBox = txtAncho.Text,
+                   altoBox = txtAlto.Text;
 
             // Declaración de variables donde se guardarán los valores ya validados y convertidos.
-            int posX, posY, lado;
+            int posX, posY, ancho, alto;
             string color;
 
             // Declaración del booleano que comprobará que los datos son válidos.
@@ -43,27 +44,29 @@ namespace Tema8_Tarea04
             esCorrecto &= FuncionesInterfaz.ValidarEntero(posXBox, out posX);
             esCorrecto &= FuncionesInterfaz.ValidarEntero(posYBox, out posY);
             esCorrecto &= FuncionesInterfaz.ValidarTexto(colorBox, out color);
-            esCorrecto &= FuncionesInterfaz.ValidarEntero(ladoBox, out lado);
+            esCorrecto &= FuncionesInterfaz.ValidarEntero(anchoBox, out ancho);
+            esCorrecto &= FuncionesInterfaz.ValidarEntero(altoBox, out alto);
 
             if (esCorrecto)
             {
-                Cuadrado cuadrado = new(posX, posY, color, lado);
-                _listaFiguras.Add(cuadrado);
+                Rectangulo rectangulo = new(posX, posY, color, ancho, alto);
+                _listaFiguras.Add(rectangulo);
             }
         }
 
 
         // Botones.
-        private void FormCuadrados_Load(object sender, EventArgs e)
+        private void FormRectangulos_Load(object sender, EventArgs e)
         {
             txtPosX.Text = "0";
             txtPosY.Text = "0";
-            txtLado.Text = "0";
+            txtAncho.Text = "0";
+            txtAlto.Text = "0";
         }
 
-        private void btnAddCuadrado_Click(object sender, EventArgs e)
+        private void btnAddRectangulo_Click(object sender, EventArgs e)
         {
-            this.CrearCuadrado();
+            this.CrearRectangulo();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -71,7 +74,8 @@ namespace Tema8_Tarea04
             txtPosX.Text = "0";
             txtPosY.Text = "0";
             txtColor.Text = null;
-            txtLado.Text = "0";
+            txtAncho.Text = "0";
+            txtAlto.Text = "0";
             txtPosX.Focus();
         }
 

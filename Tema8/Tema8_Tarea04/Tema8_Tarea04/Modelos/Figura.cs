@@ -49,9 +49,9 @@ namespace Tema8_Tarea04.Modelos
         // Sobreescritura de un método que heredamos de System.Object
         public override string ToString()
         {
-            return $"Posición X: {PosicionX}\n" +
-                   $"Posición Y: {PosicionY}\n" +
-                   $"Color: {Color}";
+            return $"PosX: {PosicionX} , \n" +
+                   $"PosY: {PosicionY} , \n" +
+                   $"Color: {Color} , ";
         }
 
         // Método abastracto. No tiene cuerpo. Se reescribe en las clases que heredan.

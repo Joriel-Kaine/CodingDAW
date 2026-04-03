@@ -3,23 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tema8_Tarea04.Modelos;
 
-namespace Tema8_Tarea04
+namespace Tema8_Tarea04.Modelos
 {
-    public class Triangulo : Figura
+    public class Rectangulo : Figura
     {
-        private int _lado;
+        private int _ancho;
+        private int _alto;
 
-        public int Lado
+        public int Ancho
         {
-            get { return _lado; }
-            set { _lado = value; }
+            get { return _ancho; }
+            set { _ancho = value; }
         }
 
-        public Triangulo(int x, int y, string color, int lado) : base(x, y, color)
+        public int Alto
         {
-            _lado = lado;
+            get { return _alto; }
+            set { _alto = value; }
+        }
+
+        public Rectangulo(int x, int y, string color, int alto, int ancho) : base(x, y, color)
+        {
+            _ancho = ancho;
+            _alto = alto;
         }
 
         public override string QuienSoy()

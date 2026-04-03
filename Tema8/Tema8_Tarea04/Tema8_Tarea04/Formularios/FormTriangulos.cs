@@ -12,11 +12,11 @@ using Tema8_Tarea04.Modelos;
 
 namespace Tema8_Tarea04
 {
-    public partial class FormCuadrados : Form
+    public partial class FormTriangulos : Form
     {
         private List<Figura> _listaFiguras;
 
-        public FormCuadrados(List<Figura> listaFiguras)
+        public FormTriangulos(List<Figura> listaFiguras)
         {
             InitializeComponent();
             this._listaFiguras = listaFiguras;
@@ -24,7 +24,7 @@ namespace Tema8_Tarea04
 
 
         // Métodos.
-        private void CrearCuadrado()
+        private void CrearTriangulo()
         {
             // Declaración de variables con los datos de los cuadros de texto.
             string posXBox = txtPosX.Text,
@@ -47,23 +47,23 @@ namespace Tema8_Tarea04
 
             if (esCorrecto)
             {
-                Cuadrado cuadrado = new(posX, posY, color, lado);
-                _listaFiguras.Add(cuadrado);
+                Triangulo triangulo = new(posX, posY, color, lado);
+                _listaFiguras.Add(triangulo);
             }
         }
 
 
         // Botones.
-        private void FormCuadrados_Load(object sender, EventArgs e)
+        private void FormTriangulos_Load(object sender, EventArgs e)
         {
             txtPosX.Text = "0";
             txtPosY.Text = "0";
             txtLado.Text = "0";
         }
 
-        private void btnAddCuadrado_Click(object sender, EventArgs e)
+        private void btnAddTriangulo_Click(object sender, EventArgs e)
         {
-            this.CrearCuadrado();
+            this.CrearTriangulo();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

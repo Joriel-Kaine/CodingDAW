@@ -42,7 +42,7 @@
             btnMostrarFiguras = new Button();
             btnMostrarCirculos = new Button();
             btnCerrar = new Button();
-            listaFiguras = new ListBox();
+            lstBoxFiguras = new ListBox();
             btnMostrarFigura = new Button();
             btnEliminarFigura = new Button();
             groupBox1.SuspendLayout();
@@ -117,6 +117,7 @@
             btnCrearRectangulo.TabIndex = 6;
             btnCrearRectangulo.Text = "Crear Rectángulo";
             btnCrearRectangulo.UseVisualStyleBackColor = false;
+            btnCrearRectangulo.Click += btnCrearRectangulo_Click;
             // 
             // btnCrearTriangulo
             // 
@@ -131,6 +132,7 @@
             btnCrearTriangulo.TabIndex = 5;
             btnCrearTriangulo.Text = "Crear Triángulo";
             btnCrearTriangulo.UseVisualStyleBackColor = false;
+            btnCrearTriangulo.Click += btnCrearTriangulo_Click;
             // 
             // btnAutorelleno
             // 
@@ -175,6 +177,7 @@
             btnMostrarRectangulos.TabIndex = 5;
             btnMostrarRectangulos.Text = "Mostrar Rectángulos";
             btnMostrarRectangulos.UseVisualStyleBackColor = false;
+            btnMostrarRectangulos.Click += btnMostrarRectangulos_Click;
             // 
             // btnMostrarTriangulos
             // 
@@ -189,6 +192,7 @@
             btnMostrarTriangulos.TabIndex = 4;
             btnMostrarTriangulos.Text = "Mostrar Triángulos";
             btnMostrarTriangulos.UseVisualStyleBackColor = false;
+            btnMostrarTriangulos.Click += btnMostrarTriangulos_Click;
             // 
             // btnMostrarCuadrados
             // 
@@ -248,16 +252,16 @@
             btnCerrar.UseVisualStyleBackColor = false;
             btnCerrar.Click += btnCerrar_Click;
             // 
-            // listaFiguras
+            // lstBoxFiguras
             // 
-            listaFiguras.Font = new Font("Maiandra GD", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            listaFiguras.ForeColor = Color.Black;
-            listaFiguras.FormattingEnabled = true;
-            listaFiguras.ItemHeight = 29;
-            listaFiguras.Location = new Point(1177, 225);
-            listaFiguras.Name = "listaFiguras";
-            listaFiguras.Size = new Size(695, 613);
-            listaFiguras.TabIndex = 14;
+            lstBoxFiguras.Font = new Font("Maiandra GD", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lstBoxFiguras.ForeColor = Color.Black;
+            lstBoxFiguras.FormattingEnabled = true;
+            lstBoxFiguras.ItemHeight = 29;
+            lstBoxFiguras.Location = new Point(1156, 224);
+            lstBoxFiguras.Name = "lstBoxFiguras";
+            lstBoxFiguras.Size = new Size(720, 613);
+            lstBoxFiguras.TabIndex = 14;
             // 
             // btnMostrarFigura
             // 
@@ -266,12 +270,13 @@
             btnMostrarFigura.FlatAppearance.BorderSize = 4;
             btnMostrarFigura.FlatStyle = FlatStyle.Flat;
             btnMostrarFigura.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMostrarFigura.Location = new Point(1209, 929);
+            btnMostrarFigura.Location = new Point(1207, 905);
             btnMostrarFigura.Name = "btnMostrarFigura";
             btnMostrarFigura.Size = new Size(280, 80);
             btnMostrarFigura.TabIndex = 15;
             btnMostrarFigura.Text = "Mostrar Figura";
             btnMostrarFigura.UseVisualStyleBackColor = false;
+            btnMostrarFigura.Click += btnMostrarFigura_Click;
             // 
             // btnEliminarFigura
             // 
@@ -280,12 +285,13 @@
             btnEliminarFigura.FlatAppearance.BorderSize = 4;
             btnEliminarFigura.FlatStyle = FlatStyle.Flat;
             btnEliminarFigura.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEliminarFigura.Location = new Point(1557, 929);
+            btnEliminarFigura.Location = new Point(1555, 905);
             btnEliminarFigura.Name = "btnEliminarFigura";
             btnEliminarFigura.Size = new Size(280, 80);
             btnEliminarFigura.TabIndex = 16;
             btnEliminarFigura.Text = "Eliminar Figura";
             btnEliminarFigura.UseVisualStyleBackColor = false;
+            btnEliminarFigura.Click += btnEliminarFigura_Click;
             // 
             // FormFiguras
             // 
@@ -295,7 +301,7 @@
             ClientSize = new Size(1978, 1144);
             Controls.Add(btnEliminarFigura);
             Controls.Add(btnMostrarFigura);
-            Controls.Add(listaFiguras);
+            Controls.Add(lstBoxFiguras);
             Controls.Add(btnCerrar);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -319,7 +325,7 @@
         private Button btnMostrarCirculos;
         private Button btnMostrarCuadrados;
         private Button btnCerrar;
-        private ListBox listaFiguras;
+        private ListBox lstBoxFiguras;
         private Button btnMostrarFigura;
         private Button btnCrearTriangulo;
         private Button btnAutorelleno;
