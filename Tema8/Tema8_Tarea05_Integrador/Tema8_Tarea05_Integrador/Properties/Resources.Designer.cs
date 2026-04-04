@@ -59,5 +59,15 @@ namespace Tema8_Tarea05_Integrador.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagenExit {
+            get {
+                object obj = ResourceManager.GetObject("imagenExit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
