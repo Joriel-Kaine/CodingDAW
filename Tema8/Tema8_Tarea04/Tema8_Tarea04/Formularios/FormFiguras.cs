@@ -100,10 +100,11 @@ namespace Tema8_Tarea04
         private void MostrarFigura()
         {
             int posicion = lstBoxFiguras.SelectedIndex;
-            Figura figura = DevolverFiguraPorPosicion(posicion);
 
             if (posicion >= 0)
             {
+                Figura figura = DevolverFiguraPorPosicion(posicion);
+
                 MessageBox.Show(figura.GenerarTextoFigura());
             }
         }
