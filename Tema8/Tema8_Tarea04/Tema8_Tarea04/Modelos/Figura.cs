@@ -64,7 +64,7 @@ namespace Tema8_Tarea04.Modelos
         public string GenerarTextoFigura()
         {
             return $"{QuienSoy()}\n" +
-                   $"{ToString()}\n" +
+                   $"{ToString()}\n\n" +
                    $"Mi área es {Area()}";
         }
     }

@@ -31,22 +31,24 @@ namespace Tema8_Tarea04.Modelos
 
         public override string QuienSoy()
         {
-            return base.QuienSoy();
+            return "Soy un Rectángulo.\n";
         }
 
         public override string ToString()
         {
-            return base.ToString();
+            return $"{base.ToString()}\n" +
+                   $"Ancho: {Ancho}" +
+                   $"Alto: {Alto}";
         }
 
         public override double Area()
         {
-            throw new NotImplementedException();
+            return Ancho * Alto;
         }
 
         public override double Perimetro()
         {
-            throw new NotImplementedException();
+            return 2 * (Ancho + Alto);
         }
     }
 }

@@ -23,22 +23,23 @@ namespace Tema8_Tarea04.Modelos
 
         public override string QuienSoy()
         {
-            return base.QuienSoy();
+            return "soy un Triángulo.\n";
         }
 
         public override string ToString()
         {
-            return base.ToString();
+            return $"{base.ToString()}\n" +
+                   $"Lado: {Lado}";
         }
 
         public override double Area()
         {
-            throw new NotImplementedException();
+            return ((double)Math.Sqrt(3) / 4) * (Lado * Lado);
         }
 
         public override double Perimetro()
         {
-            throw new NotImplementedException();
+            return 3 * Lado;
         }
     }
 }

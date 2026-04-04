@@ -104,7 +104,7 @@ namespace Tema8_Tarea04
 
             if (posicion >= 0)
             {
-                MessageBox.Show(figura.ToString());
+                MessageBox.Show(figura.GenerarTextoFigura());
             }
         }
 
@@ -186,6 +186,7 @@ namespace Tema8_Tarea04
         private void btnEliminarFigura_Click(object sender, EventArgs e)
         {
             this.EliminarFigura();
+            this.MostrarFiguras();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

@@ -29,7 +29,7 @@ namespace Tema8_Tarea04.Modelos
         // Sobreescritura del método virtual.
         public override string QuienSoy()
         {
-            return "Soy un cuadrado.\n";
+            return "Soy un Cuadrado.\n";
         }
 
         public override string ToString()
@@ -45,7 +45,7 @@ namespace Tema8_Tarea04.Modelos
 
         public override double Perimetro()
         {
-            throw new NotImplementedException();
+            return 4 * Lado;
         }
     }
 }
