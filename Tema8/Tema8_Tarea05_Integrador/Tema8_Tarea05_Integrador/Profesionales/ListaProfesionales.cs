@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Tema8_Tarea05_Integrador.Profesionales
 {
-    internal class ListaProfesionales
+    public class ListaProfesionales
     {
+
     }
 }

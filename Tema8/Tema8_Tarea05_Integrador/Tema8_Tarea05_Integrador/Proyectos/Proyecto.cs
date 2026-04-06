@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Tema8_Tarea05_Integrador.Proyectos
 {
-    internal class Proyecto
+    public class Proyecto
     {
+
     }
 }
