@@ -59,6 +59,7 @@
             btnGestionProfesionales.TabIndex = 1;
             btnGestionProfesionales.Text = "Gestión de Profesionales";
             btnGestionProfesionales.UseVisualStyleBackColor = false;
+            btnGestionProfesionales.Click += btnGestionProfesionales_Click;
             // 
             // btnGestionProyectos
             // 
@@ -133,6 +134,7 @@
             Controls.Add(lblTitulo);
             Name = "FormGestionEmpresa";
             Text = "Gestion de Empresa";
+            Load += FormGestionEmpresa_Load;
             ResumeLayout(false);
             PerformLayout();
         }
