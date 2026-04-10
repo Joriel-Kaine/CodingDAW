@@ -73,6 +73,7 @@
             btnAcceder.TabIndex = 1;
             btnAcceder.Text = "Acceder";
             btnAcceder.UseVisualStyleBackColor = false;
+            btnAcceder.Click += btnAcceder_Click;
             // 
             // lblGestionProfesionales
             // 

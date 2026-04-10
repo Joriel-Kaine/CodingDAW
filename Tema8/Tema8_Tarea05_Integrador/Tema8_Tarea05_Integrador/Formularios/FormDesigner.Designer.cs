@@ -115,6 +115,7 @@
             btnAddDesigner.TabIndex = 6;
             btnAddDesigner.Text = "Agregar Diseñador";
             btnAddDesigner.UseVisualStyleBackColor = false;
+            btnAddDesigner.Click += btnAddDesigner_Click;
             // 
             // txtNombre
             // 
@@ -186,6 +187,7 @@
             Controls.Add(lblDesigner);
             Name = "FormDesigner";
             Text = "Formulario Diseñador";
+            Load += FormDesigner_Load;
             ResumeLayout(false);
             PerformLayout();
         }

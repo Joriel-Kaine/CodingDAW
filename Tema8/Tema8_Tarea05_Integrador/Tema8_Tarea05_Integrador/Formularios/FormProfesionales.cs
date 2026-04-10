@@ -14,18 +14,39 @@ namespace Tema8_Tarea05_Integrador
 {
     public partial class FormProfesionales : Form
     {
-        private List<Profesional> _listaProfesionales;
+        private ListaProfesionales _listaProfesionales;
 
-        public FormProfesionales(List<Profesional> listaProfesionales)
+        public FormProfesionales(ListaProfesionales listaProfesionales)
         {
             InitializeComponent();
-
             this._listaProfesionales = listaProfesionales;
         }
 
         private void FormProfesionales_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAcceder_Click(object sender, EventArgs e)
+        {
+            switch (cmbAddProfesional.Text)
+            {
+                case "Diseñador":
+                    FormDesigner formDesigner = new(_listaProfesionales);
+
+                    formDesigner.ShowDialog();
+                    break;
+                case "Desarrollador":
+                    FormDesarrollador formDesarrollador = new(_listaProfesionales);
+
+                    formDesarrollador.ShowDialog();
+                    break;
+                case "Redactor":
+                    FormRedactor formRedactor = new(_listaProfesionales);
+
+                    formRedactor.ShowDialog();
+                    break;
+            }
         }
     }
 }

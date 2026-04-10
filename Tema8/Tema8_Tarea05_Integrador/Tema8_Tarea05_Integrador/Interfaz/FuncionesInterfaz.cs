@@ -9,9 +9,9 @@ namespace Tema8_Tarea05_Integrador.Interfaz
 {
     public static class FuncionesInterfaz
     {
-        public static bool ValidarEntero(string mensaje, out int num)
+        public static bool ValidarDouble(string mensaje, out double num)
         {
-            bool esCorrecto = int.TryParse(mensaje, out num);
+            bool esCorrecto = double.TryParse(mensaje, out num);
 
             if (!esCorrecto)
             {

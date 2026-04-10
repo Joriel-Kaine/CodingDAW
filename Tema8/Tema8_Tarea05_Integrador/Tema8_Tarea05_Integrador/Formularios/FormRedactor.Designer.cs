@@ -87,6 +87,7 @@
             txtNombre.BackColor = Color.LavenderBlush;
             txtNombre.BorderStyle = BorderStyle.FixedSingle;
             txtNombre.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNombre.ForeColor = SystemColors.ControlText;
             txtNombre.Location = new Point(310, 177);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(293, 41);
@@ -105,6 +106,7 @@
             btnAddRedactor.TabIndex = 19;
             btnAddRedactor.Text = "Agregar Redactor";
             btnAddRedactor.UseVisualStyleBackColor = false;
+            btnAddRedactor.Click += btnAddRedactor_Click;
             // 
             // lblPrecioPorPalabra
             // 
@@ -186,6 +188,7 @@
             Controls.Add(lblRedactor);
             Name = "FormRedactor";
             Text = "Formulario Redactor";
+            Load += FormRedactor_Load;
             ResumeLayout(false);
             PerformLayout();
         }

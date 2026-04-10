@@ -7,14 +7,65 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tema8_Tarea05_Integrador.Interfaz;
+using Tema8_Tarea05_Integrador.Profesionales;
 
 namespace Tema8_Tarea05_Integrador
 {
     public partial class FormDesigner : Form
     {
-        public FormDesigner()
+        // Campos privados.
+        private ListaProfesionales _listaProfesionales;
+
+
+        // Constructor con parámetros de entrada.
+        public FormDesigner(ListaProfesionales listaProfesionales)
         {
             InitializeComponent();
+            this._listaProfesionales = listaProfesionales;
+        }
+
+
+        // Métodos.
+        private void AddDesigner()
+        {
+            // Declaración de variables con los datos de los cuadros de texto.
+            string nombreBox = txtNombre.Text,
+                   dniBox = txtDNI.Text,
+                   telefonoBox = txtTelefono.Text,
+                   especialidadBox = txtEspecialidad.Text,
+                   tarifaHoraBox = txtTarifaHora.Text;
+
+            // Declaración de variables donde se guardarán los valores ya validados y convertidos.
+            string nombre, dni, telefono, especialidad;
+            double tarifaHora;
+
+            // Declaración del booleano que comprobará que los datos son correctos.
+            bool esCorrecto = true;
+
+            // Se comprueba si los datos con correctos (con AND).
+            esCorrecto &= FuncionesInterfaz.ValidarTexto(nombreBox, out nombre);
+            esCorrecto &= FuncionesInterfaz.ValidarDNI(dniBox, out dni);
+            esCorrecto &= FuncionesInterfaz.ValidarTexto(telefonoBox, out telefono);
+            esCorrecto &= FuncionesInterfaz.ValidarTexto(especialidadBox, out especialidad);
+            esCorrecto &= FuncionesInterfaz.ValidarDouble(tarifaHoraBox, out tarifaHora);
+
+            if (esCorrecto)
+            {
+                Designer designer = new(nombre, dni, telefono, especialidad, tarifaHora);
+
+                _listaProfesionales.AddProfesional(designer);
+            }
+        }
+
+        private void FormDesigner_Load(object sender, EventArgs e)
+        {
+            txtTarifaHora.Text = "0";
+        }
+
+        private void btnAddDesigner_Click(object sender, EventArgs e)
+        {
+            this.AddDesigner();
         }
     }
 }

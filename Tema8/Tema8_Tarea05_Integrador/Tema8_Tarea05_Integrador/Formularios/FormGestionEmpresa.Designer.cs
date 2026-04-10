@@ -122,6 +122,7 @@
             btnSalir.Text = "Salir";
             btnSalir.TextAlign = ContentAlignment.MiddleLeft;
             btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // FormGestionEmpresa
             // 

@@ -105,6 +105,7 @@
             btnAddDesarrollador.TabIndex = 19;
             btnAddDesarrollador.Text = "Agregar Desarrollador";
             btnAddDesarrollador.UseVisualStyleBackColor = false;
+            btnAddDesarrollador.Click += btnAddDesarrollador_Click;
             // 
             // lblTarifaHora
             // 
@@ -186,6 +187,7 @@
             Controls.Add(lblDesarrollador);
             Name = "FormDesarrollador";
             Text = "Formulario Desarrollador";
+            Load += FormDesarrollador_Load;
             ResumeLayout(false);
             PerformLayout();
         }

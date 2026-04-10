@@ -5,7 +5,7 @@ namespace Tema8_Tarea05_Integrador
 {
     public partial class FormGestionEmpresa : Form
     {
-        private List<Profesional> _listaProfesionales = new();
+        private ListaProfesionales _listaProfesionales = new();
 
         public FormGestionEmpresa()
         {
@@ -37,6 +37,11 @@ namespace Tema8_Tarea05_Integrador
         private void btnAutorrelleno_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
