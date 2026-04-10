@@ -30,8 +30,8 @@
         {
             cmbAddProfesional = new ComboBox();
             grpProfesionales = new GroupBox();
+            btnAcceder = new Button();
             lblGestionProfesionales = new Label();
-            btnAddProfesional = new Button();
             grpProfesionales.SuspendLayout();
             SuspendLayout();
             // 
@@ -39,18 +39,18 @@
             // 
             cmbAddProfesional.BackColor = Color.Beige;
             cmbAddProfesional.FlatStyle = FlatStyle.Flat;
-            cmbAddProfesional.Font = new Font("Maiandra GD", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbAddProfesional.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbAddProfesional.FormattingEnabled = true;
             cmbAddProfesional.Items.AddRange(new object[] { "Diseñador", "Desarrollador", "Redactor" });
             cmbAddProfesional.Location = new Point(78, 84);
             cmbAddProfesional.Name = "cmbAddProfesional";
-            cmbAddProfesional.Size = new Size(400, 51);
+            cmbAddProfesional.Size = new Size(400, 47);
             cmbAddProfesional.TabIndex = 0;
             cmbAddProfesional.Text = "Elige una categoría";
             // 
             // grpProfesionales
             // 
-            grpProfesionales.Controls.Add(btnAddProfesional);
+            grpProfesionales.Controls.Add(btnAcceder);
             grpProfesionales.Controls.Add(cmbAddProfesional);
             grpProfesionales.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             grpProfesionales.Location = new Point(77, 205);
@@ -59,6 +59,20 @@
             grpProfesionales.TabIndex = 1;
             grpProfesionales.TabStop = false;
             grpProfesionales.Text = "Añadir Profesionales";
+            // 
+            // btnAcceder
+            // 
+            btnAcceder.BackColor = Color.LemonChiffon;
+            btnAcceder.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnAcceder.FlatAppearance.BorderSize = 4;
+            btnAcceder.FlatStyle = FlatStyle.Flat;
+            btnAcceder.Font = new Font("Maiandra GD", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAcceder.Location = new Point(170, 189);
+            btnAcceder.Name = "btnAcceder";
+            btnAcceder.Size = new Size(200, 80);
+            btnAcceder.TabIndex = 1;
+            btnAcceder.Text = "Acceder";
+            btnAcceder.UseVisualStyleBackColor = false;
             // 
             // lblGestionProfesionales
             // 
@@ -70,24 +84,11 @@
             lblGestionProfesionales.TabIndex = 2;
             lblGestionProfesionales.Text = "Gestión de Profesionales";
             // 
-            // btnAddProfesional
-            // 
-            btnAddProfesional.BackColor = Color.LemonChiffon;
-            btnAddProfesional.FlatAppearance.BorderColor = Color.SteelBlue;
-            btnAddProfesional.FlatAppearance.BorderSize = 6;
-            btnAddProfesional.FlatStyle = FlatStyle.Flat;
-            btnAddProfesional.Font = new Font("Maiandra GD", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddProfesional.Location = new Point(169, 195);
-            btnAddProfesional.Name = "btnAddProfesional";
-            btnAddProfesional.Size = new Size(200, 80);
-            btnAddProfesional.TabIndex = 1;
-            btnAddProfesional.Text = "Añadir";
-            btnAddProfesional.UseVisualStyleBackColor = false;
-            // 
             // FormProfesionales
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Gainsboro;
             ClientSize = new Size(1778, 944);
             Controls.Add(lblGestionProfesionales);
             Controls.Add(grpProfesionales);
@@ -104,6 +105,6 @@
         private ComboBox cmbAddProfesional;
         private GroupBox grpProfesionales;
         private Label lblGestionProfesionales;
-        private Button btnAddProfesional;
+        private Button btnAcceder;
     }
 }

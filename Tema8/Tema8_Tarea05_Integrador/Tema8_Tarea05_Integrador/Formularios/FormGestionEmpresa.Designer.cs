@@ -74,6 +74,7 @@
             btnGestionProyectos.TabIndex = 2;
             btnGestionProyectos.Text = "Gestión de Proyectos";
             btnGestionProyectos.UseVisualStyleBackColor = false;
+            btnGestionProyectos.Click += btnGestionProyectos_Click;
             // 
             // btnAnalisis
             // 
@@ -88,6 +89,7 @@
             btnAnalisis.TabIndex = 3;
             btnAnalisis.Text = "Análisis";
             btnAnalisis.UseVisualStyleBackColor = false;
+            btnAnalisis.Click += btnAnalisis_Click;
             // 
             // btnAutorrelleno
             // 
@@ -102,6 +104,7 @@
             btnAutorrelleno.TabIndex = 4;
             btnAutorrelleno.Text = "Autorrelleno de Datos";
             btnAutorrelleno.UseVisualStyleBackColor = false;
+            btnAutorrelleno.Click += btnAutorrelleno_Click;
             // 
             // btnSalir
             // 

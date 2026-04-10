@@ -23,5 +23,20 @@ namespace Tema8_Tarea05_Integrador
 
             formProfesionales.ShowDialog();
         }
+
+        private void btnGestionProyectos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAnalisis_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAutorrelleno_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

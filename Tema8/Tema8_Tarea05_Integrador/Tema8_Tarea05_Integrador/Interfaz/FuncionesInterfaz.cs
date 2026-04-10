@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,107 @@ namespace Tema8_Tarea05_Integrador.Interfaz
 {
     public static class FuncionesInterfaz
     {
+        public static bool ValidarEntero(string mensaje, out int num)
+        {
+            bool esCorrecto = int.TryParse(mensaje, out num);
 
+            if (!esCorrecto)
+            {
+                MessageBox.Show("Introduce valores numéricos válidos");
+            }
+
+            return esCorrecto;
+        }
+
+        public static bool ValidarTexto(string mensaje, out string texto)
+        {
+            bool esCorrecto = true;
+            texto = mensaje;
+
+            if (string.IsNullOrEmpty(mensaje))
+            {
+                MessageBox.Show("No se permiten textos vacíos o nulos.");
+                esCorrecto = false;
+            }
+            else if (!mensaje.All(char.IsLetter))
+            {
+                MessageBox.Show("Introduce textos válidos.");
+                esCorrecto = false;
+            }
+
+            return esCorrecto;
+        }
+
+        private static bool ContieneNum(char caracter)
+        {
+            bool esCorrecto = false;
+
+            if (caracter >= '0' && caracter <= '9')
+            {
+                esCorrecto = true;
+            }
+
+            return esCorrecto;
+        }
+
+        private static bool ContieneLetra(char caracter)
+        {
+            bool esCorrecto = false;
+            caracter = char.ToUpper(caracter);
+
+            if (caracter >= 'A' && caracter <= 'Z')
+            {
+                esCorrecto = true;
+            }
+
+            return esCorrecto;
+        }
+
+        public static bool ValidarDNI(string dniEntrada, out string dniSalida)
+        {
+            string parteNum, parteLetra;
+            bool esCorrecto = true;
+            
+            parteNum = ""; parteLetra = "";
+              
+            dniEntrada = dniEntrada.Trim().ToUpper();
+            
+            if (dniEntrada.Length == 9)
+            {
+                for (int i = 0; i < dniEntrada.Length; i++)
+                {
+
+                    if (ContieneNum(dniEntrada[i]) && parteNum.Length < 8)
+                    {
+                        parteNum += dniEntrada[i];
+                    }
+                    else if (i == dniEntrada.Length - 1 && ContieneLetra(dniEntrada[i]))
+                    {
+                        parteLetra += dniEntrada[i];
+                    }
+                    else
+                    {
+                        esCorrecto = false;
+                    }
+                }
+
+                if (parteNum.Length != 8 || parteLetra.Length != 1)
+                {
+                    esCorrecto = false;
+
+                    MessageBox.Show("Introduce un número de identidad válido.");
+                }
+            }
+            else
+            {
+                esCorrecto = false;
+
+                MessageBox.Show("El DNI debe componerse de 9 caracteres.");
+            }
+            
+            dniSalida = parteNum + parteLetra;
+
+            return esCorrecto;
+        }
     }
 }
