@@ -1,11 +1,15 @@
 using System.Drawing.Drawing2D;
+using System.Net;
 using Tema8_Tarea05_Integrador.Profesionales;
+using Tema8_Tarea05_Integrador.Proyectos;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Tema8_Tarea05_Integrador
 {
     public partial class FormGestionEmpresa : Form
     {
         private ListaProfesionales _listaProfesionales = new();
+        private ListaProyectos _listaProyectos = new();
 
         public FormGestionEmpresa()
         {
@@ -26,7 +30,9 @@ namespace Tema8_Tarea05_Integrador
 
         private void btnGestionProyectos_Click(object sender, EventArgs e)
         {
+            FormProyectos formProyectos = new(_listaProyectos);
 
+            formProyectos.ShowDialog();
         }
 
         private void btnAnalisis_Click(object sender, EventArgs e)
@@ -36,7 +42,21 @@ namespace Tema8_Tarea05_Integrador
 
         private void btnAutorrelleno_Click(object sender, EventArgs e)
         {
-
+            _listaProfesionales.AddProfesional(new Designer("Pedro", "98653214P", "+34696642288", "Diseño Gráfico", 10.5));
+            _listaProfesionales.AddProfesional(new Desarrollador("Manu", "02088244M", "+34699822802", "CSharp", 14.8));
+            _listaProfesionales.AddProfesional(new Redactor("Laura", "65412388L", "+34688442200", "Tecnología", 0.14));
+            _listaProfesionales.AddProfesional(new Desarrollador("Lito", "92068041K", "+34666108040", "Phyton", 18));
+            _listaProfesionales.AddProfesional(new Desarrollador("Jane", "10050064J", "+34682005995", "Java", 13.4));
+            _listaProfesionales.AddProfesional(new Designer("Marina", "89142869N", "+34622189150", "Diseño Web", 12.2));
+            _listaProfesionales.AddProfesional(new Designer("Juan", "12385295Z", "+34600763298", "Ilustración", 11));
+            _listaProfesionales.AddProfesional(new Designer("Carlos", "97463182C", "+34621366990", "Diseño UI", 15.3));
+            _listaProfesionales.AddProfesional(new Desarrollador("Rosa", "18903719R", "+34659338060", "CSharp", 14));
+            _listaProfesionales.AddProfesional(new Desarrollador("Elena", "55739150E", "+34682582010", "Rust", 13.7));
+            _listaProfesionales.AddProfesional(new Designer("Marcos", "68626460S", "+34618389271", "Diseño Gráfico", 10.8));
+            _listaProfesionales.AddProfesional(new Redactor("Milena", "40235689A", "+34685316497", "Entretenimiento", 0.12));
+            _listaProfesionales.AddProfesional(new Redactor("Javier", "85432055V", "+34677205080", "Ciencia", 0.08));
+            _listaProfesionales.AddProfesional(new Desarrollador("Ramón", "64825193Y", "+34690565452", "Python", 17.3));
+            _listaProfesionales.AddProfesional(new Redactor("Lidia", "37246805D", "+34628355390", "Marketing", 0.10));
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

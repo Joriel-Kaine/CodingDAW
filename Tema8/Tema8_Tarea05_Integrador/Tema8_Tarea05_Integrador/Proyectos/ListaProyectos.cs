@@ -8,6 +8,8 @@ namespace Tema8_Tarea05_Integrador.Proyectos
 {
     public class ListaProyectos
     {
+        private List<Proyecto> _listaProyectos = new();
+
 
     }
 }

@@ -29,7 +29,7 @@ namespace Tema8_Tarea05_Integrador
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            switch (cmbAddProfesional.Text)
+            switch (cmbProfesional.Text)
             {
                 case "Diseñador":
                     FormDesigner formDesigner = new(_listaProfesionales);
@@ -46,6 +46,64 @@ namespace Tema8_Tarea05_Integrador
 
                     formRedactor.ShowDialog();
                     break;
+            }
+        }
+
+        private void btnMostrarProfesional_Click(object sender, EventArgs e)
+        {
+            List<Profesional> listaProfesionales = _listaProfesionales.DevolverListaProfesionales();
+
+            switch (cmbProfesional.Text)
+            {
+                case "Diseñador":
+                    lstProfesionales.Items.Clear();
+
+                    foreach (Profesional profesional in listaProfesionales)
+                    {
+                        if (profesional is Designer designer)
+                        {
+                            lstProfesionales.Items.Add(profesional);
+                        }
+                    }
+                    break;
+                case "Desarrollador":
+                    lstProfesionales.Items.Clear();
+
+                    foreach (Profesional profesional in listaProfesionales)
+                    {
+                        if (profesional is Desarrollador desarrollador)
+                        {
+                            lstProfesionales.Items.Add(profesional);
+                        }
+                    }
+                    break;
+                case "Redactor":
+                    lstProfesionales.Items.Clear();
+
+                    foreach (Profesional profesional in listaProfesionales)
+                    {
+                        if (profesional is Redactor redactor)
+                        {
+                            lstProfesionales.Items.Add(profesional);
+                        }
+                    }
+                    break;
+            }
+        }
+
+        private void btnEliminarPorDNI_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMostrarTodo_Click(object sender, EventArgs e)
+        {
+            lstProfesionales.Items.Clear();
+            List<Profesional> listaProfesionales = _listaProfesionales.DevolverListaProfesionales();
+
+            foreach (Profesional profesional in listaProfesionales)
+            {
+                lstProfesionales.Items.Add(profesional);
             }
         }
     }
