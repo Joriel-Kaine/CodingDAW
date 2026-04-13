@@ -111,5 +111,48 @@ namespace Tema8_Tarea05_Integrador.Interfaz
 
             return esCorrecto;
         }
+
+        public static string LeerDNI(string mensaje)
+        {
+            string dni, parteNum, parteLetra;
+
+            do
+            {
+                parteNum = ""; parteLetra = "";
+
+                dni = Interaction.InputBox(mensaje, " ");
+                dni = dni.Trim().ToUpper();
+
+                if (dni.Length == 9)
+                {
+                    for (int i = 0; i < dni.Length; i++)
+                    {
+                        if (ContieneNum(dni[i]) && parteNum.Length < 8)
+                        {
+                            parteNum += dni[i];
+                        }
+
+                        if (i == dni.Length - 1 && ContieneLetra(dni[i]))
+                        {
+                            parteLetra += dni[i];
+                        }
+                    }
+
+                    if (parteNum.Length != 8 || parteLetra.Length != 1)
+                    {
+                        MessageBox.Show("Introduce un número de identidad válido.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El DNI debe componerse de 9 caracteres.");
+                }
+
+            } while (parteNum.Length != 8 || parteLetra.Length != 1);
+
+            dni = parteNum + parteLetra;
+
+            return dni;
+        }
     }
 }

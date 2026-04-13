@@ -67,5 +67,20 @@ namespace Tema8_Tarea05_Integrador
         {
             this.AddDesarrollador();
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNombre.Text = null;
+            txtDNI.Text = null;
+            txtTelefono.Text = null;
+            txtLenguajePrincipal.Text = null;
+            txtTarifaHora.Text = "0";
+            txtNombre.Focus();
+        }
     }
 }

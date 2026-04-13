@@ -40,6 +40,8 @@
             txtTelefono = new TextBox();
             txtEspecialidad = new TextBox();
             txtTarifaHora = new TextBox();
+            btnAtras = new Button();
+            btnLimpiar = new Button();
             SuspendLayout();
             // 
             // lblDesigner
@@ -167,12 +169,42 @@
             txtTarifaHora.Size = new Size(293, 41);
             txtTarifaHora.TabIndex = 12;
             // 
+            // btnAtras
+            // 
+            btnAtras.BackColor = Color.PaleGoldenrod;
+            btnAtras.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnAtras.FlatAppearance.BorderSize = 4;
+            btnAtras.FlatStyle = FlatStyle.Flat;
+            btnAtras.Image = Properties.Resources.imagenBack;
+            btnAtras.Location = new Point(47, 771);
+            btnAtras.Name = "btnAtras";
+            btnAtras.Size = new Size(100, 100);
+            btnAtras.TabIndex = 15;
+            btnAtras.UseVisualStyleBackColor = false;
+            btnAtras.Click += btnAtras_Click;
+            // 
+            // btnLimpiar
+            // 
+            btnLimpiar.BackColor = Color.PaleGoldenrod;
+            btnLimpiar.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnLimpiar.FlatAppearance.BorderSize = 4;
+            btnLimpiar.FlatStyle = FlatStyle.Flat;
+            btnLimpiar.Image = Properties.Resources.imagen;
+            btnLimpiar.Location = new Point(609, 771);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(100, 100);
+            btnLimpiar.TabIndex = 16;
+            btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
+            // 
             // FormDesigner
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(778, 944);
+            Controls.Add(btnLimpiar);
+            Controls.Add(btnAtras);
             Controls.Add(txtTarifaHora);
             Controls.Add(txtEspecialidad);
             Controls.Add(txtTelefono);
@@ -206,5 +238,7 @@
         private TextBox txtTelefono;
         private TextBox txtEspecialidad;
         private TextBox txtTarifaHora;
+        private Button btnAtras;
+        private Button btnLimpiar;
     }
 }

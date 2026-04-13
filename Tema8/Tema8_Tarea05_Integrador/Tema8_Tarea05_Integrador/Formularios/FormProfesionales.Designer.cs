@@ -36,6 +36,8 @@
             lblGestionProfesionales = new Label();
             lstProfesionales = new ListBox();
             btnMostrarTodo = new Button();
+            btnAtras = new Button();
+            btnLimpiar = new Button();
             grpAddProfesionales.SuspendLayout();
             SuspendLayout();
             // 
@@ -148,12 +150,42 @@
             btnMostrarTodo.UseVisualStyleBackColor = false;
             btnMostrarTodo.Click += btnMostrarTodo_Click;
             // 
+            // btnAtras
+            // 
+            btnAtras.BackColor = Color.Wheat;
+            btnAtras.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnAtras.FlatAppearance.BorderSize = 4;
+            btnAtras.FlatStyle = FlatStyle.Flat;
+            btnAtras.Image = Properties.Resources.imagenBack;
+            btnAtras.Location = new Point(85, 34);
+            btnAtras.Name = "btnAtras";
+            btnAtras.Size = new Size(100, 100);
+            btnAtras.TabIndex = 14;
+            btnAtras.UseVisualStyleBackColor = false;
+            btnAtras.Click += btnAtras_Click;
+            // 
+            // btnLimpiar
+            // 
+            btnLimpiar.BackColor = Color.Wheat;
+            btnLimpiar.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnLimpiar.FlatAppearance.BorderSize = 4;
+            btnLimpiar.FlatStyle = FlatStyle.Flat;
+            btnLimpiar.Image = Properties.Resources.imagen;
+            btnLimpiar.Location = new Point(1185, 34);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(100, 100);
+            btnLimpiar.TabIndex = 15;
+            btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
+            // 
             // FormProfesionales
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1378, 1144);
+            Controls.Add(btnLimpiar);
+            Controls.Add(btnAtras);
             Controls.Add(btnMostrarTodo);
             Controls.Add(lstProfesionales);
             Controls.Add(lblGestionProfesionales);
@@ -176,5 +208,7 @@
         private Button btnMostrarProfesional;
         private Button btnMostrarTodo;
         private Button btnEliminarPorDNI;
+        private Button btnAtras;
+        private Button btnLimpiar;
     }
 }

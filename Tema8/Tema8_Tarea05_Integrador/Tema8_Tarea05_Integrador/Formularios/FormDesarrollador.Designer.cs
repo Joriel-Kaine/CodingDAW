@@ -40,6 +40,8 @@
             lblDNI = new Label();
             lblNombre = new Label();
             lblDesarrollador = new Label();
+            btnAtras = new Button();
+            btnLimpiar = new Button();
             SuspendLayout();
             // 
             // txtTarifaHora
@@ -167,12 +169,42 @@
             lblDesarrollador.TabIndex = 13;
             lblDesarrollador.Text = "Desarrollador";
             // 
+            // btnAtras
+            // 
+            btnAtras.BackColor = Color.LightSteelBlue;
+            btnAtras.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnAtras.FlatAppearance.BorderSize = 4;
+            btnAtras.FlatStyle = FlatStyle.Flat;
+            btnAtras.Image = Properties.Resources.imagenBack;
+            btnAtras.Location = new Point(47, 771);
+            btnAtras.Name = "btnAtras";
+            btnAtras.Size = new Size(100, 100);
+            btnAtras.TabIndex = 25;
+            btnAtras.UseVisualStyleBackColor = false;
+            btnAtras.Click += btnAtras_Click;
+            // 
+            // btnLimpiar
+            // 
+            btnLimpiar.BackColor = Color.LightSteelBlue;
+            btnLimpiar.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnLimpiar.FlatAppearance.BorderSize = 4;
+            btnLimpiar.FlatStyle = FlatStyle.Flat;
+            btnLimpiar.Image = Properties.Resources.imagen;
+            btnLimpiar.Location = new Point(609, 771);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(100, 100);
+            btnLimpiar.TabIndex = 26;
+            btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
+            // 
             // FormDesarrollador
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSkyBlue;
             ClientSize = new Size(778, 944);
+            Controls.Add(btnLimpiar);
+            Controls.Add(btnAtras);
             Controls.Add(txtTarifaHora);
             Controls.Add(txtLenguajePrincipal);
             Controls.Add(txtTelefono);
@@ -206,5 +238,7 @@
         private Label lblDNI;
         private Label lblNombre;
         private Label lblDesarrollador;
+        private Button btnAtras;
+        private Button btnLimpiar;
     }
 }

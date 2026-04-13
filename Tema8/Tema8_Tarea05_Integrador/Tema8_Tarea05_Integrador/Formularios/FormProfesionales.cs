@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tema8_Tarea05_Integrador.Interfaz;
 using Tema8_Tarea05_Integrador.Profesionales;
 
 namespace Tema8_Tarea05_Integrador
@@ -22,12 +23,9 @@ namespace Tema8_Tarea05_Integrador
             this._listaProfesionales = listaProfesionales;
         }
 
-        private void FormProfesionales_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void btnAcceder_Click(object sender, EventArgs e)
+        // Métodos.
+        private void AccederFormularios()
         {
             switch (cmbProfesional.Text)
             {
@@ -49,7 +47,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
-        private void btnMostrarProfesional_Click(object sender, EventArgs e)
+        private void MostrarPorProfesional()
         {
             List<Profesional> listaProfesionales = _listaProfesionales.DevolverListaProfesionales();
 
@@ -91,12 +89,29 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
-        private void btnEliminarPorDNI_Click(object sender, EventArgs e)
+        private void EliminarProfesionalesPorDNI()
         {
+            string dni = FuncionesInterfaz.LeerDNI("Introduce el DNI del profesional a eliminar:");
 
+            if (_listaProfesionales.EliminarProfesionalPorDNI(dni))
+            {
+                MessageBox.Show("Profesional eliminado correctamente.");
+                if (cmbProfesional.Text == "Elige una categoría")
+                {
+                    MostrarTodosProfesionales();
+                }
+                else
+                {
+                    MostrarPorProfesional();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No existe el profesional a eliminar.");
+            }
         }
 
-        private void btnMostrarTodo_Click(object sender, EventArgs e)
+        private void MostrarTodosProfesionales()
         {
             lstProfesionales.Items.Clear();
             List<Profesional> listaProfesionales = _listaProfesionales.DevolverListaProfesionales();
@@ -105,6 +120,45 @@ namespace Tema8_Tarea05_Integrador
             {
                 lstProfesionales.Items.Add(profesional);
             }
+        }
+
+
+        // Load del formulario.
+        private void FormProfesionales_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        // Botones.
+        private void btnAcceder_Click(object sender, EventArgs e)
+        {
+            this.AccederFormularios();
+        }
+
+        private void btnMostrarProfesional_Click(object sender, EventArgs e)
+        {
+            this.MostrarPorProfesional();
+        }
+
+        private void btnEliminarPorDNI_Click(object sender, EventArgs e)
+        {
+            this.EliminarProfesionalesPorDNI();
+        }
+
+        private void btnMostrarTodo_Click(object sender, EventArgs e)
+        {
+            this.MostrarTodosProfesionales();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            lstProfesionales.Items.Clear();
         }
     }
 }
