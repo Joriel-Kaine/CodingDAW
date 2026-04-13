@@ -111,6 +111,28 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        private void EliminarProfesionalesPorPosicion()
+        {
+            int posicion = FuncionesInterfaz.LeerEntero("Introduce la posicion del profesional a eliminar:");
+
+            if (_listaProfesionales.EliminarProfesionalPorPosicion(posicion))
+            {
+                MessageBox.Show("Profesional eliminado correctamente.");
+                if (cmbProfesional.Text == "Elige una categoría")
+                {
+                    MostrarTodosProfesionales();
+                }
+                else
+                {
+                    MostrarPorProfesional();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No existe el profesional a eliminar.");
+            }
+        }
+
         private void MostrarTodosProfesionales()
         {
             lstProfesionales.Items.Clear();
@@ -144,6 +166,11 @@ namespace Tema8_Tarea05_Integrador
         private void btnEliminarPorDNI_Click(object sender, EventArgs e)
         {
             this.EliminarProfesionalesPorDNI();
+        }
+
+        private void btnEliminarPosicion_Click(object sender, EventArgs e)
+        {
+            this.EliminarProfesionalesPorPosicion();
         }
 
         private void btnMostrarTodo_Click(object sender, EventArgs e)

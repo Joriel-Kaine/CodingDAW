@@ -112,6 +112,27 @@ namespace Tema8_Tarea05_Integrador.Interfaz
             return esCorrecto;
         }
 
+        public static int LeerEntero(string mensaje)
+        {
+            int num;
+            bool esCorrecto = false;
+            string texto;
+
+            do
+            {
+                texto = Interaction.InputBox(mensaje);
+                esCorrecto = int.TryParse(texto, out num);
+
+                if (!esCorrecto)
+                {
+                    MessageBox.Show("Introduce valores numéricos válidos.");
+                }
+
+            } while (!esCorrecto);
+
+            return num;
+        }
+
         public static string LeerDNI(string mensaje)
         {
             string dni, parteNum, parteLetra;

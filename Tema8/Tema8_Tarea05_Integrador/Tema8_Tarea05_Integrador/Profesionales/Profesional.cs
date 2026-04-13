@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tema8_Tarea05_Integrador.Proyectos;
 
 namespace Tema8_Tarea05_Integrador.Profesionales
 {
@@ -12,6 +13,7 @@ namespace Tema8_Tarea05_Integrador.Profesionales
         private string _nombre;
         private string _dni;
         private string _telefono;
+        private List<Proyecto> _listaProyectos = new();
 
 
         // Propiedades públicas de los campos privados.

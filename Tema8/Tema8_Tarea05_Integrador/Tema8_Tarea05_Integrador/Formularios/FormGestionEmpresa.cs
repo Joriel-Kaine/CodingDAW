@@ -37,7 +37,9 @@ namespace Tema8_Tarea05_Integrador
 
         private void btnAnalisis_Click(object sender, EventArgs e)
         {
+            FormAnalisis formAnalisis = new();
 
+            formAnalisis.ShowDialog();
         }
 
         private void btnAutorrelleno_Click(object sender, EventArgs e)

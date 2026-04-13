@@ -54,6 +54,19 @@ namespace Tema8_Tarea05_Integrador.Profesionales
             return esCorrecto;
         }
 
+        public bool EliminarProfesionalPorPosicion(int posicion)
+        {
+            bool esCorrecto = false;
+
+            if (posicion >= 0 && posicion < _listaProfesionales.Count)
+            {
+                _listaProfesionales.RemoveAt(posicion);
+                esCorrecto = true;
+            }
+
+            return esCorrecto;
+        }
+
         public List<Profesional> DevolverListaProfesionales()
         {
             return _listaProfesionales;
