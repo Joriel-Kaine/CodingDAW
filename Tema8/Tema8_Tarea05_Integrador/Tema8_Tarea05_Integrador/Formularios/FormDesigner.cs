@@ -50,7 +50,7 @@ namespace Tema8_Tarea05_Integrador
             esCorrecto &= FuncionesInterfaz.ValidarTexto(especialidadBox, out especialidad);
             esCorrecto &= FuncionesInterfaz.ValidarDouble(tarifaHoraBox, out tarifaHora);
 
-            if (esCorrecto)
+            if (esCorrecto) // Si es correcto se añade a la lista.
             {
                 Designer designer = new(nombre, dni, telefono, especialidad, tarifaHora);
 

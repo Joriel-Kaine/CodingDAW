@@ -30,6 +30,7 @@
         {
             cmbProfesional = new ComboBox();
             grpAddProfesionales = new GroupBox();
+            txtEliminarProfesional = new TextBox();
             btnEliminarPosicion = new Button();
             btnEliminarPorDNI = new Button();
             btnMostrarProfesional = new Button();
@@ -39,6 +40,7 @@
             btnMostrarTodo = new Button();
             btnAtras = new Button();
             btnLimpiar = new Button();
+            btnEliminarProfesionalLista = new Button();
             grpAddProfesionales.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,7 +51,7 @@
             cmbProfesional.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbProfesional.FormattingEnabled = true;
             cmbProfesional.Items.AddRange(new object[] { "Diseñador", "Desarrollador", "Redactor" });
-            cmbProfesional.Location = new Point(322, 116);
+            cmbProfesional.Location = new Point(322, 109);
             cmbProfesional.Name = "cmbProfesional";
             cmbProfesional.Size = new Size(400, 42);
             cmbProfesional.TabIndex = 0;
@@ -57,6 +59,7 @@
             // 
             // grpAddProfesionales
             // 
+            grpAddProfesionales.Controls.Add(txtEliminarProfesional);
             grpAddProfesionales.Controls.Add(btnEliminarPosicion);
             grpAddProfesionales.Controls.Add(btnEliminarPorDNI);
             grpAddProfesionales.Controls.Add(btnMostrarProfesional);
@@ -70,6 +73,14 @@
             grpAddProfesionales.TabStop = false;
             grpAddProfesionales.Text = "Profesionales";
             // 
+            // txtEliminarProfesional
+            // 
+            txtEliminarProfesional.BackColor = Color.Lavender;
+            txtEliminarProfesional.Location = new Point(771, 110);
+            txtEliminarProfesional.Name = "txtEliminarProfesional";
+            txtEliminarProfesional.Size = new Size(360, 41);
+            txtEliminarProfesional.TabIndex = 6;
+            // 
             // btnEliminarPosicion
             // 
             btnEliminarPosicion.BackColor = Color.Wheat;
@@ -77,7 +88,7 @@
             btnEliminarPosicion.FlatAppearance.BorderSize = 4;
             btnEliminarPosicion.FlatStyle = FlatStyle.Flat;
             btnEliminarPosicion.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEliminarPosicion.Location = new Point(771, 140);
+            btnEliminarPosicion.Location = new Point(771, 157);
             btnEliminarPosicion.Name = "btnEliminarPosicion";
             btnEliminarPosicion.Size = new Size(360, 60);
             btnEliminarPosicion.TabIndex = 5;
@@ -92,7 +103,7 @@
             btnEliminarPorDNI.FlatAppearance.BorderSize = 4;
             btnEliminarPorDNI.FlatStyle = FlatStyle.Flat;
             btnEliminarPorDNI.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEliminarPorDNI.Location = new Point(771, 74);
+            btnEliminarPorDNI.Location = new Point(771, 44);
             btnEliminarPorDNI.Name = "btnEliminarPorDNI";
             btnEliminarPorDNI.Size = new Size(360, 60);
             btnEliminarPorDNI.TabIndex = 4;
@@ -107,7 +118,7 @@
             btnMostrarProfesional.FlatAppearance.BorderSize = 4;
             btnMostrarProfesional.FlatStyle = FlatStyle.Flat;
             btnMostrarProfesional.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMostrarProfesional.Location = new Point(70, 140);
+            btnMostrarProfesional.Location = new Point(70, 133);
             btnMostrarProfesional.Name = "btnMostrarProfesional";
             btnMostrarProfesional.Size = new Size(200, 60);
             btnMostrarProfesional.TabIndex = 1;
@@ -122,7 +133,7 @@
             btnAcceder.FlatAppearance.BorderSize = 4;
             btnAcceder.FlatStyle = FlatStyle.Flat;
             btnAcceder.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAcceder.Location = new Point(70, 74);
+            btnAcceder.Location = new Point(70, 67);
             btnAcceder.Name = "btnAcceder";
             btnAcceder.Size = new Size(200, 60);
             btnAcceder.TabIndex = 1;
@@ -159,9 +170,9 @@
             btnMostrarTodo.FlatAppearance.BorderSize = 4;
             btnMostrarTodo.FlatStyle = FlatStyle.Flat;
             btnMostrarTodo.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMostrarTodo.Location = new Point(476, 840);
+            btnMostrarTodo.Location = new Point(856, 840);
             btnMostrarTodo.Name = "btnMostrarTodo";
-            btnMostrarTodo.Size = new Size(400, 60);
+            btnMostrarTodo.Size = new Size(360, 60);
             btnMostrarTodo.TabIndex = 2;
             btnMostrarTodo.Text = "Mostrar Todo";
             btnMostrarTodo.UseVisualStyleBackColor = false;
@@ -195,12 +206,28 @@
             btnLimpiar.UseVisualStyleBackColor = false;
             btnLimpiar.Click += btnLimpiar_Click;
             // 
+            // btnEliminarProfesionalLista
+            // 
+            btnEliminarProfesionalLista.BackColor = Color.Wheat;
+            btnEliminarProfesionalLista.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnEliminarProfesionalLista.FlatAppearance.BorderSize = 4;
+            btnEliminarProfesionalLista.FlatStyle = FlatStyle.Flat;
+            btnEliminarProfesionalLista.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminarProfesionalLista.Location = new Point(155, 840);
+            btnEliminarProfesionalLista.Name = "btnEliminarProfesionalLista";
+            btnEliminarProfesionalLista.Size = new Size(600, 60);
+            btnEliminarProfesionalLista.TabIndex = 16;
+            btnEliminarProfesionalLista.Text = "Eliminar Profesional desde la lista";
+            btnEliminarProfesionalLista.UseVisualStyleBackColor = false;
+            btnEliminarProfesionalLista.Click += btnEliminarProfesionalLista_Click;
+            // 
             // FormProfesionales
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1378, 924);
+            Controls.Add(btnEliminarProfesionalLista);
             Controls.Add(btnLimpiar);
             Controls.Add(btnAtras);
             Controls.Add(btnMostrarTodo);
@@ -211,6 +238,7 @@
             Text = "Gestión de Profesionales";
             Load += FormProfesionales_Load;
             grpAddProfesionales.ResumeLayout(false);
+            grpAddProfesionales.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -228,5 +256,7 @@
         private Button btnAtras;
         private Button btnLimpiar;
         private Button btnEliminarPosicion;
+        private TextBox txtEliminarProfesional;
+        private Button btnEliminarProfesionalLista;
     }
 }

@@ -12,7 +12,7 @@ namespace Tema8_Tarea05_Integrador.Profesionales
 
 
         // Método auxiliar para buscar un profesional por su DNI.
-        private int BuscarProfesional(string dni)
+        public int BuscarProfesional(string dni)
         {
             int posicion = -1;
             bool esEncontrado = false;

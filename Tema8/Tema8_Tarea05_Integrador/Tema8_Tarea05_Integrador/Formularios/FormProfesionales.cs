@@ -91,7 +91,11 @@ namespace Tema8_Tarea05_Integrador
 
         private void EliminarProfesionalesPorDNI()
         {
-            string dni = FuncionesInterfaz.LeerDNI("Introduce el DNI del profesional a eliminar:");
+            string dniBox = txtEliminarProfesional.Text;
+            string dni;
+            bool esCorrecto = true;
+
+            esCorrecto = FuncionesInterfaz.ValidarDNI(dniBox, out dni);
 
             if (_listaProfesionales.EliminarProfesionalPorDNI(dni))
             {
@@ -113,7 +117,35 @@ namespace Tema8_Tarea05_Integrador
 
         private void EliminarProfesionalesPorPosicion()
         {
-            int posicion = FuncionesInterfaz.LeerEntero("Introduce la posicion del profesional a eliminar:");
+            string dniBox = txtEliminarProfesional.Text;
+            string dni;
+            bool esCorrecto = true;
+
+            esCorrecto = FuncionesInterfaz.ValidarDNI(dniBox, out dni);
+
+            int posicion = _listaProfesionales.BuscarProfesional(dni);
+
+            if (_listaProfesionales.EliminarProfesionalPorPosicion(posicion))
+            {
+                MessageBox.Show("Profesional eliminado correctamente.");
+                if (cmbProfesional.Text == "Elige una categoría")
+                {
+                    MostrarTodosProfesionales();
+                }
+                else
+                {
+                    MostrarPorProfesional();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No existe el profesional a eliminar.");
+            }
+        }
+
+        public void EliminarProfesionalDesdeLista()
+        {
+            int posicion = lstProfesionales.SelectedIndex;
 
             if (_listaProfesionales.EliminarProfesionalPorPosicion(posicion))
             {
@@ -171,6 +203,11 @@ namespace Tema8_Tarea05_Integrador
         private void btnEliminarPosicion_Click(object sender, EventArgs e)
         {
             this.EliminarProfesionalesPorPosicion();
+        }
+
+        private void btnEliminarProfesionalLista_Click(object sender, EventArgs e)
+        {
+            this.EliminarProfesionalDesdeLista();
         }
 
         private void btnMostrarTodo_Click(object sender, EventArgs e)
