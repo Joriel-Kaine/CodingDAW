@@ -20,5 +20,22 @@ namespace Tema8_Tarea05_Integrador
             InitializeComponent();
             this._listaProyectos = listaProyectos;
         }
+
+        // Métodos.
+        private void ActualizarComboLists()
+        {
+            cmbProyectos.Items.Clear();
+            cmbProfesionales.Items.Clear();
+
+            
+        }
+
+
+        // Load del formulario.
+
+
+
+        // Botones.
+
     }
 }

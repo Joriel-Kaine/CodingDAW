@@ -9,30 +9,16 @@ namespace Tema8_Tarea05_Integrador.Profesionales
     public class Desarrollador : Profesional
     {
         // Campos privados.
-        private string _lenguajePrincipal;
-        private double _tarifaHora;
-
-
-        // Propiedades públicas de los campos privados.
-        public string LenguajePrincipal
-        {
-            get { return _lenguajePrincipal; }
-            set { _lenguajePrincipal = value; }
-        }
-
-        public double TarifaHora
-        {
-            get { return _tarifaHora; }
-            set { _tarifaHora = value; }
-        }
+        public string LenguajePrincipal { get; set; }
+        public double TarifaHora { get; set; }
 
 
         // Constructor con parámetros de entrada.
-        public Desarrollador(string nombre, string dni, string telefono, string lenguajePrincipal,
-                        double tarifaHora) : base(nombre, dni, telefono)
+        public Desarrollador(string nombre, string dni, string email, string telefono, string lenguajePrincipal,
+                        double tarifaHora) : base(nombre, dni, email, telefono)
         {
-            _lenguajePrincipal = lenguajePrincipal;
-            _tarifaHora = tarifaHora;
+            LenguajePrincipal = lenguajePrincipal;
+            TarifaHora = tarifaHora;
         }
 
 

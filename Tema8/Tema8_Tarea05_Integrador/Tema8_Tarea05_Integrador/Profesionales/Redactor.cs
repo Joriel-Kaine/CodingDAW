@@ -9,30 +9,16 @@ namespace Tema8_Tarea05_Integrador.Profesionales
     public class Redactor : Profesional
     {
         // Campos privados.
-        private string _tematicaPrincipal;
-        private double _precioPorPalabra;
-
-
-        // Propiedades públicas de los campos privados.
-        public string TematicaPrincipal
-        {
-            get { return _tematicaPrincipal; }
-            set { _tematicaPrincipal = value; }
-        }
-
-        public double PrecioPorPalabra
-        {
-            get { return _precioPorPalabra; }
-            set { _precioPorPalabra = value; }
-        }
+        public string TematicaPrincipal { get; set; }
+        public double PrecioPorPalabra { get; set; }
 
 
         // Constructor con parámetros de entrada.
-        public Redactor(string nombre, string dni, string telefono, string tematicaPrincipal,
-                        double precioPorPalabra) : base(nombre, dni, telefono)
+        public Redactor(string nombre, string dni, string email, string telefono, string tematicaPrincipal,
+                        double precioPorPalabra) : base(nombre, dni, email, telefono)
         {
-            _tematicaPrincipal = tematicaPrincipal;
-            _precioPorPalabra = precioPorPalabra;
+            TematicaPrincipal = tematicaPrincipal;
+            PrecioPorPalabra = precioPorPalabra;
         }
 
 

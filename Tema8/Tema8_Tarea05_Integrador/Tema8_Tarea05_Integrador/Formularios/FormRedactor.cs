@@ -32,12 +32,13 @@ namespace Tema8_Tarea05_Integrador
             // Declaración de variables con los datos de los cuadros de texto.
             string nombreBox = txtNombre.Text,
                    dniBox = txtDNI.Text,
+                   emailBox = txtEmail.Text,
                    telefonoBox = txtTelefono.Text,
                    tematicaPrincipalBox = txtTematicaPrincipal.Text,
                    precioPorPalabraBox = txtPrecioPorPalabra.Text;
 
             // Declaración de variables donde se guardarán los valores ya validados y convertidos.
-            string nombre, dni, telefono, tematicaPrincipal;
+            string nombre, dni, email, telefono, tematicaPrincipal;
             double precioPorPalabra;
 
             // Declaración del booleano que comprobará que los datos son correctos.
@@ -46,6 +47,7 @@ namespace Tema8_Tarea05_Integrador
             // Se comprueba si los datos con correctos (con AND).
             esCorrecto &= FuncionesInterfaz.ValidarTexto(nombreBox, out nombre);
             esCorrecto &= FuncionesInterfaz.ValidarDNI(dniBox, out dni);
+            esCorrecto &= FuncionesInterfaz.ValidarTexto(emailBox, out email);
             esCorrecto &= FuncionesInterfaz.ValidarTexto(telefonoBox, out telefono);
             esCorrecto &= FuncionesInterfaz.ValidarTexto(tematicaPrincipalBox, out tematicaPrincipal);
             esCorrecto &= FuncionesInterfaz.ValidarDouble(precioPorPalabraBox, out precioPorPalabra);

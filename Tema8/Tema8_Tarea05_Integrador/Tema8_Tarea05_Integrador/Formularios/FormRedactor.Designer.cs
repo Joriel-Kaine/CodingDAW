@@ -28,72 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            btnAddRedactor = new Button();
+            lblRedactor = new Label();
+            btnAtras = new Button();
+            btnLimpiar = new Button();
+            lblEmail = new Label();
             txtPrecioPorPalabra = new TextBox();
             txtTematicaPrincipal = new TextBox();
             txtTelefono = new TextBox();
+            txtEmail = new TextBox();
             txtDNI = new TextBox();
             txtNombre = new TextBox();
-            btnAddRedactor = new Button();
             lblPrecioPorPalabra = new Label();
             lblTematicaPrincipal = new Label();
             lblTelefono = new Label();
             lblDNI = new Label();
             lblNombre = new Label();
-            lblRedactor = new Label();
-            btnAtras = new Button();
-            btnLimpiar = new Button();
             SuspendLayout();
-            // 
-            // txtPrecioPorPalabra
-            // 
-            txtPrecioPorPalabra.BackColor = Color.LavenderBlush;
-            txtPrecioPorPalabra.BorderStyle = BorderStyle.FixedSingle;
-            txtPrecioPorPalabra.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtPrecioPorPalabra.Location = new Point(310, 629);
-            txtPrecioPorPalabra.Name = "txtPrecioPorPalabra";
-            txtPrecioPorPalabra.Size = new Size(293, 41);
-            txtPrecioPorPalabra.TabIndex = 24;
-            // 
-            // txtTematicaPrincipal
-            // 
-            txtTematicaPrincipal.BackColor = Color.LavenderBlush;
-            txtTematicaPrincipal.BorderStyle = BorderStyle.FixedSingle;
-            txtTematicaPrincipal.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtTematicaPrincipal.Location = new Point(310, 516);
-            txtTematicaPrincipal.Name = "txtTematicaPrincipal";
-            txtTematicaPrincipal.Size = new Size(293, 41);
-            txtTematicaPrincipal.TabIndex = 23;
-            // 
-            // txtTelefono
-            // 
-            txtTelefono.BackColor = Color.LavenderBlush;
-            txtTelefono.BorderStyle = BorderStyle.FixedSingle;
-            txtTelefono.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtTelefono.Location = new Point(310, 403);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(293, 41);
-            txtTelefono.TabIndex = 22;
-            // 
-            // txtDNI
-            // 
-            txtDNI.BackColor = Color.LavenderBlush;
-            txtDNI.BorderStyle = BorderStyle.FixedSingle;
-            txtDNI.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtDNI.Location = new Point(310, 290);
-            txtDNI.Name = "txtDNI";
-            txtDNI.Size = new Size(293, 41);
-            txtDNI.TabIndex = 21;
-            // 
-            // txtNombre
-            // 
-            txtNombre.BackColor = Color.LavenderBlush;
-            txtNombre.BorderStyle = BorderStyle.FixedSingle;
-            txtNombre.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombre.ForeColor = SystemColors.ControlText;
-            txtNombre.Location = new Point(310, 177);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(293, 41);
-            txtNombre.TabIndex = 20;
             // 
             // btnAddRedactor
             // 
@@ -109,56 +60,6 @@
             btnAddRedactor.Text = "Agregar Redactor";
             btnAddRedactor.UseVisualStyleBackColor = false;
             btnAddRedactor.Click += btnAddRedactor_Click;
-            // 
-            // lblPrecioPorPalabra
-            // 
-            lblPrecioPorPalabra.AutoSize = true;
-            lblPrecioPorPalabra.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPrecioPorPalabra.Location = new Point(19, 631);
-            lblPrecioPorPalabra.Name = "lblPrecioPorPalabra";
-            lblPrecioPorPalabra.Size = new Size(268, 34);
-            lblPrecioPorPalabra.TabIndex = 18;
-            lblPrecioPorPalabra.Text = "Precio por palabra:";
-            // 
-            // lblTematicaPrincipal
-            // 
-            lblTematicaPrincipal.AutoSize = true;
-            lblTematicaPrincipal.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTematicaPrincipal.Location = new Point(20, 518);
-            lblTematicaPrincipal.Name = "lblTematicaPrincipal";
-            lblTematicaPrincipal.Size = new Size(267, 34);
-            lblTematicaPrincipal.TabIndex = 17;
-            lblTematicaPrincipal.Text = "Temática principal:";
-            // 
-            // lblTelefono
-            // 
-            lblTelefono.AutoSize = true;
-            lblTelefono.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTelefono.Location = new Point(143, 405);
-            lblTelefono.Name = "lblTelefono";
-            lblTelefono.Size = new Size(144, 34);
-            lblTelefono.TabIndex = 16;
-            lblTelefono.Text = "Teléfono:";
-            // 
-            // lblDNI
-            // 
-            lblDNI.AutoSize = true;
-            lblDNI.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDNI.Location = new Point(209, 292);
-            lblDNI.Name = "lblDNI";
-            lblDNI.Size = new Size(78, 34);
-            lblDNI.TabIndex = 15;
-            lblDNI.Text = "DNI:";
-            // 
-            // lblNombre
-            // 
-            lblNombre.AutoSize = true;
-            lblNombre.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNombre.Location = new Point(153, 179);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(134, 34);
-            lblNombre.TabIndex = 14;
-            lblNombre.Text = "Nombre:";
             // 
             // lblRedactor
             // 
@@ -198,25 +99,147 @@
             btnLimpiar.UseVisualStyleBackColor = false;
             btnLimpiar.Click += btnLimpiar_Click;
             // 
+            // lblEmail
+            // 
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmail.Location = new Point(191, 367);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(96, 34);
+            lblEmail.TabIndex = 50;
+            lblEmail.Text = "Email:";
+            // 
+            // txtPrecioPorPalabra
+            // 
+            txtPrecioPorPalabra.BackColor = Color.LightGoldenrodYellow;
+            txtPrecioPorPalabra.BorderStyle = BorderStyle.FixedSingle;
+            txtPrecioPorPalabra.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtPrecioPorPalabra.Location = new Point(310, 647);
+            txtPrecioPorPalabra.Name = "txtPrecioPorPalabra";
+            txtPrecioPorPalabra.Size = new Size(293, 41);
+            txtPrecioPorPalabra.TabIndex = 49;
+            // 
+            // txtTematicaPrincipal
+            // 
+            txtTematicaPrincipal.BackColor = Color.LightGoldenrodYellow;
+            txtTematicaPrincipal.BorderStyle = BorderStyle.FixedSingle;
+            txtTematicaPrincipal.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtTematicaPrincipal.Location = new Point(310, 553);
+            txtTematicaPrincipal.Name = "txtTematicaPrincipal";
+            txtTematicaPrincipal.Size = new Size(293, 41);
+            txtTematicaPrincipal.TabIndex = 48;
+            // 
+            // txtTelefono
+            // 
+            txtTelefono.BackColor = Color.LightGoldenrodYellow;
+            txtTelefono.BorderStyle = BorderStyle.FixedSingle;
+            txtTelefono.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtTelefono.Location = new Point(310, 459);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(293, 41);
+            txtTelefono.TabIndex = 47;
+            // 
+            // txtEmail
+            // 
+            txtEmail.BackColor = Color.LightGoldenrodYellow;
+            txtEmail.BorderStyle = BorderStyle.FixedSingle;
+            txtEmail.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtEmail.Location = new Point(310, 365);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(293, 41);
+            txtEmail.TabIndex = 46;
+            // 
+            // txtDNI
+            // 
+            txtDNI.BackColor = Color.LightGoldenrodYellow;
+            txtDNI.BorderStyle = BorderStyle.FixedSingle;
+            txtDNI.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtDNI.Location = new Point(310, 271);
+            txtDNI.Name = "txtDNI";
+            txtDNI.Size = new Size(293, 41);
+            txtDNI.TabIndex = 45;
+            // 
+            // txtNombre
+            // 
+            txtNombre.BackColor = Color.LightGoldenrodYellow;
+            txtNombre.BorderStyle = BorderStyle.FixedSingle;
+            txtNombre.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNombre.Location = new Point(310, 177);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(293, 41);
+            txtNombre.TabIndex = 44;
+            // 
+            // lblPrecioPorPalabra
+            // 
+            lblPrecioPorPalabra.AutoSize = true;
+            lblPrecioPorPalabra.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPrecioPorPalabra.Location = new Point(19, 649);
+            lblPrecioPorPalabra.Name = "lblPrecioPorPalabra";
+            lblPrecioPorPalabra.Size = new Size(268, 34);
+            lblPrecioPorPalabra.TabIndex = 43;
+            lblPrecioPorPalabra.Text = "Precio por palabra:";
+            // 
+            // lblTematicaPrincipal
+            // 
+            lblTematicaPrincipal.AutoSize = true;
+            lblTematicaPrincipal.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTematicaPrincipal.Location = new Point(20, 555);
+            lblTematicaPrincipal.Name = "lblTematicaPrincipal";
+            lblTematicaPrincipal.Size = new Size(267, 34);
+            lblTematicaPrincipal.TabIndex = 42;
+            lblTematicaPrincipal.Text = "Temática principal:";
+            // 
+            // lblTelefono
+            // 
+            lblTelefono.AutoSize = true;
+            lblTelefono.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTelefono.Location = new Point(143, 461);
+            lblTelefono.Name = "lblTelefono";
+            lblTelefono.Size = new Size(144, 34);
+            lblTelefono.TabIndex = 41;
+            lblTelefono.Text = "Teléfono:";
+            // 
+            // lblDNI
+            // 
+            lblDNI.AutoSize = true;
+            lblDNI.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDNI.Location = new Point(209, 273);
+            lblDNI.Name = "lblDNI";
+            lblDNI.Size = new Size(78, 34);
+            lblDNI.TabIndex = 40;
+            lblDNI.Text = "DNI:";
+            // 
+            // lblNombre
+            // 
+            lblNombre.AutoSize = true;
+            lblNombre.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNombre.Location = new Point(153, 179);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(134, 34);
+            lblNombre.TabIndex = 39;
+            lblNombre.Text = "Nombre:";
+            // 
             // FormRedactor
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Thistle;
             ClientSize = new Size(778, 944);
-            Controls.Add(btnLimpiar);
-            Controls.Add(btnAtras);
+            Controls.Add(lblEmail);
             Controls.Add(txtPrecioPorPalabra);
             Controls.Add(txtTematicaPrincipal);
             Controls.Add(txtTelefono);
+            Controls.Add(txtEmail);
             Controls.Add(txtDNI);
             Controls.Add(txtNombre);
-            Controls.Add(btnAddRedactor);
             Controls.Add(lblPrecioPorPalabra);
             Controls.Add(lblTematicaPrincipal);
             Controls.Add(lblTelefono);
             Controls.Add(lblDNI);
             Controls.Add(lblNombre);
+            Controls.Add(btnLimpiar);
+            Controls.Add(btnAtras);
+            Controls.Add(btnAddRedactor);
             Controls.Add(lblRedactor);
             Name = "FormRedactor";
             Text = "Formulario Redactor";
@@ -226,20 +249,21 @@
         }
 
         #endregion
-
+        private Button btnAddRedactor;
+        private Label lblRedactor;
+        private Button btnAtras;
+        private Button btnLimpiar;
+        private Label lblEmail;
         private TextBox txtPrecioPorPalabra;
         private TextBox txtTematicaPrincipal;
         private TextBox txtTelefono;
+        private TextBox txtEmail;
         private TextBox txtDNI;
         private TextBox txtNombre;
-        private Button btnAddRedactor;
         private Label lblPrecioPorPalabra;
         private Label lblTematicaPrincipal;
         private Label lblTelefono;
         private Label lblDNI;
         private Label lblNombre;
-        private Label lblRedactor;
-        private Button btnAtras;
-        private Button btnLimpiar;
     }
 }

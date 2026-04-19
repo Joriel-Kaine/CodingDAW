@@ -10,38 +10,21 @@ namespace Tema8_Tarea05_Integrador.Profesionales
     public abstract class Profesional
     {
         // Campos privados.
-        private string _nombre;
-        private string _dni;
-        private string _telefono;
+        public string Nombre { get; set; }
+        public string DNI { get; set; }
+        public string Email { get; set; }
+        public string Telefono { get; set; }
+
         private List<Proyecto> _listaProyectos = new();
 
 
-        // Propiedades públicas de los campos privados.
-        public string Nombre
-        {
-            get { return _nombre; }
-            set { _nombre = value; }
-        }
-
-        public string DNI
-        {
-            get { return _dni; }
-            set { _dni = value; }
-        }
-
-        public string Telefono
-        {
-            get { return _telefono; }
-            set { _telefono = value; }
-        }
-
-
         // Constructor con parámetros de entrada.
-        public Profesional(string nombre, string dni, string telefono)
+        public Profesional(string nombre, string dni, string email, string telefono)
         {
-            _nombre = nombre;
-            _dni = dni;
-            _telefono = telefono;
+            Nombre = nombre;
+            DNI = dni;
+            Email = email;
+            Telefono = telefono;
         }
 
 
@@ -55,8 +38,9 @@ namespace Tema8_Tarea05_Integrador.Profesionales
         // Método que sobreescribe el método heredado de System.Object
         public override string ToString()
         {
-            return $"Nombre: {Nombre} \n" +
-                   $"DNI: {DNI} \n" +
+            return $"Nombre: {Nombre} - \n" +
+                   $"DNI: {DNI} - \n" +
+                   $"Email: {Email} \n" +
                    $"Teléfono: {Telefono} ";
         }
 
