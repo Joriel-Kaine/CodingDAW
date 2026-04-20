@@ -94,6 +94,42 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        private void MostrarParticipantesProyecto()
+        {
+            if (cmbProyectos.SelectedItem == null)
+            {
+                MessageBox.Show("Selecciona un profesional y un proyecto.");
+            }
+            else
+            {
+                string? comboProyecto = cmbProyectos.SelectedItem.ToString();
+
+                Proyecto? proyecto = _listaProyectos
+                    .DevolverListaProyectos()
+                    .FirstOrDefault(proyecto => proyecto.ComboBoxProyecto == comboProyecto);
+
+                if (proyecto is null)
+                {
+                    MessageBox.Show("Error.");
+                }
+                else
+                {
+                    lstProyectos.Items.Clear();
+                    List<Profesional> listaProfesionalesProyecto = proyecto.DevolverListaProfesionalesProyecto();
+
+                    foreach (Profesional profesional in listaProfesionalesProyecto)
+                    {
+                        lstProyectos.Items.Add(profesional);
+                    }
+
+                    if (lstProyectos.Items.Count == 0)
+                    {
+                        MessageBox.Show("No hay participantes para este proyecto.");
+                    }
+                }
+            }
+        }
+
 
         // Load del formulario.
         private void FormProyectos_Load(object sender, EventArgs e)
@@ -115,12 +151,12 @@ namespace Tema8_Tarea05_Integrador
 
         private void btnAsignarProfesionalProyecto_Click(object sender, EventArgs e)
         {
-
+            this.AsignarProfesionalProyecto();
         }
 
         private void btnVerParticipantesProyecto_Click(object sender, EventArgs e)
         {
-
+            this.MostrarParticipantesProyecto();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -131,6 +167,8 @@ namespace Tema8_Tarea05_Integrador
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             lstProyectos.Items.Clear();
+            cmbProfesionales.Text = "Elige un profesional";
+            cmbProyectos.Text = "Elige un proyecto";
         }
     }
 }

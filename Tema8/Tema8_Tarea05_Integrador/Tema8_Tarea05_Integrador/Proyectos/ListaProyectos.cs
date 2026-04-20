@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tema8_Tarea05_Integrador.Profesionales;
 
 namespace Tema8_Tarea05_Integrador.Proyectos
 {

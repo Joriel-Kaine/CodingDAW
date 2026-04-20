@@ -46,5 +46,10 @@ namespace Tema8_Tarea05_Integrador.Proyectos
                 _listaProfesionales.Add(profesional);
             }
         }
+
+        public List<Profesional> DevolverListaProfesionalesProyecto()
+        {
+            return _listaProfesionales;
+        }
     }
 }

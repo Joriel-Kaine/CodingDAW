@@ -67,6 +67,7 @@
             // grpAddProyectos
             // 
             grpAddProyectos.Controls.Add(cmbProyectos);
+            grpAddProyectos.Controls.Add(btnListaProyectos);
             grpAddProyectos.Controls.Add(cmbProfesionales);
             grpAddProyectos.Controls.Add(btnVerParticipantesProyecto);
             grpAddProyectos.Controls.Add(btnAsignarProfesionalProyecto);
@@ -109,7 +110,7 @@
             btnVerParticipantesProyecto.FlatAppearance.BorderSize = 4;
             btnVerParticipantesProyecto.FlatStyle = FlatStyle.Flat;
             btnVerParticipantesProyecto.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnVerParticipantesProyecto.Location = new Point(301, 174);
+            btnVerParticipantesProyecto.Location = new Point(594, 174);
             btnVerParticipantesProyecto.Name = "btnVerParticipantesProyecto";
             btnVerParticipantesProyecto.Size = new Size(600, 60);
             btnVerParticipantesProyecto.TabIndex = 5;
@@ -139,7 +140,7 @@
             btnListaProyectos.FlatAppearance.BorderSize = 4;
             btnListaProyectos.FlatStyle = FlatStyle.Flat;
             btnListaProyectos.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnListaProyectos.Location = new Point(665, 844);
+            btnListaProyectos.Location = new Point(6, 174);
             btnListaProyectos.Name = "btnListaProyectos";
             btnListaProyectos.Size = new Size(400, 60);
             btnListaProyectos.TabIndex = 4;
@@ -154,7 +155,7 @@
             btnCrearProyecto.FlatAppearance.BorderSize = 4;
             btnCrearProyecto.FlatStyle = FlatStyle.Flat;
             btnCrearProyecto.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCrearProyecto.Location = new Point(259, 844);
+            btnCrearProyecto.Location = new Point(91, 844);
             btnCrearProyecto.Name = "btnCrearProyecto";
             btnCrearProyecto.Size = new Size(400, 60);
             btnCrearProyecto.TabIndex = 1;
@@ -197,7 +198,6 @@
             BackColor = Color.FloralWhite;
             ClientSize = new Size(1378, 924);
             Controls.Add(btnLimpiar);
-            Controls.Add(btnListaProyectos);
             Controls.Add(btnAtras);
             Controls.Add(lstProyectos);
             Controls.Add(lblGestionProyectos);
