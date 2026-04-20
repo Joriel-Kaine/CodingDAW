@@ -9,13 +9,19 @@ namespace Tema8_Tarea05_Integrador.Profesionales
 {
     public abstract class Profesional
     {
-        // Campos privados.
+        // Lista privada.
+        private List<Proyecto> _listaProyectos = new();
+
+
+        // Propiedades públicas.
         public string Nombre { get; set; }
         public string DNI { get; set; }
         public string Email { get; set; }
         public string Telefono { get; set; }
 
-        private List<Proyecto> _listaProyectos = new();
+
+        // Propiedad pública con solo get, para devolver un string formado.
+        public string ComboBoxProfesional => $"{Nombre} ({DNI})";
 
 
         // Constructor con parámetros de entrada.
@@ -40,11 +46,19 @@ namespace Tema8_Tarea05_Integrador.Profesionales
         {
             return $"Nombre: {Nombre} - \n" +
                    $"DNI: {DNI} - \n" +
-                   $"Email: {Email} \n" +
+                   $"Email: {Email} - \n" +
                    $"Teléfono: {Telefono} ";
         }
 
         // Método abstracto (sin cuerpo) para calcular el presupuesto.
         public abstract double CalcularPresupuesto();
+
+        public void AddProyecto(Proyecto proyecto)
+        {
+            if (!_listaProyectos.Contains(proyecto))
+            {
+                _listaProyectos.Add(proyecto);
+            }
+        }
     }
 }

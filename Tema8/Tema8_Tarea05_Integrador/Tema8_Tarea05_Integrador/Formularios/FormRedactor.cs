@@ -54,7 +54,7 @@ namespace Tema8_Tarea05_Integrador
 
             if (esCorrecto)
             {
-                Redactor redactor = new(nombre, dni, telefono, tematicaPrincipal, precioPorPalabra);
+                Redactor redactor = new(nombre, dni, email, telefono, tematicaPrincipal, precioPorPalabra);
 
                 _listaProfesionales.AddProfesional(redactor);
             }

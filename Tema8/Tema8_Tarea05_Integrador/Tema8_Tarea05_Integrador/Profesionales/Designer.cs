@@ -8,9 +8,9 @@ namespace Tema8_Tarea05_Integrador.Profesionales
 {
     public class Designer : Profesional
     {
-        // Campos privados.
-        public string Especialidad;
-        public double TarifaHora;
+        // Propiedades públicas.
+        public string Especialidad { get; set; }
+        public double TarifaHora { get; set; }
 
 
         // Constructor con parámetros de entrada.

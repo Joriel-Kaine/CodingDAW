@@ -60,7 +60,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNombre.Location = new Point(153, 179);
+            lblNombre.Location = new Point(153, 143);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(134, 34);
             lblNombre.TabIndex = 1;
@@ -70,7 +70,7 @@
             // 
             lblDNI.AutoSize = true;
             lblDNI.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDNI.Location = new Point(209, 273);
+            lblDNI.Location = new Point(209, 237);
             lblDNI.Name = "lblDNI";
             lblDNI.Size = new Size(78, 34);
             lblDNI.TabIndex = 2;
@@ -80,7 +80,7 @@
             // 
             lblTelefono.AutoSize = true;
             lblTelefono.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTelefono.Location = new Point(143, 461);
+            lblTelefono.Location = new Point(143, 425);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(144, 34);
             lblTelefono.TabIndex = 3;
@@ -90,7 +90,7 @@
             // 
             lblEspecialidad.AutoSize = true;
             lblEspecialidad.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEspecialidad.Location = new Point(103, 555);
+            lblEspecialidad.Location = new Point(103, 519);
             lblEspecialidad.Name = "lblEspecialidad";
             lblEspecialidad.Size = new Size(184, 34);
             lblEspecialidad.TabIndex = 4;
@@ -100,7 +100,7 @@
             // 
             lblTarifaHora.AutoSize = true;
             lblTarifaHora.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTarifaHora.Location = new Point(61, 649);
+            lblTarifaHora.Location = new Point(61, 613);
             lblTarifaHora.Name = "lblTarifaHora";
             lblTarifaHora.Size = new Size(226, 34);
             lblTarifaHora.TabIndex = 5;
@@ -113,7 +113,7 @@
             btnAddDesigner.FlatAppearance.BorderSize = 4;
             btnAddDesigner.FlatStyle = FlatStyle.Flat;
             btnAddDesigner.Font = new Font("Maiandra GD", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddDesigner.Location = new Point(153, 771);
+            btnAddDesigner.Location = new Point(153, 697);
             btnAddDesigner.Name = "btnAddDesigner";
             btnAddDesigner.Size = new Size(450, 100);
             btnAddDesigner.TabIndex = 6;
@@ -126,7 +126,7 @@
             txtNombre.BackColor = Color.LightGoldenrodYellow;
             txtNombre.BorderStyle = BorderStyle.FixedSingle;
             txtNombre.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombre.Location = new Point(310, 177);
+            txtNombre.Location = new Point(310, 141);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(293, 41);
             txtNombre.TabIndex = 7;
@@ -136,7 +136,7 @@
             txtDNI.BackColor = Color.LightGoldenrodYellow;
             txtDNI.BorderStyle = BorderStyle.FixedSingle;
             txtDNI.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtDNI.Location = new Point(310, 271);
+            txtDNI.Location = new Point(310, 235);
             txtDNI.Name = "txtDNI";
             txtDNI.Size = new Size(293, 41);
             txtDNI.TabIndex = 9;
@@ -146,7 +146,7 @@
             txtEmail.BackColor = Color.LightGoldenrodYellow;
             txtEmail.BorderStyle = BorderStyle.FixedSingle;
             txtEmail.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtEmail.Location = new Point(310, 365);
+            txtEmail.Location = new Point(310, 329);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(293, 41);
             txtEmail.TabIndex = 10;
@@ -156,7 +156,7 @@
             txtTelefono.BackColor = Color.LightGoldenrodYellow;
             txtTelefono.BorderStyle = BorderStyle.FixedSingle;
             txtTelefono.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtTelefono.Location = new Point(310, 459);
+            txtTelefono.Location = new Point(310, 423);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(293, 41);
             txtTelefono.TabIndex = 11;
@@ -166,7 +166,7 @@
             txtEspecialidad.BackColor = Color.LightGoldenrodYellow;
             txtEspecialidad.BorderStyle = BorderStyle.FixedSingle;
             txtEspecialidad.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtEspecialidad.Location = new Point(310, 553);
+            txtEspecialidad.Location = new Point(310, 517);
             txtEspecialidad.Name = "txtEspecialidad";
             txtEspecialidad.Size = new Size(293, 41);
             txtEspecialidad.TabIndex = 12;
@@ -178,7 +178,7 @@
             btnAtras.FlatAppearance.BorderSize = 4;
             btnAtras.FlatStyle = FlatStyle.Flat;
             btnAtras.Image = Properties.Resources.imagenBack;
-            btnAtras.Location = new Point(47, 771);
+            btnAtras.Location = new Point(47, 697);
             btnAtras.Name = "btnAtras";
             btnAtras.Size = new Size(100, 100);
             btnAtras.TabIndex = 15;
@@ -192,7 +192,7 @@
             btnLimpiar.FlatAppearance.BorderSize = 4;
             btnLimpiar.FlatStyle = FlatStyle.Flat;
             btnLimpiar.Image = Properties.Resources.imagen;
-            btnLimpiar.Location = new Point(609, 771);
+            btnLimpiar.Location = new Point(609, 697);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(100, 100);
             btnLimpiar.TabIndex = 16;
@@ -204,7 +204,7 @@
             txtTarifaHora.BackColor = Color.LightGoldenrodYellow;
             txtTarifaHora.BorderStyle = BorderStyle.FixedSingle;
             txtTarifaHora.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtTarifaHora.Location = new Point(310, 647);
+            txtTarifaHora.Location = new Point(310, 611);
             txtTarifaHora.Name = "txtTarifaHora";
             txtTarifaHora.Size = new Size(293, 41);
             txtTarifaHora.TabIndex = 18;
@@ -213,7 +213,7 @@
             // 
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEmail.Location = new Point(191, 367);
+            lblEmail.Location = new Point(191, 331);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(96, 34);
             lblEmail.TabIndex = 19;
@@ -224,7 +224,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSeaGreen;
-            ClientSize = new Size(778, 944);
+            ClientSize = new Size(778, 844);
             Controls.Add(lblEmail);
             Controls.Add(txtTarifaHora);
             Controls.Add(btnLimpiar);

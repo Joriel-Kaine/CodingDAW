@@ -8,7 +8,7 @@ namespace Tema8_Tarea05_Integrador.Profesionales
 {
     public class Redactor : Profesional
     {
-        // Campos privados.
+        // Propiedades públicas.
         public string TematicaPrincipal { get; set; }
         public double PrecioPorPalabra { get; set; }
 

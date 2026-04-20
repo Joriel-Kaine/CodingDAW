@@ -9,12 +9,17 @@ namespace Tema8_Tarea05_Integrador.Proyectos
 {
     public class Proyecto
     {
-        // Campos privados.
+        // Lista privada.
+        private List<Profesional> _listaProfesionales = new();
+
+
+        // Propiedades públicas.
         public string Nombre { get; set; }
         public int Codigo { get; set; }
         public int Duracion { get; set; }
 
-        private List<Profesional> _listaProfesionales = new();
+        // Propiedad pública con solo get, para devolver un string formado.
+        public string ComboBoxProyecto => $"{Nombre} ({Codigo})";
 
 
         // Constructor con parámetros de entrada.
@@ -27,5 +32,19 @@ namespace Tema8_Tarea05_Integrador.Proyectos
 
 
         // Método.
+        public override string ToString()
+        {
+            return $"Nombre: {Nombre} - \n" +
+                   $"Código: {Codigo} - \n" +
+                   $"Duración: {Duracion}";
+        }
+
+        public void AddProfesional(Profesional profesional)
+        {
+            if (!_listaProfesionales.Contains(profesional))
+            {
+                _listaProfesionales.Add(profesional);
+            }
+        }
     }
 }

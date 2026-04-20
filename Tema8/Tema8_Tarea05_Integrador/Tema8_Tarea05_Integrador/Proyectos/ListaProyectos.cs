@@ -11,5 +11,15 @@ namespace Tema8_Tarea05_Integrador.Proyectos
         private List<Proyecto> _listaProyectos = new();
 
 
+        // Métodos.
+        public void AddProyecto(Proyecto proyecto)
+        { 
+            _listaProyectos.Add(proyecto);
+        }
+
+        public List<Proyecto> DevolverListaProyectos()
+        {
+            return _listaProyectos;
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace Tema8_Tarea05_Integrador.Profesionales
 {
     public class Desarrollador : Profesional
     {
-        // Campos privados.
+        // Propiedades públicas.
         public string LenguajePrincipal { get; set; }
         public double TarifaHora { get; set; }
 

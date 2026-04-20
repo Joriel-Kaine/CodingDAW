@@ -54,7 +54,7 @@ namespace Tema8_Tarea05_Integrador
 
             if (esCorrecto)
             {
-                Desarrollador desarrollador = new(nombre, dni, telefono, lenguajePrincipal, tarifaHora);
+                Desarrollador desarrollador = new(nombre, dni, email, telefono, lenguajePrincipal, tarifaHora);
 
                 _listaProfesionales.AddProfesional(desarrollador);
             }

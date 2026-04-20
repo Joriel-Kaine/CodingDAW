@@ -51,7 +51,7 @@
             cmbProfesional.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbProfesional.FormattingEnabled = true;
             cmbProfesional.Items.AddRange(new object[] { "Diseñador", "Desarrollador", "Redactor" });
-            cmbProfesional.Location = new Point(322, 109);
+            cmbProfesional.Location = new Point(291, 109);
             cmbProfesional.Name = "cmbProfesional";
             cmbProfesional.Size = new Size(400, 42);
             cmbProfesional.TabIndex = 0;

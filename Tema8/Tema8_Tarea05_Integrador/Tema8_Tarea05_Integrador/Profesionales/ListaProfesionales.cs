@@ -35,7 +35,7 @@ namespace Tema8_Tarea05_Integrador.Profesionales
         // Método donde se añade un profesional a la lista de profesionales.
         // Se usa como parámetro de entrada al profesional, con todos los datos ya introducidos.
         public void AddProfesional(Profesional profesional)
-        {
+        {   
             _listaProfesionales.Add(profesional);
         }
 

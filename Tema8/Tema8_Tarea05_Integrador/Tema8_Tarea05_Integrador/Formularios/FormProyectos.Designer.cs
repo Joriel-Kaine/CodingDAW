@@ -31,14 +31,14 @@
             lstProyectos = new ListBox();
             lblGestionProyectos = new Label();
             grpAddProyectos = new GroupBox();
+            cmbProyectos = new ComboBox();
+            cmbProfesionales = new ComboBox();
             btnVerParticipantesProyecto = new Button();
             btnAsignarProfesionalProyecto = new Button();
             btnListaProyectos = new Button();
             btnCrearProyecto = new Button();
             btnAtras = new Button();
             btnLimpiar = new Button();
-            cmbProfesionales = new ComboBox();
-            cmbProyectos = new ComboBox();
             grpAddProyectos.SuspendLayout();
             SuspendLayout();
             // 
@@ -78,6 +78,30 @@
             grpAddProyectos.TabStop = false;
             grpAddProyectos.Text = "Proyectos";
             // 
+            // cmbProyectos
+            // 
+            cmbProyectos.BackColor = Color.Lavender;
+            cmbProyectos.FlatStyle = FlatStyle.Flat;
+            cmbProyectos.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbProyectos.FormattingEnabled = true;
+            cmbProyectos.Location = new Point(665, 88);
+            cmbProyectos.Name = "cmbProyectos";
+            cmbProyectos.Size = new Size(400, 42);
+            cmbProyectos.TabIndex = 7;
+            cmbProyectos.Text = "Elige un proyecto";
+            // 
+            // cmbProfesionales
+            // 
+            cmbProfesionales.BackColor = Color.Lavender;
+            cmbProfesionales.FlatStyle = FlatStyle.Flat;
+            cmbProfesionales.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbProfesionales.FormattingEnabled = true;
+            cmbProfesionales.Location = new Point(665, 40);
+            cmbProfesionales.Name = "cmbProfesionales";
+            cmbProfesionales.Size = new Size(400, 42);
+            cmbProfesionales.TabIndex = 6;
+            cmbProfesionales.Text = "Elige un profesional";
+            // 
             // btnVerParticipantesProyecto
             // 
             btnVerParticipantesProyecto.BackColor = Color.Tan;
@@ -91,6 +115,7 @@
             btnVerParticipantesProyecto.TabIndex = 5;
             btnVerParticipantesProyecto.Text = "Ver participantes de un Proyecto";
             btnVerParticipantesProyecto.UseVisualStyleBackColor = false;
+            btnVerParticipantesProyecto.Click += btnVerParticipantesProyecto_Click;
             // 
             // btnAsignarProfesionalProyecto
             // 
@@ -105,6 +130,7 @@
             btnAsignarProfesionalProyecto.TabIndex = 1;
             btnAsignarProfesionalProyecto.Text = "Asignar Profesional a un Proyecto";
             btnAsignarProfesionalProyecto.UseVisualStyleBackColor = false;
+            btnAsignarProfesionalProyecto.Click += btnAsignarProfesionalProyecto_Click;
             // 
             // btnListaProyectos
             // 
@@ -119,6 +145,7 @@
             btnListaProyectos.TabIndex = 4;
             btnListaProyectos.Text = "Lista de Proyectos";
             btnListaProyectos.UseVisualStyleBackColor = false;
+            btnListaProyectos.Click += btnListaProyectos_Click;
             // 
             // btnCrearProyecto
             // 
@@ -133,6 +160,7 @@
             btnCrearProyecto.TabIndex = 1;
             btnCrearProyecto.Text = "Crear Proyecto";
             btnCrearProyecto.UseVisualStyleBackColor = false;
+            btnCrearProyecto.Click += btnCrearProyecto_Click;
             // 
             // btnAtras
             // 
@@ -146,6 +174,7 @@
             btnAtras.Size = new Size(100, 100);
             btnAtras.TabIndex = 15;
             btnAtras.UseVisualStyleBackColor = false;
+            btnAtras.Click += btnAtras_Click;
             // 
             // btnLimpiar
             // 
@@ -159,31 +188,7 @@
             btnLimpiar.Size = new Size(100, 100);
             btnLimpiar.TabIndex = 16;
             btnLimpiar.UseVisualStyleBackColor = false;
-            // 
-            // cmbProfesionales
-            // 
-            cmbProfesionales.BackColor = Color.Lavender;
-            cmbProfesionales.FlatStyle = FlatStyle.Flat;
-            cmbProfesionales.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbProfesionales.FormattingEnabled = true;
-            cmbProfesionales.Location = new Point(665, 40);
-            cmbProfesionales.Name = "cmbProfesionales";
-            cmbProfesionales.Size = new Size(400, 42);
-            cmbProfesionales.TabIndex = 6;
-            cmbProfesionales.Text = "Elige un profesional";
-            // 
-            // cmbProyectos
-            // 
-            cmbProyectos.BackColor = Color.Lavender;
-            cmbProyectos.FlatStyle = FlatStyle.Flat;
-            cmbProyectos.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbProyectos.FormattingEnabled = true;
-            cmbProyectos.Items.AddRange(new object[] { "Diseñador", "Desarrollador", "Redactor" });
-            cmbProyectos.Location = new Point(665, 88);
-            cmbProyectos.Name = "cmbProyectos";
-            cmbProyectos.Size = new Size(400, 42);
-            cmbProyectos.TabIndex = 7;
-            cmbProyectos.Text = "Elige un proyecto";
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // FormProyectos
             // 
@@ -200,6 +205,7 @@
             Controls.Add(grpAddProyectos);
             Name = "FormProyectos";
             Text = "Gestión de Proyectos";
+            Load += FormProyectos_Load;
             grpAddProyectos.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

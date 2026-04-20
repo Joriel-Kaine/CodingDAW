@@ -54,7 +54,7 @@ namespace Tema8_Tarea05_Integrador
 
             if (esCorrecto) // Si es correcto se añade a la lista.
             {
-                Designer designer = new(nombre, dni, telefono, especialidad, tarifaHora);
+                Designer designer = new(nombre, dni, email, telefono, especialidad, tarifaHora);
 
                 _listaProfesionales.AddProfesional(designer);
             }

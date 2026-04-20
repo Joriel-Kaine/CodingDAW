@@ -53,7 +53,7 @@
             btnAddRedactor.FlatAppearance.BorderSize = 4;
             btnAddRedactor.FlatStyle = FlatStyle.Flat;
             btnAddRedactor.Font = new Font("Maiandra GD", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddRedactor.Location = new Point(153, 771);
+            btnAddRedactor.Location = new Point(153, 697);
             btnAddRedactor.Name = "btnAddRedactor";
             btnAddRedactor.Size = new Size(450, 100);
             btnAddRedactor.TabIndex = 19;
@@ -78,7 +78,7 @@
             btnAtras.FlatAppearance.BorderSize = 4;
             btnAtras.FlatStyle = FlatStyle.Flat;
             btnAtras.Image = Properties.Resources.imagenBack;
-            btnAtras.Location = new Point(47, 771);
+            btnAtras.Location = new Point(47, 697);
             btnAtras.Name = "btnAtras";
             btnAtras.Size = new Size(100, 100);
             btnAtras.TabIndex = 25;
@@ -92,7 +92,7 @@
             btnLimpiar.FlatAppearance.BorderSize = 4;
             btnLimpiar.FlatStyle = FlatStyle.Flat;
             btnLimpiar.Image = Properties.Resources.imagen;
-            btnLimpiar.Location = new Point(609, 771);
+            btnLimpiar.Location = new Point(609, 697);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(100, 100);
             btnLimpiar.TabIndex = 26;
@@ -103,7 +103,7 @@
             // 
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEmail.Location = new Point(191, 367);
+            lblEmail.Location = new Point(191, 331);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(96, 34);
             lblEmail.TabIndex = 50;
@@ -111,60 +111,60 @@
             // 
             // txtPrecioPorPalabra
             // 
-            txtPrecioPorPalabra.BackColor = Color.LightGoldenrodYellow;
+            txtPrecioPorPalabra.BackColor = Color.LavenderBlush;
             txtPrecioPorPalabra.BorderStyle = BorderStyle.FixedSingle;
             txtPrecioPorPalabra.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtPrecioPorPalabra.Location = new Point(310, 647);
+            txtPrecioPorPalabra.Location = new Point(310, 611);
             txtPrecioPorPalabra.Name = "txtPrecioPorPalabra";
             txtPrecioPorPalabra.Size = new Size(293, 41);
             txtPrecioPorPalabra.TabIndex = 49;
             // 
             // txtTematicaPrincipal
             // 
-            txtTematicaPrincipal.BackColor = Color.LightGoldenrodYellow;
+            txtTematicaPrincipal.BackColor = Color.LavenderBlush;
             txtTematicaPrincipal.BorderStyle = BorderStyle.FixedSingle;
             txtTematicaPrincipal.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtTematicaPrincipal.Location = new Point(310, 553);
+            txtTematicaPrincipal.Location = new Point(310, 517);
             txtTematicaPrincipal.Name = "txtTematicaPrincipal";
             txtTematicaPrincipal.Size = new Size(293, 41);
             txtTematicaPrincipal.TabIndex = 48;
             // 
             // txtTelefono
             // 
-            txtTelefono.BackColor = Color.LightGoldenrodYellow;
+            txtTelefono.BackColor = Color.LavenderBlush;
             txtTelefono.BorderStyle = BorderStyle.FixedSingle;
             txtTelefono.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtTelefono.Location = new Point(310, 459);
+            txtTelefono.Location = new Point(310, 423);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(293, 41);
             txtTelefono.TabIndex = 47;
             // 
             // txtEmail
             // 
-            txtEmail.BackColor = Color.LightGoldenrodYellow;
+            txtEmail.BackColor = Color.LavenderBlush;
             txtEmail.BorderStyle = BorderStyle.FixedSingle;
             txtEmail.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtEmail.Location = new Point(310, 365);
+            txtEmail.Location = new Point(310, 329);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(293, 41);
             txtEmail.TabIndex = 46;
             // 
             // txtDNI
             // 
-            txtDNI.BackColor = Color.LightGoldenrodYellow;
+            txtDNI.BackColor = Color.LavenderBlush;
             txtDNI.BorderStyle = BorderStyle.FixedSingle;
             txtDNI.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtDNI.Location = new Point(310, 271);
+            txtDNI.Location = new Point(310, 235);
             txtDNI.Name = "txtDNI";
             txtDNI.Size = new Size(293, 41);
             txtDNI.TabIndex = 45;
             // 
             // txtNombre
             // 
-            txtNombre.BackColor = Color.LightGoldenrodYellow;
+            txtNombre.BackColor = Color.LavenderBlush;
             txtNombre.BorderStyle = BorderStyle.FixedSingle;
             txtNombre.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombre.Location = new Point(310, 177);
+            txtNombre.Location = new Point(310, 141);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(293, 41);
             txtNombre.TabIndex = 44;
@@ -173,7 +173,7 @@
             // 
             lblPrecioPorPalabra.AutoSize = true;
             lblPrecioPorPalabra.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPrecioPorPalabra.Location = new Point(19, 649);
+            lblPrecioPorPalabra.Location = new Point(19, 613);
             lblPrecioPorPalabra.Name = "lblPrecioPorPalabra";
             lblPrecioPorPalabra.Size = new Size(268, 34);
             lblPrecioPorPalabra.TabIndex = 43;
@@ -183,7 +183,7 @@
             // 
             lblTematicaPrincipal.AutoSize = true;
             lblTematicaPrincipal.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTematicaPrincipal.Location = new Point(20, 555);
+            lblTematicaPrincipal.Location = new Point(20, 519);
             lblTematicaPrincipal.Name = "lblTematicaPrincipal";
             lblTematicaPrincipal.Size = new Size(267, 34);
             lblTematicaPrincipal.TabIndex = 42;
@@ -193,7 +193,7 @@
             // 
             lblTelefono.AutoSize = true;
             lblTelefono.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTelefono.Location = new Point(143, 461);
+            lblTelefono.Location = new Point(143, 425);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(144, 34);
             lblTelefono.TabIndex = 41;
@@ -203,7 +203,7 @@
             // 
             lblDNI.AutoSize = true;
             lblDNI.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDNI.Location = new Point(209, 273);
+            lblDNI.Location = new Point(209, 237);
             lblDNI.Name = "lblDNI";
             lblDNI.Size = new Size(78, 34);
             lblDNI.TabIndex = 40;
@@ -213,7 +213,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNombre.Location = new Point(153, 179);
+            lblNombre.Location = new Point(153, 143);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(134, 34);
             lblNombre.TabIndex = 39;
@@ -224,7 +224,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Thistle;
-            ClientSize = new Size(778, 944);
+            ClientSize = new Size(778, 844);
             Controls.Add(lblEmail);
             Controls.Add(txtPrecioPorPalabra);
             Controls.Add(txtTematicaPrincipal);

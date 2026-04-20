@@ -21,6 +21,18 @@ namespace Tema8_Tarea05_Integrador.Interfaz
             return esCorrecto;
         }
 
+        public static bool ValidarEntero(string mensaje, out int num)
+        {
+            bool esCorrecto = int.TryParse(mensaje, out num);
+
+            if (!esCorrecto)
+            {
+                MessageBox.Show("Introduce valores numéricos válidos");
+            }
+
+            return esCorrecto;
+        }
+
         public static bool ValidarTexto(string mensaje, out string texto)
         {
             bool esCorrecto = true;
