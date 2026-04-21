@@ -160,7 +160,7 @@
             lstProfesionales.ItemHeight = 29;
             lstProfesionales.Location = new Point(85, 397);
             lstProfesionales.Name = "lstProfesionales";
-            lstProfesionales.Size = new Size(1200, 437);
+            lstProfesionales.Size = new Size(1200, 350);
             lstProfesionales.TabIndex = 3;
             // 
             // btnMostrarTodo
@@ -170,7 +170,7 @@
             btnMostrarTodo.FlatAppearance.BorderSize = 4;
             btnMostrarTodo.FlatStyle = FlatStyle.Flat;
             btnMostrarTodo.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMostrarTodo.Location = new Point(856, 840);
+            btnMostrarTodo.Location = new Point(856, 753);
             btnMostrarTodo.Name = "btnMostrarTodo";
             btnMostrarTodo.Size = new Size(360, 60);
             btnMostrarTodo.TabIndex = 2;
@@ -213,11 +213,11 @@
             btnEliminarProfesionalLista.FlatAppearance.BorderSize = 4;
             btnEliminarProfesionalLista.FlatStyle = FlatStyle.Flat;
             btnEliminarProfesionalLista.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEliminarProfesionalLista.Location = new Point(155, 840);
+            btnEliminarProfesionalLista.Location = new Point(155, 753);
             btnEliminarProfesionalLista.Name = "btnEliminarProfesionalLista";
             btnEliminarProfesionalLista.Size = new Size(600, 60);
             btnEliminarProfesionalLista.TabIndex = 16;
-            btnEliminarProfesionalLista.Text = "Eliminar Profesional desde la lista";
+            btnEliminarProfesionalLista.Text = "Eliminar desde la lista";
             btnEliminarProfesionalLista.UseVisualStyleBackColor = false;
             btnEliminarProfesionalLista.Click += btnEliminarProfesionalLista_Click;
             // 

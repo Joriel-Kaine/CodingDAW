@@ -223,6 +223,7 @@ namespace Tema8_Tarea05_Integrador
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             lstProfesionales.Items.Clear();
+            cmbProfesional.Text = "Elige una categoría";
         }
     }
 }

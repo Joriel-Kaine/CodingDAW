@@ -32,10 +32,10 @@
             lblGestionProyectos = new Label();
             grpAddProyectos = new GroupBox();
             cmbProyectos = new ComboBox();
+            btnListaProyectos = new Button();
             cmbProfesionales = new ComboBox();
             btnVerParticipantesProyecto = new Button();
             btnAsignarProfesionalProyecto = new Button();
-            btnListaProyectos = new Button();
             btnCrearProyecto = new Button();
             btnAtras = new Button();
             btnLimpiar = new Button();
@@ -51,7 +51,7 @@
             lstProyectos.ItemHeight = 29;
             lstProyectos.Location = new Point(85, 401);
             lstProyectos.Name = "lstProyectos";
-            lstProyectos.Size = new Size(1200, 437);
+            lstProyectos.Size = new Size(1200, 350);
             lstProyectos.TabIndex = 7;
             // 
             // lblGestionProyectos
@@ -90,6 +90,21 @@
             cmbProyectos.Size = new Size(400, 42);
             cmbProyectos.TabIndex = 7;
             cmbProyectos.Text = "Elige un proyecto";
+            // 
+            // btnListaProyectos
+            // 
+            btnListaProyectos.BackColor = Color.Tan;
+            btnListaProyectos.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnListaProyectos.FlatAppearance.BorderSize = 4;
+            btnListaProyectos.FlatStyle = FlatStyle.Flat;
+            btnListaProyectos.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnListaProyectos.Location = new Point(6, 174);
+            btnListaProyectos.Name = "btnListaProyectos";
+            btnListaProyectos.Size = new Size(400, 60);
+            btnListaProyectos.TabIndex = 4;
+            btnListaProyectos.Text = "Lista de Proyectos";
+            btnListaProyectos.UseVisualStyleBackColor = false;
+            btnListaProyectos.Click += btnListaProyectos_Click;
             // 
             // cmbProfesionales
             // 
@@ -133,21 +148,6 @@
             btnAsignarProfesionalProyecto.UseVisualStyleBackColor = false;
             btnAsignarProfesionalProyecto.Click += btnAsignarProfesionalProyecto_Click;
             // 
-            // btnListaProyectos
-            // 
-            btnListaProyectos.BackColor = Color.Tan;
-            btnListaProyectos.FlatAppearance.BorderColor = Color.SteelBlue;
-            btnListaProyectos.FlatAppearance.BorderSize = 4;
-            btnListaProyectos.FlatStyle = FlatStyle.Flat;
-            btnListaProyectos.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnListaProyectos.Location = new Point(6, 174);
-            btnListaProyectos.Name = "btnListaProyectos";
-            btnListaProyectos.Size = new Size(400, 60);
-            btnListaProyectos.TabIndex = 4;
-            btnListaProyectos.Text = "Lista de Proyectos";
-            btnListaProyectos.UseVisualStyleBackColor = false;
-            btnListaProyectos.Click += btnListaProyectos_Click;
-            // 
             // btnCrearProyecto
             // 
             btnCrearProyecto.BackColor = Color.Tan;
@@ -155,7 +155,7 @@
             btnCrearProyecto.FlatAppearance.BorderSize = 4;
             btnCrearProyecto.FlatStyle = FlatStyle.Flat;
             btnCrearProyecto.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCrearProyecto.Location = new Point(91, 844);
+            btnCrearProyecto.Location = new Point(91, 757);
             btnCrearProyecto.Name = "btnCrearProyecto";
             btnCrearProyecto.Size = new Size(400, 60);
             btnCrearProyecto.TabIndex = 1;

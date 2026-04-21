@@ -98,7 +98,7 @@ namespace Tema8_Tarea05_Integrador
         {
             if (cmbProyectos.SelectedItem == null)
             {
-                MessageBox.Show("Selecciona un profesional y un proyecto.");
+                MessageBox.Show("Selecciona un proyecto.");
             }
             else
             {
@@ -110,7 +110,7 @@ namespace Tema8_Tarea05_Integrador
 
                 if (proyecto is null)
                 {
-                    MessageBox.Show("Error.");
+                    return;
                 }
                 else
                 {

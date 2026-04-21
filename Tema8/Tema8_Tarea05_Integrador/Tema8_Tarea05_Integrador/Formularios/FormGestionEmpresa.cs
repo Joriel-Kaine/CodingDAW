@@ -37,7 +37,7 @@ namespace Tema8_Tarea05_Integrador
 
         private void btnAnalisis_Click(object sender, EventArgs e)
         {
-            FormAnalisis formAnalisis = new();
+            FormAnalisis formAnalisis = new(_listaProyectos, _listaProfesionales);
 
             formAnalisis.ShowDialog();
         }
