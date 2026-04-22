@@ -8,6 +8,10 @@ namespace Tema8_Tarea05_Integrador.Profesionales
 {
     public class Redactor : Profesional
     {
+        // Constante.
+        const int TarifaHora = 200;
+
+
         // Propiedades públicas.
         public string TematicaPrincipal { get; set; }
         public double PrecioPorPalabra { get; set; }
@@ -37,6 +41,15 @@ namespace Tema8_Tarea05_Integrador.Profesionales
         public override double CalcularPresupuesto()
         {
             return 0.0;
+        }
+
+
+        // Conversión del precio por palabra a la tarifa por hora que cobra.
+        public double TarifaHoraRedactor()
+        {
+            double tarifaHora;
+
+            return tarifaHora = PrecioPorPalabra * TarifaHora;
         }
     }
 }

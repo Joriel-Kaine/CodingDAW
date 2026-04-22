@@ -39,6 +39,7 @@
             cmbProfesionales = new ComboBox();
             btnProyectosProfesional = new Button();
             grpAnalisis = new GroupBox();
+            cmbProyectos = new ComboBox();
             grpAnalisis.SuspendLayout();
             SuspendLayout();
             // 
@@ -76,7 +77,7 @@
             btnTotalCosteProyecto.FlatAppearance.BorderSize = 4;
             btnTotalCosteProyecto.FlatStyle = FlatStyle.Flat;
             btnTotalCosteProyecto.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnTotalCosteProyecto.Location = new Point(6, 150);
+            btnTotalCosteProyecto.Location = new Point(759, 757);
             btnTotalCosteProyecto.Name = "btnTotalCosteProyecto";
             btnTotalCosteProyecto.Size = new Size(520, 60);
             btnTotalCosteProyecto.TabIndex = 12;
@@ -129,7 +130,7 @@
             btnProfesionalesEnProyectos.FlatAppearance.BorderSize = 4;
             btnProfesionalesEnProyectos.FlatStyle = FlatStyle.Flat;
             btnProfesionalesEnProyectos.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnProfesionalesEnProyectos.Location = new Point(719, 757);
+            btnProfesionalesEnProyectos.Location = new Point(6, 150);
             btnProfesionalesEnProyectos.Name = "btnProfesionalesEnProyectos";
             btnProfesionalesEnProyectos.Size = new Size(560, 60);
             btnProfesionalesEnProyectos.TabIndex = 10;
@@ -162,6 +163,7 @@
             cmbProfesionales.Name = "cmbProfesionales";
             cmbProfesionales.Size = new Size(400, 42);
             cmbProfesionales.TabIndex = 13;
+            cmbProfesionales.Text = "Elige un Profesional";
             // 
             // btnProyectosProfesional
             // 
@@ -180,9 +182,9 @@
             // 
             // grpAnalisis
             // 
+            grpAnalisis.Controls.Add(btnProfesionalesEnProyectos);
             grpAnalisis.Controls.Add(btnTotalGananciasProfesional);
             grpAnalisis.Controls.Add(btnProyectosProfesional);
-            grpAnalisis.Controls.Add(btnTotalCosteProyecto);
             grpAnalisis.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             grpAnalisis.Location = new Point(85, 155);
             grpAnalisis.Name = "grpAnalisis";
@@ -191,13 +193,26 @@
             grpAnalisis.TabStop = false;
             grpAnalisis.Text = "Análisis";
             // 
+            // cmbProyectos
+            // 
+            cmbProyectos.BackColor = Color.Lavender;
+            cmbProyectos.FlatStyle = FlatStyle.Flat;
+            cmbProyectos.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbProyectos.FormattingEnabled = true;
+            cmbProyectos.Location = new Point(793, 844);
+            cmbProyectos.Name = "cmbProyectos";
+            cmbProyectos.Size = new Size(400, 42);
+            cmbProyectos.TabIndex = 21;
+            cmbProyectos.Text = "Elige un Proyecto";
+            // 
             // FormAnalisis
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1378, 924);
-            Controls.Add(btnProfesionalesEnProyectos);
+            Controls.Add(cmbProyectos);
             Controls.Add(btnLimpiar);
+            Controls.Add(btnTotalCosteProyecto);
             Controls.Add(btnAtras);
             Controls.Add(lblGestionProyectos);
             Controls.Add(cmbProfesionales);
@@ -225,5 +240,6 @@
         private ComboBox cmbProfesionales;
         private Button btnProyectosProfesional;
         private GroupBox grpAnalisis;
+        private ComboBox cmbProyectos;
     }
 }

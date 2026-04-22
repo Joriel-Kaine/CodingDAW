@@ -26,6 +26,25 @@ namespace Tema8_Tarea05_Integrador
 
 
         // Métodos.
+        private void ActualizarComboList()
+        {
+            cmbProfesionales.Items.Clear();
+            cmbProyectos.Items.Clear();
+
+            List<Profesional> listaProfesionales = _listaProfesionales.DevolverListaProfesionales();
+            List<Proyecto> listaProyectos = _listaProyectos.DevolverListaProyectos();
+
+            foreach (Profesional profesional in listaProfesionales)
+            {
+                cmbProfesionales.Items.Add(profesional.ComboBoxProfesional);
+            }
+
+            foreach (Proyecto proyecto in listaProyectos)
+            {
+                cmbProyectos.Items.Add(proyecto.ComboBoxProyecto);
+            }
+        }
+
         private void MostrarTodo()
         {
             lstAnalisis.Items.Clear();
@@ -41,7 +60,7 @@ namespace Tema8_Tarea05_Integrador
         // Load del formulario.
         private void FormAnalisis_Load(object sender, EventArgs e)
         {
-
+            this.ActualizarComboList();
         }
 
 

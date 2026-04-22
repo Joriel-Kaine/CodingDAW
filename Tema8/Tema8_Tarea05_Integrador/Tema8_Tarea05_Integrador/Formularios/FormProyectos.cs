@@ -25,7 +25,7 @@ namespace Tema8_Tarea05_Integrador
         }
 
         // Métodos.
-        private void ActualizarComboLists()
+        private void ActualizarComboList()
         {
             cmbProfesionales.Items.Clear();
             cmbProyectos.Items.Clear();
@@ -134,7 +134,7 @@ namespace Tema8_Tarea05_Integrador
         // Load del formulario.
         private void FormProyectos_Load(object sender, EventArgs e)
         {
-            this.ActualizarComboLists();
+            this.ActualizarComboList();
         }
 
 
