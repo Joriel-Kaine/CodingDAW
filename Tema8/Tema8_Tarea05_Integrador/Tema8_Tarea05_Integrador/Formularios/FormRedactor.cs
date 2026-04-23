@@ -82,6 +82,7 @@ namespace Tema8_Tarea05_Integrador
         {
             txtNombre.Text = null;
             txtDNI.Text = null;
+            txtEmail.Text = null;
             txtTelefono.Text = null;
             txtTematicaPrincipal.Text = null;
             txtPrecioPorPalabra.Text = "0";

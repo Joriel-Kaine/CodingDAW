@@ -157,6 +157,19 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        private void ProfesionalesEnProyectos()
+        {
+            List<Profesional> listaProfesionales = _listaProfesionales.DevolverListaProfesionales();
+
+            foreach (Profesional profesional in listaProfesionales)
+            {
+                if (profesional.DevolverListaProyectosProfesional().Count > 0)
+                {
+                    lstAnalisis.Items.Add(profesional);
+                }
+            }
+        }
+
 
         // Load del formulario.
         private void FormAnalisis_Load(object sender, EventArgs e)
@@ -188,7 +201,7 @@ namespace Tema8_Tarea05_Integrador
 
         private void btnProfesionalesEnProyectos_Click(object sender, EventArgs e)
         {
-
+            this.ProfesionalesEnProyectos();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)

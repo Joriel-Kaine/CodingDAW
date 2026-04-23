@@ -33,9 +33,9 @@ namespace Tema8_Tarea05_Integrador
             string nombreBox = txtNombre.Text,
                    dniBox = txtDNI.Text,
                    emailBox = txtEmail.Text,
-                   telefonoBox = txtEmail.Text,
-                   especialidadBox = txtTelefono.Text,
-                   tarifaHoraBox = txtEspecialidad.Text;
+                   telefonoBox = txtTelefono.Text,
+                   especialidadBox = txtEspecialidad.Text,
+                   tarifaHoraBox = txtTarifaHora.Text;
 
             // Declaración de variables donde se guardarán los valores ya validados y convertidos.
             string nombre, dni, email, telefono, especialidad;
@@ -62,7 +62,7 @@ namespace Tema8_Tarea05_Integrador
 
         private void FormDesigner_Load(object sender, EventArgs e)
         {
-            txtEspecialidad.Text = "0";
+            txtTarifaHora.Text = "0";
         }
 
         private void btnAddDesigner_Click(object sender, EventArgs e)
@@ -81,7 +81,8 @@ namespace Tema8_Tarea05_Integrador
             txtDNI.Text = null;
             txtEmail.Text = null;
             txtTelefono.Text = null;
-            txtEspecialidad.Text = "0";
+            txtEspecialidad.Text = null;
+            txtTarifaHora.Text = "0";
             txtNombre.Focus();
         }
     }

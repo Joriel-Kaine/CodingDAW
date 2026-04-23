@@ -34,18 +34,28 @@ namespace Tema8_Tarea05_Integrador.Profesionales
 
         // Método donde se añade un profesional a la lista de profesionales.
         // Se usa como parámetro de entrada al profesional, con todos los datos ya introducidos.
-        public void AddProfesional(Profesional profesional)
-        {   
-            _listaProfesionales.Add(profesional);
+        public bool AddProfesional(Profesional profesional)
+        {
+            bool esCorrecto = false;
+
+            // Se asegura que no haya duplicados en el código único (DNI) antes de añadir.
+            if (BuscarProfesional(profesional.DNI) < 0)
+            {
+                _listaProfesionales.Add(profesional);
+                esCorrecto = true;
+            }
+
+            return esCorrecto; // Se devuelve un booleano para mostrar mensajes en el FORM.
+
         }
 
         // Método para eliminar un profesional por su DNI.
         public bool EliminarProfesionalPorDNI(string dni)
         {
             bool esCorrecto = false;
-            int posicion = BuscarProfesional(dni);
+            int posicion = BuscarProfesional(dni); // Se busca la posición del Profesional.
 
-            if (posicion >= 0)
+            if (posicion >= 0) // Si es igual o mayor a 0, se elimina.
             {
                 _listaProfesionales.RemoveAt(posicion);
                 esCorrecto = true;
@@ -54,10 +64,12 @@ namespace Tema8_Tarea05_Integrador.Profesionales
             return esCorrecto;
         }
 
+        // Método para eliminar un profesional por su posicion.
         public bool EliminarProfesionalPorPosicion(int posicion)
         {
             bool esCorrecto = false;
 
+            // Se comprueba que la posición es válida.
             if (posicion >= 0 && posicion < _listaProfesionales.Count)
             {
                 _listaProfesionales.RemoveAt(posicion);
@@ -67,6 +79,7 @@ namespace Tema8_Tarea05_Integrador.Profesionales
             return esCorrecto;
         }
 
+        // Método para devolver la lista de profesionales para usar en el FORM.
         public List<Profesional> DevolverListaProfesionales()
         {
             return _listaProfesionales;

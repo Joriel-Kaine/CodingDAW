@@ -35,7 +35,9 @@ namespace Tema8_Tarea05_Integrador.Profesionales
 
         public override string ToString()
         {
-            return base.ToString();
+            return $"{base.ToString()}" +
+                   $"Especialidad: {TematicaPrincipal}" +
+                   $"Tarifa por hora: {PrecioPorPalabra}";
         }
 
         public override double CalcularPresupuesto()

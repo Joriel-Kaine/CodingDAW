@@ -130,7 +130,7 @@
             btnProfesionalesEnProyectos.FlatAppearance.BorderSize = 4;
             btnProfesionalesEnProyectos.FlatStyle = FlatStyle.Flat;
             btnProfesionalesEnProyectos.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnProfesionalesEnProyectos.Location = new Point(6, 150);
+            btnProfesionalesEnProyectos.Location = new Point(6, 58);
             btnProfesionalesEnProyectos.Name = "btnProfesionalesEnProyectos";
             btnProfesionalesEnProyectos.Size = new Size(560, 60);
             btnProfesionalesEnProyectos.TabIndex = 10;
@@ -145,7 +145,7 @@
             btnTotalGananciasProfesional.FlatAppearance.BorderSize = 4;
             btnTotalGananciasProfesional.FlatStyle = FlatStyle.Flat;
             btnTotalGananciasProfesional.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnTotalGananciasProfesional.Location = new Point(6, 58);
+            btnTotalGananciasProfesional.Location = new Point(6, 150);
             btnTotalGananciasProfesional.Name = "btnTotalGananciasProfesional";
             btnTotalGananciasProfesional.Size = new Size(560, 60);
             btnTotalGananciasProfesional.TabIndex = 11;
