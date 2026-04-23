@@ -46,18 +46,20 @@ namespace Tema8_Tarea05_Integrador
             bool esCorrecto = true;
 
             // Se comprueba si los datos con correctos (con AND).
-            esCorrecto &= FuncionesInterfaz.ValidarTexto(nombreBox, out nombre);
+            esCorrecto &= FuncionesInterfaz.ValidarNombre(nombreBox, out nombre);
             esCorrecto &= FuncionesInterfaz.ValidarDNI(dniBox, out dni);
-            esCorrecto &= FuncionesInterfaz.ValidarTexto(emailBox, out email);
-            esCorrecto &= FuncionesInterfaz.ValidarTexto(telefonoBox, out telefono);
-            esCorrecto &= FuncionesInterfaz.ValidarTexto(tematicaPrincipalBox, out tematicaPrincipal);
-            esCorrecto &= FuncionesInterfaz.ValidarDouble(precioPorPalabraBox, out precioPorPalabra);
+            esCorrecto &= FuncionesInterfaz.ValidarEmail(emailBox, out email);
+            esCorrecto &= FuncionesInterfaz.ValidarTelefono(cmbPrefijo.Text, telefonoBox, out telefono);
+            esCorrecto &= FuncionesInterfaz.ValidarNombre(tematicaPrincipalBox, out tematicaPrincipal);
+            esCorrecto &= FuncionesInterfaz.ValidarPrecioPalabras(precioPorPalabraBox, out precioPorPalabra);
 
             if (esCorrecto)
             {
                 Redactor redactor = new(nombre, dni, email, telefono, tematicaPrincipal, precioPorPalabra);
 
                 _listaProfesionales.AddProfesional(redactor);
+
+                MessageBox.Show("Profesional añadido correctamente.");
             }
         }
 
@@ -83,6 +85,7 @@ namespace Tema8_Tarea05_Integrador
             txtNombre.Text = null;
             txtDNI.Text = null;
             txtEmail.Text = null;
+            cmbPrefijo.Text = null;
             txtTelefono.Text = null;
             txtTematicaPrincipal.Text = null;
             txtPrecioPorPalabra.Text = "0";

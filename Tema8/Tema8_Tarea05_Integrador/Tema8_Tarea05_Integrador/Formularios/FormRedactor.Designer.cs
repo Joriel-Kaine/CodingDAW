@@ -44,6 +44,7 @@
             lblTelefono = new Label();
             lblDNI = new Label();
             lblNombre = new Label();
+            cmbPrefijo = new ComboBox();
             SuspendLayout();
             // 
             // btnAddRedactor
@@ -116,7 +117,7 @@
             txtPrecioPorPalabra.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPrecioPorPalabra.Location = new Point(310, 611);
             txtPrecioPorPalabra.Name = "txtPrecioPorPalabra";
-            txtPrecioPorPalabra.Size = new Size(293, 41);
+            txtPrecioPorPalabra.Size = new Size(360, 41);
             txtPrecioPorPalabra.TabIndex = 49;
             // 
             // txtTematicaPrincipal
@@ -126,7 +127,7 @@
             txtTematicaPrincipal.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTematicaPrincipal.Location = new Point(310, 517);
             txtTematicaPrincipal.Name = "txtTematicaPrincipal";
-            txtTematicaPrincipal.Size = new Size(293, 41);
+            txtTematicaPrincipal.Size = new Size(360, 41);
             txtTematicaPrincipal.TabIndex = 48;
             // 
             // txtTelefono
@@ -134,9 +135,9 @@
             txtTelefono.BackColor = Color.LavenderBlush;
             txtTelefono.BorderStyle = BorderStyle.FixedSingle;
             txtTelefono.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtTelefono.Location = new Point(310, 423);
+            txtTelefono.Location = new Point(416, 423);
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(293, 41);
+            txtTelefono.Size = new Size(254, 41);
             txtTelefono.TabIndex = 47;
             // 
             // txtEmail
@@ -146,7 +147,7 @@
             txtEmail.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtEmail.Location = new Point(310, 329);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(293, 41);
+            txtEmail.Size = new Size(360, 41);
             txtEmail.TabIndex = 46;
             // 
             // txtDNI
@@ -156,7 +157,7 @@
             txtDNI.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtDNI.Location = new Point(310, 235);
             txtDNI.Name = "txtDNI";
-            txtDNI.Size = new Size(293, 41);
+            txtDNI.Size = new Size(360, 41);
             txtDNI.TabIndex = 45;
             // 
             // txtNombre
@@ -166,7 +167,7 @@
             txtNombre.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtNombre.Location = new Point(310, 141);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(293, 41);
+            txtNombre.Size = new Size(360, 41);
             txtNombre.TabIndex = 44;
             // 
             // lblPrecioPorPalabra
@@ -219,12 +220,24 @@
             lblNombre.TabIndex = 39;
             lblNombre.Text = "Nombre:";
             // 
+            // cmbPrefijo
+            // 
+            cmbPrefijo.BackColor = Color.LavenderBlush;
+            cmbPrefijo.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbPrefijo.FormattingEnabled = true;
+            cmbPrefijo.Items.AddRange(new object[] { "+34", "+33", "+39", "+49" });
+            cmbPrefijo.Location = new Point(310, 422);
+            cmbPrefijo.Name = "cmbPrefijo";
+            cmbPrefijo.Size = new Size(100, 42);
+            cmbPrefijo.TabIndex = 51;
+            // 
             // FormRedactor
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Thistle;
             ClientSize = new Size(778, 844);
+            Controls.Add(cmbPrefijo);
             Controls.Add(lblEmail);
             Controls.Add(txtPrecioPorPalabra);
             Controls.Add(txtTematicaPrincipal);
@@ -265,5 +278,6 @@
         private Label lblTelefono;
         private Label lblDNI;
         private Label lblNombre;
+        private ComboBox cmbPrefijo;
     }
 }

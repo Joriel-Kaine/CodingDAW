@@ -45,18 +45,20 @@ namespace Tema8_Tarea05_Integrador
             bool esCorrecto = true;
 
             // Se comprueba si los datos con correctos (con AND).
-            esCorrecto &= FuncionesInterfaz.ValidarTexto(nombreBox, out nombre);
+            esCorrecto &= FuncionesInterfaz.ValidarNombre(nombreBox, out nombre);
             esCorrecto &= FuncionesInterfaz.ValidarDNI(dniBox, out dni);
-            esCorrecto &= FuncionesInterfaz.ValidarTexto(emailBox, out email);
-            esCorrecto &= FuncionesInterfaz.ValidarTexto(telefonoBox, out telefono);
-            esCorrecto &= FuncionesInterfaz.ValidarTexto(lenguajePrincipalBox, out lenguajePrincipal);
-            esCorrecto &= FuncionesInterfaz.ValidarDouble(tarifaHoraBox, out tarifaHora);
+            esCorrecto &= FuncionesInterfaz.ValidarEmail(emailBox, out email);
+            esCorrecto &= FuncionesInterfaz.ValidarTelefono(cmbPrefijo.Text, telefonoBox, out telefono);
+            esCorrecto &= FuncionesInterfaz.ValidarNombre(lenguajePrincipalBox, out lenguajePrincipal);
+            esCorrecto &= FuncionesInterfaz.ValidarTarifaHora(tarifaHoraBox, out tarifaHora);
 
             if (esCorrecto)
             {
                 Desarrollador desarrollador = new(nombre, dni, email, telefono, lenguajePrincipal, tarifaHora);
 
                 _listaProfesionales.AddProfesional(desarrollador);
+
+                MessageBox.Show("Profesional añadido correctamente.");
             }
         }
 
@@ -80,6 +82,7 @@ namespace Tema8_Tarea05_Integrador
             txtNombre.Text = null;
             txtDNI.Text = null;
             txtEmail.Text = null;
+            cmbPrefijo.Text = null;
             txtTelefono.Text = null;
             txtLenguajePrincipal.Text = null;
             txtTarifaHora.Text = "0";

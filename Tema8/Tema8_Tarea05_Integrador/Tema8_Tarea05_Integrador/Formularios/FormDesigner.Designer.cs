@@ -44,6 +44,7 @@
             btnLimpiar = new Button();
             txtTarifaHora = new TextBox();
             lblEmail = new Label();
+            cmbPrefijo = new ComboBox();
             SuspendLayout();
             // 
             // lblDesigner
@@ -128,7 +129,7 @@
             txtNombre.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtNombre.Location = new Point(310, 141);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(293, 41);
+            txtNombre.Size = new Size(360, 41);
             txtNombre.TabIndex = 7;
             // 
             // txtDNI
@@ -138,7 +139,7 @@
             txtDNI.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtDNI.Location = new Point(310, 235);
             txtDNI.Name = "txtDNI";
-            txtDNI.Size = new Size(293, 41);
+            txtDNI.Size = new Size(360, 41);
             txtDNI.TabIndex = 9;
             // 
             // txtEmail
@@ -148,7 +149,7 @@
             txtEmail.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtEmail.Location = new Point(310, 329);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(293, 41);
+            txtEmail.Size = new Size(360, 41);
             txtEmail.TabIndex = 10;
             // 
             // txtTelefono
@@ -156,9 +157,9 @@
             txtTelefono.BackColor = Color.LightGoldenrodYellow;
             txtTelefono.BorderStyle = BorderStyle.FixedSingle;
             txtTelefono.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtTelefono.Location = new Point(310, 423);
+            txtTelefono.Location = new Point(416, 423);
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(293, 41);
+            txtTelefono.Size = new Size(254, 41);
             txtTelefono.TabIndex = 11;
             // 
             // txtEspecialidad
@@ -168,7 +169,7 @@
             txtEspecialidad.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtEspecialidad.Location = new Point(310, 517);
             txtEspecialidad.Name = "txtEspecialidad";
-            txtEspecialidad.Size = new Size(293, 41);
+            txtEspecialidad.Size = new Size(360, 41);
             txtEspecialidad.TabIndex = 12;
             // 
             // btnAtras
@@ -206,7 +207,7 @@
             txtTarifaHora.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTarifaHora.Location = new Point(310, 611);
             txtTarifaHora.Name = "txtTarifaHora";
-            txtTarifaHora.Size = new Size(293, 41);
+            txtTarifaHora.Size = new Size(360, 41);
             txtTarifaHora.TabIndex = 18;
             // 
             // lblEmail
@@ -219,12 +220,24 @@
             lblEmail.TabIndex = 19;
             lblEmail.Text = "Email:";
             // 
+            // cmbPrefijo
+            // 
+            cmbPrefijo.BackColor = Color.LightGoldenrodYellow;
+            cmbPrefijo.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbPrefijo.FormattingEnabled = true;
+            cmbPrefijo.Items.AddRange(new object[] { "+34", "+33", "+39", "+49" });
+            cmbPrefijo.Location = new Point(310, 422);
+            cmbPrefijo.Name = "cmbPrefijo";
+            cmbPrefijo.Size = new Size(100, 42);
+            cmbPrefijo.TabIndex = 20;
+            // 
             // FormDesigner
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(778, 844);
+            Controls.Add(cmbPrefijo);
             Controls.Add(lblEmail);
             Controls.Add(txtTarifaHora);
             Controls.Add(btnLimpiar);
@@ -266,5 +279,6 @@
         private Button btnLimpiar;
         private TextBox txtTarifaHora;
         private Label lblEmail;
+        private ComboBox cmbPrefijo;
     }
 }

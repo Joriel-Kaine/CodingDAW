@@ -37,17 +37,17 @@ namespace Tema8_Tarea05_Integrador.Profesionales
         // Método virtual que será reescrito en las clases heredadas.
         public virtual string MostrarTipo()
         {
-            return "PROFESIONAL" +
-                   "═══════════";
+            return "Profesional: ";
         }
 
         // Método que sobreescribe el método heredado de System.Object
         public override string ToString()
         {
-            return $"Nombre: {Nombre} - \n" +
-                   $"DNI: {DNI} - \n" +
-                   $"Email: {Email} - \n" +
-                   $"Teléfono: {Telefono} ";
+            return $"{MostrarTipo()}" +
+                   $"{Nombre} - \n" +
+                   $"{DNI} - \n" +
+                   $"{Email} - \n" +
+                   $"{Telefono} - \n ";
         }
 
         // Método abstracto (sin cuerpo) para calcular el presupuesto.

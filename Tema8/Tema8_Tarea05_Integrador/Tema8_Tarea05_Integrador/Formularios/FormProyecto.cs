@@ -40,15 +40,17 @@ namespace Tema8_Tarea05_Integrador
             bool esCorrecto = true;
 
             // Se comprueba si los datos con correctos (con AND).
-            esCorrecto &= FuncionesInterfaz.ValidarTexto(nombreBox, out nombre);
-            esCorrecto &= FuncionesInterfaz.ValidarEntero(codigoBox, out codigo);
-            esCorrecto &= FuncionesInterfaz.ValidarEntero(duracionBox, out duracion);
+            esCorrecto &= FuncionesInterfaz.ValidarNombre(nombreBox, out nombre);
+            esCorrecto &= FuncionesInterfaz.ValidarCodigo(codigoBox, out codigo);
+            esCorrecto &= FuncionesInterfaz.ValidarDuracion(duracionBox, out duracion);
 
             if (esCorrecto) // Si es correcto se añade a la lista.
             {
                 Proyecto proyecto = new(nombre, codigo, duracion);
 
                 _listaProyectos.AddProyecto(proyecto);
+
+                MessageBox.Show("Proyecto añadido correctamente.");
             }
         }
 

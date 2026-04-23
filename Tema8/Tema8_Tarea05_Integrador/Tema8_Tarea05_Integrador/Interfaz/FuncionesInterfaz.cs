@@ -3,75 +3,30 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Tema8_Tarea05_Integrador.Interfaz
 {
     public static class FuncionesInterfaz
     {
-        public static bool ValidarDouble(string mensaje, out double num)
-        {
-            bool esCorrecto = double.TryParse(mensaje, out num);
+        const string ErrorLongitudTelefono = "El número no tiene la longitud correcta.";
 
-            if (!esCorrecto)
-            {
-                MessageBox.Show("Introduce valores numéricos válidos");
-            }
-
-            return esCorrecto;
-        }
-
-        public static bool ValidarEntero(string mensaje, out int num)
-        {
-            bool esCorrecto = int.TryParse(mensaje, out num);
-
-            if (!esCorrecto)
-            {
-                MessageBox.Show("Introduce valores numéricos válidos");
-            }
-
-            return esCorrecto;
-        }
-
-        public static bool ValidarTexto(string mensaje, out string texto)
+        public static bool ValidarNombre(string nombreEntrada, out string nombreSalida)
         {
             bool esCorrecto = true;
-            texto = mensaje;
+            nombreEntrada = nombreEntrada.Trim();
+            nombreSalida = nombreEntrada;
 
-            if (string.IsNullOrEmpty(mensaje))
+            if (string.IsNullOrEmpty(nombreEntrada))
             {
-                MessageBox.Show("No se permiten textos vacíos o nulos.");
+                MessageBox.Show("El nombre no debe estar vacío o ser nulo.");
                 esCorrecto = false;
             }
-            else if (!mensaje.All(char.IsLetter))
+            else if (!nombreEntrada.All(char.IsLetter))
             {
-                MessageBox.Show("Introduce textos válidos.");
+                MessageBox.Show("Introduce un nombre válido.");
                 esCorrecto = false;
-            }
-
-            return esCorrecto;
-        }
-
-        private static bool ContieneNum(char caracter)
-        {
-            bool esCorrecto = false;
-
-            if (caracter >= '0' && caracter <= '9')
-            {
-                esCorrecto = true;
-            }
-
-            return esCorrecto;
-        }
-
-        private static bool ContieneLetra(char caracter)
-        {
-            bool esCorrecto = false;
-            caracter = char.ToUpper(caracter);
-
-            if (caracter >= 'A' && caracter <= 'Z')
-            {
-                esCorrecto = true;
             }
 
             return esCorrecto;
@@ -79,47 +34,170 @@ namespace Tema8_Tarea05_Integrador.Interfaz
 
         public static bool ValidarDNI(string dniEntrada, out string dniSalida)
         {
-            string parteNum, parteLetra;
             bool esCorrecto = true;
-            
-            parteNum = ""; parteLetra = "";
-              
+
             dniEntrada = dniEntrada.Trim().ToUpper();
+            dniSalida = dniEntrada;
+
+            /* Regex para 8 números + 1 letra.
+             */
+            string patron = @"^[0-9]{8}[A-Z]$";
             
-            if (dniEntrada.Length == 9)
+            if (!Regex.IsMatch(dniEntrada, patron)) 
+            { 
+                MessageBox.Show("Introduce un número de identidad válido.");
+                esCorrecto = false;
+            }
+
+            return esCorrecto;
+        }
+
+        public static bool ValidarEmail(string emailEntrada, out string emailSalida)
+        {
+            bool esCorrecto = true;
+
+            emailEntrada = emailEntrada.Trim().ToLower();
+            emailSalida = emailEntrada;
+
+            /* Regex para validar el formato de email.
+             */
+            string patron = @"^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,}$";
+
+            if (!Regex.IsMatch(emailEntrada, patron))
             {
-                for (int i = 0; i < dniEntrada.Length; i++)
-                {
+                MessageBox.Show("Introduce un correo electrónico válido.");
+                esCorrecto = false;
+            }
 
-                    if (ContieneNum(dniEntrada[i]) && parteNum.Length < 8)
-                    {
-                        parteNum += dniEntrada[i];
-                    }
-                    else if (i == dniEntrada.Length - 1 && ContieneLetra(dniEntrada[i]))
-                    {
-                        parteLetra += dniEntrada[i];
-                    }
-                    else
-                    {
-                        esCorrecto = false;
-                    }
-                }
+            return esCorrecto;
+        }
 
-                if (parteNum.Length != 8 || parteLetra.Length != 1)
-                {
-                    esCorrecto = false;
+        public static bool ValidarTelefono(string prefijo, string telefonoEntrada, out string telefonoSalida)
+        {
+            bool esCorrecto = true;
+            telefonoEntrada = telefonoEntrada.Trim();
+            telefonoSalida = telefonoEntrada;
 
-                    MessageBox.Show("Introduce un número de identidad válido.");
-                }
+            if (string.IsNullOrEmpty(telefonoEntrada))
+            {
+                MessageBox.Show("El teléfono no debe estar vacío o ser nulo.");
+                esCorrecto = false;
+            }
+            else if (!telefonoEntrada.All(char.IsDigit))
+            {
+                MessageBox.Show("Introduce un número de teléfono válido.");
+                esCorrecto = false;
             }
             else
             {
-                esCorrecto = false;
+                switch (prefijo)
+                {
+                    case "+34":
+                        if (telefonoEntrada.Length != 9)
+                        {
+                            MessageBox.Show(ErrorLongitudTelefono);
+                            esCorrecto = false;
+                        }
+                        break;
+                    case "+33":
+                        if (telefonoEntrada.Length != 9)
+                        {
+                            MessageBox.Show(ErrorLongitudTelefono);
+                            esCorrecto = false;
+                        }
+                        break;
+                    case "+39":
+                        if (telefonoEntrada.Length < 9 || telefonoEntrada.Length > 10)
+                        {
+                            MessageBox.Show(ErrorLongitudTelefono);
+                            esCorrecto = false;
+                        }
+                        break;
+                    case "+49":
+                        if (telefonoEntrada.Length < 7 || telefonoEntrada.Length > 11)
+                        {
+                            MessageBox.Show(ErrorLongitudTelefono);
+                            esCorrecto = false;
+                        }
+                        break;
+                }
+            }
 
-                MessageBox.Show("El DNI debe componerse de 9 caracteres.");
+            return esCorrecto;
+        }
+
+        public static bool ValidarCodigo(string codigoEntrada, out int codigoSalida)
+        {
+            bool esCorrecto = true;
+            codigoEntrada = codigoEntrada.Trim();
+
+            if (!int.TryParse(codigoEntrada, out codigoSalida))
+            {
+                MessageBox.Show("Introduce un código válido.");
+                esCorrecto = false;
+            }
+            else if (codigoSalida < 1000 || codigoSalida > 9999)
+            {
+                MessageBox.Show("El código debe estar entre 1000 y 9999");
+                esCorrecto = false;
             }
             
-            dniSalida = parteNum + parteLetra;
+            return esCorrecto;
+        }
+
+        public static bool ValidarDuracion(string duracionEntrada, out int duracionSalida)
+        {
+            bool esCorrecto = true;
+            duracionEntrada = duracionEntrada.Trim();
+
+            if (!int.TryParse(duracionEntrada, out duracionSalida))
+            {
+                MessageBox.Show("Introduce valores numéricos válidos.");
+                esCorrecto = false;
+            }
+            else if (duracionSalida < 50 || duracionSalida > 500)
+            {
+                MessageBox.Show("La duración del proyecto debe estar entre 50 y 500 horas.");
+                esCorrecto = false;
+            }
+
+            return esCorrecto;
+        }
+
+        public static bool ValidarTarifaHora(string tarifaEntrada, out double tarifaSalida)
+        {
+            bool esCorrecto = true;
+            tarifaEntrada = tarifaEntrada.Trim();
+
+            if (!double.TryParse(tarifaEntrada, out tarifaSalida))
+            {
+                MessageBox.Show("Introduce valores numéricos válidos.");
+                esCorrecto = false;
+            }
+            else if (tarifaSalida < 10 || tarifaSalida > 100)
+            {
+                MessageBox.Show("La tarifa por hora debe estar entre 10€ y 100€");
+                esCorrecto = false;
+            }
+
+            return esCorrecto;
+        }
+
+        public static bool ValidarPrecioPalabras(string precioPalabraEntrada, out double precioPalabraSalida)
+        {
+            bool esCorrecto = true;
+            precioPalabraEntrada = precioPalabraEntrada.Trim();
+
+            if (!double.TryParse(precioPalabraEntrada, out precioPalabraSalida))
+            {
+                MessageBox.Show("Introduce valores numéricos válidos.");
+                esCorrecto = false;
+            }
+            else if (precioPalabraSalida < 0.01 || precioPalabraSalida > 0.20)
+            {
+                MessageBox.Show("La duración del precio por palabra debe estar entre 0.01€ y 0.20€");
+                esCorrecto = false;
+            }
 
             return esCorrecto;
         }

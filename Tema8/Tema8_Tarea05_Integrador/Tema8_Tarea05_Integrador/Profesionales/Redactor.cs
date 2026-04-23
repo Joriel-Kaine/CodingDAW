@@ -29,15 +29,14 @@ namespace Tema8_Tarea05_Integrador.Profesionales
         // Métodos que sobreescriben los métodos de la clase base.
         public override string MostrarTipo()
         {
-            return "REDACTOR" +
-                   "════════";
+            return "Redactor: ";
         }
 
         public override string ToString()
         {
             return $"{base.ToString()}" +
-                   $"Especialidad: {TematicaPrincipal}" +
-                   $"Tarifa por hora: {PrecioPorPalabra}";
+                   $"{TematicaPrincipal} - \n" +
+                   $"{PrecioPorPalabra:C2}";
         }
 
         public override double CalcularPresupuesto()
