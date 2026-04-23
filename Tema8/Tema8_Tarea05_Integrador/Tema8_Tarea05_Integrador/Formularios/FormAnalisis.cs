@@ -56,6 +56,107 @@ namespace Tema8_Tarea05_Integrador
             lstAnalisis.Items.Add($"El total de proyectos que hay es de {totalProyectos}");
         }
 
+        private void CosteTotalProyecto()
+        {
+            if (cmbProyectos.SelectedItem is null)
+            {
+                MessageBox.Show("Selecciona un proyecto.");
+            }
+            else
+            {
+                string? comboProyecto = cmbProyectos.SelectedItem.ToString();
+
+                Proyecto? proyecto = _listaProyectos
+                    .DevolverListaProyectos()
+                    .FirstOrDefault(proyecto => proyecto.ComboBoxProyecto == comboProyecto);
+
+                if (proyecto is null)
+                {
+                    MessageBox.Show("Error.");
+                }
+                else
+                {
+                    lstAnalisis.Items.Clear();
+                    List<Profesional> listaProfesionalesProyecto = proyecto.DevolverListaProfesionalesProyecto();
+                    double totalTarifaHora = 0;
+
+                    foreach (Profesional profesional in listaProfesionalesProyecto)
+                    {
+                        totalTarifaHora += profesional.CalcularPresupuesto();
+                    }
+
+                    lstAnalisis.Items.Add($"El total del coste del proyecto es de " +
+                                          $"{totalTarifaHora * proyecto.Duracion:C2}");
+                }
+            }
+        }
+
+        private void ProyectosDeProfesional()
+        {
+            if (cmbProfesionales.SelectedItem is null)
+            {
+                MessageBox.Show("Selecciona un profesional.");
+            }
+            else
+            {
+                string? comboProfesional = cmbProfesionales.SelectedItem.ToString();
+
+                Profesional? profesional = _listaProfesionales
+                    .DevolverListaProfesionales()
+                    .FirstOrDefault(profesional => profesional.ComboBoxProfesional == comboProfesional);
+
+                if (profesional is null)
+                {
+                    MessageBox.Show("Error.");
+                }
+                else
+                {
+                    lstAnalisis.Items.Clear();
+                    List<Proyecto> listaProyectosProfesional = profesional.DevolverListaProyectosProfesional();
+
+                    foreach (Proyecto proyecto in listaProyectosProfesional)
+                    {
+                        lstAnalisis.Items.Add(proyecto);
+                    }
+                }
+            }
+        }
+
+        private void GananciasProfesional()
+        {
+            if (cmbProfesionales.SelectedItem is null)
+            {
+                MessageBox.Show("Selecciona un profesional.");
+            }
+            else
+            {
+                string? comboProfesional = cmbProfesionales.SelectedItem.ToString();
+
+                Profesional? profesional = _listaProfesionales
+                    .DevolverListaProfesionales()
+                    .FirstOrDefault(profesional => profesional.ComboBoxProfesional == comboProfesional);
+
+                if (profesional is null)
+                {
+                    MessageBox.Show("Error.");
+                }
+                else
+                {
+                    lstAnalisis.Items.Clear();
+                    List<Proyecto> listaProyectosProfesional = profesional.DevolverListaProyectosProfesional();
+                    double totalHoras = 0;
+
+                    foreach (Proyecto proyecto in listaProyectosProfesional)
+                    {
+                        totalHoras += proyecto.Duracion;
+                    }
+
+                    lstAnalisis.Items.Add($"El total de ganancias del profesional es de " +
+                                          $"{totalHoras * profesional.CalcularPresupuesto():C2}");
+                }
+            }
+        }
+
 
         // Load del formulario.
         private void FormAnalisis_Load(object sender, EventArgs e)
@@ -72,17 +173,17 @@ namespace Tema8_Tarea05_Integrador
 
         private void btnTotalCosteProyecto_Click(object sender, EventArgs e)
         {
-
+            this.CosteTotalProyecto();
         }
 
         private void btnProyectosProfesional_Click(object sender, EventArgs e)
         {
-
+            this.ProyectosDeProfesional();
         }
 
         private void btnTotalGananciasProfesional_Click(object sender, EventArgs e)
         {
-
+            this.GananciasProfesional();
         }
 
         private void btnProfesionalesEnProyectos_Click(object sender, EventArgs e)

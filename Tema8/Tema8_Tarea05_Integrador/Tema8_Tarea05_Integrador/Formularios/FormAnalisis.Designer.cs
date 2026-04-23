@@ -117,11 +117,11 @@
             // 
             lblGestionProyectos.AutoSize = true;
             lblGestionProyectos.Font = new Font("Maiandra GD", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblGestionProyectos.Location = new Point(502, 49);
+            lblGestionProyectos.Location = new Point(609, 49);
             lblGestionProyectos.Name = "lblGestionProyectos";
-            lblGestionProyectos.Size = new Size(365, 48);
+            lblGestionProyectos.Size = new Size(155, 48);
             lblGestionProyectos.TabIndex = 17;
-            lblGestionProyectos.Text = "Gestión de Análisis";
+            lblGestionProyectos.Text = "Análisis";
             // 
             // btnProfesionalesEnProyectos
             // 

@@ -36,7 +36,7 @@ namespace Tema8_Tarea05_Integrador.Profesionales
 
         public override double CalcularPresupuesto()
         {
-            return 0.0;
+            return TarifaHora;
         }
     }
 }

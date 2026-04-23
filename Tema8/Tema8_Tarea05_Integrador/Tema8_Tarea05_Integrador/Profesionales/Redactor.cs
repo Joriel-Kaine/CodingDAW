@@ -40,16 +40,7 @@ namespace Tema8_Tarea05_Integrador.Profesionales
 
         public override double CalcularPresupuesto()
         {
-            return 0.0;
-        }
-
-
-        // Conversión del precio por palabra a la tarifa por hora que cobra.
-        public double TarifaHoraRedactor()
-        {
-            double tarifaHora;
-
-            return tarifaHora = PrecioPorPalabra * TarifaHora;
+            return PrecioPorPalabra * TarifaHora;
         }
     }
 }
