@@ -35,16 +35,21 @@ namespace Tema8_Tarea05_Integrador.Proyectos
         public override string ToString()
         {
             return $"Nombre: {Nombre} - \n" +
-                   $"Código: {Codigo} - \n" +
-                   $"Duración: {Duracion}";
+                   $"Código: ({Codigo}) - \n" +
+                   $"{Duracion} horas.";
         }
 
-        public void AddProfesional(Profesional profesional)
+        public bool AddProfesional(Profesional profesional)
         {
+            bool esCorrecto = false;
+
             if (!_listaProfesionales.Contains(profesional))
             {
                 _listaProfesionales.Add(profesional);
+                esCorrecto = true;
             }
+
+            return esCorrecto;
         }
 
         public List<Profesional> DevolverListaProfesionalesProyecto()

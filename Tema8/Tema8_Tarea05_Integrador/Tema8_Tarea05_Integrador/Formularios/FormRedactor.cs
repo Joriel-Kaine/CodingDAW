@@ -39,7 +39,7 @@ namespace Tema8_Tarea05_Integrador
                    precioPorPalabraBox = txtPrecioPorPalabra.Text;
 
             // Declaración de variables donde se guardarán los valores ya validados y convertidos.
-            string nombre, dni, email, telefono, tematicaPrincipal;
+            string nombre, dni, email, telefono, tematicaPrincipal, telefonoCompleto;
             double precioPorPalabra;
 
             // Declaración del booleano que comprobará que los datos son correctos.
@@ -53,13 +53,20 @@ namespace Tema8_Tarea05_Integrador
             esCorrecto &= FuncionesInterfaz.ValidarNombre(tematicaPrincipalBox, out tematicaPrincipal);
             esCorrecto &= FuncionesInterfaz.ValidarPrecioPalabras(precioPorPalabraBox, out precioPorPalabra);
 
+            telefonoCompleto = cmbPrefijo.Text + telefono;
+
             if (esCorrecto)
             {
-                Redactor redactor = new(nombre, dni, email, telefono, tematicaPrincipal, precioPorPalabra);
+                Redactor redactor = new(nombre, dni, email, telefonoCompleto, tematicaPrincipal, precioPorPalabra);
 
-                _listaProfesionales.AddProfesional(redactor);
-
-                MessageBox.Show("Profesional añadido correctamente.");
+                if (_listaProfesionales.AddProfesional(redactor))
+                {
+                    MessageBox.Show("Profesional añadido correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("Ya existe un profesional con ese DNI.");
+                }
             }
         }
 

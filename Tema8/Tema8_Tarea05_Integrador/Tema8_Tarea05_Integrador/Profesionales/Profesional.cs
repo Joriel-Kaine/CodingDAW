@@ -53,12 +53,17 @@ namespace Tema8_Tarea05_Integrador.Profesionales
         // Método abstracto (sin cuerpo) para calcular el presupuesto.
         public abstract double CalcularPresupuesto();
 
-        public void AddProyecto(Proyecto proyecto)
+        public bool AddProyecto(Proyecto proyecto)
         {
+            bool esCorrecto = false;
+
             if (!_listaProyectos.Contains(proyecto))
             {
                 _listaProyectos.Add(proyecto);
+                esCorrecto = true;
             }
+
+            return esCorrecto;
         }
 
         public List<Proyecto> DevolverListaProyectosProfesional()

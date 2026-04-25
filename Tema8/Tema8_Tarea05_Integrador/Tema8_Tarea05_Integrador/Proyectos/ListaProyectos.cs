@@ -32,13 +32,13 @@ namespace Tema8_Tarea05_Integrador.Proyectos
             return posicion;
         }
 
-        // Método donde se añade un profesional a la lista de profesionales.
-        // Se usa como parámetro de entrada al profesional, con todos los datos ya introducidos.
+        // Método donde se añade un proyecto a la lista de proyectos.
+        // Se usa como parámetro de entrada al proyecto, con todos los datos ya introducidos.
         public bool AddProyecto(Proyecto proyecto)
         {
             bool esCorrecto = false;
 
-            // Se asegura que no haya duplicados en el código único (DNI) antes de añadir.
+            // Se asegura que no haya duplicados en el código único (Codigo) antes de añadir.
             if (BuscarProyecto(proyecto.Codigo) < 0)
             {
                 _listaProyectos.Add(proyecto);
@@ -51,6 +51,35 @@ namespace Tema8_Tarea05_Integrador.Proyectos
         public List<Proyecto> DevolverListaProyectos()
         {
             return _listaProyectos;
+        }
+
+        public bool EliminarProyectoPorCodigo(int codigo)
+        {
+            bool esCorrecto = false;
+            int posicion = BuscarProyecto(codigo); // Se busca la posición del proyecto.
+
+            if (posicion >= 0) // Si es igual o mayor a 0, se elimina.
+            {
+                _listaProyectos.RemoveAt(posicion);
+                esCorrecto = true;
+            }
+
+            return esCorrecto;
+        }
+
+        // Método para eliminar un proyecto por su posicion.
+        public bool EliminarProyectosPorPosicion(int posicion)
+        {
+            bool esCorrecto = false;
+
+            // Se comprueba que la posición es válida.
+            if (posicion >= 0 && posicion < _listaProyectos.Count)
+            {
+                _listaProyectos.RemoveAt(posicion);
+                esCorrecto = true;
+            }
+
+            return esCorrecto;
         }
     }
 }

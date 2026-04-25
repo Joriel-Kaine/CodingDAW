@@ -52,8 +52,8 @@ namespace Tema8_Tarea05_Integrador
             var totalProfesionales = _listaProfesionales.DevolverListaProfesionales().Count;
             var totalProyectos = _listaProyectos.DevolverListaProyectos().Count;
 
-            lstAnalisis.Items.Add($"El total de profesionales que hay es de {totalProfesionales}");
-            lstAnalisis.Items.Add($"El total de proyectos que hay es de {totalProyectos}");
+            lstAnalisis.Items.Add($"Hay un total de {totalProfesionales} profesionales en la empresa.");
+            lstAnalisis.Items.Add($"Hay un total de {totalProyectos} proyectos en la empresa.");
         }
 
         private void CosteTotalProyecto()
@@ -72,7 +72,7 @@ namespace Tema8_Tarea05_Integrador
 
                 if (proyecto is null)
                 {
-                    MessageBox.Show("Error.");
+                    MessageBox.Show("Error interno.");
                 }
                 else
                 {
@@ -107,7 +107,7 @@ namespace Tema8_Tarea05_Integrador
 
                 if (profesional is null)
                 {
-                    MessageBox.Show("Error.");
+                    MessageBox.Show("Error interno.");
                 }
                 else
                 {
@@ -138,7 +138,7 @@ namespace Tema8_Tarea05_Integrador
 
                 if (profesional is null)
                 {
-                    MessageBox.Show("Error.");
+                    MessageBox.Show("Error interno.");
                 }
                 else
                 {
@@ -159,11 +159,26 @@ namespace Tema8_Tarea05_Integrador
 
         private void ProfesionalesEnProyectos()
         {
+            lstAnalisis.Items.Clear();
             List<Profesional> listaProfesionales = _listaProfesionales.DevolverListaProfesionales();
 
             foreach (Profesional profesional in listaProfesionales)
             {
                 if (profesional.DevolverListaProyectosProfesional().Count > 0)
+                {
+                    lstAnalisis.Items.Add(profesional);
+                }
+            }
+        }
+
+        private void ProfesionalesSinProyectos()
+        {
+            lstAnalisis.Items.Clear();
+            List<Profesional> listaProfesionales = _listaProfesionales.DevolverListaProfesionales();
+
+            foreach (Profesional profesional in listaProfesionales)
+            {
+                if (profesional.DevolverListaProyectosProfesional().Count <= 0)
                 {
                     lstAnalisis.Items.Add(profesional);
                 }
@@ -202,6 +217,11 @@ namespace Tema8_Tarea05_Integrador
         private void btnProfesionalesEnProyectos_Click(object sender, EventArgs e)
         {
             this.ProfesionalesEnProyectos();
+        }
+
+        private void btnProfesionalesSinProyectos_Click(object sender, EventArgs e)
+        {
+            this.ProfesionalesSinProyectos();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)

@@ -23,7 +23,7 @@ namespace Tema8_Tarea05_Integrador.Interfaz
                 MessageBox.Show("El nombre no debe estar vacío o ser nulo.");
                 esCorrecto = false;
             }
-            else if (!nombreEntrada.All(char.IsLetter))
+            else if (!nombreEntrada.All(caracter => char.IsLetter(caracter) || caracter == ' '))
             {
                 MessageBox.Show("Introduce un nombre válido.");
                 esCorrecto = false;
@@ -207,9 +207,10 @@ namespace Tema8_Tarea05_Integrador.Interfaz
             bool esCorrecto = true;
             mensaje = mensaje.Trim();
 
-            if (!int.TryParse(mensaje, out num))
+            if (!int.TryParse(mensaje, out num) || num < 0)
             {
                 MessageBox.Show("Introduce valores numéricos válidos");
+                esCorrecto = false;
             }
 
             return esCorrecto;

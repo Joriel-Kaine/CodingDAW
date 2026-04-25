@@ -84,5 +84,70 @@ namespace Tema8_Tarea05_Integrador.Profesionales
         {
             return _listaProfesionales;
         }
+
+        // Método auxiliar para hacer una ordenación según convenga (Swap).
+        private void Swap(int i, int j)
+        {
+            Profesional aux = _listaProfesionales[i];
+            _listaProfesionales[i] = _listaProfesionales[j];
+            _listaProfesionales[j] = aux;
+        }
+
+        private string ObtenerPuesto(Profesional profesional)
+        {
+            if (profesional is Designer designer)
+            {
+                return designer.Especialidad;
+            }
+
+            if (profesional is Desarrollador desarrollador)
+            {
+                return desarrollador.LenguajePrincipal;
+            }
+
+            if (profesional is Redactor redactor)
+            {
+                return redactor.TematicaPrincipal;
+            }
+
+            return "";
+        }
+        
+        private int Comparar(int i, int j, string opcion)
+        {
+            switch (opcion)
+            {
+                case "Nombre":
+                    return _listaProfesionales[i].Nombre.CompareTo(_listaProfesionales[j].Nombre);
+
+                case "DNI":
+                    return _listaProfesionales[i].DNI.CompareTo(_listaProfesionales[j].DNI);
+
+                case "Puesto":
+                    return ObtenerPuesto(_listaProfesionales[i])
+                        .CompareTo(ObtenerPuesto(_listaProfesionales[j]));
+
+                case "Salario hora":
+                    return _listaProfesionales[i].CalcularPresupuesto()
+                        .CompareTo(_listaProfesionales[j].CalcularPresupuesto());
+
+                default:
+                    return 0;
+            }
+        }
+
+        public void OrdenarPor(string opcion)
+        {
+            for (int i = 0; i < _listaProfesionales.Count - 1; i++)
+            {
+                for (int j = i + 1; j < _listaProfesionales.Count; j++)
+                {
+                    if (Comparar(i, j, opcion) > 0)
+                    {
+                        Swap(i, j);
+                    }
+                }
+            }
+        }
     }
 }

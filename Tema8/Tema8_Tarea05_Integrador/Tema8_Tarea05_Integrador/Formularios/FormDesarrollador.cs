@@ -38,7 +38,7 @@ namespace Tema8_Tarea05_Integrador
                    tarifaHoraBox = txtTarifaHora.Text;
 
             // Declaración de variables donde se guardarán los valores ya validados y convertidos.
-            string nombre, dni, email, telefono, lenguajePrincipal;
+            string nombre, dni, email, telefono, lenguajePrincipal, telefonoCompleto;
             double tarifaHora;
 
             // Declaración del booleano que comprobará que los datos son correctos.
@@ -52,13 +52,20 @@ namespace Tema8_Tarea05_Integrador
             esCorrecto &= FuncionesInterfaz.ValidarNombre(lenguajePrincipalBox, out lenguajePrincipal);
             esCorrecto &= FuncionesInterfaz.ValidarTarifaHora(tarifaHoraBox, out tarifaHora);
 
+            telefonoCompleto = cmbPrefijo.Text + telefono;
+
             if (esCorrecto)
             {
-                Desarrollador desarrollador = new(nombre, dni, email, telefono, lenguajePrincipal, tarifaHora);
+                Desarrollador desarrollador = new(nombre, dni, email, telefonoCompleto, lenguajePrincipal, tarifaHora);
 
-                _listaProfesionales.AddProfesional(desarrollador);
-
-                MessageBox.Show("Profesional añadido correctamente.");
+                if (_listaProfesionales.AddProfesional(desarrollador))
+                {
+                    MessageBox.Show("Profesional añadido correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("Ya existe un profesional con ese DNI.");
+                }
             }
         }
 

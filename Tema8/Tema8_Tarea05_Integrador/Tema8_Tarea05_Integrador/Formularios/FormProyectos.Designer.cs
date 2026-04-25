@@ -31,12 +31,16 @@
             lstProyectos = new ListBox();
             lblGestionProyectos = new Label();
             grpAddProyectos = new GroupBox();
-            cmbProyectos = new ComboBox();
+            btnEliminarDesdeLista = new Button();
             btnListaProyectos = new Button();
+            btnEliminarPorCodigo = new Button();
+            btnProyectosSinProfesionales = new Button();
+            txtEliminarProyecto = new TextBox();
+            cmbProyectos = new ComboBox();
+            btnCrearProyecto = new Button();
             cmbProfesionales = new ComboBox();
             btnVerParticipantesProyecto = new Button();
             btnAsignarProfesionalProyecto = new Button();
-            btnCrearProyecto = new Button();
             btnAtras = new Button();
             btnLimpiar = new Button();
             grpAddProyectos.SuspendLayout();
@@ -66,8 +70,13 @@
             // 
             // grpAddProyectos
             // 
-            grpAddProyectos.Controls.Add(cmbProyectos);
+            grpAddProyectos.Controls.Add(btnEliminarDesdeLista);
             grpAddProyectos.Controls.Add(btnListaProyectos);
+            grpAddProyectos.Controls.Add(btnEliminarPorCodigo);
+            grpAddProyectos.Controls.Add(btnProyectosSinProfesionales);
+            grpAddProyectos.Controls.Add(txtEliminarProyecto);
+            grpAddProyectos.Controls.Add(cmbProyectos);
+            grpAddProyectos.Controls.Add(btnCrearProyecto);
             grpAddProyectos.Controls.Add(cmbProfesionales);
             grpAddProyectos.Controls.Add(btnVerParticipantesProyecto);
             grpAddProyectos.Controls.Add(btnAsignarProfesionalProyecto);
@@ -78,6 +87,74 @@
             grpAddProyectos.TabIndex = 4;
             grpAddProyectos.TabStop = false;
             grpAddProyectos.Text = "Proyectos";
+            // 
+            // btnEliminarDesdeLista
+            // 
+            btnEliminarDesdeLista.BackColor = Color.Tan;
+            btnEliminarDesdeLista.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnEliminarDesdeLista.FlatAppearance.BorderSize = 4;
+            btnEliminarDesdeLista.FlatStyle = FlatStyle.Flat;
+            btnEliminarDesdeLista.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminarDesdeLista.Location = new Point(6, 691);
+            btnEliminarDesdeLista.Name = "btnEliminarDesdeLista";
+            btnEliminarDesdeLista.Size = new Size(420, 60);
+            btnEliminarDesdeLista.TabIndex = 21;
+            btnEliminarDesdeLista.Text = "Eliminar desde la lista";
+            btnEliminarDesdeLista.UseVisualStyleBackColor = false;
+            btnEliminarDesdeLista.Click += btnEliminarDesdeLista_Click;
+            // 
+            // btnListaProyectos
+            // 
+            btnListaProyectos.BackColor = Color.Tan;
+            btnListaProyectos.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnListaProyectos.FlatAppearance.BorderSize = 4;
+            btnListaProyectos.FlatStyle = FlatStyle.Flat;
+            btnListaProyectos.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnListaProyectos.Location = new Point(6, 602);
+            btnListaProyectos.Name = "btnListaProyectos";
+            btnListaProyectos.Size = new Size(400, 60);
+            btnListaProyectos.TabIndex = 4;
+            btnListaProyectos.Text = "Lista de Proyectos";
+            btnListaProyectos.UseVisualStyleBackColor = false;
+            btnListaProyectos.Click += btnListaProyectos_Click;
+            // 
+            // btnEliminarPorCodigo
+            // 
+            btnEliminarPorCodigo.BackColor = Color.Tan;
+            btnEliminarPorCodigo.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnEliminarPorCodigo.FlatAppearance.BorderSize = 4;
+            btnEliminarPorCodigo.FlatStyle = FlatStyle.Flat;
+            btnEliminarPorCodigo.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminarPorCodigo.Location = new Point(794, 602);
+            btnEliminarPorCodigo.Name = "btnEliminarPorCodigo";
+            btnEliminarPorCodigo.Size = new Size(400, 60);
+            btnEliminarPorCodigo.TabIndex = 17;
+            btnEliminarPorCodigo.Text = "Eliminar por Código";
+            btnEliminarPorCodigo.UseVisualStyleBackColor = false;
+            btnEliminarPorCodigo.Click += btnEliminarPorCodigo_Click;
+            // 
+            // btnProyectosSinProfesionales
+            // 
+            btnProyectosSinProfesionales.BackColor = Color.Tan;
+            btnProyectosSinProfesionales.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnProyectosSinProfesionales.FlatAppearance.BorderSize = 4;
+            btnProyectosSinProfesionales.FlatStyle = FlatStyle.Flat;
+            btnProyectosSinProfesionales.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnProyectosSinProfesionales.Location = new Point(494, 691);
+            btnProyectosSinProfesionales.Name = "btnProyectosSinProfesionales";
+            btnProyectosSinProfesionales.Size = new Size(700, 60);
+            btnProyectosSinProfesionales.TabIndex = 20;
+            btnProyectosSinProfesionales.Text = "Ver Proyectos sin Profesionales asignados";
+            btnProyectosSinProfesionales.UseVisualStyleBackColor = false;
+            btnProyectosSinProfesionales.Click += btnProyectosSinProfesionales_Click;
+            // 
+            // txtEliminarProyecto
+            // 
+            txtEliminarProyecto.BackColor = Color.Lavender;
+            txtEliminarProyecto.Location = new Point(521, 614);
+            txtEliminarProyecto.Name = "txtEliminarProyecto";
+            txtEliminarProyecto.Size = new Size(267, 41);
+            txtEliminarProyecto.TabIndex = 19;
             // 
             // cmbProyectos
             // 
@@ -91,20 +168,20 @@
             cmbProyectos.TabIndex = 7;
             cmbProyectos.Text = "Elige un proyecto";
             // 
-            // btnListaProyectos
+            // btnCrearProyecto
             // 
-            btnListaProyectos.BackColor = Color.Tan;
-            btnListaProyectos.FlatAppearance.BorderColor = Color.SteelBlue;
-            btnListaProyectos.FlatAppearance.BorderSize = 4;
-            btnListaProyectos.FlatStyle = FlatStyle.Flat;
-            btnListaProyectos.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnListaProyectos.Location = new Point(6, 174);
-            btnListaProyectos.Name = "btnListaProyectos";
-            btnListaProyectos.Size = new Size(400, 60);
-            btnListaProyectos.TabIndex = 4;
-            btnListaProyectos.Text = "Lista de Proyectos";
-            btnListaProyectos.UseVisualStyleBackColor = false;
-            btnListaProyectos.Click += btnListaProyectos_Click;
+            btnCrearProyecto.BackColor = Color.Tan;
+            btnCrearProyecto.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnCrearProyecto.FlatAppearance.BorderSize = 4;
+            btnCrearProyecto.FlatStyle = FlatStyle.Flat;
+            btnCrearProyecto.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCrearProyecto.Location = new Point(6, 180);
+            btnCrearProyecto.Name = "btnCrearProyecto";
+            btnCrearProyecto.Size = new Size(400, 60);
+            btnCrearProyecto.TabIndex = 1;
+            btnCrearProyecto.Text = "Crear Proyecto";
+            btnCrearProyecto.UseVisualStyleBackColor = false;
+            btnCrearProyecto.Click += btnCrearProyecto_Click;
             // 
             // cmbProfesionales
             // 
@@ -148,21 +225,6 @@
             btnAsignarProfesionalProyecto.UseVisualStyleBackColor = false;
             btnAsignarProfesionalProyecto.Click += btnAsignarProfesionalProyecto_Click;
             // 
-            // btnCrearProyecto
-            // 
-            btnCrearProyecto.BackColor = Color.Tan;
-            btnCrearProyecto.FlatAppearance.BorderColor = Color.SteelBlue;
-            btnCrearProyecto.FlatAppearance.BorderSize = 4;
-            btnCrearProyecto.FlatStyle = FlatStyle.Flat;
-            btnCrearProyecto.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCrearProyecto.Location = new Point(91, 757);
-            btnCrearProyecto.Name = "btnCrearProyecto";
-            btnCrearProyecto.Size = new Size(400, 60);
-            btnCrearProyecto.TabIndex = 1;
-            btnCrearProyecto.Text = "Crear Proyecto";
-            btnCrearProyecto.UseVisualStyleBackColor = false;
-            btnCrearProyecto.Click += btnCrearProyecto_Click;
-            // 
             // btnAtras
             // 
             btnAtras.BackColor = Color.Wheat;
@@ -199,14 +261,14 @@
             ClientSize = new Size(1378, 924);
             Controls.Add(btnLimpiar);
             Controls.Add(btnAtras);
-            Controls.Add(lstProyectos);
             Controls.Add(lblGestionProyectos);
-            Controls.Add(btnCrearProyecto);
+            Controls.Add(lstProyectos);
             Controls.Add(grpAddProyectos);
             Name = "FormProyectos";
             Text = "Gestión de Proyectos";
             Load += FormProyectos_Load;
             grpAddProyectos.ResumeLayout(false);
+            grpAddProyectos.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -225,5 +287,9 @@
         private Button btnLimpiar;
         private ComboBox cmbProyectos;
         private ComboBox cmbProfesionales;
+        private Button btnEliminarPorCodigo;
+        private TextBox txtEliminarProyecto;
+        private Button btnProyectosSinProfesionales;
+        private Button btnEliminarDesdeLista;
     }
 }

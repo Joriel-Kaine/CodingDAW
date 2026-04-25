@@ -9,7 +9,7 @@ namespace Tema8_Tarea05_Integrador.Profesionales
     public class Redactor : Profesional
     {
         // Constante.
-        const int TarifaHora = 200;
+        const int PalabrasHora = 200;
 
 
         // Propiedades públicas.
@@ -41,7 +41,7 @@ namespace Tema8_Tarea05_Integrador.Profesionales
 
         public override double CalcularPresupuesto()
         {
-            return PrecioPorPalabra * TarifaHora;
+            return PrecioPorPalabra * PalabrasHora;
         }
     }
 }

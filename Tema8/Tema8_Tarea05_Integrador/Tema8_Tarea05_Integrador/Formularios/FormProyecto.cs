@@ -48,9 +48,16 @@ namespace Tema8_Tarea05_Integrador
             {
                 Proyecto proyecto = new(nombre, codigo, duracion);
 
-                _listaProyectos.AddProyecto(proyecto);
+                bool esRepetido = _listaProyectos.AddProyecto(proyecto);
 
-                MessageBox.Show("Proyecto añadido correctamente.");
+                if (!esRepetido)
+                {
+                    MessageBox.Show("Proyecto añadido correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("Ya existe un proyecto con ese código.");
+                }
             }
         }
 

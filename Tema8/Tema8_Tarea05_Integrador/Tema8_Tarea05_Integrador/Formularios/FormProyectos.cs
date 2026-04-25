@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tema8_Tarea05_Integrador.Interfaz;
 using Tema8_Tarea05_Integrador.Profesionales;
 using Tema8_Tarea05_Integrador.Proyectos;
 
@@ -79,17 +80,24 @@ namespace Tema8_Tarea05_Integrador
                 Proyecto? proyecto = _listaProyectos
                     .DevolverListaProyectos()
                     .FirstOrDefault(proyecto => proyecto.ComboBoxProyecto == comboProyecto);
-                
+
                 if (profesional is null || proyecto is null)
                 {
-                    MessageBox.Show("Error.");
+                    MessageBox.Show("Error interno.");
                 }
                 else
                 {
-                    profesional.AddProyecto(proyecto);
-                    proyecto.AddProfesional(profesional);
+                    bool isAddProyecto = profesional.AddProyecto(proyecto);
+                    bool isAddProfesional = proyecto.AddProfesional(profesional);
 
-                    MessageBox.Show("Profesional asignado.");
+                    if (isAddProyecto && isAddProfesional)
+                    {
+                        MessageBox.Show("Profesional asignado.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ya existe el profesional en ese proyecto");
+                    }
                 }
             }
         }
@@ -130,6 +138,63 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        private void EliminarProyectosPorCodigo()
+        {
+            string codigoBox = txtEliminarProyecto.Text;
+            int codigo;
+            bool esCorrecto = true;
+
+            esCorrecto = FuncionesInterfaz.ValidarCodigo(codigoBox, out codigo);
+
+            if (!esCorrecto)
+            {
+                return;
+            }
+
+            if (_listaProyectos.EliminarProyectoPorCodigo(codigo))
+            {
+                MessageBox.Show("Proyecto eliminado correctamente.");
+                MostrarTodosProyectos();
+            }
+            else
+            {
+                MessageBox.Show("No existe el proyecto a eliminar.");
+            }
+        }
+
+        private void EliminarProyectosDesdeLista()
+        {
+            int posicion = lstProyectos.SelectedIndex;
+
+            if (_listaProyectos.EliminarProyectosPorPosicion(posicion))
+            {
+                MessageBox.Show("Proyecto eliminado correctamente.");
+                MostrarTodosProyectos();
+            }
+            else if (lstProyectos.Items.Count == 0)
+            {
+                MessageBox.Show("La lista está vacía.");
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un proyecto a eliminar.");
+            }
+        }
+
+        private void ProyectosSinProfesional()
+        {
+            lstProyectos.Items.Clear();
+            List<Proyecto> listaProyectos = _listaProyectos.DevolverListaProyectos();
+
+            foreach (Proyecto proyecto in listaProyectos)
+            {
+                if (proyecto.DevolverListaProfesionalesProyecto().Count <= 0)
+                {
+                    lstProyectos.Items.Add(proyecto);
+                }
+            }
+        }
+
 
         // Load del formulario.
         private void FormProyectos_Load(object sender, EventArgs e)
@@ -159,6 +224,21 @@ namespace Tema8_Tarea05_Integrador
             this.MostrarParticipantesProyecto();
         }
 
+        private void btnEliminarPorCodigo_Click(object sender, EventArgs e)
+        {
+            this.EliminarProyectosPorCodigo();
+        }
+
+        private void btnEliminarDesdeLista_Click(object sender, EventArgs e)
+        {
+            this.EliminarProyectosDesdeLista();
+        }
+
+        private void btnProyectosSinProfesionales_Click(object sender, EventArgs e)
+        {
+            this.ProyectosSinProfesional();
+        }
+
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -169,6 +249,9 @@ namespace Tema8_Tarea05_Integrador
             lstProyectos.Items.Clear();
             cmbProfesionales.Text = "Elige un profesional";
             cmbProyectos.Text = "Elige un proyecto";
+            txtEliminarProyecto = null;
         }
+
+        
     }
 }
