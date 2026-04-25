@@ -30,6 +30,7 @@
         {
             cmbProfesional = new ComboBox();
             grpAddProfesionales = new GroupBox();
+            txtEliminarPosicion = new TextBox();
             txtEliminarProfesional = new TextBox();
             btnEliminarPosicion = new Button();
             btnEliminarPorDNI = new Button();
@@ -59,6 +60,7 @@
             // 
             // grpAddProfesionales
             // 
+            grpAddProfesionales.Controls.Add(txtEliminarPosicion);
             grpAddProfesionales.Controls.Add(txtEliminarProfesional);
             grpAddProfesionales.Controls.Add(btnEliminarPosicion);
             grpAddProfesionales.Controls.Add(btnEliminarPorDNI);
@@ -68,17 +70,25 @@
             grpAddProfesionales.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             grpAddProfesionales.Location = new Point(85, 151);
             grpAddProfesionales.Name = "grpAddProfesionales";
-            grpAddProfesionales.Size = new Size(1200, 240);
+            grpAddProfesionales.Size = new Size(1200, 761);
             grpAddProfesionales.TabIndex = 1;
             grpAddProfesionales.TabStop = false;
             grpAddProfesionales.Text = "Profesionales";
+            // 
+            // txtEliminarPosicion
+            // 
+            txtEliminarPosicion.BackColor = Color.Lavender;
+            txtEliminarPosicion.Location = new Point(1044, 110);
+            txtEliminarPosicion.Name = "txtEliminarPosicion";
+            txtEliminarPosicion.Size = new Size(87, 41);
+            txtEliminarPosicion.TabIndex = 7;
             // 
             // txtEliminarProfesional
             // 
             txtEliminarProfesional.BackColor = Color.Lavender;
             txtEliminarProfesional.Location = new Point(771, 110);
             txtEliminarProfesional.Name = "txtEliminarProfesional";
-            txtEliminarProfesional.Size = new Size(360, 41);
+            txtEliminarProfesional.Size = new Size(267, 41);
             txtEliminarProfesional.TabIndex = 6;
             // 
             // btnEliminarPosicion
@@ -258,5 +268,6 @@
         private Button btnEliminarPosicion;
         private TextBox txtEliminarProfesional;
         private Button btnEliminarProfesionalLista;
+        private TextBox txtEliminarPosicion;
     }
 }

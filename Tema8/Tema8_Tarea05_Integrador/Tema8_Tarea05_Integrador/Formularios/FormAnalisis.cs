@@ -212,7 +212,8 @@ namespace Tema8_Tarea05_Integrador
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             lstAnalisis.Items.Clear();
-            cmbProfesionales.Text = null;
+            cmbProfesionales.Text = "Elige un profesional";
+            cmbProyectos.Text = "Elige un proyecto";
         }
     }
 }

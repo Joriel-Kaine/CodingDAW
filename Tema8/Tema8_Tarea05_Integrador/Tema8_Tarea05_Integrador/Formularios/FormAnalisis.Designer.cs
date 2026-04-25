@@ -188,7 +188,7 @@
             grpAnalisis.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             grpAnalisis.Location = new Point(85, 155);
             grpAnalisis.Name = "grpAnalisis";
-            grpAnalisis.Size = new Size(1200, 240);
+            grpAnalisis.Size = new Size(1200, 757);
             grpAnalisis.TabIndex = 20;
             grpAnalisis.TabStop = false;
             grpAnalisis.Text = "Análisis";

@@ -74,7 +74,7 @@
             grpAddProyectos.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             grpAddProyectos.Location = new Point(85, 155);
             grpAddProyectos.Name = "grpAddProyectos";
-            grpAddProyectos.Size = new Size(1200, 240);
+            grpAddProyectos.Size = new Size(1200, 757);
             grpAddProyectos.TabIndex = 4;
             grpAddProyectos.TabStop = false;
             grpAddProyectos.Text = "Proyectos";

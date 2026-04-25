@@ -8,41 +8,20 @@ namespace Tema8_Tarea05_Integrador
 {
     public partial class FormGestionEmpresa : Form
     {
+        // Listas privadas.
         private ListaProfesionales _listaProfesionales = new();
         private ListaProyectos _listaProyectos = new();
 
+
+        // Constructor.
         public FormGestionEmpresa()
         {
             InitializeComponent();
         }
 
-        private void FormGestionEmpresa_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void btnGestionProfesionales_Click(object sender, EventArgs e)
-        {
-            FormProfesionales formProfesionales = new(_listaProfesionales);
-
-            formProfesionales.ShowDialog();
-        }
-
-        private void btnGestionProyectos_Click(object sender, EventArgs e)
-        {
-            FormProyectos formProyectos = new(_listaProyectos, _listaProfesionales);
-
-            formProyectos.ShowDialog();
-        }
-
-        private void btnAnalisis_Click(object sender, EventArgs e)
-        {
-            FormAnalisis formAnalisis = new(_listaProyectos, _listaProfesionales);
-
-            formAnalisis.ShowDialog();
-        }
-
-        private void btnAutorrelleno_Click(object sender, EventArgs e)
+        // Método para rellenar datos de ejemplo con un solo clic.
+        private void DatosDeEjemplo()
         {
             // Profesionales.
             _listaProfesionales.AddProfesional(new Designer
@@ -76,7 +55,6 @@ namespace Tema8_Tarea05_Integrador
             _listaProfesionales.AddProfesional(new Redactor
                 ("Lidia", "37246805D", "lidia@email.com", "+34628355390", "Marketing", 0.10));
 
-
             //Proyectos.
             _listaProyectos.AddProyecto(new("Atlas Web", 1420, 120));
             _listaProyectos.AddProyecto(new("Orion Security Suite", 9345, 180));
@@ -88,6 +66,44 @@ namespace Tema8_Tarea05_Integrador
             _listaProyectos.AddProyecto(new("Mercurio Cloud", 6247, 90));
             _listaProyectos.AddProyecto(new("Lumen Data Sync", 8659, 140));
             _listaProyectos.AddProyecto(new("Nova Billing Tool", 7124, 110));
+
+            // Mensaje emergente.
+            MessageBox.Show("Datos de ejemplo añadidos correctamente.");
+        }
+
+
+        // Load del formulario.
+        private void FormGestionEmpresa_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        // Botones.
+        private void btnGestionProfesionales_Click(object sender, EventArgs e)
+        {
+            FormProfesionales formProfesionales = new(_listaProfesionales);
+
+            formProfesionales.ShowDialog();
+        }
+
+        private void btnGestionProyectos_Click(object sender, EventArgs e)
+        {
+            FormProyectos formProyectos = new(_listaProyectos, _listaProfesionales);
+
+            formProyectos.ShowDialog();
+        }
+
+        private void btnAnalisis_Click(object sender, EventArgs e)
+        {
+            FormAnalisis formAnalisis = new(_listaProyectos, _listaProfesionales);
+
+            formAnalisis.ShowDialog();
+        }
+
+        private void btnAutorrelleno_Click(object sender, EventArgs e)
+        {
+            this.DatosDeEjemplo();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

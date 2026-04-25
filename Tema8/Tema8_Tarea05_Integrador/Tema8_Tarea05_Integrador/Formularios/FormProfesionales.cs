@@ -117,13 +117,11 @@ namespace Tema8_Tarea05_Integrador
 
         private void EliminarProfesionalesPorPosicion()
         {
-            string dniBox = txtEliminarProfesional.Text;
-            string dni;
+            string posicionBox = txtEliminarPosicion.Text;
+            int posicion;
             bool esCorrecto = true;
 
-            esCorrecto = FuncionesInterfaz.ValidarDNI(dniBox, out dni);
-
-            int posicion = _listaProfesionales.BuscarProfesional(dni);
+            esCorrecto = FuncionesInterfaz.ValidarEntero(posicionBox, out posicion);
 
             if (_listaProfesionales.EliminarProfesionalPorPosicion(posicion))
             {
@@ -224,6 +222,8 @@ namespace Tema8_Tarea05_Integrador
         {
             lstProfesionales.Items.Clear();
             cmbProfesional.Text = "Elige una categoría";
+            txtEliminarProfesional.Text = null;
+            txtEliminarPosicion.Text = null;
         }
     }
 }
