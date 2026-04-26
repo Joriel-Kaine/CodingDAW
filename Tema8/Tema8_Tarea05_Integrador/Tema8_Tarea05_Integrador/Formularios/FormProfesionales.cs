@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tema8_Tarea05_Integrador.Interfaz;
 using Tema8_Tarea05_Integrador.Profesionales;
+using Tema8_Tarea05_Integrador.Proyectos;
 
 namespace Tema8_Tarea05_Integrador
 {
@@ -143,6 +144,11 @@ namespace Tema8_Tarea05_Integrador
 
             esCorrecto = FuncionesInterfaz.ValidarDNI(dniBox, out dni);
 
+            if (!esCorrecto)
+            {
+                return;
+            }
+
             if (_listaProfesionales.EliminarProfesionalPorDNI(dni))
             {
                 MessageBox.Show("Profesional eliminado correctamente.");
@@ -169,7 +175,16 @@ namespace Tema8_Tarea05_Integrador
                 return;
             }
 
-            EliminarUsandoPosicion(posicion);
+            // Muestra un mensaje emergente según si se ha eliminado correctamente o no.
+            if (_listaProfesionales.EliminarProfesionalPorPosicion(posicion))
+            {
+                MessageBox.Show("Profesional eliminado correctamente.");
+                ActualizarListas(); // Actualiza las listas según convenga.
+            }
+            else
+            {
+                MessageBox.Show("No existe el profesional a eliminar.");
+            }
         }
 
         // Método para eliminar el profesional seleccionándolo en la lista.
@@ -177,7 +192,19 @@ namespace Tema8_Tarea05_Integrador
         {
             int posicion = lstProfesionales.SelectedIndex;
 
-            EliminarUsandoPosicion(posicion);
+            if (_listaProfesionales.EliminarProfesionalPorPosicion(posicion))
+            {
+                MessageBox.Show("Profesional eliminado correctamente.");
+                ActualizarListas();
+            }
+            else if (lstProfesionales.Items.Count == 0)
+            {
+                MessageBox.Show("La lista está vacía.");
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un profesional a eliminar.");
+            }
         }
 
         // Método para mostrar a todos los profesionales sin importar el tipo.
@@ -195,23 +222,30 @@ namespace Tema8_Tarea05_Integrador
         // Método para ordenar los profesionales según la opción del ComboBox.
         private void OrdenarProfesionales()
         {
-            switch (cmbOpcion.SelectedItem?.ToString())
+            if (cmbOpcion.SelectedItem is null)
             {
-                case "Nombre":
-                    _listaProfesionales.OrdenarPor("Nombre");
-                    break;
-                case "DNI":
-                    _listaProfesionales.OrdenarPor("DNI");
-                    break;
-                case "Puesto":
-                    _listaProfesionales.OrdenarPor("Puesto");
-                    break;
-                case "Salario hora":
-                    _listaProfesionales.OrdenarPor("Salario hora");
-                    break;
+                MessageBox.Show("Selecciona una opción.");
             }
+            else
+            {
+                switch (cmbOpcion.SelectedItem?.ToString())
+                {
+                    case "Nombre":
+                        _listaProfesionales.OrdenarPor("Nombre");
+                        break;
+                    case "DNI":
+                        _listaProfesionales.OrdenarPor("DNI");
+                        break;
+                    case "Puesto":
+                        _listaProfesionales.OrdenarPor("Puesto");
+                        break;
+                    case "Salario hora":
+                        _listaProfesionales.OrdenarPor("Salario hora");
+                        break;
+                }
 
-            ActualizarListas();
+                ActualizarListas();
+            }
         }
 
 
