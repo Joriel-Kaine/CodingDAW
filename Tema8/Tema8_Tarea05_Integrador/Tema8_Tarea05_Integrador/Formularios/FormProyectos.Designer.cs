@@ -227,7 +227,7 @@
             // 
             // btnAtras
             // 
-            btnAtras.BackColor = Color.Wheat;
+            btnAtras.BackColor = Color.Tan;
             btnAtras.FlatAppearance.BorderColor = Color.SteelBlue;
             btnAtras.FlatAppearance.BorderSize = 4;
             btnAtras.FlatStyle = FlatStyle.Flat;
@@ -241,7 +241,7 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.BackColor = Color.Wheat;
+            btnLimpiar.BackColor = Color.Tan;
             btnLimpiar.FlatAppearance.BorderColor = Color.SteelBlue;
             btnLimpiar.FlatAppearance.BorderSize = 4;
             btnLimpiar.FlatStyle = FlatStyle.Flat;
