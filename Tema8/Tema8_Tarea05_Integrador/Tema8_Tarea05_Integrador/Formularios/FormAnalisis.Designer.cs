@@ -39,8 +39,8 @@
             cmbProfesionales = new ComboBox();
             btnProyectosProfesional = new Button();
             grpAnalisis = new GroupBox();
-            cmbProyectos = new ComboBox();
             btnProfesionalesSinProyectos = new Button();
+            cmbProyectos = new ComboBox();
             grpAnalisis.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             // 
             // btnTotalProfesionalesProyectos
             // 
-            btnTotalProfesionalesProyectos.BackColor = Color.Tan;
+            btnTotalProfesionalesProyectos.BackColor = Color.DarkSeaGreen;
             btnTotalProfesionalesProyectos.FlatAppearance.BorderColor = Color.SteelBlue;
             btnTotalProfesionalesProyectos.FlatAppearance.BorderSize = 4;
             btnTotalProfesionalesProyectos.FlatStyle = FlatStyle.Flat;
@@ -73,7 +73,7 @@
             // 
             // btnTotalCosteProyecto
             // 
-            btnTotalCosteProyecto.BackColor = Color.Tan;
+            btnTotalCosteProyecto.BackColor = Color.DarkSeaGreen;
             btnTotalCosteProyecto.FlatAppearance.BorderColor = Color.SteelBlue;
             btnTotalCosteProyecto.FlatAppearance.BorderSize = 4;
             btnTotalCosteProyecto.FlatStyle = FlatStyle.Flat;
@@ -88,7 +88,7 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.BackColor = Color.Wheat;
+            btnLimpiar.BackColor = Color.DarkSeaGreen;
             btnLimpiar.FlatAppearance.BorderColor = Color.SteelBlue;
             btnLimpiar.FlatAppearance.BorderSize = 4;
             btnLimpiar.FlatStyle = FlatStyle.Flat;
@@ -102,7 +102,7 @@
             // 
             // btnAtras
             // 
-            btnAtras.BackColor = Color.Wheat;
+            btnAtras.BackColor = Color.DarkSeaGreen;
             btnAtras.FlatAppearance.BorderColor = Color.SteelBlue;
             btnAtras.FlatAppearance.BorderSize = 4;
             btnAtras.FlatStyle = FlatStyle.Flat;
@@ -126,7 +126,7 @@
             // 
             // btnProfesionalesEnProyectos
             // 
-            btnProfesionalesEnProyectos.BackColor = Color.Tan;
+            btnProfesionalesEnProyectos.BackColor = Color.DarkSeaGreen;
             btnProfesionalesEnProyectos.FlatAppearance.BorderColor = Color.SteelBlue;
             btnProfesionalesEnProyectos.FlatAppearance.BorderSize = 4;
             btnProfesionalesEnProyectos.FlatStyle = FlatStyle.Flat;
@@ -141,7 +141,7 @@
             // 
             // btnTotalGananciasProfesional
             // 
-            btnTotalGananciasProfesional.BackColor = Color.Tan;
+            btnTotalGananciasProfesional.BackColor = Color.DarkSeaGreen;
             btnTotalGananciasProfesional.FlatAppearance.BorderColor = Color.SteelBlue;
             btnTotalGananciasProfesional.FlatAppearance.BorderSize = 4;
             btnTotalGananciasProfesional.FlatStyle = FlatStyle.Flat;
@@ -168,7 +168,7 @@
             // 
             // btnProyectosProfesional
             // 
-            btnProyectosProfesional.BackColor = Color.Tan;
+            btnProyectosProfesional.BackColor = Color.DarkSeaGreen;
             btnProyectosProfesional.FlatAppearance.BorderColor = Color.SteelBlue;
             btnProyectosProfesional.FlatAppearance.BorderSize = 4;
             btnProyectosProfesional.FlatStyle = FlatStyle.Flat;
@@ -197,21 +197,9 @@
             grpAnalisis.TabStop = false;
             grpAnalisis.Text = "Análisis";
             // 
-            // cmbProyectos
-            // 
-            cmbProyectos.BackColor = Color.Lavender;
-            cmbProyectos.FlatStyle = FlatStyle.Flat;
-            cmbProyectos.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbProyectos.FormattingEnabled = true;
-            cmbProyectos.Location = new Point(757, 668);
-            cmbProyectos.Name = "cmbProyectos";
-            cmbProyectos.Size = new Size(400, 42);
-            cmbProyectos.TabIndex = 21;
-            cmbProyectos.Text = "Elige un Proyecto";
-            // 
             // btnProfesionalesSinProyectos
             // 
-            btnProfesionalesSinProyectos.BackColor = Color.Tan;
+            btnProfesionalesSinProyectos.BackColor = Color.DarkSeaGreen;
             btnProfesionalesSinProyectos.FlatAppearance.BorderColor = Color.SteelBlue;
             btnProfesionalesSinProyectos.FlatAppearance.BorderSize = 4;
             btnProfesionalesSinProyectos.FlatStyle = FlatStyle.Flat;
@@ -224,10 +212,23 @@
             btnProfesionalesSinProyectos.UseVisualStyleBackColor = false;
             btnProfesionalesSinProyectos.Click += btnProfesionalesSinProyectos_Click;
             // 
+            // cmbProyectos
+            // 
+            cmbProyectos.BackColor = Color.Lavender;
+            cmbProyectos.FlatStyle = FlatStyle.Flat;
+            cmbProyectos.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbProyectos.FormattingEnabled = true;
+            cmbProyectos.Location = new Point(757, 668);
+            cmbProyectos.Name = "cmbProyectos";
+            cmbProyectos.Size = new Size(400, 42);
+            cmbProyectos.TabIndex = 21;
+            cmbProyectos.Text = "Elige un Proyecto";
+            // 
             // FormAnalisis
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkKhaki;
             ClientSize = new Size(1378, 924);
             Controls.Add(btnLimpiar);
             Controls.Add(btnTotalCosteProyecto);
