@@ -46,14 +46,14 @@
             // 
             // lstAnalisis
             // 
-            lstAnalisis.BackColor = Color.LightSteelBlue;
+            lstAnalisis.BackColor = Color.BurlyWood;
             lstAnalisis.BorderStyle = BorderStyle.FixedSingle;
             lstAnalisis.Font = new Font("Maiandra GD", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lstAnalisis.FormattingEnabled = true;
             lstAnalisis.ItemHeight = 29;
-            lstAnalisis.Location = new Point(85, 401);
+            lstAnalisis.Location = new Point(91, 401);
             lstAnalisis.Name = "lstAnalisis";
-            lstAnalisis.Size = new Size(1200, 350);
+            lstAnalisis.Size = new Size(1188, 350);
             lstAnalisis.TabIndex = 8;
             // 
             // btnTotalProfesionalesProyectos

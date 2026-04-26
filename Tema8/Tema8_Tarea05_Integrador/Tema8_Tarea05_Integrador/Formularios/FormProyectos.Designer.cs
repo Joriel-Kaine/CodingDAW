@@ -53,9 +53,9 @@
             lstProyectos.Font = new Font("Maiandra GD", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lstProyectos.FormattingEnabled = true;
             lstProyectos.ItemHeight = 29;
-            lstProyectos.Location = new Point(85, 401);
+            lstProyectos.Location = new Point(91, 401);
             lstProyectos.Name = "lstProyectos";
-            lstProyectos.Size = new Size(1200, 350);
+            lstProyectos.Size = new Size(1188, 350);
             lstProyectos.TabIndex = 7;
             // 
             // lblGestionProyectos

@@ -216,9 +216,9 @@
             lstProfesionales.Font = new Font("Maiandra GD", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lstProfesionales.FormattingEnabled = true;
             lstProfesionales.ItemHeight = 29;
-            lstProfesionales.Location = new Point(85, 397);
+            lstProfesionales.Location = new Point(91, 397);
             lstProfesionales.Name = "lstProfesionales";
-            lstProfesionales.Size = new Size(1200, 350);
+            lstProfesionales.Size = new Size(1188, 350);
             lstProfesionales.TabIndex = 3;
             // 
             // btnMostrarTodo
