@@ -52,7 +52,7 @@
             // 
             // txtDuracion
             // 
-            txtDuracion.BackColor = Color.LightGoldenrodYellow;
+            txtDuracion.BackColor = Color.SeaShell;
             txtDuracion.BorderStyle = BorderStyle.FixedSingle;
             txtDuracion.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtDuracion.Location = new Point(310, 329);
@@ -62,7 +62,7 @@
             // 
             // txtCodigo
             // 
-            txtCodigo.BackColor = Color.LightGoldenrodYellow;
+            txtCodigo.BackColor = Color.SeaShell;
             txtCodigo.BorderStyle = BorderStyle.FixedSingle;
             txtCodigo.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtCodigo.Location = new Point(310, 235);
@@ -72,7 +72,7 @@
             // 
             // txtNombre
             // 
-            txtNombre.BackColor = Color.LightGoldenrodYellow;
+            txtNombre.BackColor = Color.SeaShell;
             txtNombre.BorderStyle = BorderStyle.FixedSingle;
             txtNombre.Font = new Font("Maiandra GD", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtNombre.Location = new Point(310, 141);
@@ -112,7 +112,7 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.BackColor = Color.LightSteelBlue;
+            btnLimpiar.BackColor = Color.Wheat;
             btnLimpiar.FlatAppearance.BorderColor = Color.SteelBlue;
             btnLimpiar.FlatAppearance.BorderSize = 4;
             btnLimpiar.FlatStyle = FlatStyle.Flat;
@@ -126,7 +126,7 @@
             // 
             // btnAtras
             // 
-            btnAtras.BackColor = Color.LightSteelBlue;
+            btnAtras.BackColor = Color.Wheat;
             btnAtras.FlatAppearance.BorderColor = Color.SteelBlue;
             btnAtras.FlatAppearance.BorderSize = 4;
             btnAtras.FlatStyle = FlatStyle.Flat;
@@ -140,7 +140,7 @@
             // 
             // btnAddProyecto
             // 
-            btnAddProyecto.BackColor = Color.LightSteelBlue;
+            btnAddProyecto.BackColor = Color.Wheat;
             btnAddProyecto.FlatAppearance.BorderColor = Color.SteelBlue;
             btnAddProyecto.FlatAppearance.BorderSize = 4;
             btnAddProyecto.FlatStyle = FlatStyle.Flat;
@@ -157,6 +157,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.PeachPuff;
             ClientSize = new Size(778, 584);
             Controls.Add(btnLimpiar);
             Controls.Add(btnAtras);
