@@ -17,6 +17,7 @@ namespace Tema8_Tarea05_Integrador
     public partial class FormProfesionales : Form
     {
         private ListaProfesionales _listaProfesionales;
+        private bool _listaFiltrada = false;
 
         public FormProfesionales(ListaProfesionales listaProfesionales)
         {
@@ -163,6 +164,12 @@ namespace Tema8_Tarea05_Integrador
         // Método para eliminar el profesional por la posición.
         private void EliminarProfesionalesPorPosicion()
         {
+            if (_listaFiltrada)
+            {
+                MessageBox.Show("No se puede elminar por posición mientras la lista tenga filtros.");
+                return;
+            }
+
             string posicionBox = txtEliminarPosicion.Text;
             int posicion;
             bool esCorrecto = true;
@@ -190,6 +197,12 @@ namespace Tema8_Tarea05_Integrador
         // Método para eliminar el profesional seleccionándolo en la lista.
         public void EliminarProfesionalDesdeLista()
         {
+            if (_listaFiltrada)
+            {
+                MessageBox.Show("No se puede elminar por posición mientras la lista tenga filtros.");
+                return;
+            }
+
             int posicion = lstProfesionales.SelectedIndex;
 
             if (_listaProfesionales.EliminarProfesionalPorPosicion(posicion))
@@ -217,6 +230,8 @@ namespace Tema8_Tarea05_Integrador
             {
                 lstProfesionales.Items.Add(profesional);
             }
+
+            cmbCategoria.Text = "Elige una categoría";
         }
 
         // Método para ordenar los profesionales según la opción del ComboBox.
@@ -265,6 +280,7 @@ namespace Tema8_Tarea05_Integrador
         private void btnMostrarProfesional_Click(object sender, EventArgs e)
         {
             this.MostrarPorProfesional();
+            _listaFiltrada = true;
         }
 
         private void btnEliminarPorDNI_Click(object sender, EventArgs e)
@@ -285,6 +301,7 @@ namespace Tema8_Tarea05_Integrador
         private void btnMostrarTodo_Click(object sender, EventArgs e)
         {
             this.MostrarTodosProfesionales();
+            _listaFiltrada = false;
         }
 
         private void btnOrdenar_Click(object sender, EventArgs e)
