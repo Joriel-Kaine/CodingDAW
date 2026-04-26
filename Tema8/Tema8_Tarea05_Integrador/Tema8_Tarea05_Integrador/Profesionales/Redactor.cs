@@ -9,7 +9,7 @@ namespace Tema8_Tarea05_Integrador.Profesionales
     public class Redactor : Profesional
     {
         // Constante.
-        const int PalabrasHora = 200;
+        private const int PalabrasHora = 200;
 
 
         // Propiedades públicas.

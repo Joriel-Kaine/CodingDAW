@@ -54,6 +54,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método para acceder a los formularios de los tipos de profesionales.
         private void AccederFormularios()
         {
             if (cmbCategoria.SelectedItem is null)
@@ -62,7 +63,7 @@ namespace Tema8_Tarea05_Integrador
             }
             else
             {
-                switch (cmbCategoria.Text)
+                switch (cmbCategoria.Text) // Se usa un ComboBox para la elección del tipo de profesional.
                 {
                     case "Diseñador":
                         FormDesigner formDesigner = new(_listaProfesionales);
@@ -83,6 +84,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método para mostrar profesionales a través del ComboBox.
         private void MostrarPorProfesional()
         {
             List<Profesional> listaProfesionales = _listaProfesionales.DevolverListaProfesionales();
@@ -93,7 +95,7 @@ namespace Tema8_Tarea05_Integrador
             }
             else
             {
-                switch (cmbCategoria.Text)
+                switch (cmbCategoria.Text) // Salen en la lista según el profesional seleccionado.
                 {
                     case "Diseñador":
                         lstProfesionales.Items.Clear();
@@ -132,6 +134,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método para eliminar a un profesional por su DNI (identificador único).
         private void EliminarProfesionalesPorDNI()
         {
             string dniBox = txtEliminarProfesional.Text;
@@ -151,6 +154,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método para eliminar el profesional por la posición.
         private void EliminarProfesionalesPorPosicion()
         {
             string posicionBox = txtEliminarPosicion.Text;
@@ -159,6 +163,7 @@ namespace Tema8_Tarea05_Integrador
 
             esCorrecto = FuncionesInterfaz.ValidarEntero(posicionBox, out posicion);
 
+            // Si no es correcto sale el mensaje emergente de la validación y no sigue el método.
             if (!esCorrecto)
             {
                 return;
@@ -167,6 +172,7 @@ namespace Tema8_Tarea05_Integrador
             EliminarUsandoPosicion(posicion);
         }
 
+        // Método para eliminar el profesional seleccionándolo en la lista.
         public void EliminarProfesionalDesdeLista()
         {
             int posicion = lstProfesionales.SelectedIndex;
@@ -174,6 +180,7 @@ namespace Tema8_Tarea05_Integrador
             EliminarUsandoPosicion(posicion);
         }
 
+        // Método para mostrar a todos los profesionales sin importar el tipo.
         private void MostrarTodosProfesionales()
         {
             lstProfesionales.Items.Clear();
@@ -185,6 +192,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método para ordenar los profesionales según la opción del ComboBox.
         private void OrdenarProfesionales()
         {
             switch (cmbOpcion.SelectedItem?.ToString())

@@ -25,7 +25,8 @@ namespace Tema8_Tarea05_Integrador
             this._listaProfesionales = listaProfesionales;
         }
 
-        // Métodos.
+
+        // Método para actualizar el ComboBox de profesionales y proyectos con los datos existentes.
         private void ActualizarComboList()
         {
             cmbProfesionales.Items.Clear();
@@ -34,6 +35,7 @@ namespace Tema8_Tarea05_Integrador
             List<Profesional> listaProfesionales = _listaProfesionales.DevolverListaProfesionales();
             List<Proyecto> listaProyectos = _listaProyectos.DevolverListaProyectos();
 
+            // Usamos foreach para añadir a los ComboBox todos los datos.
             foreach (Profesional profesional in listaProfesionales)
             {
                 cmbProfesionales.Items.Add(profesional.ComboBoxProfesional);
@@ -45,6 +47,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método para mostrar todos los proyectos.
         private void MostrarTodosProyectos()
         {
             lstProyectos.Items.Clear();
@@ -56,6 +59,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método para acceder al formulario para añadir un proyecto.
         private void AccederFormulario()
         {
             FormProyecto formProyecto = new(_listaProyectos);
@@ -63,33 +67,45 @@ namespace Tema8_Tarea05_Integrador
             formProyecto.ShowDialog();
         }
 
+        // Método para asignar un profesional a un proyecto.
         private void AsignarProfesionalProyecto()
         {
+            // Comprobación de si no hay seleccionado nada en los ComboBox con mensaje emergente.
             if (cmbProfesionales.SelectedItem == null || cmbProyectos.SelectedItem == null)
             {
                 MessageBox.Show("Selecciona un profesional y un proyecto.");
             }
             else
             {
+                // Se obtiene el texto seleccionado en los ComboBox.
+                // Son los strings formados en la clase Profesional, pero no los objetos en sí.
                 string? comboProfesional = cmbProfesionales.SelectedItem.ToString();
                 string? comboProyecto = cmbProyectos.SelectedItem.ToString();
 
+                // Buscamos el objeto real a través de esa selección del ComboBox usando LINQ.
+                // Se declara un profesional y se llama a una función en ListaProfesionales.
+                // Con FirstOrDefault se busca el primer elemento de la lista que cumpla una condición.
+                // La condición se representa mediante una función anónima (lambda) para recuperar el objeto.
                 Profesional? profesional = _listaProfesionales
                     .DevolverListaProfesionales()
                     .FirstOrDefault(profesional => profesional.ComboBoxProfesional == comboProfesional);
+                // Lo mismo con Proyecto.
                 Proyecto? proyecto = _listaProyectos
                     .DevolverListaProyectos()
                     .FirstOrDefault(proyecto => proyecto.ComboBoxProyecto == comboProyecto);
 
+                // Si el profesional o el proyecto es nulo, mostramos mensaje emergente.
                 if (profesional is null || proyecto is null)
                 {
                     MessageBox.Show("Error interno.");
                 }
                 else
                 {
+                    // Si no lo es, declaramos una variable donde se crea el proyecto o profesional en las listas.
                     bool isAddProyecto = profesional.AddProyecto(proyecto);
                     bool isAddProfesional = proyecto.AddProfesional(profesional);
 
+                    // Se comprueba con una condición si el se puede o no asignar el profesional al proyecto.
                     if (isAddProyecto && isAddProfesional)
                     {
                         MessageBox.Show("Profesional asignado.");
@@ -102,6 +118,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método para mostrar los particpantes que hay en un proyecto.
         private void MostrarParticipantesProyecto()
         {
             if (cmbProyectos.SelectedItem == null)
@@ -138,6 +155,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método para eliminar proyectos por código.
         private void EliminarProyectosPorCodigo()
         {
             string codigoBox = txtEliminarProyecto.Text;
@@ -162,6 +180,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método para eliminar proyectos desde la lista.
         private void EliminarProyectosDesdeLista()
         {
             int posicion = lstProyectos.SelectedIndex;
@@ -181,6 +200,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método para mostrar los proyectos que no tienen profesionales asignados.
         private void ProyectosSinProfesional()
         {
             lstProyectos.Items.Clear();

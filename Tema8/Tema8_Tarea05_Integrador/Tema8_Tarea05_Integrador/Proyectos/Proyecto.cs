@@ -31,7 +31,7 @@ namespace Tema8_Tarea05_Integrador.Proyectos
         }
 
 
-        // Método.
+        // Método que sobreescribe el método heredado de System.Object
         public override string ToString()
         {
             return $"Nombre: {Nombre} - \n" +
@@ -39,19 +39,22 @@ namespace Tema8_Tarea05_Integrador.Proyectos
                    $"{Duracion} horas.";
         }
 
+        // Metodo para añadir profesionales a una lista que han sido asignados en proyectos.
         public bool AddProfesional(Profesional profesional)
         {
             bool esCorrecto = false;
 
+            // Comprobamos que no exista ya.
             if (!_listaProfesionales.Contains(profesional))
             {
                 _listaProfesionales.Add(profesional);
                 esCorrecto = true;
             }
 
-            return esCorrecto;
+            return esCorrecto; // Devolvemos booleano para la comprobación en el FORMS.
         }
 
+        // Método que devuelve la lista de los profesionales asignados en proyectos.
         public List<Profesional> DevolverListaProfesionalesProyecto()
         {
             return _listaProfesionales;

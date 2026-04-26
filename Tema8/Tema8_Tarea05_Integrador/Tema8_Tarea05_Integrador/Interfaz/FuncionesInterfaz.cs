@@ -10,19 +10,24 @@ namespace Tema8_Tarea05_Integrador.Interfaz
 {
     public static class FuncionesInterfaz
     {
-        const string ErrorLongitudTelefono = "El número no tiene la longitud correcta.";
+        private const string ErrorLongitudTelefono = "El número no tiene la longitud correcta.";
 
+        // Método que valida el nombre. En todos los métodos de validación usamos de salida un booleano.
         public static bool ValidarNombre(string nombreEntrada, out string nombreSalida)
         {
             bool esCorrecto = true;
-            nombreEntrada = nombreEntrada.Trim();
+            nombreEntrada = nombreEntrada.Trim(); // Quitamos los espacios en blanco tanto al principio como al final.
             nombreSalida = nombreEntrada;
 
+            // Comprobamos si es null o está vacío.
             if (string.IsNullOrEmpty(nombreEntrada))
             {
                 MessageBox.Show("El nombre no debe estar vacío o ser nulo.");
                 esCorrecto = false;
             }
+            // Aquí comprobamos que el nombre contenga letras o espacios en blanco.
+            // Usamos (All) para recorrer el string de caracteres.
+            // Usamos función lambda anónima para asegurarnos que todos son letras o espacios.
             else if (!nombreEntrada.All(caracter => char.IsLetter(caracter) || caracter == ' '))
             {
                 MessageBox.Show("Introduce un nombre válido.");
@@ -32,17 +37,21 @@ namespace Tema8_Tarea05_Integrador.Interfaz
             return esCorrecto;
         }
 
+        // Método para validar correctamente el DNI.
         public static bool ValidarDNI(string dniEntrada, out string dniSalida)
         {
             bool esCorrecto = true;
 
-            dniEntrada = dniEntrada.Trim().ToUpper();
+            dniEntrada = dniEntrada.Trim().ToUpper(); // Quitamos los espacios en blanco y pasamos la letra a mayusculas.
             dniSalida = dniEntrada;
 
-            /* Regex para 8 números + 1 letra.
-             */
-            string patron = @"^[0-9]{8}[A-Z]$";
+            // Regex para 8 números + 1 letra.
+            // Declaramos una variable donde se almacena el patrón para el DNI.
+            // Lo que queremos en el patrón empieza con ^ y termina con $.
+            // Dentro ponemos las reglas que queremos para la validación del DNI.
+            string patron = @"^[0-9]{8}[A-Z]$"; // 8 números y una letra al final.
             
+            // Comprobamos si coinciden o no los datos de entrada con el patrón que hemos impuesto.
             if (!Regex.IsMatch(dniEntrada, patron)) 
             { 
                 MessageBox.Show("Introduce un número de identidad válido.");
@@ -52,6 +61,7 @@ namespace Tema8_Tarea05_Integrador.Interfaz
             return esCorrecto;
         }
 
+        // Método para validar correctamente el Email.
         public static bool ValidarEmail(string emailEntrada, out string emailSalida)
         {
             bool esCorrecto = true;
@@ -59,8 +69,12 @@ namespace Tema8_Tarea05_Integrador.Interfaz
             emailEntrada = emailEntrada.Trim().ToLower();
             emailSalida = emailEntrada;
 
-            /* Regex para validar el formato de email.
-             */
+            // Regex para validar el formato de Email.
+            // En la primera parte del patrón queremos tanto letras como números y algunos signos.
+            // Después ponemos un + para decir que sea de 1 caracter en adelante.
+            // En la segunda parte hacemos algo muy similar.
+            // En la última parte tenemos que poner una \ antes del punto para que funcione bien.
+            // Y al final nos aseguramos que la extensión del email tenga desde 2 en adelante caracteres.
             string patron = @"^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,}$";
 
             if (!Regex.IsMatch(emailEntrada, patron))
@@ -72,24 +86,29 @@ namespace Tema8_Tarea05_Integrador.Interfaz
             return esCorrecto;
         }
 
+        // Método para validar el teléfono.
         public static bool ValidarTelefono(string prefijo, string telefonoEntrada, out string telefonoSalida)
         {
             bool esCorrecto = true;
             telefonoEntrada = telefonoEntrada.Trim();
             telefonoSalida = telefonoEntrada;
 
+            // Nos aseguramos que no sea null o esté vacío.
             if (string.IsNullOrEmpty(telefonoEntrada))
             {
                 MessageBox.Show("El teléfono no debe estar vacío o ser nulo.");
                 esCorrecto = false;
             }
+            // Luego que miramos si son todo dígitos o no lo son.
             else if (!telefonoEntrada.All(char.IsDigit))
             {
                 MessageBox.Show("Introduce un número de teléfono válido.");
                 esCorrecto = false;
             }
+            // Si son dígitos pasamos a un switch para comprobar un ComboBox de prefijos.
             else
             {
+                // Cada prefijo tiene unas reglas de longitud de números.
                 switch (prefijo)
                 {
                     case "+34":
@@ -126,6 +145,7 @@ namespace Tema8_Tarea05_Integrador.Interfaz
             return esCorrecto;
         }
 
+        // Método para validar el código. Reglas de código entre cierto rango de números.
         public static bool ValidarCodigo(string codigoEntrada, out int codigoSalida)
         {
             bool esCorrecto = true;
@@ -145,6 +165,7 @@ namespace Tema8_Tarea05_Integrador.Interfaz
             return esCorrecto;
         }
 
+        // Método para validar la duración. También con rango.
         public static bool ValidarDuracion(string duracionEntrada, out int duracionSalida)
         {
             bool esCorrecto = true;
@@ -164,6 +185,7 @@ namespace Tema8_Tarea05_Integrador.Interfaz
             return esCorrecto;
         }
 
+        // Método para validar la tarifa por hora. También con rango.
         public static bool ValidarTarifaHora(string tarifaEntrada, out double tarifaSalida)
         {
             bool esCorrecto = true;
@@ -183,6 +205,7 @@ namespace Tema8_Tarea05_Integrador.Interfaz
             return esCorrecto;
         }
 
+        // Método para validar el precio por palabra. También con rango.
         public static bool ValidarPrecioPalabras(string precioPalabraEntrada, out double precioPalabraSalida)
         {
             bool esCorrecto = true;
@@ -202,6 +225,7 @@ namespace Tema8_Tarea05_Integrador.Interfaz
             return esCorrecto;
         }
 
+        // Método para validar los números enteros.
         public static bool ValidarEntero(string mensaje, out int num)
         {
             bool esCorrecto = true;

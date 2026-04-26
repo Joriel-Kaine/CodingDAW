@@ -48,11 +48,13 @@ namespace Tema8_Tarea05_Integrador.Proyectos
             return esCorrecto; // Se devuelve un booleano para mostrar mensajes en el FORM.
         }
 
+        // Método que devuelve la lista de proyectos.
         public List<Proyecto> DevolverListaProyectos()
         {
             return _listaProyectos;
         }
 
+        // Método que elimina un proyecto por medio del código único.
         public bool EliminarProyectoPorCodigo(int codigo)
         {
             bool esCorrecto = false;

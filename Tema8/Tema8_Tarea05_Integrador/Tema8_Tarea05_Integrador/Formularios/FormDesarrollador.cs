@@ -29,7 +29,6 @@ namespace Tema8_Tarea05_Integrador
         // Métodos.
         private void AddDesarrollador()
         {
-            // Declaración de variables con los datos de los cuadros de texto.
             string nombreBox = txtNombre.Text,
                    dniBox = txtDNI.Text,
                    emailBox = txtEmail.Text,
@@ -37,14 +36,11 @@ namespace Tema8_Tarea05_Integrador
                    lenguajePrincipalBox = txtLenguajePrincipal.Text,
                    tarifaHoraBox = txtTarifaHora.Text;
 
-            // Declaración de variables donde se guardarán los valores ya validados y convertidos.
             string nombre, dni, email, telefono, lenguajePrincipal, telefonoCompleto;
             double tarifaHora;
 
-            // Declaración del booleano que comprobará que los datos son correctos.
             bool esCorrecto = true;
 
-            // Se comprueba si los datos con correctos (con AND).
             esCorrecto &= FuncionesInterfaz.ValidarNombre(nombreBox, out nombre);
             esCorrecto &= FuncionesInterfaz.ValidarDNI(dniBox, out dni);
             esCorrecto &= FuncionesInterfaz.ValidarEmail(emailBox, out email);
@@ -69,11 +65,15 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+
+        // Load del formulario.
         private void FormDesarrollador_Load(object sender, EventArgs e)
         {
             txtTarifaHora.Text = "0";
         }
 
+
+        // Botones.
         private void btnAddDesarrollador_Click(object sender, EventArgs e)
         {
             this.AddDesarrollador();

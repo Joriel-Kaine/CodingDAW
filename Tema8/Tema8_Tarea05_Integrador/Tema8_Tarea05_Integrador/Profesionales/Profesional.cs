@@ -53,19 +53,22 @@ namespace Tema8_Tarea05_Integrador.Profesionales
         // Método abstracto (sin cuerpo) para calcular el presupuesto.
         public abstract double CalcularPresupuesto();
 
+        // Metodo para añadir proyectos a una lista que han sido asignados en profesionales.
         public bool AddProyecto(Proyecto proyecto)
         {
             bool esCorrecto = false;
 
+            // Comprobamos que no exista ya.
             if (!_listaProyectos.Contains(proyecto))
             {
                 _listaProyectos.Add(proyecto);
                 esCorrecto = true;
             }
 
-            return esCorrecto;
+            return esCorrecto; // Devolvemos booleano para la comprobación en el FORMS.
         }
 
+        // Método que devuelve la lista de los proyectos asignados en profesionales.
         public List<Proyecto> DevolverListaProyectosProfesional()
         {
             return _listaProyectos;

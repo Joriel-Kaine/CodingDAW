@@ -93,6 +93,7 @@ namespace Tema8_Tarea05_Integrador.Profesionales
             _listaProfesionales[j] = aux;
         }
 
+        // Método auxiliar que devuelve el puesto según el tipo de profesional.
         private string ObtenerPuesto(Profesional profesional)
         {
             if (profesional is Designer designer)
@@ -113,6 +114,7 @@ namespace Tema8_Tarea05_Integrador.Profesionales
             return "";
         }
         
+        // Método auxiliar para hacer comparación en los profesionales (para ordenar).
         private int Comparar(int i, int j, string opcion)
         {
             switch (opcion)
@@ -123,10 +125,12 @@ namespace Tema8_Tarea05_Integrador.Profesionales
                 case "DNI":
                     return _listaProfesionales[i].DNI.CompareTo(_listaProfesionales[j].DNI);
 
+                    // Aquí llamamos al método ObetnerPuesto para los distintos tipos de profesinal.
                 case "Puesto":
                     return ObtenerPuesto(_listaProfesionales[i])
                         .CompareTo(ObtenerPuesto(_listaProfesionales[j]));
 
+                    // Aquí llamamos al método de CalcularPresupuesto para saber la tarifa por hora.
                 case "Salario hora":
                     return _listaProfesionales[i].CalcularPresupuesto()
                         .CompareTo(_listaProfesionales[j].CalcularPresupuesto());
@@ -136,6 +140,8 @@ namespace Tema8_Tarea05_Integrador.Profesionales
             }
         }
 
+
+        // Método para ordenar de manera ascendente a los profesionales.
         public void OrdenarPor(string opcion)
         {
             for (int i = 0; i < _listaProfesionales.Count - 1; i++)

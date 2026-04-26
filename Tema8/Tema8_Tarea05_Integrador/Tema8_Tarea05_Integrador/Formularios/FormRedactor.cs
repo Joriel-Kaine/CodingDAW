@@ -30,7 +30,6 @@ namespace Tema8_Tarea05_Integrador
         // Métodos.
         private void AddRedactor()
         {
-            // Declaración de variables con los datos de los cuadros de texto.
             string nombreBox = txtNombre.Text,
                    dniBox = txtDNI.Text,
                    emailBox = txtEmail.Text,
@@ -38,14 +37,11 @@ namespace Tema8_Tarea05_Integrador
                    tematicaPrincipalBox = txtTematicaPrincipal.Text,
                    precioPorPalabraBox = txtPrecioPorPalabra.Text;
 
-            // Declaración de variables donde se guardarán los valores ya validados y convertidos.
             string nombre, dni, email, telefono, tematicaPrincipal, telefonoCompleto;
             double precioPorPalabra;
 
-            // Declaración del booleano que comprobará que los datos son correctos.
             bool esCorrecto = true;
 
-            // Se comprueba si los datos con correctos (con AND).
             esCorrecto &= FuncionesInterfaz.ValidarNombre(nombreBox, out nombre);
             esCorrecto &= FuncionesInterfaz.ValidarDNI(dniBox, out dni);
             esCorrecto &= FuncionesInterfaz.ValidarEmail(emailBox, out email);
@@ -71,12 +67,14 @@ namespace Tema8_Tarea05_Integrador
         }
 
 
-        // Botones.
+        // Load del formulario.
         private void FormRedactor_Load(object sender, EventArgs e)
         {
             txtPrecioPorPalabra.Text = "0";
         }
 
+
+        // Botones.
         private void btnAddRedactor_Click(object sender, EventArgs e)
         {
             this.AddRedactor();

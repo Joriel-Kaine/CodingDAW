@@ -25,7 +25,7 @@ namespace Tema8_Tarea05_Integrador
         }
 
 
-        // Métodos.
+        // Método para actualizar el ComboBox de profesionales y proyectos con los datos existentes.
         private void ActualizarComboList()
         {
             cmbProfesionales.Items.Clear();
@@ -45,6 +45,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método que muestra el total de profesionales y proyectos.
         private void MostrarTodo()
         {
             lstAnalisis.Items.Clear();
@@ -56,6 +57,7 @@ namespace Tema8_Tarea05_Integrador
             lstAnalisis.Items.Add($"Hay un total de {totalProyectos} proyectos en la empresa.");
         }
 
+        // Método que saca el total del coste de un proyecto.
         private void CosteTotalProyecto()
         {
             if (cmbProyectos.SelectedItem is null)
@@ -80,6 +82,8 @@ namespace Tema8_Tarea05_Integrador
                     List<Profesional> listaProfesionalesProyecto = proyecto.DevolverListaProfesionalesProyecto();
                     double totalTarifaHora = 0;
 
+                    // Se calcula el coste del proyecto recorriendo los profesionales.
+                    // Se recorre en la lista de proyectos dentro de la clase Profesional.
                     foreach (Profesional profesional in listaProfesionalesProyecto)
                     {
                         totalTarifaHora += profesional.CalcularPresupuesto();
@@ -91,6 +95,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método para mostrar en la lista los proyectos en los que está un profesional.
         private void ProyectosDeProfesional()
         {
             if (cmbProfesionales.SelectedItem is null)
@@ -122,6 +127,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método que calcula las ganancias de un profesional, en todos sus proyectos.
         private void GananciasProfesional()
         {
             if (cmbProfesionales.SelectedItem is null)
@@ -157,6 +163,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método que muestra en la lista los profesionales que hay en uno o más proyectos.
         private void ProfesionalesEnProyectos()
         {
             lstAnalisis.Items.Clear();
@@ -171,6 +178,7 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+        // Método que muestra los profesionales sin proyectos asignados.
         private void ProfesionalesSinProyectos()
         {
             lstAnalisis.Items.Clear();

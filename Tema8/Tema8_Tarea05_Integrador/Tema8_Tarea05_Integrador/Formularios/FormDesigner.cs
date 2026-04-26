@@ -45,6 +45,7 @@ namespace Tema8_Tarea05_Integrador
             bool esCorrecto = true;
 
             // Se comprueba si los datos con correctos (con AND).
+            // Si no son correctos, lanzan mensajes de error en cada caso.
             esCorrecto &= FuncionesInterfaz.ValidarNombre(nombreBox, out nombre);
             esCorrecto &= FuncionesInterfaz.ValidarDNI(dniBox, out dni);
             esCorrecto &= FuncionesInterfaz.ValidarEmail(emailBox, out email);
@@ -54,10 +55,11 @@ namespace Tema8_Tarea05_Integrador
 
             telefonoCompleto = cmbPrefijo.Text + telefono;
 
-            if (esCorrecto) // Si es correcto se añade a la lista.
+            if (esCorrecto) // Si es correcto se crea.
             {
                 Designer designer = new(nombre, dni, email, telefonoCompleto, especialidad, tarifaHora);
 
+                // Aquí mostramos usamos una condición, para saber si se añade o no, porque ya existe.
                 if (_listaProfesionales.AddProfesional(designer))
                 {
                     MessageBox.Show("Profesional añadido correctamente.");
@@ -69,11 +71,15 @@ namespace Tema8_Tarea05_Integrador
             }
         }
 
+
+        // Load del formulario.
         private void FormDesigner_Load(object sender, EventArgs e)
         {
             txtTarifaHora.Text = "0";
         }
 
+
+        // Botones.
         private void btnAddDesigner_Click(object sender, EventArgs e)
         {
             this.AddDesigner();
