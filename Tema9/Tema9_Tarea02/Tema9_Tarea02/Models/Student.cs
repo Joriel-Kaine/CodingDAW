@@ -15,15 +15,18 @@ namespace Tema9_Tarea02.Models
         public int? Id { get; set; }
         [Column("name")]
         public string Name { get; set; } = "";
+        [Column("dni")]
+        public string Dni { get; set; } = "";
         [Column("age")]
         public int Age { get; set; }
 
         public Student() { }
 
-        public Student(int? id, string name, int age)
+        public Student(int? id, string name, string dni, int age)
         {
             Id = id;
             Name = name;
+            Dni = dni;
             Age = age;
         }
     }

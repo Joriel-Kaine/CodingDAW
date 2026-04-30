@@ -1,8 +1,11 @@
 ﻿using Supabase.Postgrest.Converters;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Tema9_Tarea02.Models;
 using Tema9_Tarea02.Repositories;
@@ -19,20 +22,32 @@ namespace Tema9_Tarea02.Controllers
         }
 
         // Crear estudiante desde datos primitivos
-        public async Task<Student?> CreateAsync(string name, int age)
+        public async Task<Student?> CreateAsync(string name, string dni, int age)
         {
+            var patron = @"^[0-9]{8}[A-Z]$";
+
             // Validación mínima (opcional). Si no la quieres, quítala.
             if (string.IsNullOrWhiteSpace(name))
             {
                 throw new ArgumentException("El nombre no puede estar vacío.", nameof(name));
             }
-            
+
+            if (string.IsNullOrWhiteSpace(dni))
+            {
+                throw new ArgumentException("El DNI no puede estar vacío.", nameof(dni));
+            }
+
+            if (!Regex.IsMatch(dni, patron))
+            {
+                throw new ArgumentException(nameof(dni), "El DNI no tiene el formato correcto.");
+            }
+
             if (age < 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(age), "La edad no puede ser negativa");
             }
 
-            var student = new Student(null, name.Trim(), age);
+            var student = new Student(null, name.Trim(), dni.Trim(), age);
 
             return await _repo.InsertAsync(student);
         }
@@ -41,7 +56,8 @@ namespace Tema9_Tarea02.Controllers
         public Task<List<Student>> GetAllAsync() => _repo.GetAllAsync();
 
         // Actualizar un estudiante ya existente (normalmente obtenido desde la lista).
-        public async Task<Student?> UpdateAsync(Student student, string? newName = null, int? newAge = null)
+        public async Task<Student?> UpdateAsync(Student student, string? newName = null,
+            string? newDni = null, int? newAge = null)
         {
             if (student is null)
             {
@@ -58,6 +74,23 @@ namespace Tema9_Tarea02.Controllers
                 student.Name = newName.Trim();
             }
 
+            if (newDni is not null)
+            {
+                var patron = @"^[0-9]{8}[A-Z]$";
+
+                if (string.IsNullOrWhiteSpace(newDni))
+                {
+                    throw new ArgumentException("El DNI no puede estar vacío.", nameof(newDni));
+                }
+
+                if (!Regex.IsMatch(newDni, patron))
+                {
+                    throw new ArgumentException(nameof(newDni), "El DNI no tiene el formato correcto.");
+                }
+
+                student.Dni = newDni.Trim();
+            }
+
             if (newAge is not null)
             {
                 if (newAge < 0)
@@ -71,14 +104,31 @@ namespace Tema9_Tarea02.Controllers
             return await _repo.UpdateAsync(student);
         }
 
-        public async Task<bool> DeleteAsync(int id)
+        public async Task<bool> DeleteAsyncId(int id)
         {
             if (id <= 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(id), "Id debe ser > 0");
             }
 
-            return await _repo.DeleteAsync(id);
+            return await _repo.DeleteAsyncId(id);
+        }
+
+        public async Task<bool> DeleteAsyncDni(string dni)
+        {
+            var patron = @"^[0-9]{8}[A-Z]$";
+
+            if (string.IsNullOrWhiteSpace(dni))
+            {
+                throw new ArgumentException(nameof(dni), "El DNI no puede estar vacío.");
+            }
+
+            if (!Regex.IsMatch(dni, patron))
+            {
+                throw new ArgumentException(nameof(dni), "El DNI no tiene el formato correcto.");
+            }
+
+            return await _repo.DeleteAsyncDni(dni);
         }
     }
 }
