@@ -21,10 +21,14 @@ namespace Tema9_Tarea02.Controllers
             _repo = repo;
         }
 
-        // Crear estudiante desde datos primitivos
+        // Obtener toda la lista (el Program decide cómo mostrarla)
+        public Task<List<Student>> GetAllAsync() => _repo.GetAllAsync();
+
+        // Crear desde datos primitivos
         public async Task<Student?> CreateAsync(string name, string dni, int age)
         {
             var patron = @"^[0-9]{8}[A-Z]$";
+            var isExisting = await _repo.GetByDniAsync(dni);
 
             // Validación mínima (opcional). Si no la quieres, quítala.
             if (string.IsNullOrWhiteSpace(name))
@@ -42,6 +46,11 @@ namespace Tema9_Tarea02.Controllers
                 throw new ArgumentException(nameof(dni), "El DNI no tiene el formato correcto.");
             }
 
+            if (isExisting is not null)
+            {
+                throw new ArgumentException(nameof(dni), "El DNI ya existe y no puede ser introducido.");
+            }
+
             if (age < 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(age), "La edad no puede ser negativa");
@@ -52,8 +61,63 @@ namespace Tema9_Tarea02.Controllers
             return await _repo.InsertAsync(student);
         }
 
-        // Obtener toda la lista (el Program decide cómo mostrarla)
-        public Task<List<Student>> GetAllAsync() => _repo.GetAllAsync();
+        // Mostrar usando el ID.
+        public async Task<Student?> GetAsyncId(int id)
+        {
+            if (id <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(id), "Id debe ser > 0");
+            }
+
+            return await _repo.GetByIdAsync(id);
+        }
+
+        // Mostrar usando el DNI.
+        public async Task<Student?> GetAsyncDNI(string dni)
+        {
+            var patron = @"^[0-9]{8}[A-Z]$";
+
+            if (string.IsNullOrWhiteSpace(dni))
+            {
+                throw new ArgumentException(nameof(dni), "El DNI no puede estar vacío.");
+            }
+
+            if (!Regex.IsMatch(dni, patron))
+            {
+                throw new ArgumentException(nameof(dni), "El DNI no tiene el formato correcto.");
+            }
+
+            return await _repo.GetByDniAsync(dni);
+        }
+
+        // Eliminar usando el ID.
+        public async Task<bool> DeleteAsyncId(int id)
+        {
+            if (id <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(id), "Id debe ser > 0");
+            }
+
+            return await _repo.DeleteAsyncId(id);
+        }
+
+        // Eliminar un estudiante usando el DNI.
+        public async Task<bool> DeleteAsyncDni(string dni)
+        {
+            var patron = @"^[0-9]{8}[A-Z]$";
+
+            if (string.IsNullOrWhiteSpace(dni))
+            {
+                throw new ArgumentException(nameof(dni), "El DNI no puede estar vacío.");
+            }
+
+            if (!Regex.IsMatch(dni, patron))
+            {
+                throw new ArgumentException(nameof(dni), "El DNI no tiene el formato correcto.");
+            }
+
+            return await _repo.DeleteAsyncDni(dni);
+        }
 
         // Actualizar un estudiante ya existente (normalmente obtenido desde la lista).
         public async Task<Student?> UpdateAsync(Student student, string? newName = null,
@@ -102,33 +166,6 @@ namespace Tema9_Tarea02.Controllers
             }
 
             return await _repo.UpdateAsync(student);
-        }
-
-        public async Task<bool> DeleteAsyncId(int id)
-        {
-            if (id <= 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(id), "Id debe ser > 0");
-            }
-
-            return await _repo.DeleteAsyncId(id);
-        }
-
-        public async Task<bool> DeleteAsyncDni(string dni)
-        {
-            var patron = @"^[0-9]{8}[A-Z]$";
-
-            if (string.IsNullOrWhiteSpace(dni))
-            {
-                throw new ArgumentException(nameof(dni), "El DNI no puede estar vacío.");
-            }
-
-            if (!Regex.IsMatch(dni, patron))
-            {
-                throw new ArgumentException(nameof(dni), "El DNI no tiene el formato correcto.");
-            }
-
-            return await _repo.DeleteAsyncDni(dni);
         }
     }
 }

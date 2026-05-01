@@ -29,5 +29,14 @@ namespace Tema9_Tarea02.Models
             Dni = dni;
             Age = age;
         }
+
+        // Método ToString para mostrar los datos del estudiante.
+        public override string ToString()
+        {
+            return $"{Id} - " +
+                   $"{Name} - " +
+                   $"{Dni} - " +
+                   $"{Age} - ";
+        }
     }
 }

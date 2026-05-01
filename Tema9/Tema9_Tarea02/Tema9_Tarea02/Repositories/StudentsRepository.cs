@@ -39,14 +39,26 @@ namespace Tema9_Tarea02.Repositories
             return response.Models?.FirstOrDefault() ?? null;
         }
 
-        // Actualizar un estudiante.
-        public async Task<Student?> UpdateAsync(Student student)
+        // Buscar un estudiante mediante el ID (PK) como parámetro de entrada.
+        public async Task<Student?> GetByIdAsync(int id)
         {
             var response = await _client
                 .From<Student>()
-                .Update(student);
+                .Filter("id", Operator.Equals, id)
+                .Get();
 
-            return response.Models?.FirstOrDefault() ?? null;
+            return response.Models?.FirstOrDefault();
+        }
+
+        // Buscar un estudiante mediante el DNI como parámetro de entrada.
+        public async Task<Student?> GetByDniAsync(string dni)
+        {
+            var response = await _client
+                .From<Student>()
+                .Filter("dni", Operator.Equals, dni)
+                .Get();
+
+            return response.Models?.FirstOrDefault();
         }
 
         // Borrar por ID mediante el modelo con la PK (primary key), evitando el filter.
@@ -60,23 +72,22 @@ namespace Tema9_Tarea02.Repositories
             return response.Models is not null && response.Models.Count > 0;
         }
 
-        // Buscar un estudiante mediante su PK.
-        public async Task<Student?> GetByDniAsync(string dni)
-        {
-            var response = await _client
-                .From<Student>()
-                .Filter("dni", Operator.Equals, dni)
-                .Get();
-
-            return response.Models?.FirstOrDefault();
-        }
-
         // Borrar por DNI mediante el modelo.
         public async Task<bool> DeleteAsyncDni(string dni)
         {
             var student = await GetByDniAsync(dni);
 
             return student is not null && await DeleteAsyncId(student.Id);
+        }
+
+        // Actualizar un estudiante.
+        public async Task<Student?> UpdateAsync(Student student)
+        {
+            var response = await _client
+                .From<Student>()
+                .Update(student);
+
+            return response.Models?.FirstOrDefault() ?? null;
         }
     }
 }
