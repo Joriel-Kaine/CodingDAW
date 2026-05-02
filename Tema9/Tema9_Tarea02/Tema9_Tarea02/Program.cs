@@ -39,10 +39,22 @@ namespace Tema9_Tarea02
                             Console.Write("Introduce el nombre del estudiante: ");
                             var name = Console.ReadLine();
 
+                            if (string.IsNullOrWhiteSpace(name))
+                            {
+                                Console.WriteLine("El nombre no puede estar vacío.");
+                                return;
+                            }
+
                             Console.Write("Introduce su DNI: ");
                             var dni = Console.ReadLine();
 
-                            var age = ConsoleView.LeerEntero("Introduce su edad: ");
+                            if (string.IsNullOrWhiteSpace(dni))
+                            {
+                                Console.WriteLine("El DNI no puede estar vacío.");
+                                return;
+                            }
+
+                            var age = ConsoleView.ReadInteger("Introduce su edad: ");
 
                             await controller.CreateAsync(name, dni, age);
 
@@ -53,9 +65,17 @@ namespace Tema9_Tarea02
                     case 3:
                         await ConsoleView.SafeExecuteAsync(async () =>
                         {
-                            var id = ConsoleView.LeerEntero("Introduce el ID del estudiante a mostrar: ");
+                            var id = ConsoleView.ReadInteger("Introduce el ID del estudiante a mostrar: ");
 
-                            Console.WriteLine(await controller.GetAsyncId(id));
+                            var student = await controller.GetAsyncId(id);
+
+                            if (student is null)
+                            {
+                                Console.WriteLine("No hay ningún estudiante con ese ID.");
+                                return;
+                            }
+
+                            Console.WriteLine(student);
                         });
 
                         break;
@@ -65,14 +85,36 @@ namespace Tema9_Tarea02
                             Console.Write("Introduce el DNI del estudiante: ");
                             var dni = Console.ReadLine();
 
-                            Console.WriteLine(await controller.GetAsyncDNI(dni));
+                            if (string.IsNullOrWhiteSpace(dni))
+                            {
+                                Console.WriteLine("El DNI no puede estar vacío.");
+                                return;
+                            }
+
+                            var student = await controller.GetAsyncDni(dni);
+
+                            if (student is null)
+                            {
+                                Console.WriteLine("No hay ningún estudiante con ese DNI");
+                                return;
+                            }
+
+                            Console.WriteLine(student);
                         });
 
                         break;
                     case 5:
                         await ConsoleView.SafeExecuteAsync(async () =>
                         {
-                            var id = ConsoleView.LeerEntero("Introduce el ID del estudiante a eliminar: ");
+                            var id = ConsoleView.ReadInteger("Introduce el ID del estudiante a eliminar: ");
+
+                            var student = await controller.GetAsyncId(id);
+
+                            if (student is null)
+                            {
+                                Console.WriteLine("No hay ningún estudiante con ese ID");
+                                return;
+                            }
 
                             await controller.DeleteAsyncId(id);
 
@@ -86,6 +128,20 @@ namespace Tema9_Tarea02
                             Console.Write("Introduce el DNI del estudiante: ");
                             var dni = Console.ReadLine();
 
+                            if (string.IsNullOrWhiteSpace(dni))
+                            {
+                                Console.WriteLine("El DNI no puede estar vacío.");
+                                return;
+                            }
+
+                            var student = await controller.GetAsyncDni(dni);
+                            
+                            if (student is null)
+                            {
+                                Console.WriteLine("No hay ningún estudiante con ese DNI.");
+                                return;
+                            }
+
                             await controller.DeleteAsyncDni(dni);
 
                             Console.WriteLine("Estudiante eliminado correctamente.");
@@ -95,7 +151,7 @@ namespace Tema9_Tarea02
                     case 7:
                         await ConsoleView.SafeExecuteAsync(async () =>
                         {
-                            var id = ConsoleView.LeerEntero("Introduce el ID del estudiante a actualizar: ");
+                            var id = ConsoleView.ReadInteger("Introduce el ID del estudiante a actualizar: ");
 
                             var student = await controller.GetAsyncId(id);
 
@@ -113,7 +169,7 @@ namespace Tema9_Tarea02
                             Console.Write("DNI: ");
                             var newDni = Console.ReadLine();
 
-                            var newAge = ConsoleView.LeerEntero("Edad: ");
+                            var newAge = ConsoleView.ReadInteger("Edad: ");
 
                             await controller.UpdateAsync(student, newName, newDni, newAge);
 

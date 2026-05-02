@@ -9,62 +9,58 @@ namespace Tema9_Tarea02.Views
 {
     public static class ConsoleView
     {
-        public static int LeerMenu(string mensaje)
+        public static int ReadMenu(string message)
         {
             int num;
-            bool esCorrecto;
+            bool isCorrect;
 
             do
             {
-                Console.Write(mensaje);
-                esCorrecto = int.TryParse(Console.ReadLine(), out num);
+                Console.Write(message);
+                isCorrect = int.TryParse(Console.ReadLine(), out num);
 
-                if (esCorrecto && (num < 1 || num > 8))
+                if (isCorrect && (num < 1 || num > 8))
                 {
                     Console.WriteLine("Introduce una opción correcta.");
                 }
 
-            } while (!esCorrecto || (num < 1 || num > 8));
+            } while (!isCorrect || (num < 1 || num > 8));
 
             return num;
         }
 
         public static int Menu()
         {
-            int opcion;
+            int option;
 
-                Console.WriteLine("\n   ==== MENÚ ====\n" +
-                                  "\n1. Mostrar todos los estudiantes." +
-                                  "\n2. Introducir estudiante nuevo." +
-                                  "\n3. Mostrar datos de un estudiante (por ID)." +
-                                  "\n4. Mostrar datos de un estudiante (por DNI)." +
-                                  "\n5. Eliminar estudiante (por ID)." +
-                                  "\n6. Eliminar estudiante (por DNI)." +
-                                  "\n7. Editar los datos de un estudiante." +
-                                  "\n8. Salir del programa.");
+            Console.WriteLine("\n   ==== MENÚ ====\n" +             
+                              "\n1. Mostrar todos los estudiantes." +             
+                              "\n2. Introducir estudiante nuevo." +           
+                              "\n3. Mostrar datos de un estudiante (por ID)." +            
+                              "\n4. Mostrar datos de un estudiante (por DNI)." +              
+                              "\n5. Eliminar estudiante (por ID)." +            
+                              "\n6. Eliminar estudiante (por DNI)." +                
+                              "\n7. Editar los datos de un estudiante." +               
+                              "\n8. Salir del programa.");
+            
+            option = ReadMenu("\nIntroduce una opción del menú: ");  
+            Console.WriteLine();
 
-                opcion = LeerMenu("\nIntroduce una opción del menú: ");
-                Console.WriteLine();
-
-            return opcion;
+            return option;
         }
 
-        public static int LeerEntero(string mensaje)
+        public static int ReadInteger(string message)
         {
             int num;
-            bool esCorrecto;
+            bool isCorrect;
 
-            do
+            Console.Write(message);
+            isCorrect = int.TryParse(Console.ReadLine(), out num);
+
+            if (!isCorrect)
             {
-                Console.Write(mensaje);
-                esCorrecto = int.TryParse(Console.ReadLine(), out num);
-
-                if (!esCorrecto)
-                {
-                    Console.WriteLine("Introduce valores numéricos válidos.");
-                }
-
-            } while (!esCorrecto);
+                throw new FormatException("Introduce valores numéricos válidos.");
+            }
 
             return num;
         }

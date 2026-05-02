@@ -27,7 +27,7 @@ namespace Tema9_Tarea02.Data
 
             if (string.IsNullOrWhiteSpace(url) || string.IsNullOrWhiteSpace(key))
             {
-                throw new Exception("Faltan variables de entorno SUPABASE_URL o SUPABASE_ANON_KEY");
+                throw new InvalidOperationException("Faltan variables de entorno SUPABASE_URL o SUPABASE_ANON_KEY");
             }
 
             var options = new SupabaseOptions

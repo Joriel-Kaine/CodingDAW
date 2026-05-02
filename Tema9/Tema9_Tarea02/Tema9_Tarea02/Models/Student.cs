@@ -32,11 +32,6 @@ namespace Tema9_Tarea02.Models
 
         // Método ToString para mostrar los datos del estudiante.
         public override string ToString()
-        {
-            return $"{Id} - " +
-                   $"{Name} - " +
-                   $"{Dni} - " +
-                   $"{Age} años. ";
-        }
+            => $"{Id} | {Name} | {Dni} | {Age} años.";
     }
 }

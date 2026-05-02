@@ -7,6 +7,7 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Tema9_Tarea02.Models;
 using Tema9_Tarea02.Repositories;
 
@@ -48,12 +49,12 @@ namespace Tema9_Tarea02.Controllers
 
             if (!Regex.IsMatch(dni, patron))
             {
-                throw new ArgumentException(nameof(dni), "El DNI no tiene el formato correcto.");
+                throw new ArgumentException("El DNI no tiene el formato correcto.", nameof(dni));
             }
 
             if (isExisting is not null)
             {
-                throw new ArgumentException(nameof(dni), "El DNI ya existe y no puede ser introducido.");
+                throw new ArgumentException("El DNI ya existe y no puede ser introducido.", nameof(dni));
             }
 
             if (age < 0)
@@ -78,7 +79,7 @@ namespace Tema9_Tarea02.Controllers
         }
 
         // Mostrar usando el DNI.
-        public async Task<Student?> GetAsyncDNI(string dni)
+        public async Task<Student?> GetAsyncDni(string dni)
         {
             var patron = @"^[0-9]{8}[A-Z]$";
 
@@ -140,12 +141,18 @@ namespace Tema9_Tarea02.Controllers
                     throw new ArgumentException("El nombre no puede estar vacío.", nameof(newName));
                 }
 
+                if (!newName.All(character => char.IsLetter(character) || character == ' '))
+                {
+                    throw new ArgumentException("El nombre debe estar compuesto por letras.", nameof(newName));
+                }
+
                 student.Name = newName.Trim();
             }
 
             if (newDni is not null)
             {
                 var patron = @"^[0-9]{8}[A-Z]$";
+                var isExisting = await _repo.GetByDniAsync(newDni);
 
                 if (string.IsNullOrWhiteSpace(newDni))
                 {
@@ -155,6 +162,11 @@ namespace Tema9_Tarea02.Controllers
                 if (!Regex.IsMatch(newDni, patron))
                 {
                     throw new ArgumentException(nameof(newDni), "El DNI no tiene el formato correcto.");
+                }
+
+                if (isExisting is not null && isExisting.Id != student.Id)
+                {
+                    throw new ArgumentException("El DNI ya existe y no puede ser introducido.", nameof(newDni));
                 }
 
                 student.Dni = newDni.Trim();
