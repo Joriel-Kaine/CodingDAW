@@ -36,6 +36,11 @@ namespace Tema9_Tarea02.Controllers
                 throw new ArgumentException("El nombre no puede estar vacío.", nameof(name));
             }
 
+            if (!name.All(character => char.IsLetter(character) || character == ' '))
+            {
+                throw new ArgumentException("El nombre debe estar compuesto por letras.", nameof(name));
+            }
+
             if (string.IsNullOrWhiteSpace(dni))
             {
                 throw new ArgumentException("El DNI no puede estar vacío.", nameof(dni));

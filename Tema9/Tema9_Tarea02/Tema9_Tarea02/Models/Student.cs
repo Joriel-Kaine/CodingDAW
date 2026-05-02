@@ -36,7 +36,7 @@ namespace Tema9_Tarea02.Models
             return $"{Id} - " +
                    $"{Name} - " +
                    $"{Dni} - " +
-                   $"{Age} - ";
+                   $"{Age} años. ";
         }
     }
 }
