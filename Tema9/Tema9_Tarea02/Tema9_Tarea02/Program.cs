@@ -12,8 +12,6 @@ namespace Tema9_Tarea02
     {
         static async Task Main(string[] args)
         {
-
-
             Console.WriteLine("\nTema 9 - Tarea 2: Manuel MR ®\n" +
                               "═════════════════════════════\n\n");
 
