@@ -22,35 +22,46 @@ namespace Tema9_Tarea02.Controllers
             _repo = repo;
         }
 
+
+        // Métodos auxiliares.
+        private void NullWhiteSpaceValidation(string displayName, string value, string paramName)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new ArgumentException($"El {displayName} no puede estar vacío.", paramName);
+            }
+        }
+
+        private void FormatDniValidation(string value, string paramName)
+        {
+            var pattern = @"^[0-9]{8}[A-Z]$";
+
+            if (!Regex.IsMatch(value, pattern))
+            {
+                throw new ArgumentException($"El DNI no tiene el formato correcto.", paramName);
+            }
+        }
+
+
         // Obtener toda la lista (el Program decide cómo mostrarla)
-        public Task<List<Student>> GetAllAsync() => _repo.GetAllAsync();
+        public Task<List<Student>> GetAsyncAll() => _repo.GetAllAsync();
 
         // Crear desde datos primitivos
         public async Task<Student?> CreateAsync(string name, string dni, int age)
         {
-            var patron = @"^[0-9]{8}[A-Z]$";
             var isExisting = await _repo.GetByDniAsync(dni);
 
             // Validación mínima (opcional). Si no la quieres, quítala.
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                throw new ArgumentException("El nombre no puede estar vacío.", nameof(name));
-            }
+            NullWhiteSpaceValidation("nombre", name, nameof(name));
 
             if (!name.All(character => char.IsLetter(character) || character == ' '))
             {
                 throw new ArgumentException("El nombre debe estar compuesto por letras.", nameof(name));
             }
 
-            if (string.IsNullOrWhiteSpace(dni))
-            {
-                throw new ArgumentException("El DNI no puede estar vacío.", nameof(dni));
-            }
+            NullWhiteSpaceValidation("DNI", dni, nameof(dni));
 
-            if (!Regex.IsMatch(dni, patron))
-            {
-                throw new ArgumentException("El DNI no tiene el formato correcto.", nameof(dni));
-            }
+            FormatDniValidation(dni, nameof(dni));
 
             if (isExisting is not null)
             {
@@ -59,7 +70,7 @@ namespace Tema9_Tarea02.Controllers
 
             if (age < 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(age), "La edad no puede ser negativa");
+                throw new ArgumentOutOfRangeException("La edad no puede ser negativa.", nameof(age));
             }
 
             var student = new Student(null, name.Trim(), dni.Trim(), age);
@@ -72,7 +83,14 @@ namespace Tema9_Tarea02.Controllers
         {
             if (id <= 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(id), "Id debe ser > 0");
+                throw new ArgumentOutOfRangeException("El ID debe ser mayor que 0.", nameof(id));
+            }
+
+            var student = await _repo.GetByIdAsync(id);
+
+            if (student is null)
+            {
+                throw new ArgumentException("No hay ningún estudiante con ese ID.", nameof(id));
             }
 
             return await _repo.GetByIdAsync(id);
@@ -81,16 +99,15 @@ namespace Tema9_Tarea02.Controllers
         // Mostrar usando el DNI.
         public async Task<Student?> GetAsyncDni(string dni)
         {
-            var patron = @"^[0-9]{8}[A-Z]$";
+            NullWhiteSpaceValidation("DNI", dni, nameof(dni));
 
-            if (string.IsNullOrWhiteSpace(dni))
-            {
-                throw new ArgumentException(nameof(dni), "El DNI no puede estar vacío.");
-            }
+            FormatDniValidation(dni, nameof(dni));
 
-            if (!Regex.IsMatch(dni, patron))
+            var student = await _repo.GetByDniAsync(dni);
+
+            if (student is null)
             {
-                throw new ArgumentException(nameof(dni), "El DNI no tiene el formato correcto.");
+                throw new ArgumentException("No hay ningún estudiante con ese DNI.", nameof(dni));
             }
 
             return await _repo.GetByDniAsync(dni);
@@ -101,7 +118,14 @@ namespace Tema9_Tarea02.Controllers
         {
             if (id <= 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(id), "Id debe ser > 0");
+                throw new ArgumentOutOfRangeException("El ID debe ser mayor que 0.", nameof(id));
+            }
+
+            var student = await _repo.GetByIdAsync(id);
+
+            if (student is null)
+            {
+                throw new ArgumentException("No hay ningún estudiante con ese ID.", nameof(id));
             }
 
             return await _repo.DeleteAsyncId(id);
@@ -110,16 +134,15 @@ namespace Tema9_Tarea02.Controllers
         // Eliminar un estudiante usando el DNI.
         public async Task<bool> DeleteAsyncDni(string dni)
         {
-            var patron = @"^[0-9]{8}[A-Z]$";
+            NullWhiteSpaceValidation("DNI", dni, nameof(dni));
 
-            if (string.IsNullOrWhiteSpace(dni))
-            {
-                throw new ArgumentException(nameof(dni), "El DNI no puede estar vacío.");
-            }
+            FormatDniValidation(dni, nameof(dni));
 
-            if (!Regex.IsMatch(dni, patron))
+            var student = await _repo.GetByDniAsync(dni);
+
+            if (student is null)
             {
-                throw new ArgumentException(nameof(dni), "El DNI no tiene el formato correcto.");
+                throw new ArgumentException("No hay ningún estudiante con ese DNI.", nameof(dni));
             }
 
             return await _repo.DeleteAsyncDni(dni);
@@ -136,10 +159,7 @@ namespace Tema9_Tarea02.Controllers
 
             if (newName is not null)
             {
-                if (string.IsNullOrWhiteSpace(newName))
-                {
-                    throw new ArgumentException("El nombre no puede estar vacío.", nameof(newName));
-                }
+                NullWhiteSpaceValidation("nombre", newName, nameof(newName));
 
                 if (!newName.All(character => char.IsLetter(character) || character == ' '))
                 {
@@ -151,18 +171,11 @@ namespace Tema9_Tarea02.Controllers
 
             if (newDni is not null)
             {
-                var patron = @"^[0-9]{8}[A-Z]$";
                 var isExisting = await _repo.GetByDniAsync(newDni);
 
-                if (string.IsNullOrWhiteSpace(newDni))
-                {
-                    throw new ArgumentException("El DNI no puede estar vacío.", nameof(newDni));
-                }
+                NullWhiteSpaceValidation("DNI", newDni, nameof(newDni));
 
-                if (!Regex.IsMatch(newDni, patron))
-                {
-                    throw new ArgumentException(nameof(newDni), "El DNI no tiene el formato correcto.");
-                }
+                FormatDniValidation(newDni, nameof(newDni));
 
                 if (isExisting is not null && isExisting.Id != student.Id)
                 {
@@ -176,7 +189,7 @@ namespace Tema9_Tarea02.Controllers
             {
                 if (newAge < 0)
                 {
-                    throw new ArgumentOutOfRangeException(nameof(newAge), "La edad no puede ser negativa.");
+                    throw new ArgumentOutOfRangeException("La edad no puede ser negativa.", nameof(newAge));
                 }
 
                 student.Age = newAge.Value;

@@ -82,7 +82,7 @@ namespace Tema9_Tarea02.Views
 
         public static async Task PrintAllStudents(StudentsController controller)
         {
-            var students = await controller.GetAllAsync();
+            var students = await controller.GetAsyncAll();
 
             if (students.Count == 0)
             {

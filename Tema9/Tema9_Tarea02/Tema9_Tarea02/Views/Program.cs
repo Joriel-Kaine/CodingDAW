@@ -69,12 +69,6 @@ namespace Tema9_Tarea02
 
                             var student = await controller.GetAsyncId(id);
 
-                            if (student is null)
-                            {
-                                Console.WriteLine("No hay ningún estudiante con ese ID.");
-                                return;
-                            }
-
                             Console.WriteLine(student);
                         });
 
@@ -92,12 +86,6 @@ namespace Tema9_Tarea02
                             }
 
                             var student = await controller.GetAsyncDni(dni);
-
-                            if (student is null)
-                            {
-                                Console.WriteLine("No hay ningún estudiante con ese DNI");
-                                return;
-                            }
 
                             Console.WriteLine(student);
                         });
