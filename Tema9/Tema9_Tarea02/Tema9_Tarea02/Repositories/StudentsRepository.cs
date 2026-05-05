@@ -36,7 +36,7 @@ namespace Tema9_Tarea02.Repositories
                 .From<Student>()
                 .Insert(student);
 
-            return response.Models?.FirstOrDefault() ?? null;
+            return response.Models?.FirstOrDefault();
         }
 
         // Buscar un estudiante mediante el ID (PK) como parámetro de entrada.
@@ -87,7 +87,7 @@ namespace Tema9_Tarea02.Repositories
                 .From<Student>()
                 .Update(student);
 
-            return response.Models?.FirstOrDefault() ?? null;
+            return response.Models?.FirstOrDefault();
         }
     }
 }

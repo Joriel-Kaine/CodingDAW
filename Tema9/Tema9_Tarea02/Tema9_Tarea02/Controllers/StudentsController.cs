@@ -23,26 +23,6 @@ namespace Tema9_Tarea02.Controllers
         }
 
 
-        // Métodos auxiliares.
-        private void NullWhiteSpaceValidation(string displayName, string value, string paramName)
-        {
-            if (string.IsNullOrWhiteSpace(value))
-            {
-                throw new ArgumentException($"El {displayName} no puede estar vacío.", paramName);
-            }
-        }
-
-        private void FormatDniValidation(string value, string paramName)
-        {
-            var pattern = @"^[0-9]{8}[A-Z]$";
-
-            if (!Regex.IsMatch(value, pattern))
-            {
-                throw new ArgumentException($"El DNI no tiene el formato correcto.", paramName);
-            }
-        }
-
-
         // Obtener toda la lista (el Program decide cómo mostrarla)
         public Task<List<Student>> GetAsyncAll() => _repo.GetAllAsync();
 
@@ -79,7 +59,7 @@ namespace Tema9_Tarea02.Controllers
         }
 
         // Mostrar usando el ID.
-        public async Task<Student?> GetAsyncId(int id)
+        public async Task<Student> GetAsyncId(int id)
         {
             if (id <= 0)
             {
@@ -93,11 +73,11 @@ namespace Tema9_Tarea02.Controllers
                 throw new ArgumentException("No hay ningún estudiante con ese ID.", nameof(id));
             }
 
-            return await _repo.GetByIdAsync(id);
+            return student;
         }
 
         // Mostrar usando el DNI.
-        public async Task<Student?> GetAsyncDni(string dni)
+        public async Task<Student> GetAsyncDni(string dni)
         {
             NullWhiteSpaceValidation("DNI", dni, nameof(dni));
 
@@ -110,7 +90,7 @@ namespace Tema9_Tarea02.Controllers
                 throw new ArgumentException("No hay ningún estudiante con ese DNI.", nameof(dni));
             }
 
-            return await _repo.GetByDniAsync(dni);
+            return student;
         }
 
         // Eliminar usando el ID.
@@ -171,11 +151,11 @@ namespace Tema9_Tarea02.Controllers
 
             if (newDni is not null)
             {
-                var isExisting = await _repo.GetByDniAsync(newDni);
-
                 NullWhiteSpaceValidation("DNI", newDni, nameof(newDni));
 
                 FormatDniValidation(newDni, nameof(newDni));
+
+                var isExisting = await _repo.GetByDniAsync(newDni);
 
                 if (isExisting is not null && isExisting.Id != student.Id)
                 {
@@ -196,6 +176,26 @@ namespace Tema9_Tarea02.Controllers
             }
 
             return await _repo.UpdateAsync(student);
+        }
+
+
+        // Métodos auxiliares.
+        private void NullWhiteSpaceValidation(string displayName, string value, string paramName)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new ArgumentException($"El {displayName} no puede estar vacío.", paramName);
+            }
+        }
+
+        private void FormatDniValidation(string value, string paramName)
+        {
+            var pattern = @"^[0-9]{8}[A-Z]$";
+
+            if (!Regex.IsMatch(value, pattern))
+            {
+                throw new ArgumentException($"El DNI no tiene el formato correcto.", paramName);
+            }
         }
     }
 }
