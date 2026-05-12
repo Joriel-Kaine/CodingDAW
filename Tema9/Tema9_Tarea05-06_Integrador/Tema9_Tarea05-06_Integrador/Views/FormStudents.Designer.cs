@@ -28,109 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
+            btnAddStudent = new Button();
+            btnShowStudentById = new Button();
+            btnShowStudentByDni = new Button();
+            btnDeleteStudentById = new Button();
+            btnDeleteStudentByDni = new Button();
+            btnModifyStudent = new Button();
             groupBox1 = new GroupBox();
             lstStudents = new ListBox();
             label1 = new Label();
-            button8 = new Button();
-            button9 = new Button();
-            button10 = new Button();
-            button11 = new Button();
-            button12 = new Button();
-            button13 = new Button();
-            button14 = new Button();
-            button15 = new Button();
+            btnIconStart = new Button();
+            btnIconPrevious = new Button();
+            btnIconNext = new Button();
+            btnIconEnd = new Button();
+            btnIconAdd = new Button();
+            btnIconDelete = new Button();
+            btnIconShow = new Button();
+            btnIconModify = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // button1
+            // btnAddStudent
             // 
-            button1.BackColor = Color.LightGoldenrodYellow;
-            button1.FlatAppearance.BorderColor = Color.SteelBlue;
-            button1.FlatAppearance.BorderSize = 4;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(77, 628);
-            button1.Name = "button1";
-            button1.Size = new Size(500, 60);
-            button1.TabIndex = 0;
-            button1.Text = "New student";
-            button1.UseVisualStyleBackColor = false;
+            btnAddStudent.BackColor = Color.LightGoldenrodYellow;
+            btnAddStudent.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnAddStudent.FlatAppearance.BorderSize = 4;
+            btnAddStudent.FlatStyle = FlatStyle.Flat;
+            btnAddStudent.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddStudent.Location = new Point(77, 628);
+            btnAddStudent.Name = "btnAddStudent";
+            btnAddStudent.Size = new Size(500, 60);
+            btnAddStudent.TabIndex = 0;
+            btnAddStudent.Text = "New student";
+            btnAddStudent.UseVisualStyleBackColor = false;
+            btnAddStudent.Click += btnAddStudent_Click;
             // 
-            // button2
+            // btnShowStudentById
             // 
-            button2.BackColor = Color.LightGoldenrodYellow;
-            button2.FlatAppearance.BorderColor = Color.SteelBlue;
-            button2.FlatAppearance.BorderSize = 4;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(77, 730);
-            button2.Name = "button2";
-            button2.Size = new Size(500, 60);
-            button2.TabIndex = 1;
-            button2.Text = "Show student by ID";
-            button2.UseVisualStyleBackColor = false;
+            btnShowStudentById.BackColor = Color.LightGoldenrodYellow;
+            btnShowStudentById.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnShowStudentById.FlatAppearance.BorderSize = 4;
+            btnShowStudentById.FlatStyle = FlatStyle.Flat;
+            btnShowStudentById.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnShowStudentById.Location = new Point(77, 730);
+            btnShowStudentById.Name = "btnShowStudentById";
+            btnShowStudentById.Size = new Size(500, 60);
+            btnShowStudentById.TabIndex = 1;
+            btnShowStudentById.Text = "Show student by ID";
+            btnShowStudentById.UseVisualStyleBackColor = false;
+            btnShowStudentById.Click += btnShowStudentById_Click;
             // 
-            // button3
+            // btnShowStudentByDni
             // 
-            button3.BackColor = Color.LightGoldenrodYellow;
-            button3.FlatAppearance.BorderColor = Color.SteelBlue;
-            button3.FlatAppearance.BorderSize = 4;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(77, 832);
-            button3.Name = "button3";
-            button3.Size = new Size(500, 60);
-            button3.TabIndex = 2;
-            button3.Text = "Show student by DNI";
-            button3.UseVisualStyleBackColor = false;
+            btnShowStudentByDni.BackColor = Color.LightGoldenrodYellow;
+            btnShowStudentByDni.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnShowStudentByDni.FlatAppearance.BorderSize = 4;
+            btnShowStudentByDni.FlatStyle = FlatStyle.Flat;
+            btnShowStudentByDni.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnShowStudentByDni.Location = new Point(77, 832);
+            btnShowStudentByDni.Name = "btnShowStudentByDni";
+            btnShowStudentByDni.Size = new Size(500, 60);
+            btnShowStudentByDni.TabIndex = 2;
+            btnShowStudentByDni.Text = "Show student by DNI";
+            btnShowStudentByDni.UseVisualStyleBackColor = false;
+            btnShowStudentByDni.Click += btnShowStudentByDni_Click;
             // 
-            // button4
+            // btnDeleteStudentById
             // 
-            button4.BackColor = Color.LightGoldenrodYellow;
-            button4.FlatAppearance.BorderColor = Color.SteelBlue;
-            button4.FlatAppearance.BorderSize = 4;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(1174, 628);
-            button4.Name = "button4";
-            button4.Size = new Size(500, 60);
-            button4.TabIndex = 3;
-            button4.Text = "Delete student by ID";
-            button4.UseVisualStyleBackColor = false;
+            btnDeleteStudentById.BackColor = Color.LightGoldenrodYellow;
+            btnDeleteStudentById.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnDeleteStudentById.FlatAppearance.BorderSize = 4;
+            btnDeleteStudentById.FlatStyle = FlatStyle.Flat;
+            btnDeleteStudentById.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDeleteStudentById.Location = new Point(1174, 628);
+            btnDeleteStudentById.Name = "btnDeleteStudentById";
+            btnDeleteStudentById.Size = new Size(500, 60);
+            btnDeleteStudentById.TabIndex = 3;
+            btnDeleteStudentById.Text = "Delete student by ID";
+            btnDeleteStudentById.UseVisualStyleBackColor = false;
+            btnDeleteStudentById.Click += btnDeleteStudentById_Click;
             // 
-            // button5
+            // btnDeleteStudentByDni
             // 
-            button5.BackColor = Color.LightGoldenrodYellow;
-            button5.FlatAppearance.BorderColor = Color.SteelBlue;
-            button5.FlatAppearance.BorderSize = 4;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.Location = new Point(1174, 730);
-            button5.Name = "button5";
-            button5.Size = new Size(500, 60);
-            button5.TabIndex = 4;
-            button5.Text = "Delete student by DNI";
-            button5.UseVisualStyleBackColor = false;
+            btnDeleteStudentByDni.BackColor = Color.LightGoldenrodYellow;
+            btnDeleteStudentByDni.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnDeleteStudentByDni.FlatAppearance.BorderSize = 4;
+            btnDeleteStudentByDni.FlatStyle = FlatStyle.Flat;
+            btnDeleteStudentByDni.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDeleteStudentByDni.Location = new Point(1174, 730);
+            btnDeleteStudentByDni.Name = "btnDeleteStudentByDni";
+            btnDeleteStudentByDni.Size = new Size(500, 60);
+            btnDeleteStudentByDni.TabIndex = 4;
+            btnDeleteStudentByDni.Text = "Delete student by DNI";
+            btnDeleteStudentByDni.UseVisualStyleBackColor = false;
+            btnDeleteStudentByDni.Click += btnDeleteStudentByDni_Click;
             // 
-            // button6
+            // btnModifyStudent
             // 
-            button6.BackColor = Color.LightGoldenrodYellow;
-            button6.FlatAppearance.BorderColor = Color.SteelBlue;
-            button6.FlatAppearance.BorderSize = 4;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.Location = new Point(1174, 832);
-            button6.Name = "button6";
-            button6.Size = new Size(500, 60);
-            button6.TabIndex = 5;
-            button6.Text = "Modify student";
-            button6.UseVisualStyleBackColor = false;
+            btnModifyStudent.BackColor = Color.LightGoldenrodYellow;
+            btnModifyStudent.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnModifyStudent.FlatAppearance.BorderSize = 4;
+            btnModifyStudent.FlatStyle = FlatStyle.Flat;
+            btnModifyStudent.Font = new Font("Maiandra GD", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnModifyStudent.Location = new Point(1174, 832);
+            btnModifyStudent.Name = "btnModifyStudent";
+            btnModifyStudent.Size = new Size(500, 60);
+            btnModifyStudent.TabIndex = 5;
+            btnModifyStudent.Text = "Modify student";
+            btnModifyStudent.UseVisualStyleBackColor = false;
+            btnModifyStudent.Click += btnModifyStudent_Click;
             // 
             // groupBox1
             // 
@@ -162,109 +168,117 @@
             label1.TabIndex = 8;
             label1.Text = "Students management form";
             // 
-            // button8
+            // btnIconStart
             // 
-            button8.BackColor = Color.Wheat;
-            button8.FlatAppearance.BorderColor = Color.SteelBlue;
-            button8.FlatAppearance.BorderSize = 4;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Image = Properties.Resources.start;
-            button8.Location = new Point(625, 608);
-            button8.Name = "button8";
-            button8.Size = new Size(100, 80);
-            button8.TabIndex = 9;
-            button8.UseVisualStyleBackColor = false;
+            btnIconStart.BackColor = Color.Wheat;
+            btnIconStart.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnIconStart.FlatAppearance.BorderSize = 4;
+            btnIconStart.FlatStyle = FlatStyle.Flat;
+            btnIconStart.Image = Properties.Resources.start;
+            btnIconStart.Location = new Point(625, 608);
+            btnIconStart.Name = "btnIconStart";
+            btnIconStart.Size = new Size(100, 80);
+            btnIconStart.TabIndex = 9;
+            btnIconStart.UseVisualStyleBackColor = false;
+            btnIconStart.Click += btnIconStart_Click;
             // 
-            // button9
+            // btnIconPrevious
             // 
-            button9.BackColor = Color.Wheat;
-            button9.FlatAppearance.BorderColor = Color.SteelBlue;
-            button9.FlatAppearance.BorderSize = 4;
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.Image = Properties.Resources.previous;
-            button9.Location = new Point(761, 608);
-            button9.Name = "button9";
-            button9.Size = new Size(100, 80);
-            button9.TabIndex = 10;
-            button9.UseVisualStyleBackColor = false;
+            btnIconPrevious.BackColor = Color.Wheat;
+            btnIconPrevious.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnIconPrevious.FlatAppearance.BorderSize = 4;
+            btnIconPrevious.FlatStyle = FlatStyle.Flat;
+            btnIconPrevious.Image = Properties.Resources.previous;
+            btnIconPrevious.Location = new Point(761, 608);
+            btnIconPrevious.Name = "btnIconPrevious";
+            btnIconPrevious.Size = new Size(100, 80);
+            btnIconPrevious.TabIndex = 10;
+            btnIconPrevious.UseVisualStyleBackColor = false;
+            btnIconPrevious.Click += btnIconPrevious_Click;
             // 
-            // button10
+            // btnIconNext
             // 
-            button10.BackColor = Color.Wheat;
-            button10.FlatAppearance.BorderColor = Color.SteelBlue;
-            button10.FlatAppearance.BorderSize = 4;
-            button10.FlatStyle = FlatStyle.Flat;
-            button10.Image = Properties.Resources.next;
-            button10.Location = new Point(894, 608);
-            button10.Name = "button10";
-            button10.Size = new Size(100, 80);
-            button10.TabIndex = 11;
-            button10.UseVisualStyleBackColor = false;
+            btnIconNext.BackColor = Color.Wheat;
+            btnIconNext.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnIconNext.FlatAppearance.BorderSize = 4;
+            btnIconNext.FlatStyle = FlatStyle.Flat;
+            btnIconNext.Image = Properties.Resources.next;
+            btnIconNext.Location = new Point(894, 608);
+            btnIconNext.Name = "btnIconNext";
+            btnIconNext.Size = new Size(100, 80);
+            btnIconNext.TabIndex = 11;
+            btnIconNext.UseVisualStyleBackColor = false;
+            btnIconNext.Click += btnIconNext_Click;
             // 
-            // button11
+            // btnIconEnd
             // 
-            button11.BackColor = Color.Wheat;
-            button11.FlatAppearance.BorderColor = Color.SteelBlue;
-            button11.FlatAppearance.BorderSize = 4;
-            button11.FlatStyle = FlatStyle.Flat;
-            button11.Image = Properties.Resources.end;
-            button11.Location = new Point(1025, 608);
-            button11.Name = "button11";
-            button11.Size = new Size(100, 80);
-            button11.TabIndex = 12;
-            button11.UseVisualStyleBackColor = false;
+            btnIconEnd.BackColor = Color.Wheat;
+            btnIconEnd.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnIconEnd.FlatAppearance.BorderSize = 4;
+            btnIconEnd.FlatStyle = FlatStyle.Flat;
+            btnIconEnd.Image = Properties.Resources.end;
+            btnIconEnd.Location = new Point(1025, 608);
+            btnIconEnd.Name = "btnIconEnd";
+            btnIconEnd.Size = new Size(100, 80);
+            btnIconEnd.TabIndex = 12;
+            btnIconEnd.UseVisualStyleBackColor = false;
+            btnIconEnd.Click += btnIconEnd_Click;
             // 
-            // button12
+            // btnIconAdd
             // 
-            button12.BackColor = Color.Wheat;
-            button12.FlatAppearance.BorderColor = Color.SteelBlue;
-            button12.FlatAppearance.BorderSize = 4;
-            button12.FlatStyle = FlatStyle.Flat;
-            button12.Image = Properties.Resources.add;
-            button12.Location = new Point(34, 195);
-            button12.Name = "button12";
-            button12.Size = new Size(96, 96);
-            button12.TabIndex = 13;
-            button12.UseVisualStyleBackColor = false;
+            btnIconAdd.BackColor = Color.Wheat;
+            btnIconAdd.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnIconAdd.FlatAppearance.BorderSize = 4;
+            btnIconAdd.FlatStyle = FlatStyle.Flat;
+            btnIconAdd.Image = Properties.Resources.add;
+            btnIconAdd.Location = new Point(34, 195);
+            btnIconAdd.Name = "btnIconAdd";
+            btnIconAdd.Size = new Size(96, 96);
+            btnIconAdd.TabIndex = 13;
+            btnIconAdd.UseVisualStyleBackColor = false;
+            btnIconAdd.Click += btnIconAdd_Click;
             // 
-            // button13
+            // btnIconDelete
             // 
-            button13.BackColor = Color.Wheat;
-            button13.FlatAppearance.BorderColor = Color.SteelBlue;
-            button13.FlatAppearance.BorderSize = 4;
-            button13.FlatStyle = FlatStyle.Flat;
-            button13.Image = Properties.Resources.delete;
-            button13.Location = new Point(34, 420);
-            button13.Name = "button13";
-            button13.Size = new Size(96, 96);
-            button13.TabIndex = 14;
-            button13.UseVisualStyleBackColor = false;
+            btnIconDelete.BackColor = Color.Wheat;
+            btnIconDelete.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnIconDelete.FlatAppearance.BorderSize = 4;
+            btnIconDelete.FlatStyle = FlatStyle.Flat;
+            btnIconDelete.Image = Properties.Resources.delete;
+            btnIconDelete.Location = new Point(34, 420);
+            btnIconDelete.Name = "btnIconDelete";
+            btnIconDelete.Size = new Size(96, 96);
+            btnIconDelete.TabIndex = 14;
+            btnIconDelete.UseVisualStyleBackColor = false;
+            btnIconDelete.Click += btnIconDelete_Click;
             // 
-            // button14
+            // btnIconShow
             // 
-            button14.BackColor = Color.Wheat;
-            button14.FlatAppearance.BorderColor = Color.SteelBlue;
-            button14.FlatAppearance.BorderSize = 4;
-            button14.FlatStyle = FlatStyle.Flat;
-            button14.Image = Properties.Resources.show;
-            button14.Location = new Point(1618, 195);
-            button14.Name = "button14";
-            button14.Size = new Size(96, 96);
-            button14.TabIndex = 15;
-            button14.UseVisualStyleBackColor = false;
+            btnIconShow.BackColor = Color.Wheat;
+            btnIconShow.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnIconShow.FlatAppearance.BorderSize = 4;
+            btnIconShow.FlatStyle = FlatStyle.Flat;
+            btnIconShow.Image = Properties.Resources.show;
+            btnIconShow.Location = new Point(1618, 195);
+            btnIconShow.Name = "btnIconShow";
+            btnIconShow.Size = new Size(96, 96);
+            btnIconShow.TabIndex = 15;
+            btnIconShow.UseVisualStyleBackColor = false;
+            btnIconShow.Click += btnIconShow_Click;
             // 
-            // button15
+            // btnIconModify
             // 
-            button15.BackColor = Color.Wheat;
-            button15.FlatAppearance.BorderColor = Color.SteelBlue;
-            button15.FlatAppearance.BorderSize = 4;
-            button15.FlatStyle = FlatStyle.Flat;
-            button15.Image = Properties.Resources.edit;
-            button15.Location = new Point(1618, 420);
-            button15.Name = "button15";
-            button15.Size = new Size(96, 96);
-            button15.TabIndex = 16;
-            button15.UseVisualStyleBackColor = false;
+            btnIconModify.BackColor = Color.Wheat;
+            btnIconModify.FlatAppearance.BorderColor = Color.SteelBlue;
+            btnIconModify.FlatAppearance.BorderSize = 4;
+            btnIconModify.FlatStyle = FlatStyle.Flat;
+            btnIconModify.Image = Properties.Resources.edit;
+            btnIconModify.Location = new Point(1618, 420);
+            btnIconModify.Name = "btnIconModify";
+            btnIconModify.Size = new Size(96, 96);
+            btnIconModify.TabIndex = 16;
+            btnIconModify.UseVisualStyleBackColor = false;
+            btnIconModify.Click += btnIconModify_Click;
             // 
             // FormStudents
             // 
@@ -272,24 +286,25 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1758, 924);
-            Controls.Add(button15);
-            Controls.Add(button14);
-            Controls.Add(button13);
-            Controls.Add(button12);
-            Controls.Add(button11);
-            Controls.Add(button10);
-            Controls.Add(button9);
-            Controls.Add(button8);
+            Controls.Add(btnIconModify);
+            Controls.Add(btnIconShow);
+            Controls.Add(btnIconDelete);
+            Controls.Add(btnIconAdd);
+            Controls.Add(btnIconEnd);
+            Controls.Add(btnIconNext);
+            Controls.Add(btnIconPrevious);
+            Controls.Add(btnIconStart);
             Controls.Add(label1);
             Controls.Add(groupBox1);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnModifyStudent);
+            Controls.Add(btnDeleteStudentByDni);
+            Controls.Add(btnDeleteStudentById);
+            Controls.Add(btnShowStudentByDni);
+            Controls.Add(btnShowStudentById);
+            Controls.Add(btnAddStudent);
             Name = "FormStudents";
             Text = "Students Form";
+            Load += FormStudents_Load;
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -297,22 +312,22 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
+        private Button btnAddStudent;
+        private Button btnShowStudentById;
+        private Button btnShowStudentByDni;
+        private Button btnDeleteStudentById;
+        private Button btnDeleteStudentByDni;
+        private Button btnModifyStudent;
         private GroupBox groupBox1;
         private ListBox lstStudents;
         private Label label1;
-        private Button button8;
-        private Button button9;
-        private Button button10;
-        private Button button11;
-        private Button button12;
-        private Button button13;
-        private Button button14;
-        private Button button15;
+        private Button btnIconStart;
+        private Button btnIconPrevious;
+        private Button btnIconNext;
+        private Button btnIconEnd;
+        private Button btnIconAdd;
+        private Button btnIconDelete;
+        private Button btnIconShow;
+        private Button btnIconModify;
     }
 }
