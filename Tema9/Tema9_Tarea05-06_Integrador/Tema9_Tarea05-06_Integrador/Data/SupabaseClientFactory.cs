@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Supabase;
 
-namespace Tema9_Tarea02.Data
+namespace Tema9_Tarea05_06_Integrador.Data
 {
     public static class SupabaseClientFactory
     {

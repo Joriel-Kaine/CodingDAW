@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tema9_Tarea02.Models;
+using Tema9_Tarea05_06_Integrador.Models;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Tema9_Tarea02.Repositories
+namespace Tema9_Tarea05_06_Integrador.Repositories
 {
     public class StudentsRepository
     {

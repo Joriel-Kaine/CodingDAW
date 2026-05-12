@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Supabase.Postgrest.Attributes;
 using Supabase.Postgrest.Models;
 
-namespace Tema9_Tarea02.Models
+namespace Tema9_Tarea05_06_Integrador.Models
 {
     [Table("students")]
     public class Student : BaseModel

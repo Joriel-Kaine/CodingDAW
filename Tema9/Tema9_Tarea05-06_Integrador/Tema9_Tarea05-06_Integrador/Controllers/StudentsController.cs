@@ -8,10 +8,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using Tema9_Tarea02.Models;
-using Tema9_Tarea02.Repositories;
+using Tema9_Tarea05_06_Integrador.Models;
+using Tema9_Tarea05_06_Integrador.Repositories;
 
-namespace Tema9_Tarea02.Controllers
+namespace Tema9_Tarea05_06_Integrador.Controllers
 {
     public class StudentsController
     {

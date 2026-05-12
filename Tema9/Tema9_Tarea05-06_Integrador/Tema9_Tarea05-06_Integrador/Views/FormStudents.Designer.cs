@@ -164,9 +164,9 @@
             label1.Font = new Font("Maiandra GD", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(503, 17);
             label1.Name = "label1";
-            label1.Size = new Size(671, 62);
+            label1.Size = new Size(682, 62);
             label1.TabIndex = 8;
-            label1.Text = "Students management form";
+            label1.Text = "Students management Form";
             // 
             // btnIconStart
             // 
@@ -231,7 +231,7 @@
             btnIconAdd.FlatAppearance.BorderSize = 4;
             btnIconAdd.FlatStyle = FlatStyle.Flat;
             btnIconAdd.Image = Properties.Resources.add;
-            btnIconAdd.Location = new Point(34, 195);
+            btnIconAdd.Location = new Point(70, 195);
             btnIconAdd.Name = "btnIconAdd";
             btnIconAdd.Size = new Size(96, 96);
             btnIconAdd.TabIndex = 13;
@@ -245,7 +245,7 @@
             btnIconDelete.FlatAppearance.BorderSize = 4;
             btnIconDelete.FlatStyle = FlatStyle.Flat;
             btnIconDelete.Image = Properties.Resources.delete;
-            btnIconDelete.Location = new Point(34, 420);
+            btnIconDelete.Location = new Point(70, 420);
             btnIconDelete.Name = "btnIconDelete";
             btnIconDelete.Size = new Size(96, 96);
             btnIconDelete.TabIndex = 14;
@@ -259,7 +259,7 @@
             btnIconShow.FlatAppearance.BorderSize = 4;
             btnIconShow.FlatStyle = FlatStyle.Flat;
             btnIconShow.Image = Properties.Resources.show;
-            btnIconShow.Location = new Point(1618, 195);
+            btnIconShow.Location = new Point(1578, 195);
             btnIconShow.Name = "btnIconShow";
             btnIconShow.Size = new Size(96, 96);
             btnIconShow.TabIndex = 15;
@@ -273,7 +273,7 @@
             btnIconModify.FlatAppearance.BorderSize = 4;
             btnIconModify.FlatStyle = FlatStyle.Flat;
             btnIconModify.Image = Properties.Resources.edit;
-            btnIconModify.Location = new Point(1618, 420);
+            btnIconModify.Location = new Point(1578, 420);
             btnIconModify.Name = "btnIconModify";
             btnIconModify.Size = new Size(96, 96);
             btnIconModify.TabIndex = 16;
